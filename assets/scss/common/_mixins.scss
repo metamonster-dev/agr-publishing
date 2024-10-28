@@ -1,0 +1,54 @@
+@import "../common/_variables";
+
+@mixin hiddenText {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+@mixin hiddenInput {
+  display: none;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@mixin line1Text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin line2Text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.4rem;
+  max-height: 2.8rem;
+}
+
+@mixin flexLayout(
+  $align: stretch,
+  $justify: flex-start,
+  $gap: 0,
+  $wrap: nowrap,
+  $direction: row,
+  $flex: flex
+) {
+  display: $flex;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+}
+@mixin fontStyle($size: 12px, $color: $color_black, $weight: 500) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}

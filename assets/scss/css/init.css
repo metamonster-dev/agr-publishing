@@ -1,0 +1,182 @@
+/*===== INITIALIZATION =====*/
+html,
+body {
+  font-family: "Pretendard";
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+fieldset,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ol,
+ul,
+dl,
+dt,
+dd,
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+legend {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999em;
+  overflow: hidden;
+}
+
+hr {
+  display: none;
+}
+
+ol,
+ul,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+
+label,
+input,
+button,
+select,
+img {
+  vertical-align: middle;
+}
+
+button,
+input,
+select,
+textarea,
+label {
+  font-family: "Pretendard";
+  margin: 0;
+}
+
+button,
+input[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus,
+.btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder {
+  color: #aaa !important;
+}
+
+textarea::-webkit-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #9ea0b9 !important;
+}
+
+button {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+button,
+a,
+button:hover,
+a:hover {
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+}
+
+p {
+  word-break: break-all;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
