@@ -1,0 +1,27 @@
+@import "../common/_variables";
+@import "../common/_mixins";
+
+/*======================================*/
+/*------------ ERROR PAGES -------------*/
+/*======================================*/
+.error_wrap {
+  @include flexLayout(center, center);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+  }
+  h1 {
+    @include fontStyle(22px, $color_gray_1d, 700);
+    margin-top: 16px;
+  }
+  p {
+    @include fontStyle(16px, $color_gray_5, 500);
+    margin-top: 16px;
+  }
+  .btn {
+    margin-top: 40px;
+  }
+}

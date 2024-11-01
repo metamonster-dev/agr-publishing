@@ -1,0 +1,32 @@
+@import "../common/_variables";
+@import "../common/_mixins";
+
+/*======================================*/
+/*----------- COMMON STYLES ------------*/
+/*======================================*/
+/* Button */
+.btn {
+  @include flexLayout(center, center);
+  border-radius: 4px;
+  font-weight: 700;
+
+  &.btn_size_52 {
+    height: 52px;
+    font-size: 16px;
+  }
+  &.btn_style01 {
+    border: 1px solid $color_gray_1d;
+    background-color: $color_gray_1d;
+    color: $color_white;
+    &:disabled {
+      border-color: $color_gray_c6;
+      background-color: $color_gray_c6;
+      color: $color_white;
+    }
+  }
+  &.btn_style02 {
+    border: 1px solid $color_gray_8e;
+    background-color: $color_white;
+    color: $color_gray_1d;
+  }
+}

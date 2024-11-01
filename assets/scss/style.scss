@@ -1,5 +1,12 @@
+// common
 @import "./common/_mixins";
 @import "./common/_variables";
 @import "./common/_global";
 @import "./common/_fonts";
+
+// layout
 @import "./layout/_shared";
+@import "./layout/_areas";
+
+// pages
+@import "./pages/_error";
