@@ -30,23 +30,171 @@
 /*===== HEADER =====*/
 #header {
   width: 100%;
+  border-bottom: 1px solid $color_gray_e;
+  background-color: $color_white;
+
+  &.hd_bg02 {
+    background-color: $color_black;
+  }
 
   .inner {
-    @include flexLayout(center, space-between);
+    @include flexLayout(center, space-between, 12px);
     height: $height_header;
+  }
+  h1 {
+    @include fontStyle(18px, $color_gray_1d, 700);
   }
   .hd_flex {
     @include flexLayout(center, center, 12px);
   }
-
-  &.main_h {
-    background-color: $color_black;
+  .hd_search {
+    position: relative;
+    flex: 1;
+    label {
+      @include hiddenText;
+    }
+    .input {
+      width: 100%;
+      height: 40px;
+      padding: 0 76px 0 12px;
+      font-size: 14px;
+      &:not(:placeholder-shown) + .btns .delete_btn {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .btns {
+      @include flexLayout(center, center, 8px);
+      position: absolute;
+      top: calc(50% - 12px);
+      right: 12px;
+      .delete_btn {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
   }
-  &.sub_h {
-    border-bottom: 1px solid $color_gray_e;
-    background-color: $color_white;
-    h1 {
-      @include fontStyle(18px, $color_gray_1d, 700);
+}
+
+/*===== BOTTOM NAV =====*/
+#bottom_nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 480px;
+  background-color: $color_white;
+  transform: translateX(-50%);
+  ul {
+    @include flexLayout();
+    height: 64px;
+    li {
+      width: 25%;
+      button,
+      a {
+        @include flexLayout(center, center, 6px, nowrap, column);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        i {
+          display: block;
+          width: 24px;
+          height: 24px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          &.icon01 {
+            background-image: url("../images/shared/icon_home_off.svg");
+          }
+          &.icon02 {
+            background-image: url("../images/shared/icon_calendar_off.svg");
+          }
+          &.icon03 {
+            background-image: url("../images/shared/icon_heart_off.svg");
+          }
+          &.icon04 {
+            background-image: url("../images/shared/icon_mypage_off.svg");
+          }
+        }
+        span {
+          @include fontStyle(13px, $color_gray_71, 500);
+          display: block;
+        }
+      }
+      &.on {
+        button,
+        a {
+          i {
+            &.icon01 {
+              background-image: url("../images/shared/icon_home_on.svg");
+            }
+            &.icon02 {
+              background-image: url("../images/shared/icon_calendar_on.svg");
+            }
+            &.icon03 {
+              background-image: url("../images/shared/icon_heart_on.svg");
+            }
+            &.icon04 {
+              background-image: url("../images/shared/icon_mypage_on.svg");
+            }
+          }
+          span {
+            color: $color_gray_1d;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===== FOOTER =====*/
+#footer {
+  background-color: $color_gray_1d;
+  .ft_top {
+    background-color: $color_black;
+    ul {
+      @include flexLayout(center, flex-start, 4px 24px, wrap);
+      padding: 13px 0;
+      li {
+        button,
+        a {
+          @include fontStyle(14px, $color_white, 500);
+          display: block;
+        }
+      }
+    }
+  }
+  .ft_btm {
+    padding: 32px 0 120px;
+    hr {
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin: 24px 0;
+      border: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    ul {
+      @include flexLayout(flex-start, flex-start, 4px, nowrap, column);
+      li {
+        @include fontStyle(14px, $color_gray_a, 500);
+        word-break: keep-all;
+      }
+    }
+    p {
+      @include fontStyle(14px, $color_gray_a, 500);
+      a {
+        @include fontStyle(17px, $color_white, 700);
+        display: inline-block;
+        margin-top: 6px;
+      }
+    }
+    span {
+      @include fontStyle(11px, $color_gray_a, 500);
+      display: block;
+      margin-top: 24px;
     }
   }
 }

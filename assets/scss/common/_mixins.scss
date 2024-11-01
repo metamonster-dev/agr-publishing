@@ -1,6 +1,7 @@
 @import "../common/_variables";
 
 @mixin hiddenText {
+  position: absolute;
   font-size: 0;
   line-height: 0;
   text-indent: -9999px;

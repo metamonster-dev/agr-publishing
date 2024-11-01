@@ -30,3 +30,37 @@
     color: $color_gray_1d;
   }
 }
+
+/* Input */
+.input,
+.textarea {
+  @include fontStyle(16px, $color_gray_1d, 500);
+  position: relative;
+  width: 100%;
+  border: 1px solid $color_gray_d8;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $color_gray_71;
+  }
+  &:disabled {
+    background-color: $color_gray_f8;
+  }
+  &:focus {
+    border-color: $color_key_01;
+    outline: 1px solid $color_key_01;
+  }
+  &.error {
+    border-color: $color_red;
+    outline: 1px solid $color_red;
+  }
+}
+.input {
+  height: 52px;
+  padding: 0 16px;
+}
+.textarea {
+  height: 200px;
+  padding: 16px;
+  resize: none;
+}
