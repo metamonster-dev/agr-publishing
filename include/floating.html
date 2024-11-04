@@ -1,0 +1,70 @@
+<div id="floating_menu" class="show">
+  <div class="zoom_area">
+    <button type="button" class="zoom_btn" onClick="floatingToggle()">
+      <img
+        src="./assets/images/shared/icon_zoom_in.svg"
+        alt="화면 확대/축소 선택 열기"
+      />
+      <img
+        src="./assets/images/shared/icon_zoom_close.svg"
+        alt="화면 확대/축소 선택 닫기"
+      />
+    </button>
+    <div class="btns_area">
+      <button type="button" class="zoom_out_btn" onClick="zoomOut()">
+        <img src="./assets/images/shared/icon_zoom_out.svg" alt="화면 축소" />
+      </button>
+      <button type="button" class="zoom_in_btn" onClick="zoomIn()">
+        <img src="./assets/images/shared/icon_zoom_in.svg" alt="화면 확대" />
+      </button>
+    </div>
+  </div>
+  <button type="button" class="top_btn" onClick="goTopClick()">
+    <img
+      src="./assets/images/shared/icon_top.svg"
+      alt="홈페이지 상단으로 이동"
+    />
+  </button>
+</div>
+
+<script>
+  // top button click
+  const goTopClick = () => $("html, body").animate({ scrollTop: 0 }, 500);
+  const floatingToggle = () =>
+    $("#floating_menu .zoom_area").toggleClass("active");
+
+  // zoom button click
+  let zoomLevel = 1;
+  const zoomOut = () => {
+    zoomLevel = Math.max(zoomLevel - 0.1, 0.7);
+    if (zoomLevel <= 0.7) return alert("최소 화면 크기입니다.");
+    document.body.style.zoom = zoomLevel;
+  };
+  const zoomIn = () => {
+    zoomLevel = Math.min(zoomLevel + 0.1, 1.4);
+    if (zoomLevel >= 1.4) return alert("최대 화면 크기입니다.");
+    document.body.style.zoom = zoomLevel;
+  };
+
+  $(document).ready(function () {
+    // 스크롤에 따른 버튼 노출 제어
+    let lastScrollY = $(window).scrollTop();
+    let isScrolling;
+
+    $(window).on("scroll", function () {
+      const currentScrollY = $(window).scrollTop();
+
+      if (currentScrollY > lastScrollY) {
+        $("#floating_menu").removeClass("show");
+      } else {
+        $("#floating_menu").addClass("show");
+      }
+      lastScrollY = currentScrollY;
+
+      clearTimeout(isScrolling);
+      isScrolling = setTimeout(function () {
+        $("#floating_menu").addClass("show");
+      }, 400);
+    });
+  });
+</script>

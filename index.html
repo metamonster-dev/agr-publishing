@@ -17,7 +17,7 @@
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/common.js"></script>
+    <script src="./js/common.js" defer></script>
   </head>
   <body>
     <div id="root_layout">
@@ -27,11 +27,620 @@
         </div>
 
         <div id="contents">
+          <div id="floating_area"></div>
           <div id="nav_area"></div>
 
-          <section>
+          <div class="main_visual_wrap">
+            <div class="m_slider01">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="img_area rect01">
+                    <img
+                      src="./assets/images/main/visual_img.jpg"
+                      alt="문화예술 플랫폼 아트가이드런 1:1 맞춤 컨설팅 이미지"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img_area rect01">
+                    <img
+                      src="./assets/images/main/visual_img.jpg"
+                      alt="문화예술 플랫폼 아트가이드런 1:1 맞춤 컨설팅 이미지"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="btns">
+                <p></p>
+                <button type="button" class="prev_btn">
+                  <img
+                    src="./assets/images/main/icon_prev.svg"
+                    alt="이전 슬라이드 이동 버튼"
+                  />
+                </button>
+                <button type="button" class="control_btn">
+                  <img
+                    src="./assets/images/main/icon_pause.svg"
+                    alt="슬라이드 자동 재생 멈춤 버튼"
+                  />
+                </button>
+                <button type="button" class="next_btn">
+                  <img
+                    src="./assets/images/main/icon_next.svg"
+                    alt="다음 슬라이드 이동 버튼"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <section class="main_schedule_wrap pt_40">
             <div class="inner">
-              <h2>김아트님을 위한 맞춤형 서비스 <span>🔥</span></h2>
+              <div class="main_tit flex_between">
+                <h2>공모사업 일정</h2>
+                <div class="date">9월 23일</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="pt_40 pb_52 of_hidden">
+            <div class="inner">
+              <div class="main_tit">
+                <h2>김아트님을 위한 맞춤형 서비스 <i>🔥</i></h2>
+                <p>#작곡 #미디어아트 #디자인공예</p>
+              </div>
+              <div class="list_area list_style01 prod_slider mt_32">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="img_area rect01">
+                      <button type="button" class="heart_btn on">
+                        <i></i><span class="hidden_text">관심 취소</span>
+                      </button>
+                      <img
+                        src="./assets/images/product/product_img01.jpg"
+                        alt="예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <p class="tit">
+                        예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스
+                      </p>
+                      <div class="price_text">
+                        <span class="percent">10%</span>
+                        <span class="price">40,500원</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="img_area rect01">
+                      <button type="button" class="heart_btn">
+                        <i></i><span class="hidden_text">관심 등록</span>
+                      </button>
+                      <img
+                        src="./assets/images/product/product_img01.jpg"
+                        alt="예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <p class="tit">
+                        예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스
+                      </p>
+                      <div class="price_text">
+                        <span class="price">40,500원</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div class="main_banner_wrap">
+            <a href="javascript:;" class="bn_type01">
+              <b>
+                아트가이드러너 <br />
+                함께하는 1:1 컨설팅
+              </b>
+            </a>
+          </div>
+
+          <section class="py_60 of_hidden">
+            <div class="inner">
+              <div class="main_tit">
+                <h2>카테고리별 다양한 가이드런 <i>😎</i></h2>
+                <p>아트가이드런에서 다양한 서비스를 만나보세요!</p>
+              </div>
+              <div class="tab_area tab_slider mt_32">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide on">
+                    <button type="button">1:1 컨설팅</button>
+                  </li>
+                  <li class="swiper-slide">
+                    <button type="button">클래스</button>
+                  </li>
+                  <li class="swiper-slide">
+                    <button type="button">포트폴리오 멘토링</button>
+                  </li>
+                  <li class="swiper-slide">
+                    <button type="button">공모사업 지원가이드</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="list_area list_style02 mt_24">
+                <ul>
+                  <li>
+                    <div class="img_area rect01">
+                      <button type="button" class="heart_btn on">
+                        <i></i><span class="hidden_text">관심 취소</span>
+                      </button>
+                      <img
+                        src="./assets/images/product/product_img02.jpg"
+                        alt="예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <a href="javascript:;">
+                        <span class="cate">1:1 컨설팅</span>
+                        <p class="tit">
+                          예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스
+                        </p>
+                        <div class="price_text">
+                          <span class="percent">10%</span>
+                          <span class="price">40,500원</span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img_area rect01">
+                      <button type="button" class="heart_btn">
+                        <i></i><span class="hidden_text">관심 등록</span>
+                      </button>
+                      <img
+                        src="./assets/images/product/product_img02.jpg"
+                        alt="예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <a href="javascript:;">
+                        <span class="cate">1:1 컨설팅</span>
+                        <p class="tit">예술기획분야 취창업 전문 컨설팅</p>
+                        <div class="price_text">
+                          <span class="price">40,500원</span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img_area rect01">
+                      <button type="button" class="heart_btn">
+                        <i></i><span class="hidden_text">관심 등록</span>
+                      </button>
+                      <img
+                        src="./assets/images/product/product_img02.jpg"
+                        alt="예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <a href="javascript:;">
+                        <span class="cate">1:1 컨설팅</span>
+                        <p class="tit">예술기획분야 취창업 전문 컨설팅</p>
+                        <div class="price_text">
+                          <span class="price">40,500원</span>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <a
+                  href="javascript:;"
+                  class="btn btn_style03 btn_size_40 mt_32"
+                >
+                  전체보기 <i class="arrow"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <div class="main_banner_wrap">
+            <a href="javascript:;" class="bn_type02">
+              <b>
+                전문가 평가와 함께 <br />
+                포트폴리오를 완성해보세요!
+              </b>
+              <span>평가 받으러 가기 <i></i></span>
+            </a>
+          </div>
+
+          <section class="py_60">
+            <div class="inner">
+              <div class="main_tit">
+                <h2>이달의 아티스트 소개 <i>🎨</i></h2>
+                <p>세상을 새롭게 그리는 아티스트를 만나보세요!</p>
+              </div>
+              <div class="list_area list_style03 mt_32">
+                <ul>
+                  <li>
+                    <a href="javascript:;">
+                      <div class="img_area rect01">
+                        <img
+                          src="./assets/images/main/artist_img01.png"
+                          alt="아티스트 김아트 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p>김아트</p>
+                        <span>#브랜드 #전시</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <div class="img_area rect01">
+                        <img
+                          src="./assets/images/main/artist_img02.png"
+                          alt="아티스트 이수현 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p>이수현</p>
+                        <span>#미디어 #다큐</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <div class="img_area rect01">
+                        <img
+                          src="./assets/images/main/artist_img03.png"
+                          alt="아티스트 김지원 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p>김지원</p>
+                        <span>#작곡 #뮤지션</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <div class="img_area rect01">
+                        <img
+                          src="./assets/images/main/artist_img04.png"
+                          alt="아티스트 솔이 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p>솔이</p>
+                        <span>#미디어 #영화</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <div class="img_area rect01">
+                        <img
+                          src="./assets/images/main/artist_img05.png"
+                          alt="아티스트 김유정 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p>김유정</p>
+                        <span>#브랜드 #전시</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      <div class="img_area rect01">
+                        <img
+                          src="./assets/images/main/artist_img06.png"
+                          alt="아티스트 정민 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p>정민</p>
+                        <span>#미디어 #아트</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div class="inner">
+            <section class="main_info_wrap">
+              <h2>
+                1:1 맞춤 컨설팅 플랫폼 <br />
+                아트가이드런
+              </h2>
+              <div class="text_area">
+                <p>
+                  <b>83.5%</b>
+                  고객 성공 퍼센트
+                </p>
+                <p>
+                  <b>1000명</b>
+                  참여 아티스트 수
+                </p>
+                <p>
+                  <b>254억원</b>
+                  참여 사업 금액
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <section class="main_related_wrap py_60 of_hidden">
+            <div class="inner">
+              <div class="main_tit flex_between">
+                <h2>관련기관</h2>
+                <div class="btns">
+                  <button type="button" class="prev_btn">
+                    <img
+                      src="./assets/images/main/icon_prev02.svg"
+                      alt="이전 슬라이드 이동 버튼"
+                    />
+                  </button>
+                  <button type="button" class="control_btn">
+                    <img
+                      src="./assets/images/main/icon_pause02.svg"
+                      alt="슬라이드 자동 재생 멈춤 버튼"
+                    />
+                  </button>
+                  <button type="button" class="next_btn">
+                    <img
+                      src="./assets/images/main/icon_next02.svg"
+                      alt="다음 슬라이드 이동 버튼"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="m_slider02 mt_16">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <a
+                      href="https://www.soriro2015.com"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 소리로 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img01.png"
+                          alt="소리로 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://kdac.or.kr/creations/purchase/view"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 한국장애인 문화예술원 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img02.png"
+                          alt="한국장애인 문화예술원 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="http://www.emiji.net/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 한국 장애예술인 협회 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img03.png"
+                          alt="한국 장애예술인 협회 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="http://www.kawf.kr/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 한국 예술인 복지재단 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img04.png"
+                          alt="한국 예술인 복지재단 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="http://www.fdca.or.kr/bbs/board.php?bo_table=notice&wr_id=436"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 한국장애인 문화예술단체 총연합회 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img05.png"
+                          alt="한국장애인 문화예술단체 총연합회 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://kfpd.org/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 한국 장애인 재단 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img06.png"
+                          alt="한국 장애인 재단 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://gjableart.com/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, (사)광주 장애예술인 협회 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img07.png"
+                          alt="(사)광주 장애예술인 협회 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="http://www.bluesky82.org/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 한국 장애인 문화협회 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img08.png"
+                          alt="한국 장애인 문화협회 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="http://www.kdcas.com/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 한국장애인 문화예술진흥원 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img09.png"
+                          alt="한국장애인 문화예술진흥원 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://www.sfac.or.kr/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 서울문화재단 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img10.png"
+                          alt="서울문화재단 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://www.ieum.or.kr/user/movie/view.do?idx=1122"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 이음 온라인 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img11.png"
+                          alt="이음 온라인 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://www.ggnurim.or.kr/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 경기도 장애인 복지종합지원센터 누림 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img12.png"
+                          alt="경기도 장애인 복지종합지원센터 누림 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://artist.ggcf.kr/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 경기 예술인 지원센터 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img13.png"
+                          alt="경기 예술인 지원센터 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="http://www.gwcf.or.kr/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 강원문화재단 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img14.png"
+                          alt="강원문화재단 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://www.ablenews.co.kr/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 에이블뉴스 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img15.png"
+                          alt="에이블뉴스 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a
+                      href="https://www.artaward.kr/"
+                      target="_blank"
+                      ref="noreferrer"
+                      title="새창이동, 대한민국 장애인 문화예술대상 홈페이지"
+                    >
+                      <div class="img_area rect02">
+                        <img
+                          src="./assets/images/main/orgn_img16.png"
+                          alt="대한민국 장애인 문화예술대상 로고 이미지"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
         </div>
@@ -44,11 +653,76 @@
       // ===== 공통 영역 설정 스크립트 =====
       $("#header_area").load("./include/header.html");
       $("#footer_area").load("./include/footer.html");
+      $("#floating_area").load("./include/floating.html");
       $("#nav_area").load("./include/bottom_nav.html");
 
       $(window).on("load", function () {
         $("#header:not(:nth-of-type(1))").remove();
+        $("#header:nth-of-type(1)").css("display", "block");
         $("#bottom_nav ul li").eq(0).addClass("active");
+      });
+
+      // ===== 메인 =====
+      const slider01 = new Swiper(".m_slider01", {
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".m_slider01 .btns p",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".m_slider01 .btns .next_btn",
+          prevEl: ".m_slider01 .btns .prev_btn",
+        },
+      });
+      $(".m_slider01 .btns .control_btn").on("click", function () {
+        if ($(this).hasClass("on")) {
+          $(this)
+            .removeClass("on")
+            .find("img")
+            .attr("src", "./assets/images/main/icon_pause.svg")
+            .attr("alt", "비주얼 배너 슬라이드 자동 재생 멈춤 버튼");
+          slider01.autoplay.start();
+        } else {
+          $(this)
+            .addClass("on")
+            .find("img")
+            .attr("src", "./assets/images/main/icon_play.svg")
+            .attr("alt", "비주얼 배너 슬라이드 자동 재생 시작 버튼");
+          slider01.autoplay.stop();
+        }
+      });
+
+      const slider02 = new Swiper(".m_slider02", {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".main_related_wrap .next_btn",
+          prevEl: ".main_related_wrap .prev_btn",
+        },
+      });
+      $(".main_related_wrap .control_btn").on("click", function () {
+        if ($(this).hasClass("on")) {
+          $(this)
+            .removeClass("on")
+            .find("img")
+            .attr("src", "./assets/images/main/icon_pause02.svg")
+            .attr("alt", "관련기관 슬라이드 자동 재생 멈춤 버튼");
+          slider02.autoplay.start();
+        } else {
+          $(this)
+            .addClass("on")
+            .find("img")
+            .attr("src", "./assets/images/main/icon_play02.svg")
+            .attr("alt", "관련기관 슬라이드 자동 재생 시작 버튼");
+          slider02.autoplay.stop();
+        }
       });
     </script>
   </body>

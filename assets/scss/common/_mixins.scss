@@ -1,5 +1,6 @@
 @import "../common/_variables";
 
+// 화면 X, 스크린리더 O
 @mixin hiddenText {
   position: absolute;
   font-size: 0;
@@ -7,7 +8,8 @@
   text-indent: -9999px;
   overflow: hidden;
 }
-@mixin hiddenInput {
+// 화면 X, 스크린리더 X
+@mixin hiddenTextImportant {
   display: none;
   width: 0;
   height: 0;

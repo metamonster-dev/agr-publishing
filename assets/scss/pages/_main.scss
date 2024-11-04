@@ -4,3 +4,125 @@
 /*======================================*/
 /*------------- MAIN PAGES -------------*/
 /*======================================*/
+.main_tit {
+  h2 {
+    @include fontStyle(22px, $color_gray_1d, 700);
+    i {
+      font-size: 21px;
+      font-style: normal;
+    }
+  }
+  p {
+    @include fontStyle(16px, $color_gray_71, 500);
+  }
+  .date {
+    @include fontStyle(13px, $color_gray_71, 500);
+    padding: 8px 10px 8px 30px;
+    border: 1px solid $color_gray_d8;
+    border-radius: 20px;
+    background: $color_white url("../images/main/icon_date.svg") no-repeat 10px
+      center;
+  }
+  .btns {
+    @include flexLayout(center, center, 4px);
+    button {
+      padding: 3px;
+      border: 1px solid $color_gray_d8;
+      border-radius: 4px;
+      background-color: $color_white;
+    }
+  }
+
+  &.flex_between {
+    @include flexLayout(center, space-between);
+  }
+}
+
+.main_visual_wrap {
+  position: relative;
+  overflow: hidden;
+  .btns {
+    @include flexLayout(center, center);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 38px;
+    padding: 0 12px 0 16px;
+    border-top-left-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+
+    p {
+      @include fontStyle(13px, rgba(255, 255, 255, 0.5), 700);
+      width: auto;
+      margin-right: 8px;
+      .swiper-pagination-current {
+        color: $color_white;
+      }
+    }
+    button {
+      padding: 4px;
+    }
+  }
+}
+
+.main_schedule_wrap {
+  padding: 40px 0 0;
+}
+
+.main_info_wrap {
+  padding: 40px 32px;
+  border-radius: 4px;
+  background: url("../images/main/info_bg.jpg") no-repeat center / cover;
+
+  h2 {
+    @include fontStyle(25px, $color_white, 700);
+  }
+  .text_area {
+    @include flexLayout(center, center, 24px, nowrap, column);
+    margin-top: 32px;
+    padding: 24px 0;
+    border-radius: 4px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.1);
+    p {
+      @include fontStyle(16px, $color_white, 500);
+      display: block;
+      text-align: center;
+      b {
+        @include fontStyle(22px, $color_white, 700);
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.main_banner_wrap a {
+  @include flexLayout(flex-start, center, 8px, nowrap, column);
+  padding: 29px 32px;
+
+  b {
+    @include fontStyle(18px, $color_gray_1d, 700);
+  }
+
+  &.bn_type01 {
+    background: $color_key_04 url("../images/main/banner_img01.png") no-repeat
+      right 32px center / 75px;
+  }
+  &.bn_type02 {
+    background: $color_orange_02 url("../images/main/banner_img02.png")
+      no-repeat right 32px center / 68px;
+    span {
+      @include flexLayout(center, flex-start);
+      @include fontStyle(14px, $color_orange_01, 700);
+      i {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../images/main/icon_arrow_orange.svg") no-repeat center /
+          contain;
+      }
+    }
+  }
+}
