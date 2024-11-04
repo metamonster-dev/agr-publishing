@@ -17,278 +17,39 @@
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
   </head>
   <body>
     <div id="root_layout">
       <div class="root_container">
         <div class="sticky_menu">
-          <header id="header" class="hd_bg02">
-            <div class="inner">
-              <h1>
-                <a href="/">
-                  <img
-                    src="./assets/images/logo.svg"
-                    alt="ART GUIDE RUN 로고 이미지"
-                  />
-                </a>
-              </h1>
-              <div class="hd_flex">
-                <a href="./index.html">
-                  <img
-                    src="./assets/images/shared/icon_search_white.svg"
-                    alt="검색 페이지로 이동 버튼"
-                  />
-                </a>
-                <button type="button">
-                  <img
-                    src="./assets/images/shared/icon_menu_white.svg"
-                    alt="카테고리 메뉴 보기 버튼"
-                  />
-                </button>
-              </div>
-            </div>
-          </header>
-          <header id="header">
-            <div class="inner">
-              <div class="hd_flex">
-                <button type="button">
-                  <img
-                    src="./assets/images/shared/icon_prev.svg"
-                    alt="이전 페이지로 이동 버튼"
-                  />
-                </button>
-                <h1>텍스트</h1>
-              </div>
-              <button type="button">
-                <img
-                  src="./assets/images/shared/icon_menu_black.svg"
-                  alt="카테고리 메뉴 보기 버튼"
-                />
-              </button>
-            </div>
-          </header>
-          <header id="header">
-            <div class="inner">
-              <div class="hd_flex">
-                <button type="button">
-                  <img
-                    src="./assets/images/shared/icon_prev.svg"
-                    alt="이전 페이지로 이동 버튼"
-                  />
-                </button>
-                <h1>텍스트</h1>
-              </div>
-              <div class="hd_flex">
-                <a href="./index.html">
-                  <img
-                    src="./assets/images/shared/icon_search_black.svg"
-                    alt="검색 페이지로 이동 버튼"
-                  />
-                </a>
-                <button type="button">
-                  <img
-                    src="./assets/images/shared/icon_menu_black.svg"
-                    alt="카테고리 메뉴 보기 버튼"
-                  />
-                </button>
-              </div>
-            </div>
-          </header>
-          <header id="header">
-            <div class="inner">
-              <button type="button">
-                <img
-                  src="./assets/images/shared/icon_prev.svg"
-                  alt="이전 페이지로 이동 버튼"
-                />
-              </button>
-              <div class="hd_flex">
-                <a href="./index.html">
-                  <img
-                    src="./assets/images/shared/icon_search_black.svg"
-                    alt="검색 페이지로 이동 버튼"
-                  />
-                </a>
-                <button type="button">
-                  <img
-                    src="./assets/images/shared/icon_menu_black.svg"
-                    alt="카테고리 메뉴 보기 버튼"
-                  />
-                </button>
-              </div>
-            </div>
-          </header>
-          <header id="header">
-            <div class="inner">
-              <button type="button">
-                <img
-                  src="./assets/images/shared/icon_prev.svg"
-                  alt="이전 페이지로 이동 버튼"
-                />
-              </button>
-              <div class="hd_search">
-                <form onSubmit="return false;">
-                  <label for="search">검색</label>
-                  <input
-                    type="text"
-                    name="search"
-                    id="search"
-                    class="input"
-                    placeholder="검색어를 입력하세요"
-                  />
-                  <div class="btns">
-                    <button type="button" class="delete_btn">
-                      <img
-                        src="./assets/images/shared/icon_search_delete.svg"
-                        alt="입력한 검색어 삭제 버튼"
-                      />
-                    </button>
-                    <button type="submit">
-                      <img
-                        src="./assets/images/shared/icon_search_black.svg"
-                        alt="검색 버튼"
-                      />
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </header>
-          <header id="header">
-            <div class="inner">
-              <h1>텍스트</h1>
-              <button type="button">
-                <img
-                  src="./assets/images/shared/icon_close.svg"
-                  alt="카테고리 메뉴 닫기 버튼"
-                />
-              </button>
-            </div>
-          </header>
-          <header id="header">
-            <div class="inner">
-              <h1>텍스트</h1>
-              <div class="hd_flex">
-                <button type="button">
-                  <img
-                    src="./assets/images/shared/icon_home.svg"
-                    alt="홈 페이지로 이동 버튼"
-                  />
-                </button>
-                <button type="button">
-                  <img
-                    src="./assets/images/shared/icon_menu_black.svg"
-                    alt="카테고리 메뉴 보기 버튼"
-                  />
-                </button>
-              </div>
-            </div>
-          </header>
-          <header id="header">
-            <div class="inner">
-              <div class="hd_flex">
-                <button type="button">
-                  <img
-                    src="./assets/images/shared/icon_prev.svg"
-                    alt="이전 페이지로 이동 버튼"
-                  />
-                </button>
-                <h1>텍스트</h1>
-              </div>
-              <button type="button">
-                <img
-                  src="./assets/images/shared/icon_close.svg"
-                  alt="카테고리 메뉴 닫기 버튼"
-                />
-              </button>
-            </div>
-          </header>
+          <div id="header_area"></div>
         </div>
 
-        <div id="bottom_nav">
-          <ul>
-            <li class="on">
-              <a href="./index.html">
-                <i class="icon01"></i>
-                <span>홈</span>
-              </a>
-            </li>
-            <li>
-              <a href="./index.html">
-                <i class="icon02"></i>
-                <span>캘린더</span>
-              </a>
-            </li>
-            <li>
-              <a href="./index.html">
-                <i class="icon03"></i>
-                <span>관심</span>
-              </a>
-            </li>
-            <li>
-              <a href="./index.html">
-                <i class="icon04"></i>
-                <span>마이</span>
-              </a>
-            </li>
-          </ul>
+        <div id="contents">
+          <div id="nav_area"></div>
+
+          <section>
+            <div class="inner">
+              <h2>김아트님을 위한 맞춤형 서비스 <span>🔥</span></h2>
+            </div>
+          </section>
         </div>
 
-        <section>
-          <div class="inner">
-            <h2>김아트님을 위한 맞춤형 서비스 <span>🔥</span></h2>
-          </div>
-        </section>
-
-        <footer id="footer">
-          <div class="ft_top">
-            <div class="inner">
-              <ul>
-                <li>
-                  <a href="javascript:;">
-                    <b>개인정보처리방침</b>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;">이용약관</a>
-                </li>
-                <li>
-                  <a href="javascript:;">회사소개</a>
-                </li>
-                <li>
-                  <a href="javascript:;">고객센터</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="ft_btm">
-            <div class="inner">
-              <ul>
-                <li>(주)아트가이드런</li>
-                <li>대표 : 소수정</li>
-                <li>
-                  소재지 : 경기도 안양시 동안구 경수대로 733번길 23, 103-1202
-                </li>
-                <li>사업자등록번호 : 819-11-00230</li>
-                <li>통신판매업신고번호 : 000-1234-1234</li>
-              </ul>
-
-              <hr />
-
-              <p>
-                고객센터 <br /><a href="tel:0507-1037-5064">0507-1037-5064</a>
-              </p>
-              <ul>
-                <li>고객센터 운영시간 : 오전 10시~오후 5시</li>
-                <li>고객센터 톡 운영시간 : 오전 11시~오후 11시</li>
-                <li>(점심시간 12:00~14:00)</li>
-              </ul>
-              <span>Copyright@Art Guide Runner. All rights reserved</span>
-            </div>
-          </div>
-        </footer>
+        <div id="footer_area"></div>
       </div>
     </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("./include/header.html");
+      $("#footer_area").load("./include/footer.html");
+      $("#nav_area").load("./include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header:not(:nth-of-type(1))").remove();
+        $("#bottom_nav ul li").eq(0).addClass("active");
+      });
+    </script>
   </body>
 </html>
