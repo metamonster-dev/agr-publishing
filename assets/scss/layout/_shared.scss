@@ -50,11 +50,13 @@
 
 /*===== HEADER =====*/
 #header {
+  display: none;
   width: 100%;
   border-bottom: 1px solid $color_gray_e;
   background-color: $color_white;
 
   &.hd_bg02 {
+    border-bottom: 0;
     background-color: $color_black;
   }
 
