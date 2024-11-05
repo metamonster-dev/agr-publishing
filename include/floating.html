@@ -1,37 +1,33 @@
 <div id="floating_menu" class="show">
   <div class="zoom_area">
     <button type="button" class="zoom_btn" onClick="floatingToggle()">
-      <img
-        src="./assets/images/shared/icon_zoom_in.svg"
-        alt="화면 확대/축소 선택 열기"
-      />
-      <img
-        src="./assets/images/shared/icon_zoom_close.svg"
-        alt="화면 확대/축소 선택 닫기"
-      />
+      <span class="hidden_text">화면 확대/축소 선택 열기</span>
     </button>
     <div class="btns_area">
-      <button type="button" class="zoom_out_btn" onClick="zoomOut()">
-        <img src="./assets/images/shared/icon_zoom_out.svg" alt="화면 축소" />
+      <button type="button" onClick="zoomOut()">
+        <span class="hidden_text">화면 축소</span>
       </button>
-      <button type="button" class="zoom_in_btn" onClick="zoomIn()">
-        <img src="./assets/images/shared/icon_zoom_in.svg" alt="화면 확대" />
+      <button type="button" onClick="zoomIn()">
+        <span class="hidden_text">화면 확대</span>
       </button>
     </div>
   </div>
   <button type="button" class="top_btn" onClick="goTopClick()">
-    <img
-      src="./assets/images/shared/icon_top.svg"
-      alt="홈페이지 상단으로 이동"
-    />
+    <span class="hidden_text">홈페이지 상단으로 이동</span>
   </button>
 </div>
 
 <script>
   // top button click
   const goTopClick = () => $("html, body").animate({ scrollTop: 0 }, 500);
-  const floatingToggle = () =>
+  const floatingToggle = () => {
     $("#floating_menu .zoom_area").toggleClass("active");
+    if ($("#floating_menu .zoom_area").hasClass("active")) {
+      $("#floating_menu .zoom_btn span").text("화면 확대/축소 선택 닫기");
+    } else {
+      $("#floating_menu .zoom_btn span").text("화면 확대/축소 선택 열기");
+    }
+  };
 
   // zoom button click
   let zoomLevel = 1;

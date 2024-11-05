@@ -295,13 +295,20 @@ img {
   z-index: 400;
   transition: all 0.5s;
 }
+#floating_menu button {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  background-size: 24px;
+}
 #floating_menu .top_btn {
+  width: 40px;
   margin-top: 8px;
   margin-left: auto;
-  padding: 7px;
   border-radius: 50%;
   border: 1px solid #d8d8d8;
   background-color: #ffffff;
+  background-image: url("../images/shared/icon_top.svg");
 }
 #floating_menu .zoom_area {
   display: flex;
@@ -313,13 +320,11 @@ img {
 }
 #floating_menu .zoom_area .zoom_btn {
   position: relative;
-  padding: 8px;
+  width: 40px;
   border-radius: 50%;
   background-color: #475ed9;
+  background-image: url("../images/shared/icon_zoom_in.svg");
   z-index: 2;
-}
-#floating_menu .zoom_area .zoom_btn img:last-of-type {
-  display: none;
 }
 #floating_menu .zoom_area .btns_area {
   display: flex;
@@ -343,21 +348,20 @@ img {
   background-color: rgba(255, 255, 255, 0.3);
 }
 #floating_menu .zoom_area .btns_area button {
-  padding: 8px 12px;
+  width: 48px;
 }
 #floating_menu .zoom_area .btns_area button:first-of-type {
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
+  background-image: url("../images/shared/icon_zoom_out.svg");
 }
 #floating_menu .zoom_area .btns_area button:last-of-type {
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
+  background-image: url("../images/shared/icon_zoom_in.svg");
 }
-#floating_menu .zoom_area.active .zoom_btn img:first-of-type {
-  display: none;
-}
-#floating_menu .zoom_area.active .zoom_btn img:last-of-type {
-  display: block;
+#floating_menu .zoom_area.active .zoom_btn {
+  background-image: url("../images/shared/icon_zoom_close.svg");
 }
 #floating_menu .zoom_area.active .btns_area {
   display: flex;
@@ -435,9 +439,67 @@ img {
   top: calc(50% - 12px);
   right: 12px;
 }
+#header .hd_search .btns button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#header .hd_search .btns button span {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
 #header .hd_search .btns .delete_btn {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/shared/icon_search_delete.svg");
   opacity: 0;
   visibility: hidden;
+}
+#header .hd_search .btns .search_btn {
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/shared/icon_search_black.svg");
+}
+#header .hd_icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+#header .hd_icon span {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#header .hd_icon.logo {
+  width: 186px;
+  height: 22px;
+  background-image: url("../images/logo.svg");
+}
+#header .hd_icon.icon01 {
+  background-image: url("../images/shared/icon_search_white.svg");
+}
+#header .hd_icon.icon02 {
+  background-image: url("../images/shared/icon_menu_white.svg");
+}
+#header .hd_icon.icon03 {
+  background-image: url("../images/shared/icon_prev.svg");
+}
+#header .hd_icon.icon04 {
+  background-image: url("../images/shared/icon_search_black.svg");
+}
+#header .hd_icon.icon05 {
+  background-image: url("../images/shared/icon_close.svg");
+}
+#header .hd_icon.icon06 {
+  background-image: url("../images/shared/icon_home.svg");
 }
 
 /*===== MOBILE MENU =====*/
@@ -473,6 +535,26 @@ img {
   font-size: 18px;
   color: #1d1d1d;
   font-weight: 700;
+}
+#m_menu .m_header button {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+}
+#m_menu .m_header button span {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#m_menu .m_header button.back_btn {
+  background-image: url("../images/shared/icon_prev.svg");
+}
+#m_menu .m_header button.close_btn {
+  background-image: url("../images/shared/icon_close.svg");
 }
 #m_menu .gnb {
   height: calc(100vh - 56px);
@@ -584,11 +666,11 @@ img {
 }
 #bottom_nav ul li button i,
 #bottom_nav ul li a i {
+  background-repeat: no-repeat;
+  background-position: center;
   display: block;
   width: 24px;
   height: 24px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: contain;
 }
 #bottom_nav ul li button i.icon01,
@@ -839,11 +921,11 @@ img {
   font-weight: 700;
 }
 .btn i.arrow {
+  background-repeat: no-repeat;
+  background-position: center;
   display: block;
   width: 16px;
   height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: contain;
 }
 .btn.btn_size_40 {

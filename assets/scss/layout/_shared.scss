@@ -56,25 +56,29 @@
   z-index: $z_floating_menu;
   transition: all 0.5s;
 
+  button {
+    @include initBackground;
+    height: 40px;
+    background-size: 24px;
+  }
   .top_btn {
+    width: 40px;
     margin-top: 8px;
     margin-left: auto;
-    padding: 7px;
     border-radius: 50%;
     border: 1px solid $color_gray_d8;
     background-color: $color_white;
+    background-image: url("../images/shared/icon_top.svg");
   }
   .zoom_area {
     @include flexLayout(center, center, 4px, nowrap, row-reverse);
     .zoom_btn {
       position: relative;
-      padding: 8px;
+      width: 40px;
       border-radius: 50%;
       background-color: $color_key_01;
+      background-image: url("../images/shared/icon_zoom_in.svg");
       z-index: 2;
-      img:last-of-type {
-        display: none;
-      }
     }
     .btns_area {
       @include flexLayout();
@@ -92,25 +96,22 @@
         background-color: rgba(255, 255, 255, 0.3);
       }
       button {
-        padding: 8px 12px;
+        width: 48px;
         &:first-of-type {
           border-top-left-radius: 24px;
           border-bottom-left-radius: 24px;
+          background-image: url("../images/shared/icon_zoom_out.svg");
         }
         &:last-of-type {
           border-top-right-radius: 24px;
           border-bottom-right-radius: 24px;
+          background-image: url("../images/shared/icon_zoom_in.svg");
         }
       }
     }
     &.active {
-      .zoom_btn img {
-        &:first-of-type {
-          display: none;
-        }
-        &:last-of-type {
-          display: block;
-        }
+      .zoom_btn {
+        background-image: url("../images/shared/icon_zoom_close.svg");
       }
       .btns_area {
         display: flex;
@@ -166,10 +167,58 @@
       position: absolute;
       top: calc(50% - 12px);
       right: 12px;
+      button {
+        @include initBackground;
+        background-size: contain;
+        span {
+          @include hiddenText;
+        }
+      }
       .delete_btn {
+        width: 20px;
+        height: 20px;
+        background-image: url("../images/shared/icon_search_delete.svg");
         opacity: 0;
         visibility: hidden;
       }
+      .search_btn {
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/shared/icon_search_black.svg");
+      }
+    }
+  }
+  .hd_icon {
+    @include initBackground;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    span {
+      @include hiddenText;
+    }
+    &.logo {
+      width: 186px;
+      height: 22px;
+      background-image: url("../images/logo.svg");
+    }
+    &.icon01 {
+      background-image: url("../images/shared/icon_search_white.svg");
+    }
+    &.icon02 {
+      background-image: url("../images/shared/icon_menu_white.svg");
+    }
+    &.icon03 {
+      background-image: url("../images/shared/icon_prev.svg");
+    }
+    &.icon04 {
+      background-image: url("../images/shared/icon_search_black.svg");
+    }
+    &.icon05 {
+      background-image: url("../images/shared/icon_close.svg");
+    }
+    &.icon06 {
+      background-image: url("../images/shared/icon_home.svg");
     }
   }
 }
@@ -194,6 +243,21 @@
       @include flexLayout(center, center, 12px);
       p {
         @include fontStyle(18px, $color_gray_1d, 700);
+      }
+    }
+    button {
+      @include initBackground;
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+      span {
+        @include hiddenText;
+      }
+      &.back_btn {
+        background-image: url("../images/shared/icon_prev.svg");
+      }
+      &.close_btn {
+        background-image: url("../images/shared/icon_close.svg");
       }
     }
   }
@@ -283,11 +347,10 @@
         text-align: center;
 
         i {
+          @include initBackground;
           display: block;
           width: 24px;
           height: 24px;
-          background-repeat: no-repeat;
-          background-position: center;
           background-size: contain;
           &.icon01 {
             background-image: url("../images/shared/icon_home_off.svg");

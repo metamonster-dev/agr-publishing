@@ -20,6 +20,11 @@
   visibility: hidden;
 }
 
+@mixin initBackground {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @mixin line1Text {
   overflow: hidden;
   text-overflow: ellipsis;

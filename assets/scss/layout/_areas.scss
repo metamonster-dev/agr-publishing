@@ -84,11 +84,10 @@
   font-weight: 700;
 
   i.arrow {
+    @include initBackground;
     display: block;
     width: 16px;
     height: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: contain;
   }
   &.btn_size_40 {
