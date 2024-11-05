@@ -1,0 +1,88 @@
+@import "../common/_variables";
+@import "../common/_mixins";
+
+/*======================================*/
+/*------------ SEARCH PAGES ------------*/
+/*======================================*/
+.search_tit_area {
+  @include flexLayout(center, space-between);
+  h2 {
+    @include fontStyle(18px, $color_gray_1d, 700);
+  }
+  button {
+    @include fontStyle(14px, $color_gray_71, 500);
+    text-decoration: underline;
+  }
+}
+.search_tags_area ul {
+  @include flexLayout(stretch, flex-start, 8px, wrap);
+  li {
+    position: relative;
+    button {
+      &:not(.x_btn) {
+        height: 36px;
+        padding: 0 34px 0 14px;
+        border: 1px solid $color_gray_e;
+        border-radius: 50px;
+        background-color: $color_white;
+      }
+      &.x_btn {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        padding: 4px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+.search_list_area ul li {
+  button,
+  a {
+    @include fontStyle(16px, $color_gray_1d, 500);
+    @include line1Text;
+    display: block;
+    padding: 0 16px 0 44px;
+    border-bottom: 1px solid $color_gray_e;
+    background: url("../images/icon_search.svg") no-repeat 16px center;
+    line-height: 51px;
+    span {
+      color: $color_key_01;
+    }
+  }
+}
+.search_text_area {
+  h2 {
+    @include fontStyle(14px, $color_gray_1d, 500);
+    span {
+      color: $color_key_01;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}
+
+/*======================================*/
+/*------------ ERROR PAGES -------------*/
+/*======================================*/
+.error_wrap {
+  @include flexLayout(center, center);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+  }
+  h1 {
+    @include fontStyle(22px, $color_gray_1d, 700);
+    margin-top: 16px;
+  }
+  p {
+    @include fontStyle(16px, $color_gray_5, 500);
+    margin-top: 16px;
+  }
+  .btn {
+    margin-top: 40px;
+  }
+}

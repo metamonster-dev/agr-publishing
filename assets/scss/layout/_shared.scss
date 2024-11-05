@@ -132,8 +132,11 @@
   background-color: $color_white;
 
   &.hd_bg02 {
-    border-bottom: 0;
+    border-color: $color_black;
     background-color: $color_black;
+  }
+  &.hd_bg03 {
+    border-color: $color_white;
   }
 
   .inner {
@@ -225,6 +228,7 @@
 
 /*===== MOBILE MENU =====*/
 #m_menu {
+  display: none;
   position: fixed;
   top: 0;
   right: -1000px;
@@ -321,6 +325,15 @@
   }
   &.show {
     right: calc(50vw - 240px);
+  }
+}
+.hd_type01,
+.hd_type02,
+.hd_type03,
+.hd_type04,
+.hd_type07 {
+  #m_menu {
+    display: block;
   }
 }
 

@@ -36,11 +36,23 @@
 .py_60 {
   padding: 60px 0;
 }
+.pt_24 {
+  padding-top: 24px;
+}
+.pt_32 {
+  padding-top: 32px;
+}
 .pt_40 {
   padding-top: 40px;
 }
 .pb_52 {
   padding-bottom: 52px;
+}
+.pb_80 {
+  padding-bottom: 80px;
+}
+.border_top {
+  border-top: 1px solid $color_gray_e;
 }
 
 /* Input, Textarea, Select */
@@ -125,29 +137,63 @@
 
 /* Tab */
 .tab_area {
-  ul {
-    .swiper-slide {
-      width: auto;
+  background-color: $color_white;
+  .swiper-slide {
+    width: auto;
+  }
+  &.tab_style01 {
+    ul {
+      li {
+        button {
+          @include flexLayout(center, center);
+          @include fontStyle(14px, $color_gray_5, 500);
+          height: 33px;
+          padding: 0 10px;
+          border: 1px solid $color_gray_d8;
+          border-radius: 4px;
+          background-color: $color_white;
+        }
+        &.on button {
+          border-color: $color_gray_1d;
+          background-color: $color_gray_1d;
+          color: $color_white;
+        }
+      }
     }
-    li {
-      button {
-        @include flexLayout(center, center);
-        @include fontStyle(14px, $color_gray_5, 500);
-        height: 33px;
-        padding: 0 10px;
-        border: 1px solid $color_gray_d8;
-        border-radius: 4px;
-        background-color: $color_white;
-      }
-      &.on button {
-        border-color: $color_gray_1d;
-        background-color: $color_gray_1d;
-        color: $color_white;
-      }
+    &:not(.tab_slider, .tab_slider02) ul {
+      @include flexLayout(center, flex-start, 8px);
     }
   }
-  &:not(.tab_slider) ul {
-    @include flexLayout(center, flex-start, 8px);
+  &.tab_style02 {
+    position: relative;
+    padding: 0 16px;
+    border-bottom: 8px solid $color_gray_f8;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color_gray_e;
+    }
+    ul {
+      @include flexLayout(stretch, flex-start);
+      li {
+        button {
+          @include flexLayout(center, center);
+          @include fontStyle(16px, $color_gray_71, 500);
+          height: 52px;
+          padding: 0 8px;
+          border-bottom: 2px solid transparent;
+        }
+        &.on button {
+          border-color: $color_black;
+          color: $color_gray_1d;
+        }
+      }
+    }
   }
 }
 
@@ -179,6 +225,12 @@
 
 /* List */
 .list_area {
+  ul li {
+    position: relative;
+    a {
+      display: block;
+    }
+  }
   .heart_btn {
     position: absolute;
     top: 0;
@@ -200,9 +252,6 @@
   &.list_style01,
   &.list_style02 {
     .text_area {
-      a {
-        display: block;
-      }
       .cate {
         @include fontStyle(14px, $color_gray_8e, 700);
         display: block;
@@ -231,11 +280,23 @@
     .text_area {
       margin-top: 16px;
     }
+    &:not(.prod_slider) ul {
+      @include flexLayout(stretch, flex-start, 40px 12px, wrap);
+      li {
+        width: calc(50% - 6px);
+      }
+    }
   }
   &.list_style02 {
     ul li {
       @include flexLayout(center, center, 16px);
+      a {
+        @include flexLayout(center, center, 16px);
+        width: 100%;
+      }
       .heart_btn {
+        right: auto;
+        left: 58px;
         padding: 8px;
       }
       .img_area {
@@ -249,32 +310,46 @@
       }
     }
   }
-  &.list_style03 {
-    ul {
-      @include flexLayout(center, center, 32px 0, wrap);
-      li {
-        width: calc(100% / 3);
+  &.list_style03 ul {
+    @include flexLayout(center, center, 32px 0, wrap);
+    li {
+      width: calc(100% / 3);
+      text-align: center;
+      a {
+        display: inline-block;
+      }
+      .img_area {
+        width: 72px;
+        margin: 0 auto;
+      }
+      .text_area {
+        margin-top: 12px;
         text-align: center;
-        a {
-          display: inline-block;
+        p {
+          @include fontStyle(16px, $color_gray_1d, 700);
         }
-        .img_area {
-          width: 72px;
-          margin: 0 auto;
-        }
-        .text_area {
-          margin-top: 12px;
-          text-align: center;
-          p {
-            @include fontStyle(16px, $color_gray_1d, 700);
-          }
-          span {
-            @include fontStyle(14px, $color_gray_71, 500);
-            display: block;
-            margin-top: 4px;
-          }
+        span {
+          @include fontStyle(14px, $color_gray_71, 500);
+          display: block;
+          margin-top: 4px;
         }
       }
     }
+  }
+}
+
+/* No Data */
+.no_data_area {
+  text-align: center;
+  i {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    background: url("../images/icon_nodata.svg") no-repeat center / contain;
+  }
+  span {
+    @include fontStyle(16px, $color_gray_8e, 500);
+    display: block;
   }
 }

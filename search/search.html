@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="../js/common.js" defer></script>
   </head>
-  <body>
+  <body class="hd_type05">
     <div id="root_layout">
       <div class="root_container">
         <div class="sticky_menu">
@@ -24,26 +24,120 @@
         </div>
 
         <div id="contents">
-          <div id="floating_area"></div>
-          <div id="nav_area"></div>
-        </div>
+          <section class="pt_32 pb_80">
+            <div class="inner">
+              <div class="search_tit_area">
+                <h2>최근 검색어</h2>
+                <button type="button">모두 삭제</button>
+              </div>
 
-        <div id="footer_area"></div>
+              <!-- 데이터 없을 시, -->
+              <!-- <div class="no_data_area pt_40">
+                <i></i><span>최근 검색어 내역이 없습니다.</span>
+              </div> -->
+              <div class="search_tags_area pt_24">
+                <ul>
+                  <li>
+                    <button type="button">작곡 클래스</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="작곡 클래스 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">예술분야</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="예술분야 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">음악</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="음악 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">예술분야 컨설팅</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="예술분야 컨설팅 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">작곡 클래스</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="작곡 클래스 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">작곡</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="작곡 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">컨설팅</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="컨설팅 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">에술분야</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="에술분야 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">컨설팅</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="컨설팅 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button">예술분야 1:1컨설팅</button>
+                    <button type="button" class="x_btn">
+                      <img
+                        src="../assets/images/icon_x.svg"
+                        alt="예술분야 1:1컨설팅 검색어 삭제"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
 
     <script>
       // ===== 공통 영역 설정 스크립트 =====
       $("#header_area").load("../include/header.html");
-      $("#footer_area").load("../include/footer.html");
-      $("#floating_area").load("../include/floating.html");
-      $("#nav_area").load("../include/bottom_nav.html");
-
-      $(window).on("load", function () {
-        $("#header:not(:nth-of-type(5))").remove();
-        $("#header:nth-of-type(1)").css("display", "block");
-        $("#bottom_nav ul li").eq(0).addClass("active");
-      });
 
       // ===== 페이지 =====
     </script>

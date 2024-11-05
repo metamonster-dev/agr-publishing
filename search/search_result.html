@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type05">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+          <div class="tab_area tab_style02 tab_slider02">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide on">
+                <button type="button">전체</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">가이드런</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">딥파인더</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">아트마켓</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="contents">
+          <section class="pt_24 pb_80">
+            <div class="inner">
+              <div class="search_text_area">
+                <h2><span>예술분야</span>에 대한 <b>63</b>건의 검색결과</h2>
+              </div>
+
+              <!-- 데이터 없을 시, -->
+              <!-- <div class="no_data_area pt_40">
+                <i></i><span>검색결과가 없습니다.</span>
+              </div> -->
+              <div class="list_area list_style01 border_top mt_16 pt_24">
+                <ul>
+                  <li>
+                    <button type="button" class="heart_btn on">
+                      <i></i><span class="hidden_text">관심 취소</span>
+                    </button>
+                    <div class="img_area rect01">
+                      <img
+                        src="../assets/images/product/product_img02.jpg"
+                        alt="예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <span class="cate">1:1 컨설팅</span>
+                      <p class="tit">
+                        예술기획분야 예술인 등록을 위한 1:1 맞춤형 클래스
+                      </p>
+                      <div class="price_text">
+                        <span class="percent">10%</span>
+                        <span class="price">40,500원</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <button type="button" class="heart_btn">
+                      <i></i><span class="hidden_text">관심 등록</span>
+                    </button>
+                    <div class="img_area rect01">
+                      <img
+                        src="../assets/images/product/product_img02.jpg"
+                        alt="아트마켓 공예 클래스 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <span class="cate">클래스</span>
+                      <p class="tit">아트마켓 공예 클래스</p>
+                      <div class="price_text">
+                        <span class="price">40,500원</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <button type="button" class="heart_btn">
+                      <i></i><span class="hidden_text">관심 등록</span>
+                    </button>
+                    <div class="img_area rect01">
+                      <img
+                        src="../assets/images/product/product_img01.jpg"
+                        alt="아트가이드런이 추천하는 실무활용 가이드 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <span class="cate">지원가이드</span>
+                      <p class="tit">아트가이드런이 추천하는 실무활용 가이드</p>
+                      <div class="price_text">
+                        <span class="price">40,500원</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <button type="button" class="heart_btn">
+                      <i></i><span class="hidden_text">관심 등록</span>
+                    </button>
+                    <div class="img_area rect01">
+                      <img
+                        src="../assets/images/product/product_img01.jpg"
+                        alt="아트가이드런이 추천하는 실무활용 가이드 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <span class="cate">지원가이드</span>
+                      <p class="tit">아트가이드런이 추천하는 실무활용 가이드</p>
+                      <div class="price_text">
+                        <span class="price">40,500원</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+    </script>
+  </body>
+</html>

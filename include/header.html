@@ -29,7 +29,7 @@
       <button type="button" class="hd_icon icon03">
         <span>이전 페이지로 이동</span>
       </button>
-      <h1>텍스트</h1>
+      <h1>타이틀</h1>
     </div>
     <button
       type="button"
@@ -46,7 +46,7 @@
       <button type="button" class="hd_icon icon03">
         <span>이전 페이지로 이동</span>
       </button>
-      <h1>텍스트</h1>
+      <h1>타이틀</h1>
     </div>
     <div class="hd_flex">
       <a href="./index.html" class="hd_icon icon04">
@@ -63,6 +63,7 @@
   </div>
 </header>
 <header id="header">
+  <h1 class="hidden_text">타이틀</h1>
   <div class="inner">
     <button type="button" class="hd_icon icon03">
       <span>이전 페이지로 이동</span>
@@ -81,7 +82,8 @@
     </div>
   </div>
 </header>
-<header id="header">
+<header id="header" class="hd_bg03">
+  <h1 class="hidden_text">검색</h1>
   <div class="inner">
     <button type="button" class="hd_icon icon03">
       <span>이전 페이지로 이동</span>
@@ -110,7 +112,7 @@
 </header>
 <header id="header">
   <div class="inner">
-    <h1>텍스트</h1>
+    <h1>타이틀</h1>
     <button type="button" class="hd_icon icon05">
       <span>카테고리 메뉴 닫기</span>
     </button>
@@ -118,7 +120,7 @@
 </header>
 <header id="header">
   <div class="inner">
-    <h1>텍스트</h1>
+    <h1>타이틀</h1>
     <div class="hd_flex">
       <button type="button" class="hd_icon icon06">
         <span>메인 페이지로 이동</span>
@@ -139,7 +141,7 @@
       <button type="button" class="hd_icon icon03">
         <span>이전 페이지로 이동</span>
       </button>
-      <h1>텍스트</h1>
+      <h1>타이틀</h1>
     </div>
     <button type="button" class="hd_icon icon05">
       <span>카테고리 메뉴 닫기</span>
@@ -233,6 +235,15 @@
   };
 
   $(window).on("load", function () {
+    // header init
+    const index = $("body")
+      .attr("class")
+      .split(" ")
+      .filter((className) => className.startsWith("hd_type"))
+      .map((className) => className.slice(-1));
+    $(`#header:not(:nth-of-type(${index}))`).remove();
+    $("#header").css("display", "block");
+
     // depth01 focus & click
     $("#m_menu .gnb > ul > li > button").on("click focus", function () {
       $(this).parent().addClass("active").siblings().removeClass("active");
@@ -242,7 +253,11 @@
     $("#contents a, #contents button")
       .eq(0)
       .on("keydown", function (e) {
-        if (e.shiftKey && e.key === "Tab") {
+        if (
+          $("#m_menu").css("display") === "block" &&
+          e.shiftKey &&
+          e.key === "Tab"
+        ) {
           e.preventDefault();
           $("#header .menu_btn").focus();
         }
