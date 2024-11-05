@@ -33,7 +33,7 @@
     </div>
     <button
       type="button"
-      class="menu_btn hd_icon icon02"
+      class="menu_btn hd_icon icon04"
       onClick="menuOpenClick()"
     >
       <span>카테고리 메뉴 보기</span>
@@ -49,12 +49,12 @@
       <h1>타이틀</h1>
     </div>
     <div class="hd_flex">
-      <a href="./index.html" class="hd_icon icon04">
+      <a href="./index.html" class="hd_icon icon05">
         <span>검색 페이지로 이동</span>
       </a>
       <button
         type="button"
-        class="menu_btn hd_icon icon02"
+        class="menu_btn hd_icon icon04"
         onClick="menuOpenClick()"
       >
         <span>카테고리 메뉴 보기</span>
@@ -69,12 +69,12 @@
       <span>이전 페이지로 이동</span>
     </button>
     <div class="hd_flex">
-      <a href="./index.html" class="hd_icon icon04">
+      <a href="./index.html" class="hd_icon icon05">
         <span>검색 페이지로 이동</span>
       </a>
       <button
         type="button"
-        class="menu_btn hd_icon icon02"
+        class="menu_btn hd_icon icon04"
         onClick="menuOpenClick()"
       >
         <span>카테고리 메뉴 보기</span>
@@ -113,7 +113,7 @@
 <header id="header">
   <div class="inner">
     <h1>타이틀</h1>
-    <button type="button" class="hd_icon icon05">
+    <button type="button" class="hd_icon icon06">
       <span>카테고리 메뉴 닫기</span>
     </button>
   </div>
@@ -122,12 +122,12 @@
   <div class="inner">
     <h1>타이틀</h1>
     <div class="hd_flex">
-      <button type="button" class="hd_icon icon06">
+      <button type="button" class="hd_icon icon07">
         <span>메인 페이지로 이동</span>
       </button>
       <button
         type="button"
-        class="menu_btn hd_icon icon02"
+        class="menu_btn hd_icon icon04"
         onClick="menuOpenClick()"
       >
         <span>카테고리 메뉴 보기</span>
@@ -143,7 +143,7 @@
       </button>
       <h1>타이틀</h1>
     </div>
-    <button type="button" class="hd_icon icon05">
+    <button type="button" class="hd_icon icon06">
       <span>카테고리 메뉴 닫기</span>
     </button>
   </div>
@@ -250,7 +250,7 @@
     });
 
     // 메뉴 Tab 이동 제어
-    $("#contents a, #contents button")
+    $("#contents a, #contents button, #contents input")
       .eq(0)
       .on("keydown", function (e) {
         if (
@@ -265,7 +265,7 @@
     $("#header .menu_btn").on("keydown", function (e) {
       if (!$("#m_menu").hasClass("show") && !e.shiftKey && e.key === "Tab") {
         e.preventDefault();
-        $("#contents a, #contents button").eq(0).focus();
+        $("#contents a, #contents button, #contents input").eq(0).focus();
       }
     });
     $("#m_menu .back_btn").on("keydown", function (e) {

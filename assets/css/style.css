@@ -110,14 +110,6 @@ button:disabled {
   cursor: default;
 }
 
-input[type=text]:focus,
-input[type=password]:focus,
-textarea:focus,
-select:focus,
-.btn:focus {
-  box-shadow: none;
-}
-
 input::-webkit-input-placeholder,
 input:-ms-input-placeholder {
   color: #aaa !important;
@@ -496,12 +488,15 @@ img {
   background-image: url("../images/shared/icon_prev.svg");
 }
 #header .hd_icon.icon04 {
-  background-image: url("../images/shared/icon_search_black.svg");
+  background-image: url("../images/shared/icon_menu_black.svg");
 }
 #header .hd_icon.icon05 {
-  background-image: url("../images/shared/icon_close.svg");
+  background-image: url("../images/shared/icon_search_black.svg");
 }
 #header .hd_icon.icon06 {
+  background-image: url("../images/shared/icon_close.svg");
+}
+#header .hd_icon.icon07 {
   background-image: url("../images/shared/icon_home.svg");
 }
 
@@ -893,7 +888,7 @@ img {
   border-top: 1px solid #eeeeee;
 }
 
-/* Input, Textarea, Select */
+/* Input, Textarea, Select, Label */
 .input,
 .textarea {
   font-size: 16px;
@@ -935,6 +930,57 @@ img {
   height: 200px;
   padding: 16px;
   resize: none;
+}
+
+.label {
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.input_list_area {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.label_input_area {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.input_pw_area {
+  position: relative;
+}
+.input_pw_area .input {
+  padding-right: 52px;
+}
+.input_pw_area button {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 16px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icon_eye_off.svg") no-repeat center/contain;
+}
+.input_pw_area button span {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.input_pw_area button.on {
+  background-image: url("../images/icon_eye_on.svg");
 }
 
 /* Button */
@@ -1422,6 +1468,9 @@ img {
   background: url("../images/main/icon_arrow_orange.svg") no-repeat center/contain;
 }
 
+/*======================================*/
+/*------------ LOGIN PAGES -------------*/
+/*======================================*/
 /*======================================*/
 /*------------ SEARCH PAGES ------------*/
 /*======================================*/

@@ -21,4 +21,15 @@ $(window).on("load", function () {
     if ($(".tab_slider02").length > 0)
       tabSlider02.slideTo($(this).parent().index());
   });
+
+  // input 비밀번호 보기/숨기기
+  $(".input_pw_area button").on("click", function () {
+    if ($(this).prev("input").attr("type") === "password") {
+      $(this).prev("input").attr("type", "text");
+      $(this).addClass("on").find("span").text("비밀번호 숨기기");
+    } else {
+      $(this).prev("input").attr("type", "password");
+      $(this).removeClass("on").find("span").text("비밀번호 보기");
+    }
+  });
 });

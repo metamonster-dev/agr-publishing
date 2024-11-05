@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="description" content="페이지에 대한 간단한 설명">
+    <meta name="keywords" content="관련 키워드1, 관련 키워드2, 관련 키워드3">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div class="login_wrap pt_32 pb_80">
+            <div class="inner">
+              <form onSubmit="return false;">
+                <div class="input_list_area">
+                  <div class="label_input_area">
+                    <label for="email" class="label">이메일 아이디</label>
+                    <input
+                      type="text"
+                      name="email"
+                      id="email"
+                      class="input"
+                      placeholder="이메일을 입력해주세요"
+                    />
+                  </div>
+
+                  <div class="label_input_area">
+                    <label for="password" class="label">비밀번호</label>
+                    <div class="input_pw_area">
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        class="input"
+                        placeholder="비밀번호를 입력해주세요"
+                      />
+                      <button type="button">
+                        <span>비밀번호 보기</span>
+                      </button>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn_style01 btn_size_52"
+                    disabled
+                  >
+                    로그인
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("로그인");
+        $("#bottom_nav ul li").eq(0).addClass("active");
+      });
+
+      // ===== 페이지 =====
+    </script>
+  </body>
+</html>
