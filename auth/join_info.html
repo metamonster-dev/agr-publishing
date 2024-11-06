@@ -26,9 +26,8 @@
         <div id="contents">
           <div class="pt_32 pb_80">
             <div class="inner">
-              <!-- <form id="joinForm" onSubmit="return formValid(this);"> -->
-              <form id="joinForm" onSubmit="return false;">
-                <div class="input_list_area">
+              <form id="joinForm" onSubmit="return formValid(this);">
+                <div class="input_list_area gap_24">
                   <div class="label_input_area">
                     <label for="email" class="label">이메일 아이디</label>
                     <input
@@ -171,7 +170,7 @@
                   <fieldset>
                     <div class="label_input_area">
                       <legend class="label">전문분야 선택</legend>
-                      <div class="chk_list_area">
+                      <div class="chk_list_area grid02">
                         <div class="chk_custom">
                           <input
                             type="radio"
@@ -284,8 +283,8 @@
                   </div>
 
                   <button
-                    type="button"
-                    class="btn btn_style01 btn_size_52"
+                    type="submit"
+                    class="btn btn_style01 btn_size_52 w_full"
                     onClick="location.href='./join_interest.html'"
                   >
                     다음
@@ -425,6 +424,10 @@
         $("#specialty_detail button").text("세부 전문분야를 선택해 주세요");
         $("#specialty_detail ul").html(optionsHtml);
       });
+
+      const formValid = (f) => {
+        return false;
+      };
     </script>
   </body>
 </html>

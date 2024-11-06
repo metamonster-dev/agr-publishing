@@ -100,3 +100,16 @@
     }
   }
 }
+
+.join_tit_area {
+  padding: 32px 0;
+  background-color: $color_gray_f8;
+  text-align: center;
+  h2 {
+    @include fontStyle(22px, $color_gray_1d, 700);
+  }
+  p {
+    @include fontStyle(16px, $color_gray_5, 500);
+    margin-top: 16px;
+  }
+}
