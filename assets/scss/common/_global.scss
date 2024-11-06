@@ -91,9 +91,9 @@ label {
   font-family: "Pretendard";
   margin: 0;
 }
+// label,
 button,
-input[type="submit"],
-label {
+input[type="submit"] {
   cursor: pointer;
 }
 button:disabled {

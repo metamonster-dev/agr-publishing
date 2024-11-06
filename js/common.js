@@ -1,3 +1,6 @@
+const regPassword =
+  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,16}$/;
+
 $(window).on("load", function () {
   // 상품 Slider
   const productSlider = new Swiper(".prod_slider", {

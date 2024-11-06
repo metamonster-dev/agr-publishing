@@ -101,8 +101,7 @@ label {
 }
 
 button,
-input[type=submit],
-label {
+input[type=submit] {
   cursor: pointer;
 }
 
@@ -910,8 +909,8 @@ img {
 .textarea:disabled {
   background-color: #f8f8f8;
 }
-.input:focus,
-.textarea:focus {
+.input:not(.error):focus,
+.textarea:not(.error):focus {
   border-color: #475ed9;
   outline: 1px solid #475ed9;
 }
@@ -1304,6 +1303,24 @@ img {
   display: block;
 }
 
+/* Error Msg */
+.error_msg {
+  font-size: 13px;
+  color: #dd083e;
+  font-weight: 500;
+  position: relative;
+  padding-left: 22px;
+}
+.error_msg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icon_error.svg") no-repeat center/contain;
+}
+
 /*======================================*/
 /*------------- MAIN PAGES -------------*/
 /*======================================*/
@@ -1471,6 +1488,68 @@ img {
 /*======================================*/
 /*------------ LOGIN PAGES -------------*/
 /*======================================*/
+.login_btns_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-top: 24px;
+}
+.login_btns_area a {
+  font-size: 14px;
+  color: #717171;
+  font-weight: 500;
+  position: relative;
+  display: block;
+}
+.login_btns_area i {
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #d8d8d8;
+}
+
+.login_sns_area {
+  margin-top: 40px;
+}
+.login_sns_area .tit {
+  position: relative;
+  text-align: center;
+}
+.login_sns_area .tit::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #eeeeee;
+}
+.login_sns_area .tit p {
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  padding: 0 16px;
+  background-color: #ffffff;
+}
+.login_sns_area .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-top: 24px;
+}
+.login_sns_area .btns button img {
+  width: 48px;
+}
+
 /*======================================*/
 /*------------ SEARCH PAGES ------------*/
 /*======================================*/

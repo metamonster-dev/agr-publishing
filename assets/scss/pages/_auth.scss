@@ -4,5 +4,49 @@
 /*======================================*/
 /*------------ LOGIN PAGES -------------*/
 /*======================================*/
-.login_wrap {
+.login_btns_area {
+  @include flexLayout(center, center, 16px);
+  margin-top: 24px;
+  a {
+    @include fontStyle(14px, $color_gray_71, 500);
+    position: relative;
+    display: block;
+  }
+  i {
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: $color_gray_d8;
+  }
+}
+.login_sns_area {
+  margin-top: 40px;
+  .tit {
+    position: relative;
+    text-align: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $color_gray_e;
+    }
+    p {
+      @include fontStyle(14px, $color_gray_1d, 500);
+      position: relative;
+      display: inline-block;
+      padding: 0 16px;
+      background-color: $color_white;
+    }
+  }
+  .btns {
+    @include flexLayout(center, center, 16px);
+    margin-top: 24px;
+    button img {
+      width: 48px;
+    }
+  }
 }
