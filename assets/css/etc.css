@@ -1,6 +1,9 @@
 /*======================================*/
 /*----------- DEFAULT STYLES -----------*/
 /*======================================*/
+/*======================================*/
+/*----------- DEFAULT STYLES -----------*/
+/*======================================*/
 html,
 body {
   font-family: "Pretendard";
@@ -8,6 +11,8 @@ body {
   color: #000;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
+  transition: transform 0.3s ease;
+  transform-origin: top center;
   background-color: #f0f0f0;
 }
 html,
@@ -25,6 +30,7 @@ img {
   margin: 0;
   padding: 0;
   border: 0;
+  line-height: 1.45;
 }
 ol,
 ul,
@@ -52,13 +58,13 @@ section {
   display: block;
 }
 legend {
-  position: absolute;
   margin: 0;
   padding: 0;
-  font-size: 0;
-  line-height: 0;
-  text-indent: -9999em;
-  overflow: hidden;
+  /* position: absolute; */
+  /* font-size: 0; */
+  /* line-height: 0; */
+  /* text-indent: -9999em; */
+  /* overflow: hidden; */
 }
 hr {
   display: none;
@@ -85,32 +91,32 @@ label {
   font-family: "Pretendard";
   margin: 0;
 }
+/* label, */
 button,
-input[type="submit"],
-label {
+input[type="submit"] {
   cursor: pointer;
 }
 button:disabled {
   cursor: default;
 }
-input[type="text"],
-input[type="password"],
-textarea {
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  outline: none;
-}
-input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus,
-.btn:focus {
-  box-shadow: none;
-  outline: none;
-}
+/* input[type="text"], */
+/* input[type="password"], */
+/* textarea { */
+/* transition: all 0.3s ease-in-out; */
+/* -webkit-transition: all 0.3s ease-in-out; */
+/* -moz-transition: all 0.3s ease-in-out; */
+/* -ms-transition: all 0.3s ease-in-out; */
+/* -o-transition: all 0.3s ease-in-out; */
+/* outline: none; */
+/* } */
+/* input[type="text"]:focus, */
+/* input[type="password"]:focus, */
+/* textarea:focus, */
+/* select:focus, */
+/* .btn:focus { */
+/* box-shadow: none; */
+/* outline: none; */
+/* } */
 input::-webkit-input-placeholder,
 input:-ms-input-placeholder {
   color: #aaa !important;
@@ -165,7 +171,7 @@ img {
 }
 
 /*======================================*/
-/*------------ LINK STYLES -------------*/
+/*------------- LINK PAGE --------------*/
 /*======================================*/
 #link_layout {
   padding: 40px 20px;
@@ -207,4 +213,29 @@ img {
   display: inline-block;
   color: royalblue;
   text-decoration: underline;
+}
+
+/*======================================*/
+/*------------ STYLE PAGE --------------*/
+/*======================================*/
+#style_layout {
+  padding: 40px 20px;
+}
+#style_layout h1 {
+  padding: 10px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #777;
+  font-size: 18px;
+  color: #000;
+}
+#style_layout .style_wrap {
+  padding: 20px;
+  margin-top: 24px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+#style_layout .style_wrap h2 {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: royalblue;
 }

@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta name="description" content="페이지에 대한 간단한 설명">
-    <meta name="keywords" content="관련 키워드1, 관련 키워드2, 관련 키워드3">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <title>ART GUIDE RUN | 아트가이드런</title>
     <!-- CSS -->
     <link
@@ -71,7 +68,7 @@
               </form>
 
               <div class="login_btns_area">
-                <a href="./join01.html">이메일 가입</a>
+                <a href="./join_info.html">이메일 가입</a>
                 <i></i>
                 <a href="./find_id.html">아이디 찾기</a>
                 <i></i>
@@ -120,7 +117,6 @@
 
       $(window).on("load", function () {
         $("#header h1").text("로그인");
-        $("#bottom_nav ul li").eq(0).addClass("active");
       });
 
       // ===== 페이지 =====
@@ -136,6 +132,7 @@
           .find(".error_msg")
           .addClass("d_none");
       });
+
       const formValid = (f) => {
         if (f.email.value == "") {
           $(f.email)
@@ -160,7 +157,6 @@
         }
 
         if (!regPassword.test(f.password.value)) {
-          console.log("???", regPassword.test(f.password.value));
           $(f.password)
             .addClass("error")
             .parents(".label_input_area")

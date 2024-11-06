@@ -8,6 +8,18 @@
   text-indent: -9999px;
   overflow: hidden;
 }
+// 화면 X, 스크린리더 O (인풋 커스텀용)
+@mixin hiddenInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 // 화면 X, 스크린리더 X
 @mixin hiddenTextImportant {
   display: none;

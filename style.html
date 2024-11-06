@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/etc.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/common.js" defer></script>
+  </head>
+  <body>
+    <div id="style_layout">
+      <h1>아트가이드런 스타일가이드</h1>
+
+      <div class="style_wrap">
+        <h2>INPUT & SELECT</h2>
+
+        <div class="input_list_area">
+          <div class="label_input_area">
+            <label for="test" class="label">LABEL</label>
+            <input
+              type="text"
+              name="test"
+              id="test"
+              class="input"
+              placeholder="PLACEHOLDER"
+            />
+          </div>
+
+          <div class="label_input_area">
+            <label for="test" class="label">LABEL</label>
+            <input
+              type="text"
+              name="test"
+              id="test"
+              class="input error"
+              placeholder="PLACEHOLDER"
+            />
+            <span class="error_msg">ERROR MESSAGE</span>
+          </div>
+
+          <div class="label_input_area">
+            <label for="pw" class="label">PASSWORD</label>
+            <div class="input_pw_area">
+              <input
+                type="password"
+                name="pw"
+                id="pw"
+                class="input"
+                placeholder="PASSWORD"
+              />
+              <button type="button">
+                <span>비밀번호 보기</span>
+              </button>
+            </div>
+            <span class="error_msg d_none">ERROR MESSAGE</span>
+          </div>
+
+          <fieldset>
+            <div class="label_input_area">
+              <legend class="label">INPUT [type=radio]</legend>
+              <div class="chk_list_area">
+                <div class="chk_custom">
+                  <input
+                    type="radio"
+                    name="test"
+                    id="test01"
+                    value="1"
+                    checked
+                  />
+                  <label for="test01">TEXT 01</label>
+                </div>
+                <div class="chk_custom">
+                  <input type="radio" name="test" id="test02" value="2" />
+                  <label for="test02">TEXT 02</label>
+                </div>
+              </div>
+              <span class="error_msg d_none">ERROR MESSAGE</span>
+            </div>
+          </fieldset>
+
+          <div class="label_input_area">
+            <span class="label">SELECT</span>
+            <!-- 클래스 top 추가 사용 시, option 상단 노출 -->
+            <div
+              class="select_custom"
+              role="combobox"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="select_btn"
+            >
+              <button
+                type="button"
+                id="select_btn"
+                aria-controls="select_option"
+              >
+                SELECT
+              </button>
+              <ul id="select_option" role="listbox">
+                <li role="option" data-value="1" tabindex="0">OPTION 01</li>
+                <li role="option" data-value="2" tabindex="0">OPTION 02</li>
+              </ul>
+            </div>
+            <span class="error_msg d_none">ERROR MESSAGE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -88,9 +88,138 @@
   padding: 16px;
   resize: none;
 }
+.select {
+  @include fontStyle(16px, $color_gray_1d, 500);
+  height: 52px;
+  padding: 0 40px 0 16px;
+  border: 1px solid $color_gray_d8;
+  border-radius: 4px;
+  background: $color_white url("../images/icon_select.svg") no-repeat right 16px
+    center;
+  appearance: none;
+}
 .label {
   @include fontStyle(14px, $color_gray_1d, 500);
-  display: inline-block;
+  display: block;
+}
+
+.select_custom {
+  position: relative;
+  z-index: 10;
+
+  button {
+    @include fontStyle(16px, $color_gray_1d, 500);
+    position: relative;
+    width: 100%;
+    height: 52px;
+    padding: 0 40px 0 16px;
+    border: 1px solid $color_gray_d8;
+    border-radius: 4px;
+    text-align: left;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 8px);
+      right: 16px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../images/icon_select.svg") no-repeat center / contain;
+      transition: all 0.3s;
+    }
+    &:disabled {
+      background-color: $color_gray_f8;
+    }
+    &:focus {
+      border-color: $color_key_01;
+      outline: 1px solid $color_key_01;
+    }
+  }
+
+  ul {
+    display: none;
+  }
+
+  &.active {
+    button::before {
+      transform: rotate(180deg);
+    }
+    ul {
+      position: absolute;
+      top: calc(100% - 4px);
+      left: 0;
+      display: block;
+      width: 100%;
+      padding-top: 3px;
+      border: 1px solid $color_gray_d8;
+      border-top: 0;
+      border-radius: 0 0 4px 4px;
+      background-color: $color_white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      li {
+        padding: 12px 16px;
+        cursor: pointer;
+        &:not(:first-of-type) {
+          border-top: 1px solid $color_gray_d8;
+        }
+      }
+    }
+    &.top ul {
+      top: auto;
+      bottom: calc(100% - 4px);
+      padding: 0;
+      padding-bottom: 3px;
+      border: 1px solid $color_gray_d8;
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+}
+.chk_list_area {
+  @include flexLayout(center, flex-start, 12px, wrap);
+  & > * {
+    width: calc(50% - 6px);
+  }
+}
+.chk_custom {
+  input {
+    @include hiddenInput;
+    &:checked + label {
+      border-color: $color_key_01;
+      background-color: $color_key_03;
+      background-image: url("../images/icon_check_blue.svg");
+      color: $color_gray_1d;
+      font-weight: 700;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $color_key_01;
+        border-radius: 3px;
+      }
+    }
+    &:focus + label {
+      outline: 2px solid $color_black;
+    }
+  }
+  label {
+    @include flexLayout(center, flex-start);
+    @include fontStyle(16px, $color_gray_5, 500);
+    position: relative;
+    height: 52px;
+    padding: 0 40px 0 16px;
+    border: 1px solid $color_gray_d8;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    background: $color_white url("../images/icon_check_gray.svg") no-repeat
+      right 16px center;
+  }
 }
 
 .input_list_area {

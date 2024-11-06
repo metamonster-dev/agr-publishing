@@ -50,3 +50,53 @@
     }
   }
 }
+
+/*======================================*/
+/*------------ JOIN PAGES --------------*/
+/*======================================*/
+.identity_btn {
+  @include flexLayout(center, flex-start, 12px);
+  width: 100%;
+  height: 88px;
+  padding: 0 32px 0 16px;
+  border-radius: 4px;
+  background: url("../images/icon_identity_arrow.svg") no-repeat right 16px
+    center / 16px;
+  text-align: left;
+
+  &.type01 {
+    border: 1px solid $color_gray_8e;
+    background-color: $color_white;
+    i {
+      display: block;
+      width: 48px;
+      height: 48px;
+      background: url("../images/icon_identity01.png") no-repeat center /
+        contain;
+    }
+    span {
+      @include fontStyle(14px, $color_gray_5, 500);
+      display: block;
+      flex: 1;
+      b {
+        @include fontStyle(16px, $color_gray_1d, 700);
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &.type02 {
+    border: 1px solid $color_key_05;
+    background-color: $color_key_03;
+    i {
+      display: block;
+      width: 48px;
+      height: 48px;
+      background: url("../images/icon_identity02.png") no-repeat center /
+        contain;
+    }
+    span {
+      @include fontStyle(16px, $color_gray_1d, 700);
+    }
+  }
+}

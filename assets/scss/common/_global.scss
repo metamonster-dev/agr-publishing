@@ -58,13 +58,13 @@ section {
   display: block;
 }
 legend {
-  position: absolute;
   margin: 0;
   padding: 0;
-  font-size: 0;
-  line-height: 0;
-  text-indent: -9999em;
-  overflow: hidden;
+  // position: absolute;
+  // font-size: 0;
+  // line-height: 0;
+  // text-indent: -9999em;
+  // overflow: hidden;
 }
 hr {
   display: none;
