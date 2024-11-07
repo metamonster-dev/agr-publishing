@@ -10,11 +10,16 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/etc.css" />
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
     <script src="./js/common.js" defer></script>
   </head>
   <body>
@@ -175,6 +180,102 @@
           </div>
         </div>
       </div>
+
+      <div class="style_wrap">
+        <h2>TOAST & MODAL</h2>
+
+        <h3>TOAST</h3>
+        <div class="style_flex style_grid04">
+          <button
+            type="button"
+            class="btn btn_style01 btn_size_40"
+            onClick="onToastShow01()"
+          >
+            TOAST (NO ICON)
+          </button>
+          <button
+            type="button"
+            class="btn btn_style01 btn_size_40"
+            onClick="onToastShow02()"
+          >
+            TOAST (ICON)
+          </button>
+        </div>
+
+        <h3 class="mt_24">MODAL</h3>
+        <div class="style_flex style_grid04">
+          <button
+            type="button"
+            class="btn btn_style01 btn_size_40"
+            onClick="onModalShow('md_ex01')"
+          >
+            MODAL (MESSAGE 01)
+          </button>
+          <button
+            type="button"
+            class="btn btn_style01 btn_size_40"
+            onClick="onModalShow('md_ex02')"
+          >
+            MODAL (MESSAGE 02)
+          </button>
+        </div>
+
+        <!-- modal -->
+        <div class="modal_wrap msg" id="md_ex01">
+          <div class="modal_area">
+            <span>TEXT</span>
+            <div class="btn_area">
+              <button
+                type="button"
+                class="btn btn_style01 btn_size_52"
+                onClick="onModalHide('md_ex01')"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="modal_wrap msg" id="md_ex02">
+          <div class="modal_area">
+            <p>TITLE</p>
+            <span>TEXT</span>
+            <div class="btn_area">
+              <button
+                type="button"
+                class="btn btn_style02 btn_size_52"
+                onClick="onModalHide('md_ex02')"
+              >
+                취소
+              </button>
+              <button
+                type="button"
+                class="btn btn_style01 btn_size_52"
+                onClick="onModalHide('md_ex02')"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- // modal -->
+      </div>
     </div>
+
+    <script>
+      // toast
+      const onToastShow01 = () => {
+        notyf.open({
+          type: "text",
+          message: "TOAST TEXT",
+        });
+      };
+      const onToastShow02 = () => {
+        notyf.open({
+          type: "icon",
+          message: "TOAST TEXT",
+          icon: "<img src='./assets/images/icon_toast_check.svg' aria-hidden='true' />",
+        });
+      };
+    </script>
   </body>
 </html>

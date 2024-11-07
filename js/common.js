@@ -1,5 +1,29 @@
+const regEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regPassword =
   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,16}$/;
+
+// toast
+const notyf = new Notyf({
+  position: {
+    x: "center",
+    y: "bottom",
+  },
+  types: [
+    {
+      type: "text",
+      background: "rgba(75,79,88,0.9)",
+      duration: 100000,
+      dismissible: true,
+    },
+    {
+      type: "icon",
+      background: "rgba(75,79,88,0.9)",
+      duration: 100000,
+      dismissible: true,
+      icon: true,
+    },
+  ],
+});
 
 // modal
 const onModalShow = (modalId) => {

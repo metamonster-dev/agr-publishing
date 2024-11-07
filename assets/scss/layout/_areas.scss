@@ -373,7 +373,7 @@
   @include flexLayout(stretch, center, 8px, nowrap, column);
 }
 .chk_btn_area {
-  @include flexLayout(flex-start, space-between, 16px);
+  @include flexLayout(flex-start, space-between, 12px);
   .chk_custom03 {
     flex: 1;
   }

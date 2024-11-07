@@ -64,16 +64,25 @@
     center / 16px;
   text-align: left;
 
+  i {
+    @include initBackground;
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    &.icon01 {
+      background-image: url("../images/icon_identity01.png");
+    }
+    &.icon02 {
+      background-image: url("../images/icon_identity02.png");
+    }
+    &.icon03 {
+      background-image: url("../images/icon_identity03.png");
+    }
+  }
   &.type01 {
     border: 1px solid $color_gray_8e;
     background-color: $color_white;
-    i {
-      display: block;
-      width: 48px;
-      height: 48px;
-      background: url("../images/icon_identity01.png") no-repeat center /
-        contain;
-    }
     span {
       @include fontStyle(14px, $color_gray_5, 500);
       display: block;
@@ -88,13 +97,6 @@
   &.type02 {
     border: 1px solid $color_key_05;
     background-color: $color_key_03;
-    i {
-      display: block;
-      width: 48px;
-      height: 48px;
-      background: url("../images/icon_identity02.png") no-repeat center /
-        contain;
-    }
     span {
       @include fontStyle(16px, $color_gray_1d, 700);
     }
@@ -158,5 +160,19 @@
       display: block;
       word-break: break-all;
     }
+  }
+}
+.timer_area {
+  @include flexLayout(center, space-between, 12px);
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 4px;
+  background-color: $color_key_03;
+  p {
+    @include fontStyle(14px, $color_key_01, 700);
+  }
+  button {
+    @include fontStyle(14px, $color_gray_71, 700);
+    text-decoration: underline;
   }
 }

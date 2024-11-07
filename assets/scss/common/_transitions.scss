@@ -16,19 +16,6 @@
   }
 }
 
-@keyframes toastUpDown {
-  0% {
-    bottom: -50%;
-  }
-  10%,
-  90% {
-    bottom: 0;
-  }
-  100% {
-    bottom: -50%;
-  }
-}
-
 @keyframes modalUp {
   0% {
     bottom: -50%;

@@ -250,6 +250,18 @@ img {
   gap: 8px 16px;
   flex-wrap: wrap;
 }
+#style_layout .style_wrap .style_flex.style_grid02 > * {
+  width: calc((100% - 16px) / 2);
+}
 #style_layout .style_wrap .style_flex.style_grid03 > * {
   width: calc((100% - 16px * 2) / 3);
+}
+#style_layout .style_wrap .style_flex.style_grid04 > * {
+  width: calc((100% - 16px * 3) / 4);
+}
+#style_layout .style_wrap .style_flex.style_grid05 > * {
+  width: calc((100% - 16px * 4) / 5);
+}
+#style_layout .style_wrap .style_flex.style_grid06 > * {
+  width: calc((100% - 16px * 5) / 6);
 }

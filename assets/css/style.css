@@ -234,17 +234,6 @@ img {
     transform: translateX(-4px);
   }
 }
-@keyframes toastUpDown {
-  0% {
-    bottom: -50%;
-  }
-  10%, 90% {
-    bottom: 0;
-  }
-  100% {
-    bottom: -50%;
-  }
-}
 @keyframes modalUp {
   0% {
     bottom: -50%;
@@ -1301,7 +1290,7 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: nowrap;
   flex-direction: row;
 }
@@ -1662,6 +1651,48 @@ img {
 
 /* Toast Msg */
 /*======================================*/
+/*--------- NOTYF TOAST CUSTOM ---------*/
+/*======================================*/
+.notyf {
+  padding: 40px 16px;
+}
+.notyf .notyf__toast {
+  width: 100%;
+  max-width: 448px;
+  padding: 0 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.notyf .notyf__toast--lower {
+  margin-top: 8px;
+}
+.notyf .notyf__wrapper {
+  padding: 15px 24px 16px 0;
+}
+.notyf .notyf__dismiss {
+  top: calc(50% - 16px);
+  right: 8px;
+  width: 32px;
+  height: 32px;
+}
+.notyf .notyf__dismiss-btn {
+  background: none;
+  opacity: 1;
+}
+.notyf .notyf__ripple {
+  width: 600px;
+  height: 600px;
+}
+.notyf .notyf__icon {
+  width: 24px;
+  margin: -2px 8px -1px 0;
+}
+.notyf .notyf__message {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/*======================================*/
 /*------------ MODAL STYLES ------------*/
 /*======================================*/
 .modal_wrap {
@@ -1706,7 +1737,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4px;
+  gap: 12px;
   flex-wrap: nowrap;
   flex-direction: row;
   height: 56px;
@@ -1764,6 +1795,42 @@ img {
   position: absolute;
   top: calc(50% - 12px);
   right: 0;
+}
+.modal_wrap.msg {
+  align-items: center;
+  justify-content: center;
+  z-index: 800;
+}
+.modal_wrap.msg .modal_area {
+  width: calc(100% - 32px);
+  max-width: 328px;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+}
+.modal_wrap.msg .modal_area p {
+  font-size: 18px;
+  color: #1d1d1d;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.modal_wrap.msg .modal_area span {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
+}
+.modal_wrap.msg .modal_area .btn_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-top: 24px;
+}
+.modal_wrap.msg .modal_area .btn_area button {
+  flex: 1;
 }
 
 .md_agree_area {
@@ -2069,15 +2136,26 @@ img {
   background: url("../images/icon_identity_arrow.svg") no-repeat right 16px center/16px;
   text-align: left;
 }
-.identity_btn.type01 {
-  border: 1px solid #8e8e8e;
-  background-color: #ffffff;
-}
-.identity_btn.type01 i {
+.identity_btn i {
+  background-repeat: no-repeat;
+  background-position: center;
   display: block;
   width: 48px;
   height: 48px;
-  background: url("../images/icon_identity01.png") no-repeat center/contain;
+  background-size: contain;
+}
+.identity_btn i.icon01 {
+  background-image: url("../images/icon_identity01.png");
+}
+.identity_btn i.icon02 {
+  background-image: url("../images/icon_identity02.png");
+}
+.identity_btn i.icon03 {
+  background-image: url("../images/icon_identity03.png");
+}
+.identity_btn.type01 {
+  border: 1px solid #8e8e8e;
+  background-color: #ffffff;
 }
 .identity_btn.type01 span {
   font-size: 14px;
@@ -2096,12 +2174,6 @@ img {
 .identity_btn.type02 {
   border: 1px solid #b5beef;
   background-color: #eff1ff;
-}
-.identity_btn.type02 i {
-  display: block;
-  width: 48px;
-  height: 48px;
-  background: url("../images/icon_identity02.png") no-repeat center/contain;
 }
 .identity_btn.type02 span {
   font-size: 16px;
@@ -2184,6 +2256,30 @@ img {
   font-weight: 500;
   display: block;
   word-break: break-all;
+}
+
+.timer_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 4px;
+  background-color: #eff1ff;
+}
+.timer_area p {
+  font-size: 14px;
+  color: #475ed9;
+  font-weight: 700;
+}
+.timer_area button {
+  font-size: 14px;
+  color: #717171;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /*======================================*/
