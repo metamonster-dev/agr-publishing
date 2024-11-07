@@ -52,22 +52,37 @@
               </div>
               <div class="btns">
                 <p></p>
-                <button type="button" class="prev_btn">
+                <button
+                  type="button"
+                  class="prev_btn"
+                  aria-label="이전 비주얼 배너 슬라이드 이동"
+                >
                   <img
                     src="./assets/images/main/icon_prev.svg"
-                    alt="이전 슬라이드 이동 버튼"
+                    alt="이전 비주얼 배너 슬라이드 이동"
+                    aria-hidden="true"
                   />
                 </button>
-                <button type="button" class="control_btn">
+                <button
+                  type="button"
+                  class="control_btn"
+                  aria-label="비주얼 배너 슬라이드 자동 재생 멈춤"
+                >
                   <img
                     src="./assets/images/main/icon_pause.svg"
-                    alt="슬라이드 자동 재생 멈춤 버튼"
+                    alt="비주얼 배너 슬라이드 자동 재생 멈춤"
+                    aria-hidden="true"
                   />
                 </button>
-                <button type="button" class="next_btn">
+                <button
+                  type="button"
+                  class="next_btn"
+                  aria-label="다음 비주얼 배너 슬라이드 이동"
+                >
                   <img
                     src="./assets/images/main/icon_next.svg"
-                    alt="다음 슬라이드 이동 버튼"
+                    alt="다음 비주얼 배너 슬라이드 이동"
+                    aria-hidden="true"
                   />
                 </button>
               </div>
@@ -377,22 +392,37 @@
               <div class="main_tit flex_between">
                 <h2>관련기관</h2>
                 <div class="btns">
-                  <button type="button" class="prev_btn">
+                  <button
+                    type="button"
+                    class="prev_btn"
+                    aria-label="이전 관련기관 슬라이드 이동"
+                  >
                     <img
                       src="./assets/images/main/icon_prev02.svg"
-                      alt="이전 슬라이드 이동 버튼"
+                      alt="이전 관련기관 슬라이드 이동"
+                      aria-hidden="true"
                     />
                   </button>
-                  <button type="button" class="control_btn">
+                  <button
+                    type="button"
+                    class="control_btn"
+                    aria-label="관련기관 슬라이드 자동 재생 멈춤"
+                  >
                     <img
                       src="./assets/images/main/icon_pause02.svg"
-                      alt="슬라이드 자동 재생 멈춤 버튼"
+                      alt="관련기관 슬라이드 자동 재생 멈춤"
+                      aria-hidden="true"
                     />
                   </button>
-                  <button type="button" class="next_btn">
+                  <button
+                    type="button"
+                    class="next_btn"
+                    aria-label="다음 관련기관 슬라이드 이동"
+                  >
                     <img
                       src="./assets/images/main/icon_next02.svg"
-                      alt="다음 슬라이드 이동 버튼"
+                      alt="다음 관련기관 슬라이드 이동"
+                      aria-hidden="true"
                     />
                   </button>
                 </div>
@@ -679,16 +709,18 @@
         if ($(this).hasClass("on")) {
           $(this)
             .removeClass("on")
+            .attr("aria-label", "비주얼 배너 슬라이드 자동 재생 멈춤")
             .find("img")
             .attr("src", "./assets/images/main/icon_pause.svg")
-            .attr("alt", "비주얼 배너 슬라이드 자동 재생 멈춤 버튼");
+            .attr("alt", "비주얼 배너 슬라이드 자동 재생 멈춤");
           slider01.autoplay.start();
         } else {
           $(this)
             .addClass("on")
+            .attr("aria-label", "비주얼 배너 슬라이드 자동 재생 시작")
             .find("img")
             .attr("src", "./assets/images/main/icon_play.svg")
-            .attr("alt", "비주얼 배너 슬라이드 자동 재생 시작 버튼");
+            .attr("alt", "비주얼 배너 슬라이드 자동 재생 시작");
           slider01.autoplay.stop();
         }
       });
@@ -709,16 +741,18 @@
         if ($(this).hasClass("on")) {
           $(this)
             .removeClass("on")
+            .attr("aria-label", "관련기관 슬라이드 자동 재생 멈춤")
             .find("img")
             .attr("src", "./assets/images/main/icon_pause02.svg")
-            .attr("alt", "관련기관 슬라이드 자동 재생 멈춤 버튼");
+            .attr("alt", "관련기관 슬라이드 자동 재생 멈춤");
           slider02.autoplay.start();
         } else {
           $(this)
             .addClass("on")
+            .attr("aria-label", "관련기관 슬라이드 자동 재생 시작")
             .find("img")
             .attr("src", "./assets/images/main/icon_play02.svg")
-            .attr("alt", "관련기관 슬라이드 자동 재생 시작 버튼");
+            .attr("alt", "관련기관 슬라이드 자동 재생 시작");
           slider02.autoplay.stop();
         }
       });
