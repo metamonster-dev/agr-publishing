@@ -191,14 +191,14 @@
             class="btn btn_style01 btn_size_40"
             onClick="onToastShow01()"
           >
-            TOAST (NO ICON)
+            TOAST (ICON X)
           </button>
           <button
             type="button"
             class="btn btn_style01 btn_size_40"
             onClick="onToastShow02()"
           >
-            TOAST (ICON)
+            TOAST (ICON O)
           </button>
         </div>
 
@@ -217,6 +217,29 @@
             onClick="onModalShow('md_ex02')"
           >
             MODAL (MESSAGE 02)
+          </button>
+          <i></i>
+          <i></i>
+          <button
+            type="button"
+            class="btn btn_style02 btn_size_40"
+            onClick="onModalShow('md_ex03')"
+          >
+            MODAL (FULL)
+          </button>
+          <button
+            type="button"
+            class="btn btn_style02 btn_size_40"
+            onClick="onModalShow('md_ex04')"
+          >
+            MODAL (MIDDLE)
+          </button>
+          <button
+            type="button"
+            class="btn btn_style02 btn_size_40"
+            onClick="onModalShow('md_ex05')"
+          >
+            MODAL (BOTTOM)
           </button>
         </div>
 
@@ -255,6 +278,37 @@
                 확인
               </button>
             </div>
+          </div>
+        </div>
+        <div class="modal_wrap full" id="md_ex03">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>TITLE</p>
+              <button
+                type="button"
+                class="x_btn"
+                onClick="onModalHide('md_ex03')"
+              >
+                <span>모달창 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">CONTENT</div>
+          </div>
+        </div>
+        <div class="modal_wrap middle" id="md_ex04"></div>
+        <div class="modal_wrap bottom" id="md_ex05">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>TITLE</p>
+              <button
+                type="button"
+                class="x_btn"
+                onClick="onModalHide('md_ex05')"
+              >
+                <span>모달 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">CONTENT</div>
           </div>
         </div>
         <!-- // modal -->

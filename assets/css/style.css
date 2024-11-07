@@ -659,6 +659,7 @@ img {
   left: 50%;
   width: 100%;
   max-width: 480px;
+  border-top: 1px solid #d8d8d8;
   background-color: #ffffff;
   transform: translateX(-50%);
   z-index: 500;
@@ -888,6 +889,10 @@ img {
   padding: 60px 0;
 }
 
+.pt_16 {
+  padding-top: 16px;
+}
+
 .pt_24 {
   padding-top: 24px;
 }
@@ -906,6 +911,10 @@ img {
 
 .pb_80 {
   padding-bottom: 80px;
+}
+
+.pb_124 {
+  padding-bottom: 124px;
 }
 
 .border_top {
@@ -999,6 +1008,7 @@ img {
   padding: 0 40px 0 16px;
   border: 1px solid #d8d8d8;
   border-radius: 4px;
+  background-color: #ffffff;
   text-align: left;
   z-index: 2;
 }
@@ -1022,15 +1032,9 @@ img {
 }
 .select_custom ul {
   display: none;
-}
-.select_custom.active button::before {
-  transform: rotate(180deg);
-}
-.select_custom.active ul {
   position: absolute;
   top: calc(100% - 4px);
   left: 0;
-  display: block;
   width: 100%;
   padding-top: 3px;
   border: 1px solid #d8d8d8;
@@ -1039,14 +1043,23 @@ img {
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
-.select_custom.active ul li {
+.select_custom ul li {
+  font-size: 16px;
+  color: #1d1d1d;
+  font-weight: 500;
   padding: 12px 16px;
   cursor: pointer;
 }
-.select_custom.active ul li:not(:first-of-type) {
+.select_custom ul li:not(:first-of-type) {
   border-top: 1px solid #d8d8d8;
 }
-.select_custom.active.top ul {
+.select_custom.active button::before {
+  transform: rotate(180deg);
+}
+.select_custom.active ul {
+  display: block;
+}
+.select_custom.top ul {
   top: auto;
   bottom: calc(100% - 4px);
   padding: 0;
@@ -1254,6 +1267,17 @@ img {
   gap: 40px;
 }
 
+.chk_list_area.grid01 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.chk_list_area.grid01 > * {
+  width: 100%;
+}
 .chk_list_area.grid02 {
   display: flex;
   align-items: center;
@@ -1576,6 +1600,12 @@ img {
 .list_area.list_style02 ul li + li {
   margin-top: 24px;
 }
+.list_area.list_style02.type02 ul li .heart_btn {
+  left: 98px;
+}
+.list_area.list_style02.type02 ul li .img_area {
+  width: 140px;
+}
 .list_area.list_style03 ul {
   display: flex;
   align-items: center;
@@ -1649,7 +1679,6 @@ img {
   background: url("../images/icon_error.svg") no-repeat center/contain;
 }
 
-/* Toast Msg */
 /*======================================*/
 /*--------- NOTYF TOAST CUSTOM ---------*/
 /*======================================*/
@@ -2280,6 +2309,52 @@ img {
   color: #717171;
   font-weight: 700;
   text-decoration: underline;
+}
+
+/*======================================*/
+/*---------- PRODUCT STYLES ------------*/
+/*======================================*/
+.prod_list_tit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.prod_list_tit p {
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 500;
+}
+.prod_list_tit button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 14px;
+  color: #555555;
+  font-weight: 500;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background-color: #ffffff;
+  text-align: left;
+}
+.prod_list_tit button::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icon_select.svg") no-repeat center/contain;
+}
+.prod_list_tit ul li {
+  padding: 4px 8px;
+  font-size: 14px;
+  color: #555555;
 }
 
 /*======================================*/

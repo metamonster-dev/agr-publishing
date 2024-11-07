@@ -185,11 +185,11 @@
       <li>
         <button type="button">딥파인더</button>
         <ul class="depth02">
-          <li><a href="javascript:;">예술인 등록서비스</a></li>
-          <li><a href="javascript:;">작품 저작권 등록서비스</a></li>
-          <li><a href="javascript:;">혐회가입, 작품등록 서비스</a></li>
-          <li><a href="javascript:;">기획운영대행</a></li>
-          <li><a href="javascript:;">디지털퍼블리싱</a></li>
+          <li><a href="javascript:;">예술인 등록</a></li>
+          <li><a href="javascript:;">작품 저작권 등록</a></li>
+          <li><a href="javascript:;">협회가입, 작품등록</a></li>
+          <li><a href="javascript:;">기획운영 대행</a></li>
+          <li><a href="javascript:;">디지털 퍼블리싱</a></li>
         </ul>
       </li>
       <li>
@@ -265,7 +265,9 @@
     $("#header .menu_btn").on("keydown", function (e) {
       if (!$("#m_menu").hasClass("show") && !e.shiftKey && e.key === "Tab") {
         e.preventDefault();
-        $("#contents a, #contents button, #contents input").eq(0).focus();
+        if ($(".sticky_menu .tab_area").length > 0)
+          $(".sticky_menu .tab_area button").first().focus();
+        else $("#contents a, #contents button, #contents input").eq(0).focus();
       }
     });
     $("#m_menu .back_btn").on("keydown", function (e) {

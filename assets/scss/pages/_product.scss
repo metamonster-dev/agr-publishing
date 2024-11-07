@@ -1,0 +1,35 @@
+@import "../common/_variables";
+@import "../common/_mixins";
+
+/*======================================*/
+/*---------- PRODUCT STYLES ------------*/
+/*======================================*/
+.prod_list_tit {
+  @include flexLayout(center, space-between, 12px);
+  p {
+    @include fontStyle(14px, $color_gray_1d, 500);
+  }
+
+  button {
+    @include flexLayout(center, center, 4px);
+    @include fontStyle(14px, $color_gray_5, 500);
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid $color_gray_d8;
+    border-radius: 4px;
+    background-color: $color_white;
+    text-align: left;
+    &::after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../images/icon_select.svg") no-repeat center / contain;
+    }
+  }
+  ul li {
+    padding: 4px 8px;
+    font-size: 14px;
+    color: $color_gray_5;
+  }
+}

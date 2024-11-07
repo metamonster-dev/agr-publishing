@@ -347,6 +347,7 @@
   left: 50%;
   width: 100%;
   max-width: $width_container;
+  border-top: 1px solid $color_gray_d8;
   background-color: $color_white;
   transform: translateX(-50%);
   z-index: $z_bottom_nav;

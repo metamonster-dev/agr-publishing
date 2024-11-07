@@ -13,18 +13,19 @@ const notyf = new Notyf({
     {
       type: "text",
       background: "rgba(75,79,88,0.9)",
-      duration: 100000,
+      duration: 3000,
       dismissible: true,
     },
     {
       type: "icon",
       background: "rgba(75,79,88,0.9)",
-      duration: 100000,
+      duration: 3000,
       dismissible: true,
       icon: true,
     },
   ],
 });
+$(".notyf-announcer").css("outline", "none"); // outline: 0px; 웹접근성 오류
 
 // modal
 const onModalShow = (modalId) => {
@@ -72,6 +73,12 @@ $(window).on("load", function () {
   });
 
   // modal
+  $(document).on("click", ".modal_wrap", function (e) {
+    const modal = $(e.target).parents(".modal_wrap");
+    if (!modal.hasClass("modal_wrap")) {
+      $(".modal_wrap").removeClass("active");
+    }
+  });
   $(document).on(
     "keydown",
     ".modal_wrap.middle.active, .modal_wrap.bottom.active",
