@@ -33,3 +33,66 @@
     color: $color_gray_5;
   }
 }
+
+.prod_detail_visual_wrap {
+  position: relative;
+  overflow: hidden;
+  .page {
+    @include fontStyle(12px, rgba(255, 255, 255, 0.5), 700);
+    position: absolute;
+    bottom: 16px;
+    left: auto;
+    right: 16px;
+    width: auto;
+    padding: 1px 8px;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    .swiper-pagination-current {
+      color: $color_white;
+    }
+  }
+}
+
+.prod_detail_tit_wrap {
+  .top_area {
+    .inner {
+      @include flexLayout(center, space-between, 12px);
+    }
+    a {
+      @include flexLayout(center);
+      @include fontStyle(14px, $color_gray_71, 700);
+      i {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../images/icon_arrow_right.svg") no-repeat center /
+          contain;
+      }
+    }
+  }
+}
+
+.prod_detail_fixed_btn {
+  @include flexLayout(stretch, flex-start, 12px);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: $width_container;
+  padding: 10px 16px;
+  border-top: 1px solid $color_gray_d8;
+  transform: translateX(-50%);
+  z-index: $z_fixed_bottom_btn;
+
+  .heart_btn {
+    width: 38px;
+    background: url("../images/icon_heart02_off.svg") no-repeat center / 24px;
+    &.on {
+      background-image: url("../images/icon_heart02_on.svg");
+    }
+  }
+  .btn {
+    flex: 1;
+  }
+}

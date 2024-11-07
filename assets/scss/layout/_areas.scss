@@ -548,6 +548,9 @@
     top: 0;
     right: 0;
     z-index: 2;
+    span {
+      @include hiddenText;
+    }
     i {
       display: block;
       width: 26px;

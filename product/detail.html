@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type04">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+
+          <div class="prod_detail_fixed_btn">
+            <button type="button" class="heart_btn">
+              <span class="hidden_text">관심 등록</span>
+            </button>
+            <!-- 관심 등록 시, -->
+            <!-- <button type="button" class="heart_btn on">
+              <span class="hidden_text">관심 취소</span>
+            </button> -->
+            <button type="button" class="btn btn_style01 btn_size_48">
+              구매하기
+            </button>
+          </div>
+          <div class="prod_detail_visual_wrap img_slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="img_area rect01">
+                  <img
+                    src="../assets/images/product/product_img04.jpg"
+                    alt="예술기획분야 취창업 예술인 등록을 위한 1:1 맞춤형 클래스 이미지 1"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img_area rect01">
+                  <img
+                    src="../assets/images/product/product_img04.jpg"
+                    alt="예술기획분야 취창업 예술인 등록을 위한 1:1 맞춤형 클래스 이미지 2"
+                  />
+                </div>
+              </div>
+            </div>
+            <p class="page">1/1</p>
+          </div>
+          <section class="prod_detail_tit_wrap">
+            <div class="top_area">
+              <div class="inner">
+                <a href="#">1:1 컨설팅 <i></i></a>
+                <button type="button" aria-label="상품 공유하기">
+                  <img
+                    src="../assets/images/icon_share.svg"
+                    alt="상품 공유하기"
+                    aria-hidden="true"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="btm_area">
+              <div class="inner">
+                <h2>
+                  예술기획분야 취창업 예술인 등록을 위한 1:1 맞춤형 클래스
+                </h2>
+                <div class="star_review">
+                  <div class="star_area"></div>
+                  <button type="button">후기 23건</button>
+                </div>
+                <div class="price_text">
+                  <span class="percent">10%</span>
+                  <p class="price">40,500원</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- modal -->
+        <div class="modal_wrap bottom" id="md_share">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>상품 공유</p>
+              <button
+                type="button"
+                class="x_btn"
+                onClick="onModalHide('md_share', 'share_btn')"
+              >
+                <span>모달 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont"></div>
+          </div>
+        </div>
+        <!-- // modal -->
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("상품 상세");
+      });
+
+      // ===== 페이지 =====
+      const slider01 = new Swiper(".img_slider", {
+        pagination: {
+          el: ".img_slider .page",
+          type: "fraction",
+        },
+      });
+    </script>
+  </body>
+</html>
