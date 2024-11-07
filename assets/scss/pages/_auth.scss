@@ -113,3 +113,23 @@
     margin-top: 12px;
   }
 }
+
+.join_complete_area {
+  padding: 32px 0 80px;
+  text-align: center;
+  img {
+    margin: 0 auto;
+  }
+  h2 {
+    @include fontStyle(22px, $color_gray_1d, 700);
+    margin-top: 16px;
+  }
+  p {
+    @include fontStyle(16px, $color_gray_5, 500);
+    margin-top: 16px;
+  }
+  button {
+    width: 100%;
+    margin-top: 40px;
+  }
+}

@@ -239,3 +239,17 @@ img {
   font-size: 16px;
   color: royalblue;
 }
+#style_layout .style_wrap h3 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 500;
+}
+#style_layout .style_wrap .style_flex {
+  display: flex;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+}
+#style_layout .style_wrap .style_flex.style_grid03 > * {
+  width: calc((100% - 16px * 2) / 3);
+}

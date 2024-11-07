@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <section class="join_complete_area">
+            <div class="inner">
+              <img
+                src="../assets/images/icon_complete.svg"
+                alt="가입완료 페이지 아이콘"
+              />
+              <h2>김아트님, 환영합니다!</h2>
+              <p>아트가이드런에서 예술인 생활을 즐겨보아요!</p>
+              <button type="button" class="btn btn_style01 btn_size_52">
+                홈으로 가기
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("가입완료");
+      });
+    </script>
+  </body>
+</html>

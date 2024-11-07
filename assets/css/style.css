@@ -2122,6 +2122,30 @@ img {
   margin-top: 12px;
 }
 
+.join_complete_area {
+  padding: 32px 0 80px;
+  text-align: center;
+}
+.join_complete_area img {
+  margin: 0 auto;
+}
+.join_complete_area h2 {
+  font-size: 22px;
+  color: #1d1d1d;
+  font-weight: 700;
+  margin-top: 16px;
+}
+.join_complete_area p {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  margin-top: 16px;
+}
+.join_complete_area button {
+  width: 100%;
+  margin-top: 40px;
+}
+
 /*======================================*/
 /*------------ SEARCH PAGES ------------*/
 /*======================================*/
