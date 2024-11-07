@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <section>
+            <div class="join_tit_area">
+              <div class="inner">
+                <h2>약관에 동의해주세요</h2>
+                <p>서비스 이용을 위해 약관에 동의해주세요</p>
+              </div>
+            </div>
+            <div class="pt_32 pb_80">
+              <div class="inner">
+                <form id="joinForm" onSubmit="return formValid(this);">
+                  <fieldset>
+                    <legend class="hidden_text">약관 동의</legend>
+                    <div class="input_list_area gap_24">
+                      <div class="chk_custom03">
+                        <input
+                          type="checkbox"
+                          name="agree"
+                          id="agree01"
+                          value="1"
+                        />
+                        <label for="agree01">
+                          만 14세 이상입니다.<span>(필수)</span>
+                        </label>
+                      </div>
+                      <div class="chk_btn_area">
+                        <div class="chk_custom03">
+                          <input
+                            type="checkbox"
+                            name="agree"
+                            id="agree02"
+                            value="2"
+                          />
+                          <label for="agree02">
+                            이용약관 동의<span>(필수)</span>
+                          </label>
+                        </div>
+                        <button
+                          type="button"
+                          id="terms_btn"
+                          onClick="onModalShow('md_terms')"
+                        >
+                          보기
+                        </button>
+                      </div>
+                      <div class="chk_btn_area">
+                        <div class="chk_custom03">
+                          <input
+                            type="checkbox"
+                            name="agree"
+                            id="agree03"
+                            value="3"
+                          />
+                          <label for="agree03">
+                            개인정보 수집 및 이용동의<span>(필수)</span>
+                          </label>
+                        </div>
+                        <button
+                          type="button"
+                          id="privacy_btn"
+                          onClick="onModalShow('md_privacy')"
+                        >
+                          보기
+                        </button>
+                      </div>
+                      <div class="chk_btn_area">
+                        <div class="chk_custom03">
+                          <input
+                            type="checkbox"
+                            name="agree"
+                            id="agree04"
+                            value="4"
+                          />
+                          <label for="agree04">
+                            선택정보 수집 및 마케팅 수신 동의(선택)
+                          </label>
+                        </div>
+                        <button
+                          type="button"
+                          id="marketing_btn"
+                          onClick="onModalShow('md_marketing')"
+                        >
+                          보기
+                        </button>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <div class="chk_custom03 border_top mt_24 pt_24">
+                    <input
+                      type="checkbox"
+                      name="agree_all"
+                      id="agree_all"
+                      value="4"
+                    />
+                    <label for="agree_all">
+                      <b>모두 동의합니다.</b>
+                    </label>
+                  </div>
+                  <span class="error_msg mt_16 d_none">
+                    필수 약관 항목에 동의해주세요.
+                  </span>
+
+                  <button
+                    type="submit"
+                    class="btn btn_style01 btn_size_52 w_full mt_40"
+                    onClick="location.href='./join_complete.html'"
+                  >
+                    다음
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="agree_terms_area"></div>
+        <div id="agree_privacy_area"></div>
+        <div id="agree_marketing_area"></div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#agree_terms_area").load("../include/agree/terms.html");
+      $("#agree_privacy_area").load("../include/agree/privacy.html");
+      $("#agree_marketing_area").load("../include/agree/marketing.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("약관동의");
+      });
+
+      // ===== 페이지 =====
+      $("#agree_all").on("click", function () {
+        if ($("#agree_all").is(":checked"))
+          $("input[name=agree]").prop("checked", true);
+        else $("input[name=agree]").prop("checked", false);
+      });
+      $("input[name=agree]").on("click", function () {
+        const total = $("input[name=agree]").length;
+        const checked = $("input[name=agree]:checked").length;
+
+        if (total != checked) $("#agree_all").prop("checked", false);
+        else $("#agree_all").prop("checked", true);
+      });
+
+      const formValid = (f) => {
+        return false;
+      };
+    </script>
+  </body>
+</html>

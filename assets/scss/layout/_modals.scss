@@ -1,0 +1,135 @@
+@import "../common/_variables";
+@import "../common/_mixins";
+
+/*======================================*/
+/*------------ MODAL STYLES ------------*/
+/*======================================*/
+.modal_wrap {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  .modal_area {
+    background-color: $color_white;
+    .x_btn {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url("../images/shared/icon_close.svg") no-repeat center /
+        contain;
+      span {
+        @include hiddenText;
+      }
+    }
+  }
+  &.active {
+    display: flex;
+  }
+  &.full {
+    align-items: center;
+    justify-content: center;
+    z-index: $z_modal_full;
+    .modal_area {
+      width: 100%;
+      max-width: $width_container;
+      height: 100%;
+      .md_tit {
+        @include flexLayout(center, space-between, 4px);
+        height: $height_header;
+        padding: 0 16px;
+        border-bottom: 1px solid $color_gray_e;
+        p {
+          @include fontStyle(18px, $color_gray_1d, 700);
+        }
+      }
+      .md_cont {
+        height: calc(100% - $height_header);
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+  &.bottom {
+    align-items: flex-end;
+    justify-content: center;
+    z-index: $z_modal;
+    .modal_area {
+      position: relative;
+      bottom: -50%;
+      width: 100%;
+      max-width: $width_container;
+      padding: 24px 16px 40px;
+      border-radius: 8px 8px 0 0;
+      animation: modalUp 0.5s ease-in-out 0s forwards;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: calc(50% - 28px);
+        display: block;
+        width: 56px;
+        height: 4px;
+        border-radius: 50px;
+        background-color: $color_gray_ef;
+      }
+      .md_tit {
+        position: relative;
+        padding: 7px 0;
+        text-align: center;
+        p {
+          @include fontStyle(18px, $color_gray_1d, 700);
+        }
+        .x_btn {
+          position: absolute;
+          top: calc(50% - 12px);
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+// 약관 동의
+.md_agree_area {
+  padding: 32px 0;
+  .inner {
+    @include flexLayout(flex-start, center, 24px, nowrap, column);
+    & > div {
+      @include flexLayout(flex-start, center, 16px, nowrap, column);
+    }
+  }
+}
+
+// 가입 내역 안내
+.md_is_member_area {
+  padding: 16px 0 0;
+  text-align: center;
+  p {
+    @include fontStyle(16px, $color_gray_5, 500);
+  }
+  .sns_info {
+    @include flexLayout(center, center, 8px);
+    height: 62px;
+    margin-top: 24px;
+    padding: 0 16px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    img {
+      width: 20px;
+    }
+    span {
+      @include fontStyle(16px, $color_gray_5, 500);
+      display: block;
+    }
+  }
+  button {
+    width: 100%;
+    margin-top: 24px;
+  }
+}

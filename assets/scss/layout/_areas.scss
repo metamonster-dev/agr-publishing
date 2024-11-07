@@ -5,10 +5,10 @@
 /*----------- COMMON STYLES ------------*/
 /*======================================*/
 .d_none {
-  display: none;
+  display: none !important;
 }
 .of_hidden {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .hidden_text {
   @include hiddenText;
@@ -35,6 +35,9 @@
 }
 .mt_32 {
   margin-top: 32px;
+}
+.mt_40 {
+  margin-top: 40px;
 }
 .py_60 {
   padding: 60px 0;
@@ -185,28 +188,31 @@
     }
   }
 }
+[class^="chk_custom"] input {
+  @include hiddenInput;
+  &:focus + label {
+    outline: 2px solid $color_black;
+  }
+}
 .chk_custom {
-  input {
-    @include hiddenInput;
-    &:checked + label {
-      border-color: $color_key_01;
-      background-color: $color_key_03;
-      background-image: url("../images/icon_check_blue.svg");
-      color: $color_gray_1d;
-      font-weight: 700;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 1px solid $color_key_01;
-        border-radius: 3px;
-      }
+  input:checked + label {
+    border-color: $color_key_01;
+    background-color: $color_key_03;
+    color: $color_gray_1d;
+    font-weight: 700;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $color_key_01;
+      border-radius: 3px;
     }
-    &:focus + label {
-      outline: 2px solid $color_black;
+    &::after {
+      background-color: $color_key_01;
+      background-image: url("../images/icon_check_on.svg");
     }
   }
   label {
@@ -219,43 +225,47 @@
     border-radius: 4px;
     cursor: pointer;
     user-select: none;
-    background: $color_white url("../images/icon_check_gray.svg") no-repeat
-      right 16px center;
+    background-color: $color_white;
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 10px);
+      right: 18px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: url("../images/icon_check_off.svg") no-repeat center / 16px;
+    }
   }
 }
 .chk_custom02 {
-  input {
-    @include hiddenInput;
-    &:checked + label {
-      border-color: $color_key_01;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 1px solid $color_key_01;
-        border-radius: 3px;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        display: block;
-        width: 20px;
-        height: 20px;
-        background: url("../images/icon_check_blue.svg") no-repeat center /
-          contain;
-      }
-      span {
-        color: $color_gray_1d;
-        font-weight: 700;
-      }
+  input:checked + label {
+    border-color: $color_key_01;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $color_key_01;
+      border-radius: 3px;
     }
-    &:focus + label {
-      outline: 2px solid $color_black;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $color_key_01 url("../images/icon_check_on.svg") no-repeat
+        center / 16px;
+    }
+    span {
+      color: $color_gray_1d;
+      font-weight: 700;
     }
   }
   label {
@@ -272,6 +282,41 @@
     span {
       @include fontStyle(16px, $color_gray_71, 500);
       display: block;
+    }
+  }
+}
+.chk_custom03 {
+  input:checked + label {
+    &::before {
+      border-color: $color_key_01;
+      background-color: $color_key_01;
+      background-image: url("../images/icon_check_on.svg");
+    }
+  }
+  label {
+    @include fontStyle(16px, $color_gray_5, 500);
+    position: relative;
+    display: inline-block;
+    padding: 1px 0 1px 32px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $color_gray_8e;
+      border-radius: 4px;
+      background: $color_white url("../images/icon_check_off.svg") no-repeat
+        center / 16px;
+    }
+    span {
+      color: $color_key_01;
+    }
+    b {
+      color: $color_gray_1d;
+      font-weight: 700;
     }
   }
 }
@@ -324,6 +369,17 @@
 .label_input_area {
   @include flexLayout(stretch, center, 8px, nowrap, column);
 }
+.chk_btn_area {
+  @include flexLayout(flex-start, space-between, 16px);
+  .chk_custom03 {
+    flex: 1;
+  }
+  button {
+    @include fontStyle(14px, $color_gray_71, 500);
+    padding: 3px 0;
+    text-decoration: underline;
+  }
+}
 
 /* Button */
 .btn {
@@ -341,6 +397,10 @@
   &.btn_size_40 {
     height: 40px;
     font-size: 14px;
+  }
+  &.btn_size_48 {
+    height: 48px;
+    font-size: 16px;
   }
   &.btn_size_52 {
     height: 52px;
@@ -594,6 +654,7 @@
 .error_msg {
   @include fontStyle(13px, $color_red, 500);
   position: relative;
+  display: block;
   padding-left: 22px;
   &::before {
     content: "";
@@ -604,4 +665,8 @@
     height: 16px;
     background: url("../images/icon_error.svg") no-repeat center / contain;
   }
+}
+
+/* Toast Msg */
+.toast_msg {
 }

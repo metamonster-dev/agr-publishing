@@ -14,7 +14,7 @@
 
   .root_container {
     display: block;
-    width: 480px;
+    width: $width_container;
     max-width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
@@ -235,7 +235,7 @@
   position: fixed;
   top: 0;
   right: -1000px;
-  width: 480px;
+  width: $width_container;
   max-width: 100vw;
   min-height: 100vh;
   background-color: $color_white;
@@ -346,7 +346,7 @@
   bottom: 0;
   left: 50%;
   width: 100%;
-  max-width: 480px;
+  max-width: $width_container;
   background-color: $color_white;
   transform: translateX(-50%);
   z-index: $z_bottom_nav;

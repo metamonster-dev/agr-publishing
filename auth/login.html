@@ -108,6 +108,40 @@
             </div>
           </div>
         </div>
+
+        <div class="modal_wrap bottom" id="md_is_member">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>가입 내역 안내</p>
+              <button
+                type="button"
+                class="x_btn"
+                onClick="onModalHide('md_is_member')"
+              >
+                <span>모달 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">
+              <div class="md_is_member_area">
+                <p>이미 다른 계정에 가입되어 있습니다.</p>
+                <div class="sns_info">
+                  <img
+                    src="../assets/images/icon_kakao.png"
+                    alt="카카오톡 로고 이미지"
+                  />
+                  <span>w***2@kakao.com</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn_style01 btn_size_48"
+                  onClick="onModalHide('md_is_member')"
+                >
+                  확인
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -167,7 +201,9 @@
           return false;
         }
 
-        return true;
+        // return true;
+        onModalShow("md_is_member");
+        return false;
       };
     </script>
   </body>

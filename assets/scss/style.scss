@@ -3,10 +3,12 @@
 @import "./common/_variables";
 @import "./common/_global";
 @import "./common/_fonts";
+@import "./common/_transitions";
 
 // layout
 @import "./layout/_shared";
 @import "./layout/_areas";
+@import "./layout/_modals";
 
 // pages
 @import "./pages/_main";

@@ -18,11 +18,13 @@ $color_gray_a: #aaaaaa;
 $color_gray_c6: #c6c6c6;
 $color_gray_d8: #d8d8d8;
 $color_gray_e: #eeeeee;
+$color_gray_ef: #efefef;
 $color_gray_f0: #f0f0f0;
 $color_gray_f8: #f8f8f8;
 $color_white: #ffffff;
 
 // SIZES
+$width_container: 480px;
 $height_header: 56px;
 $height_bottom_nav: 64px;
 
@@ -32,3 +34,6 @@ $z_mobile_menu: 600;
 $z_sticky_menu: 500;
 $z_bottom_nav: 500;
 $z_floating_menu: 400;
+$z_modal: 800;
+$z_modal_full: 700;
+$z_modal_toast: 550;
