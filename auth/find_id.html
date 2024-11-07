@@ -51,6 +51,7 @@
                       name="phone"
                       id="phone"
                       class="input"
+                      maxlength="11"
                       placeholder="- 없이 숫자만 입력해 주세요"
                     />
                     <span class="error_msg d_none">오류 메시지</span>
@@ -59,7 +60,7 @@
                   <button
                     type="submit"
                     class="btn btn_style01 btn_size_52"
-                    onClick="location.href='./find_id_complete.html'"
+                    disabled
                   >
                     이메일 아이디 찾기
                   </button>
@@ -80,7 +81,33 @@
       });
 
       // ===== 페이지 =====
+      $("input").on("input", function () {
+        const f = document.querySelector("#findIdForm");
+        if (f.phone.value !== "" && f.phone.value.length >= 10)
+          f.querySelector("button[type=submit]").disabled = false;
+        else f.querySelector("button[type=submit]").disabled = true;
+
+        $(this).removeClass("error");
+        $(this)
+          .parents(".label_input_area")
+          .find(".error_msg")
+          .addClass("d_none");
+      });
+
       const formValid = (f) => {
+        if (!regOnlyNumber.test(f.phone.value)) {
+          $(f.phone)
+            .addClass("error")
+            .parents(".label_input_area")
+            .find(".error_msg")
+            .text("숫자만 입력해 주세요.")
+            .removeClass("d_none");
+          f.phone.focus();
+          return false;
+        }
+
+        // return true;
+        location.href = "./find_id_complete.html";
         return false;
       };
     </script>
