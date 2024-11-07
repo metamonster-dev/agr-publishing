@@ -345,6 +345,9 @@
 
 .input_list_area {
   @include flexLayout(stretch, center, 0, nowrap, column);
+  &.gap_12 {
+    gap: 12px;
+  }
   &.gap_24 {
     gap: 24px;
   }

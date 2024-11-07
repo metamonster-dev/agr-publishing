@@ -1255,6 +1255,9 @@ img {
   flex-wrap: nowrap;
   flex-direction: column;
 }
+.input_list_area.gap_12 {
+  gap: 12px;
+}
 .input_list_area.gap_24 {
   gap: 24px;
 }
@@ -1813,6 +1816,7 @@ img {
   color: #555555;
   font-weight: 500;
   display: block;
+  word-break: break-all;
 }
 .md_is_member_area button {
   width: 100%;
@@ -2144,6 +2148,42 @@ img {
 .join_complete_area button {
   width: 100%;
   margin-top: 40px;
+}
+
+/*======================================*/
+/*------------ FIND PAGES --------------*/
+/*======================================*/
+.find_info_area {
+  padding: 32px 0 40px;
+  text-align: center;
+}
+.find_info_area img {
+  margin: 0 auto 16px;
+}
+.find_info_area p {
+  font-size: 18px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.find_info_area .email_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: 80px;
+  margin-top: 24px;
+  padding: 0 16px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+.find_info_area .email_info span {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
+  word-break: break-all;
 }
 
 /*======================================*/

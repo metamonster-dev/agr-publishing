@@ -126,6 +126,7 @@
     span {
       @include fontStyle(16px, $color_gray_5, 500);
       display: block;
+      word-break: break-all;
     }
   }
   button {

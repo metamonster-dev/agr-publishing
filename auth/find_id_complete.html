@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div class="inner">
+            <div class="find_info_area">
+              <img
+                src="../assets/images/icon_complete.svg"
+                alt="이메일 아이디 찾기 결과 아이콘"
+                aria-hidden="true"
+              />
+              <p>
+                가입하신 아이디(이메일) <br />
+                정보를 알려드립니다.
+              </p>
+              <div class="email_info">
+                <span>w***2@kakao.com</span>
+              </div>
+            </div>
+            <div class="pb_80">
+              <div class="input_list_area gap_12">
+                <button
+                  type="button"
+                  class="btn btn_style02 btn_size_52"
+                  onClick="location.href='./find_pw.html'"
+                >
+                  비밀번호 찾기
+                </button>
+                <button
+                  type="button"
+                  class="btn btn_style01 btn_size_52"
+                  onClick="location.href='./login.html'"
+                >
+                  로그인
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("이메일 아이디 찾기");
+      });
+    </script>
+  </body>
+</html>

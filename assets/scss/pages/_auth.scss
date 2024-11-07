@@ -133,3 +133,30 @@
     margin-top: 40px;
   }
 }
+
+/*======================================*/
+/*------------ FIND PAGES --------------*/
+/*======================================*/
+.find_info_area {
+  padding: 32px 0 40px;
+  text-align: center;
+  img {
+    margin: 0 auto 16px;
+  }
+  p {
+    @include fontStyle(18px, $color_gray_1d, 700);
+  }
+  .email_info {
+    @include flexLayout(center, center);
+    height: 80px;
+    margin-top: 24px;
+    padding: 0 16px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    span {
+      @include fontStyle(16px, $color_gray_5, 500);
+      display: block;
+      word-break: break-all;
+    }
+  }
+}
