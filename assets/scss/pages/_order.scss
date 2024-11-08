@@ -9,7 +9,7 @@
     @include fontStyle(16px, $color_gray_1d, 500);
   }
   .note {
-    @include fontStyle(14px, $color_red, 500);
+    @include fontStyle(14px, $color_red_01, 500);
     margin-top: 16px;
     span {
       font-weight: 700;
@@ -60,5 +60,22 @@
   }
   p {
     @include fontStyle(22px, $color_gray_1d, 700);
+  }
+}
+
+.order_number_area {
+  @include flexLayout(center, space-between, 8px);
+  padding: 20px 16px;
+  background-color: $color_white;
+  border-bottom: 1px solid $color_gray_e;
+  .num {
+    @include fontStyle(14px, $color_gray_1d, 500);
+    span {
+      color: $color_key_01;
+      font-weight: 700;
+    }
+  }
+  .date {
+    @include fontStyle(14px, $color_gray_71, 500);
   }
 }

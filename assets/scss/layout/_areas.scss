@@ -27,7 +27,7 @@
   background-color: $color_gray_f8 !important;
 }
 .color_red {
-  color: $color_red !important;
+  color: $color_red_01 !important;
 }
 .color_key_01 {
   color: $color_key_01 !important;
@@ -55,6 +55,9 @@
 .mb_16 {
   margin-bottom: 16px;
 }
+.mb_20 {
+  margin-bottom: 20px;
+}
 .mb_24 {
   margin-bottom: 24px;
 }
@@ -81,6 +84,9 @@
 }
 .pb_52 {
   padding-bottom: 52px;
+}
+.pb_60 {
+  padding-bottom: 60px;
 }
 .pb_80 {
   padding-bottom: 80px;
@@ -115,8 +121,8 @@
     outline: 1px solid $color_key_01;
   }
   &.error {
-    border-color: $color_red;
-    outline: 1px solid $color_red;
+    border-color: $color_red_01;
+    outline: 1px solid $color_red_01;
   }
 }
 .input {
@@ -368,6 +374,57 @@
   }
 }
 
+.img_input {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border: 1px solid $color_gray_d8;
+  border-radius: 4px;
+  background-color: $color_gray_f8;
+  input {
+    @include hiddenInput;
+    &:focus + label {
+      outline: 2px solid $color_black;
+    }
+  }
+  label {
+    @include flexLayout(center, center);
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: url("../images/icon_plus.svg") no-repeat center / 24px;
+    cursor: pointer;
+    user-select: none;
+    span {
+      @include hiddenText;
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .img_x_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    border-top-right-radius: 4px;
+    background: rgba(0, 0, 0, 0.7) url("../images/icon_x02.svg") no-repeat
+      center/ 8px;
+    z-index: 2;
+    span {
+      @include hiddenText;
+    }
+  }
+}
+
 .input_pw_area {
   position: relative;
   .input {
@@ -422,6 +479,9 @@
     }
   }
 }
+.img_input_list_area {
+  @include flexLayout(stretch, flex-start, 8px, wrap);
+}
 .label_input_area {
   @include flexLayout(stretch, center, 8px, nowrap, column);
 }
@@ -450,6 +510,10 @@
   @include fontStyle(14px, $color_key_01, 500);
   display: block;
   margin-top: 16px;
+}
+.input_desc_text02 {
+  @include fontStyle(14px, $color_gray_71, 500);
+  display: block;
 }
 
 .star_area {
@@ -949,6 +1013,9 @@
     padding: 24px 16px 40px;
   }
 
+  &.mb_0 {
+    margin-bottom: 0;
+  }
   &.active .tg_tit::before {
     transform: rotate(180deg);
   }
@@ -994,6 +1061,29 @@
   }
 }
 
+/* Tag */
+.tag_text {
+  @include flexLayout(center, center);
+  width: 100%;
+  height: 33px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+
+  &.tag_style01 {
+    color: $color_key_01;
+    background-color: $color_key_03;
+  }
+  &.tag_style02 {
+    color: $color_red_01;
+    background-color: $color_red_02;
+  }
+  &.tag_style03 {
+    color: $color_gray_1d;
+    background-color: $color_gray_f8;
+  }
+}
+
 /* No Data */
 .no_data_area {
   text-align: center;
@@ -1012,7 +1102,7 @@
 
 /* Error Msg */
 .error_msg {
-  @include fontStyle(13px, $color_red, 500);
+  @include fontStyle(13px, $color_red_01, 500);
   position: relative;
   display: block;
   padding-left: 22px;

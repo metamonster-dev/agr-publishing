@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container bg_gray_f8">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+
+          <!-- 상품 정보 -->
+          <div class="order_number_area">
+            <p class="num">주문번호 <b>20240912345</b></p>
+            <span class="date">2024.09.30</span>
+          </div>
+
+          <!-- 상품 정보 -->
+          <div class="toggle_area active">
+            <div class="tg_tit">
+              <p class="tit">가이드런</p>
+              <button
+                type="button"
+                onClick="onModalShow('md_consult')"
+                id="consult_btn"
+              >
+                상품 문의
+              </button>
+            </div>
+            <div class="tg_cont">
+              <div class="item_area">
+                <div class="img_area rect01">
+                  <img
+                    src="../assets/images/product/product_img01.jpg"
+                    alt="예술기획분야 취창업 전문 컨설팅 이미지"
+                  />
+                </div>
+                <div class="text_area">
+                  <span class="cate">1:1 컨설팅</span>
+                  <p class="tit">예술기획분야 취창업 전문 컨설팅</p>
+                </div>
+              </div>
+              <span class="tag_text tag_style01 mt_16">결제완료</span>
+              <!-- <span class="tag_text tag_style02 mt_16">주문취소</span> -->
+              <!-- <span class="tag_text tag_style03 mt_16">진행완료</span> -->
+            </div>
+          </div>
+
+          <!-- 주문자 정보 -->
+          <div class="toggle_area active">
+            <button type="button" class="tg_tit">주문자 정보</button>
+            <div class="tg_cont">
+              <div class="list_area list_style05">
+                <dl>
+                  <dt>이름</dt>
+                  <dd>김아트</dd>
+
+                  <dt>연락처</dt>
+                  <dd>010-1234-1234</dd>
+
+                  <dt>이메일</dt>
+                  <dd>art@gmail.com</dd>
+
+                  <dt>생년월일</dt>
+                  <dd>1992.06.05</dd>
+
+                  <dt>성별</dt>
+                  <dd>여성</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <!-- 배송지 정보 -->
+          <div class="toggle_area active">
+            <button type="button" class="tg_tit">배송지 정보</button>
+            <div class="tg_cont">
+              <div class="list_area list_style05">
+                <dl>
+                  <dt>이름</dt>
+                  <dd>김아트</dd>
+
+                  <dt>연락처</dt>
+                  <dd>010-1234-1234</dd>
+
+                  <dt>주소</dt>
+                  <dd>
+                    [12345] 서울특별시 구로구 디지털로 32길 30 구로동 코오롱
+                    디지털타워빌란트 1510호
+                  </dd>
+
+                  <dt>배송메모</dt>
+                  <dd>부재 시 문앞에 놓아주세요.</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <!-- 이용 정보 -->
+          <div class="toggle_area active">
+            <button type="button" class="tg_tit">이용 정보</button>
+            <div class="tg_cont">
+              <div class="list_area list_style05">
+                <dl>
+                  <dt>이용안내</dt>
+                  <dd>
+                    결제 이후 신청자 대상으로 개별 연락으로 안내드립니다.
+                    (컨설팅 일정 협의)
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <!-- 결제 정보 -->
+          <div class="toggle_area active mb_0">
+            <button type="button" class="tg_tit">결제 정보</button>
+            <div class="tg_cont">
+              <div class="list_area list_style05">
+                <dl>
+                  <dt>결제 수단</dt>
+                  <dd>간편결제(토스)</dd>
+
+                  <dt>총 결제 금액</dt>
+                  <dd>30,000</dd>
+
+                  <dt>거래 일시</dt>
+                  <dd>24/09/30 10:08</dd>
+                </dl>
+              </div>
+
+              <a
+                href="javascript:;"
+                class="btn btn_style02 btn_size_52 w_full mt_40 mb_20"
+              >
+                목록으로
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal -->
+        <div class="modal_wrap full" id="md_consult">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>상품 문의하기</p>
+              <button
+                type="button"
+                class="x_btn"
+                onClick="onModalHide('md_consult', 'consult_btn')"
+              >
+                <span>모달창 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">
+              <div class="md_consult_area">
+                <div class="item_area">
+                  <div class="img_area rect01">
+                    <img
+                      src="../assets/images/product/product_img01.jpg"
+                      alt="예술기획분야 취창업 전문 컨설팅 이미지"
+                    />
+                  </div>
+                  <div class="text_area">
+                    <span class="cate">1:1 컨설팅</span>
+                    <p class="tit">예술기획분야 취창업 전문 컨설팅</p>
+                  </div>
+                </div>
+
+                <div class="pt_24 pb_60">
+                  <div class="inner">
+                    <div class="input_list_area gap_24">
+                      <div class="label_input_area">
+                        <label for="title" class="label">제목</label>
+                        <input
+                          type="text"
+                          name="title"
+                          id="title"
+                          class="input"
+                          placeholder="제목을 입력해 주세요."
+                        />
+                      </div>
+
+                      <div class="label_input_area">
+                        <label for="content" class="label">내용</label>
+                        <textarea
+                          name="content"
+                          id="content"
+                          cols="30"
+                          rows="10"
+                          class="textarea"
+                          placeholder="내용을 입력해 주세요."
+                        ></textarea>
+                      </div>
+
+                      <div class="label_input_area">
+                        <span class="label">이미지 첨부</span>
+                        <div class="img_input_list_area">
+                          <div class="img_input">
+                            <input
+                              type="file"
+                              id="img"
+                              accept=".jpg, .jpeg, .png"
+                            />
+                            <label for="img"><span>이미지 첨부</span></label>
+                          </div>
+                          <div class="img_input">
+                            <img
+                              src="../assets/images/product/product_img05.jpg"
+                              alt="이미지 등록"
+                            />
+                            <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </div>
+                          <div class="img_input">
+                            <img
+                              src="../assets/images/product/product_img05.jpg"
+                              alt="이미지 등록"
+                            />
+                            <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </div>
+                          <div class="img_input">
+                            <img
+                              src="../assets/images/product/product_img05.jpg"
+                              alt="이미지 등록"
+                            />
+                            <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </div>
+                        </div>
+                        <span class="input_desc_text02">
+                          * 10MB 이하 JPG, PNG만 등록 가능합니다. (최대3장)
+                        </span>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="btn btn_style01 btn_size_52 w_full mt_40"
+                      onClick="onModalHide('md_consult', 'consult_btn')"
+                    >
+                      등록
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // modal -->
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("주문상세");
+      });
+    </script>
+  </body>
+</html>
