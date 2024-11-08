@@ -34,6 +34,68 @@
   }
 }
 
+.prod_detail_tab_area {
+  position: sticky;
+  top: $height_header + 1px;
+  border-top: 8px solid $color_gray_f8;
+  border-bottom: 1px solid $color_gray_e;
+  background-color: $color_white;
+  z-index: 10;
+  ul {
+    @include flexLayout(center, center);
+    li {
+      flex: 1;
+      button {
+        @include flexLayout(center, center);
+        @include fontStyle(16px, $color_gray_8e, 700);
+        position: relative;
+        width: 100%;
+        height: 52px;
+        padding: 0 8px;
+      }
+      &.active {
+        button {
+          color: $color_gray_1d;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $color_gray_1d;
+          }
+        }
+      }
+    }
+  }
+}
+
+.prod_detail_fixed_btn {
+  @include flexLayout(stretch, flex-start, 12px);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: $width_container;
+  padding: 10px 16px;
+  border-top: 1px solid $color_gray_d8;
+  background-color: $color_white;
+  z-index: $z_fixed_bottom_btn;
+  transform: translateX(-50%);
+
+  .heart_btn {
+    width: 38px;
+    background: url("../images/icon_heart02_off.svg") no-repeat center / 24px;
+    &.on {
+      background-image: url("../images/icon_heart02_on.svg");
+    }
+  }
+  .btn {
+    flex: 1;
+  }
+}
+
 .prod_detail_visual_wrap {
   position: relative;
   overflow: hidden;
@@ -56,8 +118,10 @@
 
 .prod_detail_tit_wrap {
   .top_area {
+    border-bottom: 1px solid $color_gray_e;
     .inner {
       @include flexLayout(center, space-between, 12px);
+      height: 55px;
     }
     a {
       @include flexLayout(center);
@@ -71,28 +135,78 @@
       }
     }
   }
-}
-
-.prod_detail_fixed_btn {
-  @include flexLayout(stretch, flex-start, 12px);
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  width: 100%;
-  max-width: $width_container;
-  padding: 10px 16px;
-  border-top: 1px solid $color_gray_d8;
-  transform: translateX(-50%);
-  z-index: $z_fixed_bottom_btn;
-
-  .heart_btn {
-    width: 38px;
-    background: url("../images/icon_heart02_off.svg") no-repeat center / 24px;
-    &.on {
-      background-image: url("../images/icon_heart02_on.svg");
+  .btm_area {
+    padding: 20px 0 40px;
+    h2 {
+      @include fontStyle(18px, $color_gray_1d, 700);
+    }
+    .star_review {
+      @include flexLayout(center, flex-start, 8px);
+      margin-top: 16px;
+      button {
+        @include fontStyle(14px, $color_gray_71, 500);
+        text-decoration: underline;
+      }
+    }
+    .price_text {
+      @include flexLayout(center, flex-start, 4px);
+      margin-top: 16px;
+      .percent {
+        @include fontStyle(14px, $color_key_01, 700);
+      }
+      .price {
+        @include fontStyle(18px, $color_gray_1d, 700);
+      }
     }
   }
-  .btn {
-    flex: 1;
+}
+
+.prod_detail_info_wrap {
+  padding: 40px 0 50px;
+  .editor_area {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+    &.hide {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 240px;
+        background: linear-gradient(
+          0,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 0)
+        );
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.prod_detail_review_wrap {
+  padding: 24px 0 120px;
+
+  .total_area {
+    padding: 24px 12px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    text-align: center;
+    p {
+      @include fontStyle(14px, $color_gray_1d, 700);
+    }
+    span {
+      @include fontStyle(25px, $color_gray_1d, 700);
+      display: block;
+      margin: 8px 0;
+    }
+    .star_area {
+      margin: 0 auto;
+    }
   }
 }

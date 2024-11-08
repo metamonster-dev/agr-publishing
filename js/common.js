@@ -61,6 +61,18 @@ $(window).on("load", function () {
       tabSlider02.slideTo($(this).parent().index());
   });
 
+  // img 크게/작게 보기
+  $(".list_area.list_style04 .img_area").on("click", function () {
+    const areaEl = $(this).parent();
+    if (areaEl.hasClass("show_large")) {
+      areaEl.removeClass("show_large");
+      areaEl.find(".img_area").attr("aria-label", "이미지 크게 보기");
+    } else {
+      areaEl.addClass("show_large");
+      areaEl.find(".img_area").attr("aria-label", "이미지 작게 보기");
+    }
+  });
+
   // input 비밀번호 보기/숨기기
   $(".input_pw_area button").on("click", function () {
     if ($(this).prev("input").attr("type") === "password") {

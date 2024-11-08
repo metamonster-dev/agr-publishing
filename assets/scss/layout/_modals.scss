@@ -203,3 +203,18 @@
     margin-top: 24px;
   }
 }
+
+// 상품 공유
+.md_share_area {
+  @include flexLayout(center, center, 24px);
+  padding-top: 16px;
+
+  button {
+    text-align: center;
+    span {
+      @include fontStyle(14px, $color_gray_5, 500);
+      display: block;
+      margin-top: 8px;
+    }
+  }
+}

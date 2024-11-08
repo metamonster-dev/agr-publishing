@@ -39,11 +39,16 @@
             <!-- <button type="button" class="heart_btn on">
               <span class="hidden_text">관심 취소</span>
             </button> -->
-            <button type="button" class="btn btn_style01 btn_size_48">
+            <a href="../order/order.html" class="btn btn_style01 btn_size_48">
               구매하기
-            </button>
+            </a>
           </div>
-          <div class="prod_detail_visual_wrap img_slider">
+
+          <div
+            class="prod_detail_visual_wrap img_slider"
+            aria-label="상품 이미지 슬라이드"
+            tabindex="0"
+          >
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="img_area rect01">
@@ -56,7 +61,7 @@
               <div class="swiper-slide">
                 <div class="img_area rect01">
                   <img
-                    src="../assets/images/product/product_img04.jpg"
+                    src="../assets/images/product/product_img03.jpg"
                     alt="예술기획분야 취창업 예술인 등록을 위한 1:1 맞춤형 클래스 이미지 2"
                   />
                 </div>
@@ -64,11 +69,17 @@
             </div>
             <p class="page">1/1</p>
           </div>
+
           <section class="prod_detail_tit_wrap">
             <div class="top_area">
               <div class="inner">
                 <a href="#">1:1 컨설팅 <i></i></a>
-                <button type="button" aria-label="상품 공유하기">
+                <button
+                  type="button"
+                  id="share_btn"
+                  aria-label="상품 공유하기"
+                  onClick="onModalShow('md_share')"
+                >
                   <img
                     src="../assets/images/icon_share.svg"
                     alt="상품 공유하기"
@@ -83,13 +94,154 @@
                   예술기획분야 취창업 예술인 등록을 위한 1:1 맞춤형 클래스
                 </h2>
                 <div class="star_review">
-                  <div class="star_area"></div>
+                  <div class="star_area" aria-label="5점 만점에 4점">
+                    <div
+                      class="star_on"
+                      aria-hidden="true"
+                      style="width: 80%"
+                    ></div>
+                  </div>
                   <button type="button">후기 23건</button>
                 </div>
                 <div class="price_text">
                   <span class="percent">10%</span>
                   <p class="price">40,500원</p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="prod_detail_tab_area">
+            <ul>
+              <li class="active">
+                <button type="button">상품정보</button>
+              </li>
+              <li>
+                <button type="button">후기 (27)</button>
+              </li>
+            </ul>
+          </div>
+
+          <section class="section prod_detail_info_wrap" data-section="0">
+            <div class="inner">
+              <h3 class="hidden_text">상품정보</h3>
+              <div class="editor_area hide">
+                <img
+                  src="../assets/images/product/product_info_img.jpg"
+                  alt="상품 상세 영역 예시 이미지"
+                />
+              </div>
+              <button
+                type="button"
+                class="btn btn_style03 btn_size_40 w_full"
+                onClick="onMoreInfo()"
+              >
+                상품 정보 더보기 <i class="arrow bottom"></i>
+              </button>
+            </div>
+          </section>
+
+          <section class="section prod_detail_review_wrap" data-section="1">
+            <div class="inner">
+              <div class="total_area">
+                <p>사용자 총 평점</p>
+                <span>4.0</span>
+                <div class="star_area" aria-label="5점 만점에 4점">
+                  <div
+                    class="star_on"
+                    aria-hidden="true"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+              <h3 class="hidden_text">후기</h3>
+              <!-- 데이터 없을 시, -->
+              <!-- <div class="no_data_area mt_40">
+                <i></i><span>게시물이 없습니다.</span>
+              </div> -->
+              <div class="list_area list_style04">
+                <ul>
+                  <li>
+                    <div class="review_top_area">
+                      <span class="review">4.0</span>
+                      <div class="writer_date">
+                        <span>홍*동</span>
+                        <span>2024.09.24</span>
+                      </div>
+                    </div>
+                    <p class="review_text">
+                      1:1 컨설팅을 통해 제가 가지고 있던 고민과 목표를 명확하게
+                      해결할 수 있었습니다. 전문가의 깊이 있는 조언과 친절한
+                      피드백 덕분에 방향성을 잡는 데 큰 도움이 되었고, 제게 맞춤
+                      맞춤형 솔루션을 제시해주어 매우 만족스러웠습니다.
+                    </p>
+                    <div class="review_img_area">
+                      <button
+                        type="button"
+                        class="img_area rect01"
+                        aria-label="이미지 크게 보기"
+                      >
+                        <img
+                          src="../assets/images/product/product_img04.jpg"
+                          alt="사용자 등록 리뷰 이미지"
+                        />
+                      </button>
+                      <button
+                        type="button"
+                        class="img_area rect01"
+                        aria-label="이미지 크게 보기"
+                      >
+                        <img
+                          src="../assets/images/product/product_img04.jpg"
+                          alt="사용자 등록 리뷰 이미지"
+                        />
+                      </button>
+                      <button
+                        type="button"
+                        class="img_area rect01"
+                        aria-label="이미지 크게 보기"
+                      >
+                        <img
+                          src="../assets/images/product/product_img04.jpg"
+                          alt="사용자 등록 리뷰 이미지"
+                        />
+                      </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="review_top_area">
+                      <span class="review">4.0</span>
+                      <div class="writer_date">
+                        <span>홍*동</span>
+                        <span>2024.09.24</span>
+                      </div>
+                    </div>
+                    <p class="review_text">
+                      1:1 컨설팅을 통해 제가 가지고 있던 고민과 목표를 명확하게
+                      해결할 수 있었습니다. 전문가의 깊이 있는 조언과 친절한
+                      피드백 덕분에 방향성을 잡는 데 큰 도움이 되었고, 제게 맞춤
+                      맞춤형 솔루션을 제시해주어 매우 만족스러웠습니다.
+                    </p>
+                    <div class="review_img_area">
+                      <button
+                        type="button"
+                        class="img_area rect01"
+                        aria-label="이미지 크게 보기"
+                      >
+                        <img
+                          src="../assets/images/product/product_img04.jpg"
+                          alt="사용자 등록 리뷰 이미지"
+                        />
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn btn_style03 btn_size_40 w_full mt_40"
+                >
+                  후기 더보기 <i class="arrow bottom"></i>
+                </button>
               </div>
             </div>
           </section>
@@ -108,7 +260,26 @@
                 <span>모달 닫기</span>
               </button>
             </div>
-            <div class="md_cont"></div>
+            <div class="md_cont">
+              <div class="md_share_area">
+                <button type="button">
+                  <img
+                    src="../assets/images/icon_share_url.svg"
+                    alt="URL 복사 아이콘"
+                    aria-hidden="true"
+                  />
+                  <span>URL 복사</span>
+                </button>
+                <button type="button">
+                  <img
+                    src="../assets/images/icon_share_kakao.svg"
+                    alt="카카오톡 아이콘"
+                    aria-hidden="true"
+                  />
+                  <span>카카오톡</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
         <!-- // modal -->
@@ -130,6 +301,70 @@
           el: ".img_slider .page",
           type: "fraction",
         },
+        on: {
+          slideChange: function () {
+            $(".img_slider .swiper-slide-active").attr("aria-live", "polite");
+          },
+        },
+      });
+      $(".img_slider").on("keydown", function (e) {
+        if (e.key === "ArrowRight") {
+          slider01.slideNext();
+        } else if (e.key === "ArrowLeft") {
+          slider01.slidePrev();
+        }
+      });
+
+      // 상세 상품 더보기 버튼
+      const onMoreInfo = () => {
+        $(".editor_area").css("height", "auto");
+        $(".editor_area").removeClass("hide");
+        $(".editor_area").next().remove();
+      };
+
+      $(window).on("load", function () {
+        // 상세 상품 영역 사이즈 설정
+        const hideH =
+          Math.floor(
+            document.querySelector(".editor_area").offsetHeight / 4 / 100
+          ) * 100;
+        if (hideH > 300) {
+          $(".editor_area").css("height", hideH);
+        } else {
+          $(".editor_area").removeClass("hide");
+          $(".editor_area").next().remove();
+        }
+
+        // 탭 버튼
+        const tabBtn = $(".prod_detail_tab_area button");
+        const offset = -118;
+
+        tabBtn.on("click", function () {
+          const liEl = $(this).parent();
+          const divOFfset =
+            $(`.section[data-section=${liEl.index()}]`).offset().top + offset;
+          $("html, body").animate({ scrollTop: divOFfset }, 500);
+        });
+
+        function findPosition() {
+          $(".section").each(function (index) {
+            const pageHeight = $(document).height() - $(window).height();
+
+            if ($(this).offset().top - $(window).scrollTop() < 120) {
+              tabBtn.parents("li").removeClass("active");
+              $(".prod_detail_tab_area ul li").eq(index).addClass("active");
+
+              if ($(window).scrollTop() === pageHeight) {
+                tabBtn.parents("li").removeClass("active");
+                $(".prod_detail_tab_area ul li").last().addClass("active");
+              }
+            }
+          });
+        }
+
+        $(window).on("scroll", function () {
+          findPosition();
+        });
       });
     </script>
   </body>
