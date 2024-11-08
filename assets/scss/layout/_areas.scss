@@ -23,6 +23,13 @@
   @include line2Text;
 }
 
+.bg_gray_f8 {
+  background-color: $color_gray_f8 !important;
+}
+.color_red {
+  color: $color_red !important;
+}
+
 /* Width & Margin & Padding & Border */
 .w_full {
   width: 100%;
@@ -39,6 +46,12 @@
 .mt_40 {
   margin-top: 40px;
 }
+.mb_16 {
+  margin-bottom: 16px;
+}
+.mb_24 {
+  margin-bottom: 24px;
+}
 .py_60 {
   padding: 60px 0;
 }
@@ -54,6 +67,12 @@
 .pt_40 {
   padding-top: 40px;
 }
+.pb_16 {
+  padding-bottom: 16px;
+}
+.pb_24 {
+  padding-bottom: 24px;
+}
 .pb_52 {
   padding-bottom: 52px;
 }
@@ -65,6 +84,9 @@
 }
 .border_top {
   border-top: 1px solid $color_gray_e;
+}
+.border_bottom {
+  border-bottom: 1px solid $color_gray_e;
 }
 
 /* Input, Textarea, Select, Label */
@@ -113,6 +135,10 @@
 .label {
   @include fontStyle(14px, $color_gray_1d, 500);
   display: block;
+  &.required::after {
+    content: " *";
+    color: $color_key_01;
+  }
 }
 .label_tit {
   @include fontStyle(18px, $color_gray_1d, 700);
@@ -244,6 +270,12 @@
       background: url("../images/icon_check_off.svg") no-repeat center / 16px;
     }
   }
+  &.h_80 label {
+    height: 80px;
+    img {
+      max-height: 30px;
+    }
+  }
 }
 .chk_custom02 {
   input:checked + label {
@@ -305,6 +337,8 @@
     position: relative;
     display: inline-block;
     padding: 1px 0 1px 32px;
+    cursor: pointer;
+    user-select: none;
     &::before {
       content: "";
       position: absolute;
@@ -385,8 +419,17 @@
 .label_input_area {
   @include flexLayout(stretch, center, 8px, nowrap, column);
 }
+.input_btn_area {
+  @include flexLayout(stretch, flex-start, 6px);
+  .input {
+    flex: 1;
+  }
+  .btn {
+    width: 100px;
+  }
+}
 .chk_btn_area {
-  @include flexLayout(flex-start, space-between, 12px);
+  @include flexLayout(flex-start, space-between, 8px);
   .chk_custom03 {
     flex: 1;
   }
@@ -395,6 +438,12 @@
     padding: 3px 0;
     text-decoration: underline;
   }
+}
+
+.input_desc_text {
+  @include fontStyle(14px, $color_key_01, 500);
+  display: block;
+  margin-top: 16px;
 }
 
 .star_area {
@@ -694,7 +743,7 @@
       border-top: 1px solid $color_gray_e;
     }
     .review_top_area {
-      @include flexLayout(center, space-between, 12px);
+      @include flexLayout(center, space-between, 8px);
       .review {
         @include fontStyle(13px, $color_gray_1d, 700);
         position: relative;
@@ -739,6 +788,178 @@
       &.show_large .img_area {
         width: 100%;
       }
+    }
+  }
+  &.list_style05 {
+    dl {
+      @include flexLayout(stretch, center, 16px 0, wrap);
+      dt {
+        @include fontStyle(16px, $color_gray_71, 500);
+        width: 96px;
+        padding-right: 16px;
+      }
+      dd {
+        @include fontStyle(16px, $color_gray_1d, 500);
+        width: calc(100% - 96px);
+      }
+    }
+  }
+  &.list_style06 ul {
+    @include flexLayout(stretch, flex-start, 12px, nowrap, column);
+    li {
+      @include flexLayout(center, space-between, 8px);
+      span {
+        @include fontStyle(14px, $color_gray_71, 500);
+      }
+      button {
+        @include fontStyle(14px, $color_gray_71, 500);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* Item */
+.item_area {
+  @include flexLayout(center, center, 16px);
+  .img_area {
+    border-radius: 4px;
+    width: 64px;
+  }
+  .text_area {
+    flex: 1;
+    .cate {
+      @include fontStyle(14px, $color_gray_8e, 700);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .tit {
+      @include fontStyle(16px, $color_gray_1d, 500);
+      @include line2Text;
+    }
+    .price_text {
+      @include flexLayout(center, flex-start, 4px);
+      margin-top: 4px;
+      .percent {
+        @include fontStyle(14px, $color_key_01, 700);
+      }
+      .price {
+        @include fontStyle(16px, $color_gray_1d, 700);
+      }
+    }
+  }
+}
+.item_area02 {
+  .tit_area {
+    @include flexLayout(center, flex-start, 8px);
+    .tit {
+      @include fontStyle(16px, $color_gray_1d, 700);
+    }
+    .tag {
+      @include fontStyle(13px, $color_white, 700);
+      padding: 0 6px;
+      border-radius: 4px;
+      background-color: $color_key_01;
+      line-height: 22px;
+    }
+  }
+  .text_area {
+    margin-top: 8px;
+    .addr {
+      @include fontStyle(16px, $color_gray_5, 500);
+    }
+    .phone {
+      @include fontStyle(16px, $color_gray_8e, 500);
+      margin-top: 4px;
+    }
+  }
+}
+
+/* Toggle Item */
+.toggle_area {
+  background-color: $color_white;
+  margin: 8px 0;
+  button.tg_tit {
+    @include fontStyle(16px, $color_gray_1d, 700);
+    position: relative;
+    width: 100%;
+    padding: 17px 16px 18px;
+    border-bottom: 1px solid $color_gray_e;
+    text-align: left;
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 10px);
+      right: 16px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("../images/icon_toggle_arrow.svg") no-repeat center /
+        contain;
+      transition: all 0.3s;
+    }
+  }
+  div.tg_tit {
+    @include flexLayout(center, space-between, 8px);
+    height: 60px;
+    padding: 0 16px;
+    border-bottom: 1px solid $color_gray_e;
+    .tit {
+      @include fontStyle(16px, $color_gray_1d, 700);
+    }
+    button {
+      @include fontStyle(14px, $color_gray_5, 500);
+      height: 32px;
+      padding: 0 8px;
+      border: 1px solid $color_gray_d8;
+      border-radius: 4px;
+    }
+  }
+  .tg_cont {
+    padding: 24px 16px 40px;
+  }
+
+  &.active .tg_tit::before {
+    transform: rotate(180deg);
+  }
+  &.default_close .tg_cont {
+    display: none;
+  }
+}
+
+/* Text */
+.tit_desc_area {
+  @include flexLayout(center, space-between, 8px);
+  border-radius: 4px;
+
+  &.text_style01 {
+    .tit {
+      @include fontStyle(14px, $color_gray_71, 500);
+    }
+    .desc {
+      @include fontStyle(14px, $color_gray_1d, 500);
+    }
+  }
+  &.text_style02 {
+    height: 40px;
+    padding: 0 16px;
+    background-color: $color_gray_f8;
+    .tit {
+      @include fontStyle(14px, $color_gray_5, 500);
+    }
+    .desc {
+      @include fontStyle(14px, $color_gray_1d, 700);
+    }
+  }
+  &.text_style03 {
+    height: 60px;
+    padding: 0 16px;
+    background-color: $color_key_03;
+    .tit {
+      @include fontStyle(16px, $color_key_01, 700);
+    }
+    .desc {
+      @include fontStyle(18px, $color_gray_1d, 700);
     }
   }
 }

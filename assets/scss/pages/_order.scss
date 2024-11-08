@@ -1,0 +1,53 @@
+@import "../common/_variables";
+@import "../common/_mixins";
+
+/*======================================*/
+/*----------- ORDER STYLES -------------*/
+/*======================================*/
+.order_use_text {
+  .desc {
+    @include fontStyle(16px, $color_gray_1d, 500);
+  }
+  .note {
+    @include fontStyle(14px, $color_red, 500);
+    margin-top: 16px;
+    span {
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.order_caution_text {
+  @include flexLayout(stretch, flex-start, 8px, nowrap, column);
+  padding: 20px 16px;
+  border: 1px solid $color_gray_e;
+  border-radius: 4px;
+  margin-top: 24px;
+
+  .tit {
+    @include fontStyle(14px, $color_gray_1d, 700);
+    position: relative;
+    padding-left: 22px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../images/icon_caution.svg") no-repeat center/ contain;
+    }
+  }
+  .text {
+    @include fontStyle(13px, $color_gray_71, 500);
+    letter-spacing: -0.01rem;
+  }
+}
+
+.order_agree_btn_area {
+  padding: 24px 16px 64px;
+  background-color: $color_white;
+}

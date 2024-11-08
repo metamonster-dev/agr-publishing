@@ -140,7 +140,7 @@
   }
 
   .inner {
-    @include flexLayout(center, space-between, 12px);
+    @include flexLayout(center, space-between, 8px);
     height: $height_header;
   }
   h1 {
@@ -243,7 +243,7 @@
   transition: all 0.5s;
   .m_header {
     .inner {
-      @include flexLayout(center, space-between, 12px);
+      @include flexLayout(center, space-between, 8px);
       height: $height_header;
     }
     .m_flex {

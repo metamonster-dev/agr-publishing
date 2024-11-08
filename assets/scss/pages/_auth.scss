@@ -163,7 +163,7 @@
   }
 }
 .timer_area {
-  @include flexLayout(center, space-between, 12px);
+  @include flexLayout(center, space-between, 8px);
   height: 40px;
   padding: 0 16px;
   border-radius: 4px;

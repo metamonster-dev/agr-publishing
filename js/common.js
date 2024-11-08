@@ -27,7 +27,7 @@ const notyf = new Notyf({
 });
 $(".notyf-announcer").css("outline", "none"); // outline: 0px; 웹접근성 오류
 
-// modal
+// modal show/hide
 const onModalShow = (modalId) => {
   $(`#${modalId}`).addClass("active");
   $(`#${modalId} button, #${modalId} a`).first().focus();
@@ -35,6 +35,14 @@ const onModalShow = (modalId) => {
 const onModalHide = (modalId, btnId) => {
   $(`#${modalId}`).removeClass("active");
   if (btnId) $(`#${btnId}`).focus();
+};
+
+// scroll move
+const onScrollMove = (id) => {
+  const offset = -56;
+  const elH = $(`#${id}`).offset().top + offset;
+  $("html, body").animate({ scrollTop: elH }, 500);
+  $(`#${id}`).focus();
 };
 
 $(window).on("load", function () {
@@ -62,8 +70,8 @@ $(window).on("load", function () {
   });
 
   // img 크게/작게 보기
-  $(".list_area.list_style04 .img_area").on("click", function () {
-    const areaEl = $(this).parent();
+  const onImgZoom = (_this) => {
+    const areaEl = _this.parent();
     if (areaEl.hasClass("show_large")) {
       areaEl.removeClass("show_large");
       areaEl.find(".img_area").attr("aria-label", "이미지 크게 보기");
@@ -71,6 +79,12 @@ $(window).on("load", function () {
       areaEl.addClass("show_large");
       areaEl.find(".img_area").attr("aria-label", "이미지 작게 보기");
     }
+  };
+  $(".list_area.list_style04 .img_area").on("click", function () {
+    onImgZoom($(this));
+  });
+  $(".list_area.list_style04 .img_area").on("keypress", function (e) {
+    if (e.key === "Enter") onImgZoom($(this));
   });
 
   // input 비밀번호 보기/숨기기
@@ -84,7 +98,7 @@ $(window).on("load", function () {
     }
   });
 
-  // modal
+  // modal event
   $(document).on("click", ".modal_wrap", function (e) {
     const modal = $(e.target).parents(".modal_wrap");
     if (!modal.hasClass("modal_wrap")) {
@@ -95,9 +109,7 @@ $(window).on("load", function () {
     "keydown",
     ".modal_wrap.middle.active, .modal_wrap.bottom.active",
     function (e) {
-      if (e.key === "Escape") {
-        $(this).removeClass("active");
-      }
+      if (e.key === "Escape") $(this).removeClass("active");
     }
   );
   $(document).on(
@@ -120,6 +132,14 @@ $(window).on("load", function () {
       }
     }
   );
+
+  // toggle item
+  $(document).on("click", ".toggle_area .tg_tit", function () {
+    if ($(this).parent().hasClass("active"))
+      $(this).next(".tg_cont").stop(false, false).slideUp();
+    else $(this).next(".tg_cont").stop(false, false).slideDown();
+    $(this).parent().toggleClass("active");
+  });
 
   // select custom
   $(document).on("click", ".select_custom button", function () {
@@ -153,6 +173,9 @@ $(window).on("load", function () {
       .find("button")
       .text($(this).text())
       .focus();
+    if ($(this).attr("data-value") === "etc")
+      $(this).parents(".select_custom").next().removeClass("d_none");
+    else $(this).parents(".select_custom").next().addClass("d_none");
   });
   $(document).on("keydown", ".select_custom ul li", function (e) {
     e.preventDefault();
@@ -166,6 +189,9 @@ $(window).on("load", function () {
         .find("button")
         .text($(this).text())
         .focus();
+      if ($(this).attr("data-value") === "etc")
+        $(this).parents(".select_custom").next().removeClass("d_none");
+      else $(this).parents(".select_custom").next().addClass("d_none");
     } else if (e.key === "ArrowDown") {
       $(this).next().length && $(this).next().focus();
     } else if (e.key === "ArrowUp") {

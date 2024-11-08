@@ -79,7 +79,7 @@
       max-width: $width_container;
       height: 100%;
       .md_tit {
-        @include flexLayout(center, space-between, 12px);
+        @include flexLayout(center, space-between, 8px);
         height: $height_header;
         padding: 0 16px;
         border-bottom: 1px solid $color_gray_e;

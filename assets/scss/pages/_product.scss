@@ -5,7 +5,7 @@
 /*---------- PRODUCT STYLES ------------*/
 /*======================================*/
 .prod_list_tit {
-  @include flexLayout(center, space-between, 12px);
+  @include flexLayout(center, space-between, 8px);
   p {
     @include fontStyle(14px, $color_gray_1d, 500);
   }
@@ -37,7 +37,6 @@
 .prod_detail_tab_area {
   position: sticky;
   top: $height_header + 1px;
-  border-top: 8px solid $color_gray_f8;
   border-bottom: 1px solid $color_gray_e;
   background-color: $color_white;
   z-index: 10;
@@ -117,10 +116,11 @@
 }
 
 .prod_detail_tit_wrap {
+  border-bottom: 8px solid $color_gray_f8;
   .top_area {
     border-bottom: 1px solid $color_gray_e;
     .inner {
-      @include flexLayout(center, space-between, 12px);
+      @include flexLayout(center, space-between, 8px);
       height: 55px;
     }
     a {
@@ -163,6 +163,7 @@
 
 .prod_detail_info_wrap {
   padding: 40px 0 50px;
+  border-bottom: 8px solid $color_gray_f8;
   .editor_area {
     position: relative;
     overflow: hidden;
