@@ -377,7 +377,13 @@ img {
   display: flex;
 }
 #floating_menu.show {
+  bottom: 20px;
+}
+#floating_menu.show.b_80 {
   bottom: 80px;
+}
+#floating_menu.show.b_86 {
+  bottom: 86px;
 }
 
 /*===== HEADER =====*/

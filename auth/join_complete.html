@@ -29,6 +29,8 @@
         </div>
 
         <div id="contents">
+          <div id="floating_area"></div>
+
           <section class="join_complete_area">
             <div class="inner">
               <img
@@ -54,6 +56,7 @@
     <script>
       // ===== 공통 영역 설정 스크립트 =====
       $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
 
       $(window).on("load", function () {
         $("#header h1").text("가입완료");

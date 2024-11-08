@@ -120,7 +120,13 @@
   }
 
   &.show {
-    bottom: 80px;
+    bottom: 20px;
+    &.b_80 {
+      bottom: 80px;
+    }
+    &.b_86 {
+      bottom: 86px;
+    }
   }
 }
 

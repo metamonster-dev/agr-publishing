@@ -29,6 +29,8 @@
         </div>
 
         <div id="contents">
+          <div id="floating_area"></div>
+
           <div class="inner">
             <div class="order_info_area">
               <img
@@ -79,36 +81,17 @@
             </div>
           </div>
         </div>
-
-        <!-- modal -->
-        <div class="modal_wrap msg" id="md_send">
-          <div class="modal_area">
-            <p>인증번호가 전송되었습니다.</p>
-            <span>5분 이내에 입력해 주세요.</span>
-            <div class="btn_area">
-              <button
-                type="button"
-                class="btn btn_style01 btn_size_52"
-                onClick="onModalHide('md_send', 'verify_num')"
-              >
-                확인
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- // modal -->
       </div>
     </div>
 
     <script>
       // ===== 공통 영역 설정 스크립트 =====
       $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
 
       $(window).on("load", function () {
         $("#header h1").text("주문완료");
       });
-
-      // ===== 페이지 =====
     </script>
   </body>
 </html>
