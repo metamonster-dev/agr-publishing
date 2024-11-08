@@ -874,9 +874,17 @@ img {
   color: #dd083e !important;
 }
 
+.color_key_01 {
+  color: #475ed9 !important;
+}
+
 /* Width & Margin & Padding & Border */
 .w_full {
   width: 100%;
+}
+
+.mt_12 {
+  margin-top: 12px;
 }
 
 .mt_16 {
@@ -1860,6 +1868,34 @@ img {
   font-weight: 500;
   text-decoration: underline;
 }
+.list_area.list_style07 {
+  padding: 20px 16px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+.list_area.list_style07 dl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.list_area.list_style07 dl dt {
+  font-size: 14px;
+  color: #717171;
+  font-weight: 500;
+}
+.list_area.list_style07 dl dd {
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.list_area.list_style07 dl + dl {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eeeeee;
+}
 
 /* Item */
 .item_area {
@@ -1914,6 +1950,11 @@ img {
   font-size: 16px;
   color: #1d1d1d;
   font-weight: 700;
+}
+.item_area.border {
+  padding: 16px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
 }
 
 .item_area02 .tit_area {
@@ -3081,6 +3122,22 @@ img {
   background-color: #ffffff;
 }
 
+.order_info_area {
+  padding: 32px 0 40px;
+  text-align: center;
+}
+.order_info_area img {
+  margin: 0 auto 16px;
+}
+.order_info_area p {
+  font-size: 22px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+
+/*======================================*/
+/*----------- COMMON STYLES ------------*/
+/*======================================*/
 /*======================================*/
 /*------------ SEARCH PAGES ------------*/
 /*======================================*/

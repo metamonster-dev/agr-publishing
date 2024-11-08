@@ -29,10 +29,16 @@
 .color_red {
   color: $color_red !important;
 }
+.color_key_01 {
+  color: $color_key_01 !important;
+}
 
 /* Width & Margin & Padding & Border */
 .w_full {
   width: 100%;
+}
+.mt_12 {
+  margin-top: 12px;
 }
 .mt_16 {
   margin-top: 16px;
@@ -817,6 +823,25 @@
       }
     }
   }
+  &.list_style07 {
+    padding: 20px 16px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    dl {
+      @include flexLayout(center, space-between, 8px);
+      dt {
+        @include fontStyle(14px, $color_gray_71, 500);
+      }
+      dd {
+        @include fontStyle(14px, $color_gray_1d, 700);
+      }
+      & + dl {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid $color_gray_e;
+      }
+    }
+  }
 }
 
 /* Item */
@@ -847,6 +872,11 @@
         @include fontStyle(16px, $color_gray_1d, 700);
       }
     }
+  }
+  &.border {
+    padding: 16px;
+    border: 1px solid $color_gray_d8;
+    border-radius: 4px;
   }
 }
 .item_area02 {

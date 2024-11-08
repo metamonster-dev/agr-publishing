@@ -51,3 +51,14 @@
   padding: 24px 16px 64px;
   background-color: $color_white;
 }
+
+.order_info_area {
+  padding: 32px 0 40px;
+  text-align: center;
+  img {
+    margin: 0 auto 16px;
+  }
+  p {
+    @include fontStyle(22px, $color_gray_1d, 700);
+  }
+}
