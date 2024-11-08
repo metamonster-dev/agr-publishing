@@ -55,14 +55,9 @@
                       class="input"
                       placeholder="이메일을 입력해 주세요"
                     />
-                    <span class="error_msg d_none">오류 메시지</span>
                   </div>
 
-                  <button
-                    type="submit"
-                    class="btn btn_style01 btn_size_52"
-                    disabled
-                  >
+                  <button type="submit" class="btn btn_style01 btn_size_52">
                     인증번호 전송
                   </button>
                 </div>
@@ -134,24 +129,6 @@
       });
 
       // ===== 페이지 =====
-      $("input").on("input", function () {
-        const f = document.querySelector("#sendEmailForm");
-        const f2 = document.querySelector("#verifyForm");
-
-        if (f.email.value !== "")
-          f.querySelector("button[type=submit]").disabled = false;
-        else f.querySelector("button[type=submit]").disabled = true;
-        if (f2.verify_num.value !== "")
-          f2.querySelector("button[type=submit]").disabled = false;
-        else f2.querySelector("button[type=submit]").disabled = true;
-
-        $(this).removeClass("error");
-        $(this)
-          .parents(".label_input_area")
-          .find(".error_msg")
-          .addClass("d_none");
-      });
-
       // timer
       let timer;
       const startTimer = () => {
@@ -184,29 +161,6 @@
       };
 
       const formValid = (f) => {
-        if (f.email.value == "") {
-          $(f.email)
-            .addClass("error")
-            .parents(".label_input_area")
-            .find(".error_msg")
-            .text("이메일 주소를 입력해 주세요.")
-            .removeClass("d_none");
-          f.email.focus();
-          return false;
-        }
-
-        if (!regEmail.test(f.email.value)) {
-          $(f.email)
-            .addClass("error")
-            .parents(".label_input_area")
-            .find(".error_msg")
-            .text("정확한 이메일주소를 입력해 주세요")
-            .removeClass("d_none");
-          f.email.focus();
-          return false;
-        }
-
-        // return true;
         $("#verifyForm").removeClass("d_none");
         onModalShow("md_send");
         startTimer();
