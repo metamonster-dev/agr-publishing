@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <div class="pt_32 pb_124">
+            <div class="inner">
+              <form id="contactForm" onSubmit="return formValid(this);">
+                <div class="input_list_area gap_24">
+                  <div class="label_input_area">
+                    <label for="title" class="label">제목</label>
+                    <input
+                      type="text"
+                      name="title"
+                      id="title"
+                      class="input"
+                      placeholder="제목을 입력해 주세요."
+                    />
+                  </div>
+
+                  <div class="label_input_area">
+                    <label for="content" class="label">내용</label>
+                    <textarea
+                      name="content"
+                      id="content"
+                      cols="30"
+                      rows="10"
+                      class="textarea"
+                      placeholder="내용을 입력해 주세요."
+                    ></textarea>
+                  </div>
+
+                  <div class="label_input_area">
+                    <span class="label">이미지 첨부</span>
+                    <div class="img_input_list_area">
+                      <div class="img_input">
+                        <input
+                          type="file"
+                          name="img"
+                          id="img"
+                          accept=".jpg, .jpeg, .png"
+                        />
+                        <label for="img"><span>이미지 첨부</span></label>
+                      </div>
+                    </div>
+                    <span class="input_desc_text02">
+                      * 10MB 이하 JPG, PNG만 등록 가능합니다. (최대3장)
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn_style01 btn_size_52 w_full mt_40"
+                >
+                  확인
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("문의하기");
+        $("#floating_menu").addClass("b_80");
+      });
+
+      const formValid = (f) => {
+        return false;
+      };
+    </script>
+  </body>
+</html>
