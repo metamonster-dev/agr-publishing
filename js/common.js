@@ -134,12 +134,16 @@ $(window).on("load", function () {
   );
 
   // toggle item
-  $(document).on("click", ".toggle_area button.tg_tit", function () {
-    if ($(this).parent().hasClass("active"))
-      $(this).next(".tg_cont").stop(false, false).slideUp();
-    else $(this).next(".tg_cont").stop(false, false).slideDown();
-    $(this).parent().toggleClass("active");
-  });
+  $(document).on(
+    "click",
+    ".toggle_area button.tg_tit, .list_toggle_area button.tg_tit",
+    function () {
+      if ($(this).parent().hasClass("active"))
+        $(this).next(".tg_cont").stop(false, false).slideUp();
+      else $(this).next(".tg_cont").stop(false, false).slideDown();
+      $(this).parent().toggleClass("active");
+    }
+  );
 
   // select custom
   $(document).on("click", ".select_custom button", function () {

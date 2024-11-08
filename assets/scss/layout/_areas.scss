@@ -76,6 +76,9 @@
 .pt_40 {
   padding-top: 40px;
 }
+.pt_76 {
+  padding-top: 76px;
+}
 .pb_16 {
   padding-bottom: 16px;
 }
@@ -443,6 +446,27 @@
     }
     &.on {
       background-image: url("../images/icon_eye_on.svg");
+    }
+  }
+}
+.input_search_area {
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  input {
+    height: 44px;
+    padding-right: 48px;
+    border-color: $color_gray_e;
+  }
+  button {
+    position: absolute;
+    top: calc(50% - 22px);
+    right: 6px;
+    width: 44px;
+    height: 44px;
+    background: url("../images/icon_search02.svg") no-repeat center / 24px;
+
+    span {
+      @include hiddenText;
     }
   }
 }
@@ -906,6 +930,57 @@
       }
     }
   }
+}
+// List - toggle
+.list_toggle_area ul li {
+  border-bottom: 1px solid $color_gray_e;
+  .tg_tit {
+    position: relative;
+    width: 100%;
+    padding: 20px 40px 20px 16px;
+    text-align: left;
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 10px);
+      right: 16px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("../images/icon_toggle_arrow02.svg") no-repeat center /
+        contain;
+      transition: all 0.3s;
+    }
+    .tit {
+      @include fontStyle(16px, $color_gray_1d, 700);
+      span {
+        color: $color_key_01;
+      }
+    }
+    .date {
+      @include fontStyle(14px, $color_gray_71, 500);
+      display: block;
+      margin-top: 8px;
+    }
+  }
+  .tg_cont {
+    padding: 0 16px 24px;
+    p {
+      @include fontStyle(16px, $color_gray_5, 500);
+      padding: 16px;
+      border-radius: 4px;
+      background-color: $color_gray_f8;
+    }
+  }
+  &.active .tg_tit::before {
+    transform: rotate(180deg);
+  }
+  &.default_close .tg_cont {
+    display: none;
+  }
+}
+
+.list_total_text {
 }
 
 /* Item */

@@ -941,6 +941,10 @@ img {
   padding-top: 40px;
 }
 
+.pt_76 {
+  padding-top: 76px;
+}
+
 .pb_16 {
   padding-bottom: 16px;
 }
@@ -1388,6 +1392,31 @@ img {
 }
 .input_pw_area button.on {
   background-image: url("../images/icon_eye_on.svg");
+}
+
+.input_search_area {
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+.input_search_area input {
+  height: 44px;
+  padding-right: 48px;
+  border-color: #eeeeee;
+}
+.input_search_area button {
+  position: absolute;
+  top: calc(50% - 22px);
+  right: 6px;
+  width: 44px;
+  height: 44px;
+  background: url("../images/icon_search02.svg") no-repeat center/24px;
+}
+.input_search_area button span {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 
 .input_list_area {
@@ -2000,6 +2029,59 @@ img {
   margin-top: 16px;
   padding-top: 16px;
   border-top: 1px solid #eeeeee;
+}
+
+.list_toggle_area ul li {
+  border-bottom: 1px solid #eeeeee;
+}
+.list_toggle_area ul li .tg_tit {
+  position: relative;
+  width: 100%;
+  padding: 20px 40px 20px 16px;
+  text-align: left;
+}
+.list_toggle_area ul li .tg_tit::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 16px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icon_toggle_arrow02.svg") no-repeat center/contain;
+  transition: all 0.3s;
+}
+.list_toggle_area ul li .tg_tit .tit {
+  font-size: 16px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.list_toggle_area ul li .tg_tit .tit span {
+  color: #475ed9;
+}
+.list_toggle_area ul li .tg_tit .date {
+  font-size: 14px;
+  color: #717171;
+  font-weight: 500;
+  display: block;
+  margin-top: 8px;
+}
+.list_toggle_area ul li .tg_cont {
+  padding: 0 16px 24px;
+}
+.list_toggle_area ul li .tg_cont p {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+.list_toggle_area ul li.active .tg_tit::before {
+  transform: rotate(180deg);
+}
+.list_toggle_area ul li.default_close .tg_cont {
+  display: none;
 }
 
 /* Item */
