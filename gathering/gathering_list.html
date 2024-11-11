@@ -1,0 +1,204 @@
+<!-- 게더링 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <section class="gathering_tit_area">
+            <h2 class="tit">ART GATHERING</h2>
+            <p>
+              장애 예술인과 <br />
+              비장애 예술인 매칭 서비스
+            </p>
+          </section>
+
+          <div class="pt_32 pb_24 border_bottom_8">
+            <div class="inner">
+              <div class="input_search_area">
+                <form id="searchForm" onSubmit="return formValid(this);">
+                  <label for="search" class="hidden_text">검색</label>
+                  <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    class="input"
+                    placeholder="검색어를 입력하세요"
+                  />
+                  <button type="submit">
+                    <span>검색하기</span>
+                  </button>
+                </form>
+              </div>
+              <a
+                href="./gathering_detail.html"
+                class="btn btn_style01 btn_size_52 w_full mt_16"
+              >
+                모집 요청하기
+              </a>
+            </div>
+          </div>
+
+          <div class="pb_150">
+            <div class="inner">
+              <div class="gathering_list_tit mt_24">
+                <p>총 <b>63</b>건</p>
+                <div class="tooltip_wrap show">
+                  <div class="tooltip_area">
+                    <p>
+                      이곳은 아트가이드런이 중계 역할만 제공하며, 이에 대한
+                      책임은 지지 않습니다.
+                    </p>
+                    <button type="button" class="x_btn">
+                      <span>툴팁 닫기</span>
+                    </button>
+                  </div>
+                  <button type="button" class="i_btn">
+                    <span>게더링 페이지 툴팁 보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 데이터 없을 시, -->
+            <!-- <div class="no_data_area pt_40">
+              <i></i><span>게시물이 없습니다.</span>
+            </div> -->
+            <div class="list_area list_style09 border_top mt_16">
+              <ul>
+                <li>
+                  <a href="./gathering_view.html">
+                    <div class="tags">
+                      <span class="tag_text02 tag_style01">디즈니</span>
+                      <span class="tag_text02 tag_style02">홍보/바이럴</span>
+                    </div>
+                    <p class="tit">
+                      디즈니 100년 특별전 전시회 스탭 모집합니다.
+                    </p>
+                    <div class="desc">
+                      <p class="date">2024.09.24</p>
+                      <p class="view">조회수 3</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./gathering_view.html">
+                    <div class="tags">
+                      <span class="tag_text02 tag_style01">트루빈스</span>
+                      <span class="tag_text02 tag_style02">기타</span>
+                    </div>
+                    <p class="tit">
+                      바이럴/홍보영상 촬영현장 보조 스탭 구합니다.
+                    </p>
+                    <div class="desc">
+                      <p class="date">2024.09.24</p>
+                      <p class="view">조회수 3</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./gathering_view.html">
+                    <div class="tags">
+                      <span class="tag_text02 tag_style01">디즈니</span>
+                      <span class="tag_text02 tag_style02">홍보/바이럴</span>
+                    </div>
+                    <p class="tit">
+                      디즈니 100년 특별전 전시회 스탭 모집합니다.
+                    </p>
+                    <div class="desc">
+                      <p class="date">2024.09.24</p>
+                      <p class="view">조회수 3</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./gathering_view.html">
+                    <div class="tags">
+                      <span class="tag_text02 tag_style01">트루빈스</span>
+                      <span class="tag_text02 tag_style02">기타</span>
+                    </div>
+                    <p class="tit">
+                      바이럴/홍보영상 촬영현장 보조 스탭 구합니다.
+                    </p>
+                    <div class="desc">
+                      <p class="date">2024.09.24</p>
+                      <p class="view">조회수 3</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./gathering_view.html">
+                    <div class="tags">
+                      <span class="tag_text02 tag_style01">디즈니</span>
+                      <span class="tag_text02 tag_style02">홍보/바이럴</span>
+                    </div>
+                    <p class="tit">
+                      디즈니 100년 특별전 전시회 스탭 모집합니다.
+                    </p>
+                    <div class="desc">
+                      <p class="date">2024.09.24</p>
+                      <p class="view">조회수 3</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="inner">
+              <button
+                type="button"
+                class="btn btn_style03 btn_size_40 w_full mt_40"
+              >
+                더보기
+                <i class="arrow bottom"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("게더링");
+        $("#floating_menu").addClass("b_80");
+      });
+
+      // ===== 페이지 =====
+      const formValid = (f) => {
+        return false;
+      };
+    </script>
+  </body>
+</html>

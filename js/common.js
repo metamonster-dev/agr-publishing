@@ -98,6 +98,22 @@ $(window).on("load", function () {
     }
   });
 
+  // tooltip show/hide
+  $(document).on("click", ".tooltip_wrap .i_btn", function () {
+    const tooltip = $(this).parents(".tooltip_wrap");
+    if (!tooltip.hasClass("show")) {
+      tooltip.addClass("show");
+      tooltip.find(".x_btn").focus();
+    } else {
+      tooltip.removeClass("show");
+    }
+  });
+  $(document).on("click", ".tooltip_wrap .x_btn", function () {
+    const tooltip = $(this).parents(".tooltip_wrap");
+    tooltip.removeClass("show");
+    tooltip.find(".i_btn").focus();
+  });
+
   // modal event
   $(document).on("click", ".modal_wrap", function (e) {
     const modal = $(e.target).parents(".modal_wrap");

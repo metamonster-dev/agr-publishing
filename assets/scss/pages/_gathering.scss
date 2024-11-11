@@ -2,5 +2,69 @@
 @import "../common/_mixins";
 
 /*======================================*/
-/*----------- COMMON STYLES ------------*/
+/*--------- GATHERING STYLES -----------*/
 /*======================================*/
+.gathering_tit_area {
+  @include flexLayout(center, center, 16px, nowrap, column);
+  width: 100%;
+  height: 240px;
+  padding: 0 16px;
+  background: url("../images/gathering_tit_bg.jpg") no-repeat center / cover;
+  text-align: center;
+  h2 {
+    @include fontStyle(25px, $color_white, 700);
+    font-family: "Poppins";
+  }
+  p {
+    @include fontStyle(18px, $color_white, 700);
+  }
+}
+
+.gathering_list_tit {
+  @include flexLayout(center, space-between, 8px);
+  p {
+    @include fontStyle(14px, $color_gray_1d, 500);
+  }
+}
+
+.gathering_view_area {
+  padding: 32px 0;
+  background-color: $color_key_03;
+  .text_area {
+    padding: 20px 16px;
+    border: 1px solid $color_key_05;
+    border-radius: 4px;
+    background-color: $color_white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    .tags {
+      @include flexLayout(center, flex-start, 6px);
+      margin-bottom: 8px;
+    }
+    .tit {
+      @include fontStyle(18px, $color_gray_1d, 700);
+    }
+    .desc {
+      @include flexLayout(center, flex-start, 8px);
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid $color_gray_e;
+      p {
+        @include flexLayout(center, center, 8px);
+        @include fontStyle(14px, $color_gray_71, 500);
+        &:not(:last-of-type)::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 12px;
+          background-color: $color_gray_d8;
+        }
+      }
+    }
+  }
+}
+
+.request_button_area {
+  padding: 32px 16px;
+  border-bottom: 8px solid $color_gray_f8;
+  overflow: hidden;
+}

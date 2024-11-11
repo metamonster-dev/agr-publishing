@@ -1,0 +1,116 @@
+<!-- 게더링 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <section class="gathering_view_area">
+            <div class="inner">
+              <div class="text_area">
+                <div class="tags">
+                  <span class="tag_text02 tag_style01">디즈니</span>
+                  <span class="tag_text02 tag_style02">홍보/바이럴</span>
+                </div>
+                <h2 class="tit">디즈니 100년 특별전 전시회 스탭 모집합니다.</h2>
+                <div class="desc">
+                  <p class="date">2024.09.24</p>
+                  <p class="view">조회수 3</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="pt_24 pb_150">
+            <div class="inner">
+              <div class="list_tit_area">
+                <h3>모집정보</h3>
+              </div>
+              <div class="list_area list_style05 border_top pt_24 mt_16">
+                <dl>
+                  <dt>제작</dt>
+                  <dd>디즈니</dd>
+
+                  <dt>모집분야</dt>
+                  <dd>홍보/바이럴</dd>
+
+                  <dt>모집인원</dt>
+                  <dd>5명</dd>
+
+                  <dt>경력</dt>
+                  <dd>
+                    경력 내용 노출 경력 내용 노출 경력 내용 노출 경력 내용 노출
+                  </dd>
+
+                  <dt>담당자</dt>
+                  <dd>홍길동 실장</dd>
+
+                  <dt>휴대폰번호</dt>
+                  <dd>010-1234-5678</dd>
+
+                  <dt>이메일</dt>
+                  <dd>art@naver.com</dd>
+
+                  <dt>모집마감일</dt>
+                  <dd>10월 20일</dd>
+
+                  <dt>기타</dt>
+                  <dd>
+                    기타사항 입력 내용 노출 기타사항 입력 내용 노출 기타사항
+                    입력 내용 노출
+                  </dd>
+                </dl>
+              </div>
+              <a
+                href="./gathering_list.html"
+                class="btn btn_style02 btn_size_52 mt_40"
+              >
+                목록으로
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("게더링");
+        $("#floating_menu").addClass("b_80");
+      });
+    </script>
+  </body>
+</html>

@@ -65,7 +65,7 @@
 /*======================================*/
 /*----------- COMPANY PAGES ------------*/
 /*======================================*/
-.company_banner_area {
+.company_tit_area {
   @include flexLayout(center, center, 16px, nowrap, column);
   @include initBackground;
   padding: 0 16px;
@@ -73,10 +73,10 @@
   height: 400px;
   text-align: center;
   &.bg01 {
-    background-image: url("../images/company_banner_bg01.jpg");
+    background-image: url("../images/company_tit_bg01.jpg");
   }
   &.bg02 {
-    background-image: url("../images/company_banner_bg02.jpg");
+    background-image: url("../images/company_tit_bg02.jpg");
   }
   h2 {
     @include fontStyle(25px, $color_white, 700);

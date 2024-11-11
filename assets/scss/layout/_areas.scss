@@ -94,14 +94,20 @@
 .pb_80 {
   padding-bottom: 80px;
 }
-.pb_124 {
-  padding-bottom: 124px;
+.pb_150 {
+  padding-bottom: 150px;
 }
 .border_top {
   border-top: 1px solid $color_gray_e;
 }
 .border_bottom {
   border-bottom: 1px solid $color_gray_e;
+}
+.border_top_8 {
+  border-top: 8px solid $color_gray_f8;
+}
+.border_bottom_8 {
+  border-bottom: 8px solid $color_gray_f8;
 }
 
 /* Input, Textarea, Select, Label */
@@ -351,7 +357,7 @@
     @include fontStyle(16px, $color_gray_5, 500);
     position: relative;
     display: inline-block;
-    padding: 1px 0 1px 32px;
+    padding: 0.5px 0 0.5px 32px;
     cursor: pointer;
     user-select: none;
     &::before {
@@ -930,6 +936,84 @@
       }
     }
   }
+
+  &.list_style09 {
+    ul li {
+      border-bottom: 1px solid #eeeeee;
+      a {
+        display: block;
+        padding: 20px 16px;
+      }
+    }
+    .tags {
+      @include flexLayout(center, flex-start, 6px);
+      margin-bottom: 8px;
+    }
+    .tit {
+      @include fontStyle(16px, $color_gray_1d, 700);
+    }
+    .desc {
+      @include flexLayout(center, flex-start, 8px);
+      margin-top: 8px;
+      p {
+        @include flexLayout(center, center, 8px);
+        @include fontStyle(14px, $color_gray_71, 500);
+        &:not(:last-of-type)::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 12px;
+          background-color: $color_gray_d8;
+        }
+      }
+    }
+
+    // 여기부턴 쓰나 안쓰나 확인
+    .title_area {
+      border-bottom: 1px solid #eeeeee;
+      padding: 20px 16px;
+    }
+
+    .tg_tit {
+      position: relative;
+      width: 100%;
+      padding: 20px 40px 20px 16px;
+      text-align: left;
+      &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 16px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url("../images/icon_toggle_arrow02.svg") no-repeat center /
+          contain;
+        transition: all 0.3s;
+      }
+    }
+    .tg_cont {
+      padding: 0 16px 24px;
+      &_area {
+        background-color: $color_gray_f8;
+        border-radius: 4px;
+      }
+
+      .cont_tit,
+      .cont_desc {
+        padding: 16px;
+      }
+      p {
+        @include fontStyle(16px, $color_gray_5, 500);
+      }
+    }
+    &.active .tg_tit::before {
+      transform: rotate(180deg);
+    }
+    & .default_close .tg_cont {
+      display: none;
+    }
+  }
 }
 // List - toggle
 .list_toggle_area ul li {
@@ -979,8 +1063,33 @@
     display: none;
   }
 }
+// List - title
+.list_tit_area {
+  @include flexLayout(center, space-between, 8px);
+  h3 {
+    @include fontStyle(18px, $color_gray_1d, 700);
+  }
+  p {
+    @include fontStyle(14px, $color_gray_1d, 500);
+  }
 
-.list_total_text {
+  .select_btn {
+    @include flexLayout(center, center, 4px);
+    @include fontStyle(14px, $color_gray_5, 500);
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid $color_gray_d8;
+    border-radius: 4px;
+    background-color: $color_white;
+    text-align: left;
+    &::after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../images/icon_select.svg") no-repeat center / contain;
+    }
+  }
 }
 
 /* Item */
@@ -1136,6 +1245,54 @@
   }
 }
 
+/* Tool Tip */
+.tooltip_wrap {
+  position: relative;
+  flex: 1;
+  button {
+    @include initBackground;
+    display: block;
+    span {
+      @include hiddenText;
+    }
+  }
+  .i_btn {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    background-size: contain;
+    background-image: url("../images/icon_tooltip.svg");
+  }
+  .x_btn {
+    width: 16px;
+    height: 16px;
+    background-size: 10px;
+    background-image: url("../images/icon_x02.svg");
+  }
+  .tooltip_area {
+    @include flexLayout(stretch, flex-start, 6px);
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 28px;
+    width: calc(100% + 28px);
+    max-width: 300px;
+    padding: 12px;
+    border-radius: 4px;
+    background: rgba(29, 29, 29, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+    p {
+      @include fontStyle(14px, $color_white, 700);
+      flex: 1;
+    }
+  }
+
+  &.show .tooltip_area {
+    display: flex;
+  }
+}
+
 /* Tag */
 .tag_text {
   @include flexLayout(center, center);
@@ -1156,6 +1313,23 @@
   &.tag_style03 {
     color: $color_gray_1d;
     background-color: $color_gray_f8;
+  }
+}
+.tag_text02 {
+  @include flexLayout(center, center);
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+
+  &.tag_style01 {
+    color: $color_key_01;
+    background-color: $color_key_03;
+  }
+  &.tag_style02 {
+    color: $color_gray_5;
+    background-color: $color_gray_f0;
   }
 }
 
@@ -1192,7 +1366,8 @@
   }
 }
 
-/* Banner */
+/* ETCS */
+// Art Guide Run Banner
 .agr_banner_wrap {
   padding: 40px 32px;
   border-radius: 4px;
