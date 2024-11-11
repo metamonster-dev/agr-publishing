@@ -4,14 +4,20 @@
 /*======================================*/
 /*--------- GATHERING STYLES -----------*/
 /*======================================*/
-// 게더링
 .gathering_tit_area {
   @include flexLayout(center, center, 16px, nowrap, column);
+  @include initBackground;
   width: 100%;
   height: 240px;
   padding: 0 16px;
-  background: url("../images/gathering_tit_bg.jpg") no-repeat center / cover;
+  background-size: cover;
   text-align: center;
+  &.bg01 {
+    background-image: url("../images/gathering_tit_bg.jpg");
+  }
+  &.bg02 {
+    background-image: url("../images/work_tit_bg.jpg");
+  }
   h2 {
     @include fontStyle(25px, $color_white, 700);
     font-family: "Poppins";
@@ -28,6 +34,33 @@
   }
 }
 
+.gathering_detail_tit_area {
+  padding: 20px 0;
+  border-bottom: 1px solid $color_gray_e;
+  h2 {
+    @include fontStyle(18px, $color_gray_1d, 700);
+  }
+  .desc {
+    @include flexLayout(center, flex-start, 8px);
+    margin-top: 8px;
+    p {
+      @include flexLayout(center, center, 8px);
+      @include fontStyle(14px, $color_gray_71, 500);
+      &:not(:last-of-type)::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 12px;
+        background-color: $color_gray_d8;
+      }
+    }
+  }
+}
+.gathering_detail_content_area {
+  padding: 40px 0;
+}
+
+// 게더링
 .gathering_view_area {
   padding: 32px 0;
   background-color: $color_key_03;

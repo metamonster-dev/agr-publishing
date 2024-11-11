@@ -625,6 +625,62 @@
     background-color: $color_white;
     color: $color_gray_1d;
   }
+
+  // 파일 버튼
+  &.download_btn {
+    position: relative;
+    display: block;
+    padding: 8px 12px 8px 36px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("../images/icon_download.svg") no-repeat center/ contain;
+    }
+    & + .download_btn {
+      margin-top: 8px;
+    }
+    span {
+      @include fontStyle(13px, $color_gray_71, 500);
+      display: inline-block;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+  }
+
+  // 링크 버튼
+  &.link_btn {
+    position: relative;
+    display: block;
+    padding: 8px 12px 8px 36px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("../images/icon_download.svg") no-repeat center/ contain;
+    }
+    & + .download_btn {
+      margin-top: 8px;
+    }
+    span {
+      @include fontStyle(13px, $color_gray_71, 500);
+      display: inline-block;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+  }
 }
 
 /* Tab */
@@ -712,6 +768,9 @@
   }
   &.rect02::before {
     padding-bottom: 38%;
+  }
+  &.rect03::before {
+    padding-bottom: 60%;
   }
 }
 

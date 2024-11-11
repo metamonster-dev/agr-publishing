@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <section class="pb_150">
+            <div class="gathering_detail_tit_area">
+              <div class="inner">
+                <h2>아트가이드런에서 제공하는 VOD</h2>
+                <div class="desc">
+                  <p>2024.09.24</p>
+                  <p>조회수 3</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner">
+              <div class="editor_area py_40">
+                <img
+                  src="../assets/images/product/work_img01.jpg"
+                  alt="에디터 등록 이미지"
+                />
+                <br />
+                내용이 노출되는 영역입니다. 별 하나에 추억과 별 하나에 사랑과 별
+                하나에 쓸쓸함과 별 하나에 동경과 별 하나에 시와 별 하나에
+                어머니, 어머니, 어머님, 나는 별 하나에 아름다운 말 한 마디씩
+                불러 봅니다. 나는 아무 걱정도 없이 가을 속의 별을 다 헬
+                듯합니다.별 하나에 추억과 별 하나에 사랑과 별 하나에 쓸쓸함과 별
+                하나에 동경과 별 하나에 시와 별 하나에 어머니, 어머니, 어머님,
+                나는 별 하나에 아름다운 말 한 마디씩 불러 봅니다. 나는 아무
+                걱정도 없이 가을 속의 별을 다 헬 듯합니다.별 하나에 추억과 별
+                하나에 사랑과 별 하나에 쓸쓸함과 별 하나에 동경과 별 하나에 시와
+                별 하나에 어머니, 어머니, 어머님, 나는 별 하나에 아름다운 말 한
+                마디씩 불러 봅니다. 나는 아무 걱정도 없이 가을 속의 별을 다 헬
+                듯합니다.
+              </div>
+
+              <!-- 파일 첨부 존재 시, -->
+              <div class="mb_24">
+                <a
+                  href="../assets/images/product/work_img01.jpg"
+                  download
+                  class="btn download_btn"
+                  aria-label="파일첨부.jpg 파일 다운로드"
+                >
+                  <span>파일첨부.jpg</span>
+                </a>
+                <a
+                  href="../assets/images/product/work_img01.jpg"
+                  download
+                  class="btn download_btn"
+                  aria-label="파일첨부.jpg 파일 다운로드"
+                >
+                  <span>파일첨부.jpg</span>
+                </a>
+              </div>
+              <!-- // 파일 첨부 존재 시 -->
+            </div>
+
+            <div class="border_top pt_24">
+              <div class="inner">
+                <a
+                  href="./work_list.html"
+                  class="btn btn_style02 btn_size_52 w_full"
+                >
+                  목록으로
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("작품 소개");
+        $("#floating_menu").addClass("b_80");
+      });
+    </script>
+  </body>
+</html>
