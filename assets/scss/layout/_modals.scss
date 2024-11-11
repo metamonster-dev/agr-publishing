@@ -226,3 +226,24 @@
     border-bottom: 8px solid $color_gray_f8;
   }
 }
+
+// 공모사업
+.md_offering_area {
+  margin-top: 16px;
+  padding: 24px 16px;
+  border-radius: 4px;
+  background-color: $color_gray_f8;
+
+  dl {
+    @include flexLayout(stretch, center, 16px 0, wrap);
+    dt {
+      @include fontStyle(16px, $color_gray_71, 500);
+      width: 80px;
+      padding-right: 8px;
+    }
+    dd {
+      @include fontStyle(16px, $color_gray_1d, 500);
+      width: calc(100% - 80px);
+    }
+  }
+}

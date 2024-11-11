@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+          <div class="tab_area tab_style02 tab_slider02">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide on">
+                <button type="button">전체</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">지원 공모사업</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">취업공고</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">창업/경영</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">교육사업</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">지역사업</button>
+              </li>
+              <li class="swiper-slide">
+                <button type="button">기타행사</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <div class="pt_24 pb_150">
+            <div class="inner">
+              <div class="calendar_wrap">
+                <!-- 캘린더 라이브러리 영역 -->
+              </div>
+              <button
+                type="button"
+                id="calendar_btn"
+                class="btn btn_style01 btn_size_40 w_full"
+                onClick="onModalShow('md_offering')"
+              >
+                캘린더
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal -->
+        <div class="modal_wrap bottom" id="md_offering">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>공모사업</p>
+              <button
+                type="button"
+                class="x_btn"
+                onClick="onModalHide('md_offering', 'calendar_btn')"
+              >
+                <span>모달 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">
+              <div class="md_offering_area">
+                <dl>
+                  <dt>사업명</dt>
+                  <dd>
+                    <strong>
+                      문화예술 지원사업문화예술 지원사업문화예술 지원사업
+                    </strong>
+                  </dd>
+
+                  <dt>일정</dt>
+                  <dd>
+                    <strong>2024.08.22 ~ 2024.08.30</strong>
+                  </dd>
+
+                  <dt>기타</dt>
+                  <dd>기타사항 간략히 정보 노출</dd>
+                </dl>
+              </div>
+              <a
+                href="./detail.html"
+                class="btn btn_style01 btn_size_48 w_full mt_24"
+                onClick="onModalHide('md_offering', 'calendar_btn')"
+              >
+                상세보기
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- // modal -->
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("캘린더");
+        $("#floating_menu").addClass("b_80");
+        $("#bottom_nav ul li").eq(1).addClass("active");
+      });
+
+      // ===== 페이지 =====
+    </script>
+  </body>
+</html>

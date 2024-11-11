@@ -61,43 +61,6 @@
   }
 }
 
-// 게더링
-.gathering_view_area {
-  padding: 32px 0;
-  background-color: $color_key_03;
-  .text_area {
-    padding: 20px 16px;
-    border: 1px solid $color_key_05;
-    border-radius: 4px;
-    background-color: $color_white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-    .tags {
-      @include flexLayout(center, flex-start, 6px);
-      margin-bottom: 8px;
-    }
-    .tit {
-      @include fontStyle(18px, $color_gray_1d, 700);
-    }
-    .desc {
-      @include flexLayout(center, flex-start, 8px);
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid $color_gray_e;
-      p {
-        @include flexLayout(center, center, 8px);
-        @include fontStyle(14px, $color_gray_71, 500);
-        &:not(:last-of-type)::after {
-          content: "";
-          display: block;
-          width: 1px;
-          height: 12px;
-          background-color: $color_gray_d8;
-        }
-      }
-    }
-  }
-}
-
 // 아티스트
 .artist_tit_area {
   text-align: center;

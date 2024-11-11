@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+
+          <section class="item_area03">
+            <div class="inner">
+              <div class="text_area">
+                <div class="tags">
+                  <span class="tag_text02 tag_style01">지원공모사업</span>
+                </div>
+                <h2 class="tit">
+                  문화예술 지원사업 문화예술 지원사업 문화예술 지원사업
+                </h2>
+                <div class="desc">
+                  <p class="date">2024.08.20</p>
+                  <p class="view">조회수 333</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="pt_20 pb_150">
+            <div class="inner">
+              <div class="tit_desc_area02 text_style01">
+                <p class="tit">진행일정</p>
+                <span class="desc">2024.08.22 ~ 2024.08.30</span>
+              </div>
+
+              <div class="editor_area pt_20">
+                <img
+                  src="../assets/images/product/work_img01.jpg"
+                  alt="에디터 등록 이미지"
+                />
+                <br />
+                내용이 노출되는 영역입니다. <br />
+                별 하나에 추억과 별 하나에 사랑과 별 하나에 쓸쓸함과 별 하나에
+                동경과 별 하나에 시와 별 하나에 어머니, 어머니, 어머님, 나는 별
+                하나에 아름다운 말 한 마디씩 불러 봅니다. 나는 아무 걱정도 없이
+                가을 속의 별을 다 헬 듯합니다.
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom_fixed_btns">
+            <button type="button" class="btn btn_style02 btn_size_52">
+              문의하기
+            </button>
+            <button type="button" class="btn btn_style01 btn_size_52">
+              지원하기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("공모사업 상세");
+        $("#floating_menu").addClass("b_86");
+      });
+    </script>
+  </body>
+</html>
