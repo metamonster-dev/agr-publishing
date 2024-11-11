@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <div class="pt_32 pb_150">
+            <div class="inner">
+              <div class="gathering_list_tit">
+                <p>총 <b>63</b>건</p>
+              </div>
+
+              <!-- 데이터 없을 시, -->
+              <!-- <div class="no_data_area pt_40">
+                <i></i><span>게시물이 없습니다.</span>
+              </div> -->
+              <div class="list_area list_style09 grid01 border_top mt_16 pt_24">
+                <ul>
+                  <li>
+                    <a href="./vod_detail.html">
+                      <div class="img_area rect03 video">
+                        <img
+                          src="../assets/images/product/work_img01.jpg"
+                          alt="아트가이드런에서 제공하는 VOD 영상 썸네일 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">아트가이드런에서 제공하는 VOD</p>
+                        <div class="desc">
+                          <span class="date">2024.10.08</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./vod_detail.html">
+                      <div class="img_area rect03 video">
+                        <img
+                          src="../assets/images/product/work_img02.jpg"
+                          alt="아트가이드런에서 제공하는 VOD 영상 썸네일 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">아트가이드런에서 제공하는 VOD</p>
+                        <div class="desc">
+                          <span class="date">2024.10.08</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./vod_detail.html">
+                      <div class="img_area rect03 video">
+                        <img
+                          src="../assets/images/product/work_img03.jpg"
+                          alt="아트가이드런에서 제공하는 VOD 영상 썸네일 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">아트가이드런에서 제공하는 VOD</p>
+                        <div class="desc">
+                          <span class="date">2024.10.08</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./vod_detail.html">
+                      <div class="img_area rect03 video">
+                        <img
+                          src="../assets/images/product/work_img01.jpg"
+                          alt="아트가이드런에서 제공하는 VOD 영상 썸네일 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">아트가이드런에서 제공하는 VOD</p>
+                        <div class="desc">
+                          <span class="date">2024.10.08</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./vod_detail.html">
+                      <div class="img_area rect03 video">
+                        <img
+                          src="../assets/images/product/work_img02.jpg"
+                          alt="아트가이드런에서 제공하는 VOD 영상 썸네일 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">아트가이드런에서 제공하는 VOD</p>
+                        <div class="desc">
+                          <span class="date">2024.10.08</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./vod_detail.html">
+                      <div class="img_area rect03 video">
+                        <img
+                          src="../assets/images/product/work_img03.jpg"
+                          alt="아트가이드런에서 제공하는 VOD 영상 썸네일 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">아트가이드런에서 제공하는 VOD</p>
+                        <div class="desc">
+                          <span class="date">2024.10.08</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                class="btn btn_style03 btn_size_40 w_full mt_40"
+              >
+                더보기
+                <i class="arrow bottom"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("VOD");
+        $("#floating_menu").addClass("b_80");
+      });
+    </script>
+  </body>
+</html>

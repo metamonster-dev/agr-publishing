@@ -669,9 +669,9 @@
       display: block;
       width: 20px;
       height: 20px;
-      background: url("../images/icon_download.svg") no-repeat center/ contain;
+      background: url("../images/icon_link.svg") no-repeat center/ contain;
     }
-    & + .download_btn {
+    & + .link_btn {
       margin-top: 8px;
     }
     span {
@@ -771,6 +771,26 @@
   }
   &.rect03::before {
     padding-bottom: 60%;
+  }
+}
+.video_area {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 60%;
+  }
+  iframe,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -1005,26 +1025,26 @@
         display: block;
         padding: 20px 16px;
       }
-    }
-    .tags {
-      @include flexLayout(center, flex-start, 6px);
-      margin-bottom: 8px;
-    }
-    .tit {
-      @include fontStyle(16px, $color_gray_1d, 700);
-    }
-    .desc {
-      @include flexLayout(center, flex-start, 8px);
-      margin-top: 8px;
-      p {
-        @include flexLayout(center, center, 8px);
-        @include fontStyle(14px, $color_gray_71, 500);
-        &:not(:last-of-type)::after {
-          content: "";
-          display: block;
-          width: 1px;
-          height: 12px;
-          background-color: $color_gray_d8;
+      .tags {
+        @include flexLayout(center, flex-start, 6px);
+        margin-bottom: 8px;
+      }
+      .tit {
+        @include fontStyle(16px, $color_gray_1d, 700);
+      }
+      .desc {
+        @include flexLayout(center, flex-start, 8px);
+        margin-top: 8px;
+        p {
+          @include flexLayout(center, center, 8px);
+          @include fontStyle(14px, $color_gray_71, 500);
+          &:not(:last-of-type)::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 12px;
+            background-color: $color_gray_d8;
+          }
         }
       }
     }
@@ -1078,18 +1098,32 @@
   &.list_style09 {
     ul {
       @include flexLayout(stretch, flex-start, 0, wrap);
-    }
-    .text_area {
-      margin-top: 16px;
-      .tit {
-        @include fontStyle(16px, $color_gray_1d, 500);
-        @include line2Text;
-      }
-      .tags,
-      .desc {
-        margin-top: 4px;
-        & > * {
-          @include fontStyle(14px, $color_gray_71, 500);
+      li {
+        .img_area.video::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7) url("../images/icon_video_play.svg")
+            no-repeat center;
+          z-index: 2;
+        }
+        .text_area {
+          margin-top: 16px;
+          .tit {
+            @include fontStyle(16px, $color_gray_1d, 500);
+            @include line2Text;
+          }
+          .tags,
+          .desc {
+            margin-top: 4px;
+            & > * {
+              @include fontStyle(14px, $color_gray_71, 500);
+            }
+          }
         }
       }
     }
