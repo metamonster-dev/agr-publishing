@@ -923,11 +923,18 @@ img {
 }
 
 .py_40 {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .py_60 {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.px_8 {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .pt_16 {
@@ -1603,6 +1610,10 @@ img {
 .btn i.arrow.bottom {
   background-image: url("../images/icon_arrow_bottom.svg");
 }
+.btn.btn_size_32 {
+  height: 32px;
+  font-size: 14px;
+}
 .btn.btn_size_40 {
   height: 40px;
   font-size: 14px;
@@ -1634,6 +1645,11 @@ img {
   border: 1px solid #d8d8d8;
   background-color: #ffffff;
   color: #1d1d1d;
+}
+.btn.btn_style04 {
+  border: 1px solid #d8d8d8;
+  background-color: #ffffff;
+  color: #555555;
 }
 .btn.download_btn {
   position: relative;
@@ -1868,6 +1884,7 @@ img {
   padding-bottom: 60%;
 }
 
+/* Video */
 .video_area {
   position: relative;
   overflow: hidden;
@@ -1976,6 +1993,47 @@ img {
 }
 .list_area.list_style01:not(.prod_slider) ul li {
   width: calc(50% - 6px);
+}
+.list_area.list_style01 .chk_img input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.list_area.list_style01 .chk_img input:focus + label {
+  outline: 2px solid #000000;
+}
+.list_area.list_style01 .chk_img input:checked + label::before {
+  border-color: #475ed9;
+  background-color: #475ed9;
+  background-image: url("../images/icon_check_on.svg");
+}
+.list_area.list_style01 .chk_img label {
+  position: relative;
+  display: block;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.list_area.list_style01 .chk_img label::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #8e8e8e;
+  border-radius: 4px;
+  background: #ffffff url("../images/icon_check_off.svg") no-repeat center/16px;
+  z-index: 2;
 }
 .list_area.list_style02 ul li {
   display: flex;
@@ -2853,6 +2911,9 @@ img {
   height: 48px;
   margin: 0 auto 16px;
   background: url("../images/icon_nodata.svg") no-repeat center/contain;
+}
+.no_data_area i.icon02 {
+  background-image: url("../images/icon_nodata_heart.svg");
 }
 .no_data_area span {
   font-size: 16px;

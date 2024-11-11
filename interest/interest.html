@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type03">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <div class="pt_24 pb_150">
+            <div class="inner">
+              <div class="list_tit_area">
+                <p>총 <b>4</b>건</p>
+              </div>
+
+              <!-- 데이터 없을 시, -->
+              <!-- <div class="no_data_area pt_40">
+                <i class="icon02"></i>
+                <span>
+                  관심 가이드런 상품이 없습니다. <br />
+                  클릭 한 번으로 관심 콘텐츠를 담아보세요!
+                </span>
+              </div> -->
+              <div class="list_tit_area pt_20">
+                <div class="chk_custom03">
+                  <input
+                    type="checkbox"
+                    name="interest_all"
+                    id="interest_all"
+                    value="1"
+                  />
+                  <label for="interest_all">전체</label>
+                </div>
+                <button type="button" class="btn btn_style04 btn_size_32 px_8">
+                  선택 삭제
+                </button>
+              </div>
+              <fieldset>
+                <legend class="hidden_text">관심 콘텐츠 목록</legend>
+                <div class="list_area list_style01 border_top mt_16 pt_24">
+                  <ul>
+                    <li>
+                      <div class="chk_img">
+                        <input
+                          type="checkbox"
+                          name="interest"
+                          id="interest01"
+                          value="1"
+                        />
+                        <label for="interest01">
+                          <div class="img_area rect01">
+                            <img
+                              src="../assets/images/product/product_img02.jpg"
+                              alt="예술기획분야 취창업 전문 컨설팅 이미지"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <a href="../product/detail.html">
+                        <div class="text_area">
+                          <span class="cate">1:1 컨설팅</span>
+                          <p class="tit">예술기획분야 취창업 전문 컨설팅</p>
+                          <div class="price_text">
+                            <span class="percent">10%</span>
+                            <span class="price">40,500원</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="chk_img">
+                        <input
+                          type="checkbox"
+                          name="interest"
+                          id="interest02"
+                          value="2"
+                        />
+                        <label for="interest02">
+                          <div class="img_area rect01">
+                            <img
+                              src="../assets/images/product/product_img02.jpg"
+                              alt="아트마켓 공예 클래스 이미지"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <a href="../product/detail.html">
+                        <div class="text_area">
+                          <span class="cate">클래스</span>
+                          <p class="tit">아트마켓 공예 클래스</p>
+                          <div class="price_text">
+                            <span class="price">40,500원</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="chk_img">
+                        <input
+                          type="checkbox"
+                          name="interest"
+                          id="interest03"
+                          value="3"
+                        />
+                        <label for="interest03">
+                          <div class="img_area rect01">
+                            <img
+                              src="../assets/images/product/product_img01.jpg"
+                              alt="아트가이드런이 추천하는 실무활용 가이드 이미지"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <a href="../product/detail.html">
+                        <div class="text_area">
+                          <span class="cate">지원가이드</span>
+                          <p class="tit">
+                            아트가이드런이 추천하는 실무활용 가이드
+                          </p>
+                          <div class="price_text">
+                            <span class="price">40,500원</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="chk_img">
+                        <input
+                          type="checkbox"
+                          name="interest"
+                          id="interest04"
+                          value="4"
+                        />
+                        <label for="interest04">
+                          <div class="img_area rect01">
+                            <img
+                              src="../assets/images/product/product_img01.jpg"
+                              alt="아트가이드런이 추천하는 실무활용 가이드 이미지"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <a href="../product/detail.html">
+                        <div class="text_area">
+                          <span class="cate">지원가이드</span>
+                          <p class="tit">
+                            아트가이드런이 추천하는 실무활용 가이드
+                          </p>
+                          <div class="price_text">
+                            <span class="price">40,500원</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("관심 콘텐츠");
+        $("#floating_menu").addClass("b_80");
+        $("#bottom_nav ul li").eq(2).addClass("active");
+      });
+
+      // ===== 페이지 =====
+      $("#interest_all").on("click", function () {
+        if ($("#interest_all").is(":checked"))
+          $("input[name=interest]").prop("checked", true);
+        else $("input[name=interest]").prop("checked", false);
+      });
+      $("input[name=interest]").on("click", function () {
+        const total = $("input[name=interest]").length;
+        const checked = $("input[name=interest]:checked").length;
+
+        if (total != checked) $("#interest_all").prop("checked", false);
+        else $("#interest_all").prop("checked", true);
+      });
+    </script>
+  </body>
+</html>

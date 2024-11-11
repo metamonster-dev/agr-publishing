@@ -62,10 +62,16 @@
   margin-bottom: 24px;
 }
 .py_40 {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .py_60 {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.px_8 {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .pt_16 {
   padding-top: 16px;
@@ -596,6 +602,10 @@
       background-image: url("../images/icon_arrow_bottom.svg");
     }
   }
+  &.btn_size_32 {
+    height: 32px;
+    font-size: 14px;
+  }
   &.btn_size_40 {
     height: 40px;
     font-size: 14px;
@@ -627,6 +637,11 @@
     border: 1px solid $color_gray_d8;
     background-color: $color_white;
     color: $color_gray_1d;
+  }
+  &.btn_style04 {
+    border: 1px solid $color_gray_d8;
+    background-color: $color_white;
+    color: $color_gray_5;
   }
 
   // 파일 버튼
@@ -685,7 +700,6 @@
     }
   }
 }
-
 // Bottom Fixed Button
 .bottom_fixed_btns {
   @include flexLayout(stretch, flex-start, 8px);
@@ -831,6 +845,8 @@
     padding-bottom: 60%;
   }
 }
+
+/* Video */
 .video_area {
   position: relative;
   overflow: hidden;
@@ -916,6 +932,40 @@
       @include flexLayout(stretch, flex-start, 40px 12px, wrap);
       li {
         width: calc(50% - 6px);
+      }
+    }
+    .chk_img {
+      input {
+        @include hiddenInput;
+        &:focus + label {
+          outline: 2px solid $color_black;
+        }
+        &:checked + label::before {
+          border-color: $color_key_01;
+          background-color: $color_key_01;
+          background-image: url("../images/icon_check_on.svg");
+        }
+      }
+      label {
+        position: relative;
+        display: block;
+        border-radius: 4px;
+        cursor: pointer;
+        user-select: none;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          display: block;
+          width: 24px;
+          height: 24px;
+          border: 1px solid $color_gray_8e;
+          border-radius: 4px;
+          background: $color_white url("../images/icon_check_off.svg") no-repeat
+            center / 16px;
+          z-index: 2;
+        }
       }
     }
   }
@@ -1584,6 +1634,9 @@
     height: 48px;
     margin: 0 auto 16px;
     background: url("../images/icon_nodata.svg") no-repeat center / contain;
+    &.icon02 {
+      background-image: url("../images/icon_nodata_heart.svg");
+    }
   }
   span {
     @include fontStyle(16px, $color_gray_8e, 500);
