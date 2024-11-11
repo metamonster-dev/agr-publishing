@@ -111,9 +111,9 @@
             </div>
           </section>
 
-          <div class="prod_detail_tab_area">
+          <div class="prod_detail_tab_area tab_area tab_style03">
             <ul>
-              <li class="active">
+              <li class="on">
                 <button type="button">상품정보</button>
               </li>
               <li>
@@ -342,7 +342,7 @@
 
         // 탭 버튼
         const tabBtn = $(".prod_detail_tab_area button");
-        const offset = -110;
+        const offset = -109;
 
         tabBtn.on("click", function () {
           const liEl = $(this).parent();
@@ -356,12 +356,12 @@
             const pageHeight = $(document).height() - $(window).height();
 
             if ($(this).offset().top - $(window).scrollTop() < 120) {
-              tabBtn.parents("li").removeClass("active");
-              $(".prod_detail_tab_area ul li").eq(index).addClass("active");
+              tabBtn.parents("li").removeClass("on");
+              $(".prod_detail_tab_area ul li").eq(index).addClass("on");
 
               if ($(window).scrollTop() === pageHeight) {
-                tabBtn.parents("li").removeClass("active");
-                $(".prod_detail_tab_area ul li").last().addClass("active");
+                tabBtn.parents("li").removeClass("on");
+                $(".prod_detail_tab_area ul li").last().addClass("on");
               }
             }
           });

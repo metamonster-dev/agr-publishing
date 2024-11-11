@@ -5,39 +5,9 @@
 /*---------- PRODUCT STYLES ------------*/
 /*======================================*/
 .prod_detail_tab_area {
-  position: sticky;
-  top: $height_header + 1px;
-  border-bottom: 1px solid $color_gray_e;
-  background-color: $color_white;
+  position: sticky !important;
+  top: $height_header;
   z-index: 10;
-  ul {
-    @include flexLayout(center, center);
-    li {
-      flex: 1;
-      button {
-        @include flexLayout(center, center);
-        @include fontStyle(16px, $color_gray_8e, 700);
-        position: relative;
-        width: 100%;
-        height: 52px;
-        padding: 0 8px;
-      }
-      &.active {
-        button {
-          color: $color_gray_1d;
-          &::before {
-            content: "";
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: $color_gray_1d;
-          }
-        }
-      }
-    }
-  }
 }
 
 .prod_detail_fixed_btn {

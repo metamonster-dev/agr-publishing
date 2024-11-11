@@ -152,7 +152,7 @@ $(window).on("load", function () {
   // toggle item
   $(document).on(
     "click",
-    ".toggle_area button.tg_tit, .list_toggle_area button.tg_tit",
+    ".toggle_area button.tg_tit, .list_toggle_area button.tg_tit, .list_area.list_style08 .tg_tit",
     function () {
       if ($(this).parent().hasClass("active"))
         $(this).next(".tg_cont").stop(false, false).slideUp();
