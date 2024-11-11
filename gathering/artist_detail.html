@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <section class="artist_tit_area">
+            <div class="bg" aria-hidden="true"></div>
+
+            <div class="profile_area">
+              <div class="img_area rect01">
+                <img
+                  src="../assets/images/artist/artist_img01.png"
+                  alt="김아트 프로필 이미지"
+                />
+              </div>
+              <h2>김아트</h2>
+            </div>
+
+            <div class="inner">
+              <div class="text_area">
+                <p>
+                  시선이 오래 머무는 것에 대해 기록합니다. <br />
+                  영감을 발견하고 만드는 것에 관심이 있습니다.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="artist_view_area">
+            <div class="inner">
+              <h3>아티스트 소개</h3>
+              <p class="desc">
+                출판 기획편집자로 일하며 일상에 영감을 주는 콘텐츠를 만들고
+                있습니다. 시선이 머물게 하는 무언가 발견하고, 그것을 사람들과
+                이어주고, 또 새롭게 만드는 일에 관심이 있습니다. 사람과 작품의
+                고유한 목소리를 들을 수 있는 섬세한 사람을 목표로 합니다.
+              </p>
+            </div>
+          </section>
+
+          <section class="artist_view_area border_top_8">
+            <div class="inner">
+              <h3>아트가이드런 주요 활동</h3>
+              <div class="tags">
+                <span>#큐레이션</span>
+                <span>#오리지널·에세이</span>
+                <span>#컬쳐</span>
+                <span>#아트</span>
+                <span>#피플</span>
+              </div>
+            </div>
+          </section>
+
+          <div class="editor_area py_40 border_top_8">
+            <div class="inner">
+              <img
+                src="../assets/images/artist_img01.jpg"
+                alt="에디터 등록 이미지"
+              />
+              <br />
+              내용이 노출되는 영역입니다. 별 하나에 추억과 별 하나에 사랑과 별
+              하나에 쓸쓸함과 별 하나에 동경과 별 하나에 시와 별 하나에 어머니,
+              어머니, 어머님, 나는 별 하나에 아름다운 말 한 마디씩 불러 봅니다.
+              나는 아무 걱정도 없이 가을 속의 별을 다 헬 듯합니다.별 하나에
+              추억과 별 하나에 사랑과 별 하나에 쓸쓸함과 별 하나에 동경과 별
+              하나에 시와 별 하나에 어머니, 어머니, 어머님, 나는 별 하나에
+              아름다운 말 한 마디씩 불러 봅니다. 나는 아무 걱정도 없이 가을 속의
+              별을 다 헬 듯합니다.별 하나에 추억과 별 하나에 사랑과 별 하나에
+              쓸쓸함과 별 하나에 동경과 별 하나에 시와 별 하나에 어머니, 어머니,
+              어머님, 나는 별 하나에 아름다운 말 한 마디씩 불러 봅니다. 나는
+              아무 걱정도 없이 가을 속의 별을 다 헬 듯합니다.
+            </div>
+          </div>
+
+          <div class="inner">
+            <div class="border_top pt_40 pb_150">
+              <a
+                href="./artist_list.html"
+                class="btn btn_style02 btn_size_52 w_full"
+              >
+                목록으로
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("아티스트 상세");
+        $("#floating_menu").addClass("b_80");
+      });
+    </script>
+  </body>
+</html>

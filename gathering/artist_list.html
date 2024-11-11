@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <div class="pt_32 pb_150">
+            <div class="inner">
+              <div class="input_search_area">
+                <form id="searchForm" onSubmit="return formValid(this);">
+                  <label for="search" class="hidden_text">검색</label>
+                  <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    class="input"
+                    placeholder="검색어를 입력하세요"
+                  />
+                  <button type="submit">
+                    <span>검색하기</span>
+                  </button>
+                </form>
+              </div>
+
+              <div class="gathering_list_tit mt_24">
+                <p>총 <b>63</b>건</p>
+              </div>
+
+              <!-- 데이터 없을 시, -->
+              <!-- <div class="no_data_area pt_40">
+                <i></i>
+                <span>게시물이 없습니다.</span>
+                <span>검색결과가 없습니다.</span>
+              </div> -->
+              <div class="list_area list_style09 grid02 border_top mt_16 pt_24">
+                <ul>
+                  <li>
+                    <a href="./artist_detail.html">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/artist/artist_img01.png"
+                          alt="아티스트 김아트 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">김아트</p>
+                        <div class="tags">
+                          <span class="tag">#플레이스</span>
+                          <span class="tag">#미술</span>
+                          <span class="tag">#출판</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./artist_detail.html">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/artist/artist_img02.png"
+                          alt="아티스트 김아트 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">김아트</p>
+                        <div class="tags">
+                          <span class="tag">#음악</span>
+                          <span class="tag">#영화</span>
+                          <span class="tag">#인디</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./artist_detail.html">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/artist/artist_img03.png"
+                          alt="아티스트 김아트 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">홍길동</p>
+                        <div class="tags">
+                          <span class="tag">#음악</span>
+                          <span class="tag">#영화</span>
+                          <span class="tag">#인디</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./artist_detail.html">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/artist/artist_img01.png"
+                          alt="아티스트 김아트 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">이소연</p>
+                        <div class="tags">
+                          <span class="tag">#큐레이터</span>
+                          <span class="tag">#오리지널</span>
+                          <span class="tag">#에세이</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./artist_detail.html">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/artist/artist_img01.png"
+                          alt="아티스트 김아트 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">김아트</p>
+                        <div class="tags">
+                          <span class="tag">#플레이스</span>
+                          <span class="tag">#미술</span>
+                          <span class="tag">#출판</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./artist_detail.html">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/artist/artist_img02.png"
+                          alt="아티스트 김아트 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <p class="tit">김아트</p>
+                        <div class="tags">
+                          <span class="tag">#음악</span>
+                          <span class="tag">#영화</span>
+                          <span class="tag">#인디</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                class="btn btn_style03 btn_size_40 w_full mt_40"
+              >
+                더보기
+                <i class="arrow bottom"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("아티스트 소개");
+        $("#floating_menu").addClass("b_80");
+      });
+
+      // ===== 페이지 =====
+      const formValid = (f) => {
+        return false;
+      };
+    </script>
+  </body>
+</html>
