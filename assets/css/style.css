@@ -1,6 +1,7 @@
 /*======================================*/
 /*----------- DEFAULT STYLES -----------*/
 /*======================================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html,
 body {
   font-family: "Pretendard";
@@ -2360,6 +2361,46 @@ img {
   background: url("../images/icon_error.svg") no-repeat center/contain;
 }
 
+/* Banner */
+.agr_banner_wrap {
+  padding: 40px 32px;
+  border-radius: 4px;
+  background: url("../images/banner_bg.jpg") no-repeat center/cover;
+}
+.agr_banner_wrap h2 {
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 700;
+}
+.agr_banner_wrap .text_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 32px;
+  padding: 24px 0;
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.agr_banner_wrap .text_area p {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+}
+.agr_banner_wrap .text_area p b {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
 /*======================================*/
 /*--------- NOTYF TOAST CUSTOM ---------*/
 /*======================================*/
@@ -2710,45 +2751,6 @@ img {
 
 .main_schedule_wrap {
   padding: 40px 0 0;
-}
-
-.main_info_wrap {
-  padding: 40px 32px;
-  border-radius: 4px;
-  background: url("../images/main/info_bg.jpg") no-repeat center/cover;
-}
-.main_info_wrap h2 {
-  font-size: 25px;
-  color: #ffffff;
-  font-weight: 700;
-}
-.main_info_wrap .text_area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  margin-top: 32px;
-  padding: 24px 0;
-  border-radius: 4px;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.main_info_wrap .text_area p {
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 500;
-  display: block;
-  text-align: center;
-}
-.main_info_wrap .text_area p b {
-  font-size: 22px;
-  color: #ffffff;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 8px;
 }
 
 .main_banner_wrap a {
@@ -3466,6 +3468,228 @@ img {
   color: #475ed9;
   font-weight: 700;
   text-decoration: underline;
+}
+
+/*======================================*/
+/*----------- COMPANY PAGES ------------*/
+/*======================================*/
+.company_banner_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 16px;
+  background-size: cover;
+  height: 400px;
+  text-align: center;
+}
+.company_banner_area.bg01 {
+  background-image: url("../images/company_banner_bg01.jpg");
+}
+.company_banner_area.bg02 {
+  background-image: url("../images/company_banner_bg02.jpg");
+}
+.company_banner_area h2 {
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Poppins";
+}
+.company_banner_area p {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.company_text_area {
+  padding: 40px 0;
+  border-bottom: 1px solid #eeeeee;
+  letter-spacing: -0.01rem;
+}
+.company_text_area h3 {
+  font-size: 18px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.company_text_area p {
+  font-size: 22px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.company_text_area span {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
+  margin-top: 16px;
+}
+.company_text_area ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.company_text_area ul li {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  position: relative;
+  padding-left: 15px;
+}
+.company_text_area ul li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: #555555;
+}
+.company_text_area .text_area {
+  margin-top: 16px;
+  padding: 20px 16px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+.company_text_area .text_area p {
+  font-size: 18px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+
+.company_desc {
+  font-size: 18px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+
+.organization_wrap h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  height: 60px;
+  border-radius: 4px;
+  background-color: #1d1d1d;
+}
+.organization_wrap dl {
+  position: relative;
+  padding-top: 24px;
+  padding-left: 40px;
+}
+.organization_wrap dl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #d8d8d8;
+}
+.organization_wrap dl:last-of-type::before {
+  height: 75px;
+}
+.organization_wrap dl dt {
+  position: relative;
+  border: 1px solid #475ed9;
+  border-radius: 4px;
+}
+.organization_wrap dl dt::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  display: block;
+  width: 19px;
+  height: 1px;
+  background-color: #d8d8d8;
+}
+.organization_wrap dl dt p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  height: 39px;
+  padding: 0 4px;
+  border-radius: 4px 4px 0 0;
+  background-color: #475ed9;
+  text-align: center;
+}
+.organization_wrap dl dt span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  height: 59px;
+}
+.organization_wrap dl dt span b {
+  color: #475ed9;
+  font-weight: 700;
+}
+.organization_wrap dl dd {
+  position: relative;
+  padding: 20px 0;
+  background-color: #f8f8f8;
+  border: 1px solid #d8d8d8;
+  border-top: 0;
+  border-bottom: 0;
+  text-align: center;
+}
+.organization_wrap dl dd p {
+  font-size: 16px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.organization_wrap dl dd span {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
+  margin-top: 8px;
+}
+.organization_wrap dl dd:first-of-type {
+  margin-top: 8px;
+  border-top: 1px solid #d8d8d8;
+  border-radius: 4px 4px 0 0;
+}
+.organization_wrap dl dd:last-of-type {
+  border-bottom: 1px solid #d8d8d8;
+  border-radius: 0 0 4px 4px;
+}
+.organization_wrap dl dd + dd::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 16px;
+  display: block;
+  width: calc(100% - 32px);
+  height: 1px;
+  background-color: #eeeeee;
 }
 
 /*======================================*/

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <section class="company_banner_area bg02">
+            <h2>Organizational Chart</h2>
+            <p>
+              소리로는 시작하는 예술가들의 <br />
+              창작활동을 실현시킵니다.
+            </p>
+          </section>
+
+          <div class="inner">
+            <section class="organization_wrap pt_40 pb_124">
+              <h3>소리로 대표 소수정</h3>
+              <dl>
+                <dt>
+                  <p><strong>공연 : 기획, 제작</strong></p>
+                  <span><b>팀장</b>한문희</span>
+                </dt>
+                <dd>
+                  <p>코원필오케스트라</p>
+                  <span>
+                    단장 : 한문희 <br />
+                    예술감동 : 최현이
+                  </span>
+                </dd>
+                <dd>
+                  <p>소리로클래식(성악)</p>
+                  <span>단장 : 공다영</span>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <p><strong>교육 : 제작, 수행</strong></p>
+                  <span><b>기획</b>소수정</span>
+                </dt>
+                <dd>
+                  <p>교육기획</p>
+                  <span>기획 : 소수정</span>
+                </dd>
+                <dd>
+                  <p>수행</p>
+                  <span>
+                    주강사 : 강예진, 서혜윤 <br />
+                    보조강사 : 김다원, 김수민
+                  </span>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <p><strong>장애예술 : 지원, 육성</strong></p>
+                  <span><b>팀장</b>임하령</span>
+                </dt>
+                <dd>
+                  <p>플랫폼 - 아트가이드런</p>
+                </dd>
+                <dd>
+                  <p>육성</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <p><strong>행정 : 행정, 회계</strong></p>
+                  <span><b>팀장</b>강승아, 손정민</span>
+                </dt>
+                <dd>
+                  <p>행정, 운영</p>
+                  <span>
+                    행정 : 강승아 <br />
+                    디자인 : 이소은
+                  </span>
+                </dd>
+                <dd>
+                  <p>회계</p>
+                  <span>팀장 : 손정민</span>
+                </dd>
+              </dl>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("조직도");
+        $("#floating_menu").addClass("b_80");
+      });
+
+      // ===== 페이지 =====
+    </script>
+  </body>
+</html>

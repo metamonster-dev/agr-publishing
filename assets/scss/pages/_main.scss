@@ -70,34 +70,6 @@
   padding: 40px 0 0;
 }
 
-.main_info_wrap {
-  padding: 40px 32px;
-  border-radius: 4px;
-  background: url("../images/main/info_bg.jpg") no-repeat center / cover;
-
-  h2 {
-    @include fontStyle(25px, $color_white, 700);
-  }
-  .text_area {
-    @include flexLayout(center, center, 24px, nowrap, column);
-    margin-top: 32px;
-    padding: 24px 0;
-    border-radius: 4px;
-    backdrop-filter: blur(30px);
-    background-color: rgba(255, 255, 255, 0.1);
-    p {
-      @include fontStyle(16px, $color_white, 500);
-      display: block;
-      text-align: center;
-      b {
-        @include fontStyle(22px, $color_white, 700);
-        display: block;
-        margin-bottom: 8px;
-      }
-    }
-  }
-}
-
 .main_banner_wrap a {
   @include flexLayout(flex-start, center, 8px, nowrap, column);
   padding: 29px 32px;

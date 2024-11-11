@@ -63,6 +63,180 @@
 }
 
 /*======================================*/
+/*----------- COMPANY PAGES ------------*/
+/*======================================*/
+.company_banner_area {
+  @include flexLayout(center, center, 16px, nowrap, column);
+  @include initBackground;
+  padding: 0 16px;
+  background-size: cover;
+  height: 400px;
+  text-align: center;
+  &.bg01 {
+    background-image: url("../images/company_banner_bg01.jpg");
+  }
+  &.bg02 {
+    background-image: url("../images/company_banner_bg02.jpg");
+  }
+  h2 {
+    @include fontStyle(25px, $color_white, 700);
+    font-family: "Poppins";
+  }
+  p {
+    @include fontStyle(18px, $color_white, 700);
+  }
+}
+
+.company_text_area {
+  padding: 40px 0;
+  border-bottom: 1px solid $color_gray_e;
+  letter-spacing: -0.01rem;
+  h3 {
+    @include fontStyle(18px, $color_gray_1d, 700);
+  }
+  p {
+    @include fontStyle(22px, $color_gray_1d, 700);
+  }
+  span {
+    @include fontStyle(16px, $color_gray_5, 500);
+    display: block;
+    margin-top: 16px;
+  }
+  ul {
+    @include flexLayout(stretch, flex-start, 8px, nowrap, column);
+    margin-top: 16px;
+    li {
+      @include fontStyle(16px, $color_gray_5, 500);
+      position: relative;
+      padding-left: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 0;
+        display: block;
+        width: 3px;
+        height: 3px;
+        background-color: $color_gray_5;
+      }
+    }
+  }
+  .text_area {
+    margin-top: 16px;
+    padding: 20px 16px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    text-align: center;
+    p {
+      @include fontStyle(18px, $color_gray_1d, 700);
+    }
+  }
+}
+
+.company_desc {
+  @include fontStyle(18px, $color_gray_1d, 700);
+}
+
+.organization_wrap {
+  h3 {
+    @include flexLayout(center, center, 16px);
+    @include fontStyle(16px, $color_white, 700);
+    height: 60px;
+    border-radius: 4px;
+    background-color: $color_gray_1d;
+  }
+  dl {
+    position: relative;
+    padding-top: 24px;
+    padding-left: 40px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20px;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: $color_gray_d8;
+    }
+    &:last-of-type::before {
+      height: 75px;
+    }
+
+    dt {
+      position: relative;
+      border: 1px solid $color_key_01;
+      border-radius: 4px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        display: block;
+        width: 19px;
+        height: 1px;
+        background-color: $color_gray_d8;
+      }
+      p {
+        @include flexLayout(center, center);
+        @include fontStyle(16px, $color_white, 700);
+        height: 39px;
+        padding: 0 4px;
+        border-radius: 4px 4px 0 0;
+        background-color: $color_key_01;
+        text-align: center;
+      }
+      span {
+        @include flexLayout(center, center, 16px);
+        @include fontStyle(16px, $color_gray_5, 500);
+        height: 59px;
+        b {
+          color: $color_key_01;
+          font-weight: 700;
+        }
+      }
+    }
+    dd {
+      position: relative;
+      padding: 20px 0;
+      background-color: $color_gray_f8;
+      border: 1px solid $color_gray_d8;
+      border-top: 0;
+      border-bottom: 0;
+      text-align: center;
+      p {
+        @include fontStyle(16px, $color_gray_1d, 700);
+      }
+      span {
+        @include fontStyle(16px, $color_gray_5, 500);
+        display: block;
+        margin-top: 8px;
+      }
+      &:first-of-type {
+        margin-top: 8px;
+        border-top: 1px solid $color_gray_d8;
+        border-radius: 4px 4px 0 0;
+      }
+      &:last-of-type {
+        border-bottom: 1px solid $color_gray_d8;
+        border-radius: 0 0 4px 4px;
+      }
+      & + dd::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 16px;
+        display: block;
+        width: calc(100% - 32px);
+        height: 1px;
+        background-color: $color_gray_e;
+      }
+    }
+  }
+}
+
+/*======================================*/
 /*------------ ERROR PAGES -------------*/
 /*======================================*/
 .error_wrap {

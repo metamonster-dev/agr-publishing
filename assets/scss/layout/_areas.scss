@@ -1191,3 +1191,32 @@
     background: url("../images/icon_error.svg") no-repeat center / contain;
   }
 }
+
+/* Banner */
+.agr_banner_wrap {
+  padding: 40px 32px;
+  border-radius: 4px;
+  background: url("../images/banner_bg.jpg") no-repeat center / cover;
+
+  h2 {
+    @include fontStyle(25px, $color_white, 700);
+  }
+  .text_area {
+    @include flexLayout(center, center, 24px, nowrap, column);
+    margin-top: 32px;
+    padding: 24px 0;
+    border-radius: 4px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.1);
+    p {
+      @include fontStyle(16px, $color_white, 500);
+      display: block;
+      text-align: center;
+      b {
+        @include fontStyle(22px, $color_white, 700);
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

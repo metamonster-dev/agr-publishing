@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ART GUIDE RUN | 아트가이드런</title>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="../js/common.js" defer></script>
+  </head>
+  <body class="hd_type02">
+    <div id="root_layout">
+      <div class="root_container">
+        <div class="sticky_menu">
+          <div id="header_area"></div>
+        </div>
+
+        <div id="contents">
+          <div id="floating_area"></div>
+          <div id="nav_area"></div>
+
+          <section class="company_banner_area bg01">
+            <h2>ART GUIDE RUN</h2>
+            <p>
+              소리로는 시작하는 예술가들의 <br />
+              창작활동을 실현시킵니다.
+            </p>
+          </section>
+
+          <div class="inner">
+            <div class="company_text_area">
+              <p>
+                <strong>
+                  소리로는 소리로 표현하고 <br />
+                  소리로 소통하고 소리로 세상을 바꾼다는 의미를 지니고 있습니다.
+                </strong>
+              </p>
+              <span>
+                일상에서 아주 평범한 사람들과 함께 지역과 일상, 이야기가 담긴
+                예술을 만들며 삶의 반경에서 예술을 바라봅니다.
+              </span>
+              <span>
+                소리로는 장애 음악가와 청년 음악가, 경력단절 음악가들에 주목하며
+                그들의 예술활동이 세상에 사회참여적으로 이바지할수 있는 토대를
+                만들기 위해 노력합니다.
+              </span>
+            </div>
+            <div class="company_text_area">
+              <h3>MISSION</h3>
+              <ul>
+                <li>예술가들의 창작을 실현</li>
+                <li>시작하는 예술가들의 자립 발판</li>
+                <li>컨텐츠를 제작하고 유통</li>
+              </ul>
+            </div>
+            <div class="company_text_area">
+              <h3>VISION</h3>
+              <ul>
+                <li>소외계층 예술인이 가장 함께 일하고 싶은 회사</li>
+                <li>소외계층 예술인과 가장 많이 협업하는 회사</li>
+                <li>소외계층 예술인의 컨텐츠를 가장 많이 보유한 회사</li>
+              </ul>
+            </div>
+            <div class="company_text_area">
+              <h3>VALUES</h3>
+              <div class="text_area">
+                <p><strong>나눔 + 진정성 + 즐거움</strong></p>
+              </div>
+              <ul>
+                <li>
+                  나눔과 진정성, 즐거움이 담긴 모두가 즐길 수 있는 예술 콘텐츠
+                  제작
+                </li>
+                <li>좋아하는 일은 밤새 수행</li>
+                <li>밤새 일한 만큼 충분한 쉼을 가짐</li>
+                <li>
+                  자신없는 일을 하기보다, 잘할수 있는 일을 최선을 다해 수행
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <section class="pt_40 pb_124">
+            <div class="inner">
+              <p class="company_desc pb_24">
+                <strong>
+                  장애예술인들이 마음껏 달리는 그날까지 <br />
+                  빠르게, 잠깐이 아니라 바르게, 끝까지 달립니다
+                </strong>
+              </p>
+
+              <div class="agr_banner_wrap">
+                <h2>
+                  1:1 맞춤 컨설팅 플랫폼 <br />
+                  아트가이드런
+                </h2>
+                <div class="text_area">
+                  <p>
+                    <b>83.5%</b>
+                    고객 성공 퍼센트
+                  </p>
+                  <p>
+                    <b>1000명</b>
+                    참여 아티스트 수
+                  </p>
+                  <p>
+                    <b>254억원</b>
+                    참여 사업 금액
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ===== 공통 영역 설정 스크립트 =====
+      $("#header_area").load("../include/header.html");
+      $("#floating_area").load("../include/floating.html");
+      $("#nav_area").load("../include/bottom_nav.html");
+
+      $(window).on("load", function () {
+        $("#header h1").text("회사소개");
+        $("#floating_menu").addClass("b_80");
+      });
+
+      // ===== 페이지 =====
+    </script>
+  </body>
+</html>
