@@ -38,90 +38,93 @@
 
 /* Width & Margin & Padding & Border */
 .w_full {
-  width: 100%;
+  width: 100% !important;
 }
 .mt_12 {
-  margin-top: 12px;
+  margin-top: 12px !important;
 }
 .mt_16 {
-  margin-top: 16px;
+  margin-top: 16px !important;
 }
 .mt_24 {
-  margin-top: 24px;
+  margin-top: 24px !important;
 }
 .mt_32 {
-  margin-top: 32px;
+  margin-top: 32px !important;
 }
 .mt_40 {
-  margin-top: 40px;
+  margin-top: 40px !important;
+}
+.mb_8 {
+  margin-bottom: 8px !important;
 }
 .mb_16 {
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 .mb_20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 .mb_24 {
-  margin-bottom: 24px;
+  margin-bottom: 24px !important;
 }
 .py_24 {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
 }
 .py_40 {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
 }
 .py_60 {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
 }
 .px_8 {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
 }
 .px_16 {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
 }
 .pt_16 {
-  padding-top: 16px;
+  padding-top: 16px !important;
 }
 .pt_20 {
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 .pt_24 {
-  padding-top: 24px;
+  padding-top: 24px !important;
 }
 .pt_32 {
-  padding-top: 32px;
+  padding-top: 32px !important;
 }
 .pt_40 {
-  padding-top: 40px;
+  padding-top: 40px !important;
 }
 .pt_76 {
-  padding-top: 76px;
+  padding-top: 76px !important;
 }
 .pb_16 {
-  padding-bottom: 16px;
+  padding-bottom: 16px !important;
 }
 .pb_24 {
-  padding-bottom: 24px;
+  padding-bottom: 24px !important;
 }
 .pb_40 {
-  padding-bottom: 40px;
+  padding-bottom: 40px !important;
 }
 .pb_52 {
-  padding-bottom: 52px;
+  padding-bottom: 52px !important;
 }
 .pb_60 {
-  padding-bottom: 60px;
+  padding-bottom: 60px !important;
 }
 .pb_80 {
-  padding-bottom: 80px;
+  padding-bottom: 80px !important;
 }
 .pb_150 {
-  padding-bottom: 150px;
+  padding-bottom: 150px !important;
 }
 .border_top {
   border-top: 1px solid $color_gray_e !important;
@@ -924,6 +927,7 @@
 .img_area {
   position: relative;
   overflow: hidden;
+  display: block;
 
   &::before {
     content: "";
@@ -971,6 +975,9 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border: 0;
+    border-radius: 4px;
+    overflow: hidden;
   }
 }
 
@@ -1430,7 +1437,7 @@
     }
     .tit {
       @include fontStyle(16px, $color_gray_1d, 700);
-      span {
+      b {
         color: $color_key_01;
       }
     }

@@ -46,6 +46,7 @@
 
           <div
             class="prod_detail_visual_wrap img_slider"
+            role="region"
             aria-label="상품 이미지 슬라이드"
             tabindex="0"
           >
@@ -94,7 +95,10 @@
                   예술기획분야 취창업 예술인 등록을 위한 1:1 맞춤형 클래스
                 </h2>
                 <div class="star_review">
-                  <div class="star_area" aria-label="5점 만점에 4점">
+                  <div class="star_area" aria-labelledby="star_text">
+                    <span id="star_text" class="hidden_text">
+                      5점 만점에 4점
+                    </span>
                     <div
                       class="star_on"
                       aria-hidden="true"
@@ -146,7 +150,8 @@
               <div class="total_area">
                 <p>사용자 총 평점</p>
                 <span>4.0</span>
-                <div class="star_area" aria-label="5점 만점에 4점">
+                <div class="star_area" aria-labelledby="star_text">
+                  <span id="star_text" class="hidden_text">5점 만점에 4점</span>
                   <div
                     class="star_on"
                     aria-hidden="true"
