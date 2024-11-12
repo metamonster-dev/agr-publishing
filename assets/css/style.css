@@ -969,6 +969,10 @@ img {
   padding-bottom: 24px;
 }
 
+.pb_40 {
+  padding-bottom: 40px;
+}
+
 .pb_52 {
   padding-bottom: 52px;
 }
@@ -1562,6 +1566,13 @@ img {
   display: block;
 }
 
+.input_desc_text03 {
+  font-size: 13px;
+  color: #717171;
+  font-weight: 500;
+  display: block;
+}
+
 .star_area {
   position: relative;
   display: block;
@@ -1708,13 +1719,19 @@ img {
   word-break: break-all;
 }
 
-.bottom_fixed_btns {
+.btn_wrap {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
   gap: 8px;
   flex-wrap: nowrap;
   flex-direction: row;
+}
+.btn_wrap .btn {
+  flex: 1;
+}
+
+.btn_btm_fixed {
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -1725,9 +1742,6 @@ img {
   background-color: #ffffff;
   z-index: 550;
   transform: translateX(-50%);
-}
-.bottom_fixed_btns .btn {
-  flex: 1;
 }
 
 /* Tab */
@@ -4086,6 +4100,164 @@ img {
 /*======================================*/
 /*----------- MYPAGE STYLES ------------*/
 /*======================================*/
+.mypage_dashboard_area {
+  padding: 32px 0 40px;
+  background-color: #000000;
+}
+.mypage_dashboard_area .tit {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.mypage_dashboard_area .tit h2 {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+}
+.mypage_dashboard_area .tit a {
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.mypage_dashboard_area ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.mypage_dashboard_area ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+  flex-direction: column-reverse;
+  flex: 1;
+  height: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.mypage_dashboard_area ul li p {
+  font-size: 14px;
+  color: #cccccc;
+  font-weight: 500;
+}
+.mypage_dashboard_area ul li span {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mypage_dashboard_list_area {
+  padding: 40px 0 28px;
+}
+.mypage_dashboard_list_area h3 {
+  font-size: 16px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.mypage_dashboard_list_area ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 12px;
+}
+.mypage_dashboard_list_area ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 16px;
+  color: #1d1d1d;
+  font-weight: 500;
+  position: relative;
+  padding: 12px 24px 12px 0;
+}
+.mypage_dashboard_list_area ul li a::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icon_arrow_right.svg") no-repeat center/contain;
+}
+
+.mypage_dashboard_btn {
+  text-align: right;
+}
+.mypage_dashboard_btn button,
+.mypage_dashboard_btn a {
+  font-size: 14px;
+  color: #8e8e8e;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.mypage_withdraw_area .desc {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+}
+.mypage_withdraw_area h2 {
+  font-size: 16px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.mypage_withdraw_area .text_area {
+  margin-top: 16px;
+  padding: 24px 16px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+.mypage_withdraw_area .text_area p {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+}
+.mypage_withdraw_area .text_area span {
+  font-size: 16px;
+  color: #475ed9;
+  font-weight: 700;
+  display: block;
+  margin-top: 16px;
+  text-decoration: underline;
+}
+
+.mypage_withdraw_info_area {
+  padding: 32px 0 40px;
+  text-align: center;
+}
+.mypage_withdraw_info_area img {
+  margin: 0 auto 16px;
+}
+.mypage_withdraw_info_area p {
+  font-size: 22px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.mypage_withdraw_info_area span {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
+  margin-top: 16px;
+}
+
 /*======================================*/
 /*------------ SEARCH PAGES ------------*/
 /*======================================*/

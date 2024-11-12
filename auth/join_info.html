@@ -309,7 +309,7 @@
       });
 
       // ===== 페이지 =====
-      const categories = [
+      const specialtyFields = [
         {
           id: "1",
           text: "문학",
@@ -416,7 +416,7 @@
 
       $("input[name=specialty]").on("change", function () {
         const value = $(this).val();
-        const valueDetails = categories?.filter(
+        const valueDetails = specialtyFields?.filter(
           (item) => item.id === value
         )?.[0]?.details;
 

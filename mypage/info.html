@@ -31,6 +31,274 @@
         <div id="contents">
           <div id="floating_area"></div>
           <div id="nav_area"></div>
+
+          <div class="pt_32 pb_40 border_bottom_8">
+            <div class="inner">
+              <div class="label_input_area">
+                <label for="email" class="label">이메일 아이디</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="input"
+                  placeholder="이메일을 입력해 주세요"
+                  value="art@gmail.com"
+                  disabled
+                />
+                <a href="./change_pw.html" class="btn btn_style02 btn_size_52">
+                  비밀번호 변경
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form id="infoForm" onSubmit="return formValid(this);">
+            <div class="py_40 border_bottom_8">
+              <div class="inner">
+                <div class="input_list_area gap_24">
+                  <div class="label_input_area">
+                    <label for="name" class="label">이름</label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      class="input"
+                      value="김아트"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="label_input_area">
+                    <label for="birth" class="label">생년월일</label>
+                    <input
+                      type="text"
+                      name="birth"
+                      id="birth"
+                      class="input"
+                      value="1985-02-06"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="label_input_area">
+                    <span class="label">성별</span>
+                    <div
+                      class="select_custom"
+                      role="combobox"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="select_btn01"
+                    >
+                      <button
+                        type="button"
+                        id="select_btn01"
+                        aria-controls="select_option01"
+                        disabled
+                      >
+                        성별
+                      </button>
+                      <ul id="select_option01" role="listbox">
+                        <li role="option" data-value="1" tabindex="0">여성</li>
+                        <li role="option" data-value="2" tabindex="0">남성</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="label_input_area">
+                    <label for="phone" class="label">연락처</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      class="input"
+                      value="010-1234-5678"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="label_input_area">
+                    <button type="button" class="identity_btn type01">
+                      <i class="icon01"></i>
+                      <span>
+                        <b>회원정보 수정</b>
+                        본인 휴대폰 번호로 인증
+                      </span>
+                    </button>
+                    <span class="input_desc_text03 mt_16">
+                      회원정보 수정은 휴대폰 본인인증을 통해서만 수정가능합니다.
+                      <br />
+                      인증이 어렵거나 별도 문의사항은 카카오채널톡으로
+                      문의해주세요.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt_40 pb_150">
+              <div class="inner">
+                <div class="input_list_area gap_24">
+                  <div class="label_input_area">
+                    <label for="affiliation" class="label">소속</label>
+                    <input
+                      type="text"
+                      name="affiliation"
+                      id="affiliation"
+                      class="input"
+                      placeholder="소속을 입력해 주세요"
+                      value="한국장애인단체총연합회"
+                    />
+                  </div>
+
+                  <!--
+                    전문분야/세부 전문분야 항목 
+                    : /auth/join_info.html 참고
+                  -->
+                  <fieldset>
+                    <div class="label_input_area">
+                      <legend class="label">전문분야 선택</legend>
+                      <div class="chk_list_area grid02">
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty01"
+                            value="1"
+                            checked
+                          />
+                          <label for="specialty01">문학</label>
+                        </div>
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty02"
+                            value="2"
+                          />
+                          <label for="specialty02">시각</label>
+                        </div>
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty03"
+                            value="3"
+                          />
+                          <label for="specialty03">공연예술</label>
+                        </div>
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty04"
+                            value="4"
+                          />
+                          <label for="specialty04">음악</label>
+                        </div>
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty05"
+                            value="5"
+                          />
+                          <label for="specialty05">전통예술</label>
+                        </div>
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty06"
+                            value="6"
+                          />
+                          <label for="specialty06">미디어예술</label>
+                        </div>
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty07"
+                            value="7"
+                          />
+                          <label for="specialty07">건축</label>
+                        </div>
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty08"
+                            value="8"
+                          />
+                          <label for="specialty08">다원예술</label>
+                        </div>
+                        <div class="chk_custom">
+                          <input
+                            type="radio"
+                            name="specialty"
+                            id="specialty09"
+                            value="9"
+                          />
+                          <label for="specialty09">연구 및 기획</label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <div class="label_input_area">
+                    <span class="label">세부 전문분야 선택</span>
+                    <div
+                      id="specialty_detail"
+                      class="select_custom top"
+                      role="combobox"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="select_btn02"
+                    >
+                      <button
+                        type="button"
+                        id="select_btn02"
+                        aria-controls="select_option02"
+                      >
+                        <!-- 세부 전문분야를 선택해 주세요 -->
+                        아동문학
+                      </button>
+                      <ul id="select_option02" role="listbox">
+                        <li role="option" data-value="0" tabindex="-1">
+                          세부 전문분야를 선택해 주세요
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="label_input_area">
+                    <label for="interest" class="label">선택한 관심사</label>
+                    <div class="input_btn_area">
+                      <input
+                        type="text"
+                        name="interest"
+                        id="interest"
+                        class="input"
+                        value="음악, 연극"
+                        disabled
+                      />
+                      <button type="button" class="btn btn_style02 btn_size_52">
+                        수정하기
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn_wrap mt_40">
+                  <a href="./mypage.html" class="btn btn_style02 btn_size_52">
+                    취소
+                  </a>
+                  <button type="submit" class="btn btn_style01 btn_size_52">
+                    수정
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -46,6 +314,11 @@
         $("#floating_menu").addClass("b_80");
         $("#bottom_nav ul li").eq(3).addClass("active");
       });
+
+      // ===== 페이지 =====
+      const formValid = (f) => {
+        return false;
+      };
     </script>
   </body>
 </html>

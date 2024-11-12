@@ -97,6 +97,9 @@
 .pb_24 {
   padding-bottom: 24px;
 }
+.pb_40 {
+  padding-bottom: 40px;
+}
 .pb_52 {
   padding-bottom: 52px;
 }
@@ -557,6 +560,10 @@
   @include fontStyle(14px, $color_gray_71, 500);
   display: block;
 }
+.input_desc_text03 {
+  @include fontStyle(13px, $color_gray_71, 500);
+  display: block;
+}
 
 .star_area {
   position: relative;
@@ -700,9 +707,15 @@
     }
   }
 }
-// Bottom Fixed Button
-.bottom_fixed_btns {
+// Button Layout
+.btn_wrap {
   @include flexLayout(stretch, flex-start, 8px);
+  .btn {
+    flex: 1;
+  }
+}
+// Bottom Fixed
+.btn_btm_fixed {
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -713,10 +726,6 @@
   background-color: $color_white;
   z-index: $z_fixed_bottom_btn;
   transform: translateX(-50%);
-
-  .btn {
-    flex: 1;
-  }
 }
 
 /* Tab */

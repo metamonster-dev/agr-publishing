@@ -4,3 +4,111 @@
 /*======================================*/
 /*----------- MYPAGE STYLES ------------*/
 /*======================================*/
+// 대시보드
+.mypage_dashboard_area {
+  padding: 32px 0 40px;
+  background-color: $color_black;
+  .tit {
+    @include flexLayout(flex-end, space-between, 8px);
+    h2 {
+      @include fontStyle(22px, $color_white, 700);
+    }
+    a {
+      @include fontStyle(14px, $color_gray_c, 700);
+      text-decoration: underline;
+    }
+  }
+  ul {
+    @include flexLayout(stretch, flex-start, 12px);
+    margin-top: 20px;
+    li {
+      @include flexLayout(center, center, 4px, nowrap, column-reverse);
+      flex: 1;
+      height: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      p {
+        @include fontStyle(14px, $color_gray_c, 500);
+      }
+      span {
+        @include fontStyle(22px, $color_white, 700);
+      }
+    }
+  }
+}
+.mypage_dashboard_list_area {
+  padding: 40px 0 28px;
+  h3 {
+    @include fontStyle(16px, $color_gray_1d, 700);
+  }
+  ul {
+    @include flexLayout(stretch, flex-start, 0, nowrap, column);
+    margin-top: 12px;
+    li a {
+      @include flexLayout(center, flex-start, 12px);
+      @include fontStyle(16px, $color_gray_1d, 500);
+      position: relative;
+      padding: 12px 24px 12px 0;
+      &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 8px);
+        right: 0;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../images/icon_arrow_right.svg") no-repeat center /
+          contain;
+      }
+    }
+  }
+}
+.mypage_dashboard_btn {
+  text-align: right;
+  button,
+  a {
+    @include fontStyle(14px, $color_gray_8e, 700);
+    text-decoration: underline;
+  }
+}
+
+// 회원탈퇴
+.mypage_withdraw_area {
+  .desc {
+    @include fontStyle(16px, $color_gray_5, 500);
+  }
+  h2 {
+    @include fontStyle(16px, $color_gray_1d, 700);
+  }
+  .text_area {
+    margin-top: 16px;
+    padding: 24px 16px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    p {
+      @include fontStyle(16px, $color_gray_5, 500);
+    }
+    span {
+      @include fontStyle(16px, $color_key_01, 700);
+      display: block;
+      margin-top: 16px;
+      text-decoration: underline;
+    }
+  }
+}
+.mypage_withdraw_info_area {
+  padding: 32px 0 40px;
+  text-align: center;
+  img {
+    margin: 0 auto 16px;
+  }
+  p {
+    @include fontStyle(22px, $color_gray_1d, 700);
+  }
+  span {
+    @include fontStyle(16px, $color_gray_5, 500);
+    display: block;
+    margin-top: 16px;
+  }
+}
