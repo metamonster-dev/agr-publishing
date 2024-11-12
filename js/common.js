@@ -80,10 +80,14 @@ $(window).on("load", function () {
       areaEl.find(".img_area").attr("aria-label", "이미지 작게 보기");
     }
   };
-  $(".list_area.list_style04 .img_area").on("click", function () {
+  $(
+    ".list_area.list_style04 .img_area, .list_area.list_style08 .rv_img_area .img_area"
+  ).on("click", function () {
     onImgZoom($(this));
   });
-  $(".list_area.list_style04 .img_area").on("keypress", function (e) {
+  $(
+    ".list_area.list_style04 .img_area, .list_area.list_style08 .rv_img_area .img_area"
+  ).on("keypress", function (e) {
     if (e.key === "Enter") onImgZoom($(this));
   });
 
@@ -155,8 +159,8 @@ $(window).on("load", function () {
     ".toggle_area button.tg_tit, .list_toggle_area button.tg_tit, .list_area.list_style08 .tg_tit",
     function () {
       if ($(this).parent().hasClass("active"))
-        $(this).next(".tg_cont").stop(false, false).slideUp();
-      else $(this).next(".tg_cont").stop(false, false).slideDown();
+        $(this).parent().find(".tg_cont").stop(false, false).slideUp();
+      else $(this).parent().find(".tg_cont").stop(false, false).slideDown();
       $(this).parent().toggleClass("active");
     }
   );

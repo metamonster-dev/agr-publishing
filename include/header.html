@@ -267,7 +267,9 @@
       if (!$("#m_menu").hasClass("show") && !e.shiftKey && e.key === "Tab") {
         e.preventDefault();
         if ($(".sticky_menu .tab_area").length > 0)
-          $(".sticky_menu .tab_area button").first().focus();
+          $(".sticky_menu .tab_area button, .sticky_menu .tab_area a")
+            .first()
+            .focus();
         else $("#contents a, #contents button, #contents input").eq(0).focus();
       }
     });

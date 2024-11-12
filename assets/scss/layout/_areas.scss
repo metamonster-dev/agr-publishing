@@ -846,7 +846,6 @@
   }
   &.tab_style03 {
     position: relative;
-    overflow: hidden;
     &::before {
       content: "";
       position: absolute;
@@ -1285,8 +1284,20 @@
           .rv_desc {
             @include fontStyle(16px, $color_gray_5, 500);
           }
+          .rv_img_area {
+            @include flexLayout(flex-start, flex-start, 8px, wrap);
+            margin-top: 16px;
+            .img_area {
+              width: 72px;
+              cursor: pointer;
+            }
+
+            &.show_large .img_area {
+              width: 100%;
+            }
+          }
           .rv_date {
-            @include fontStyle(14px, $color_gray_5, 500);
+            @include fontStyle(14px, $color_gray_71, 500);
             display: block;
             margin-top: 16px;
           }

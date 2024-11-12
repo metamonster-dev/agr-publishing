@@ -1900,7 +1900,6 @@ img {
 }
 .tab_area.tab_style03 {
   position: relative;
-  overflow: hidden;
 }
 .tab_area.tab_style03::before {
   content: "";
@@ -2464,9 +2463,25 @@ img {
   color: #555555;
   font-weight: 500;
 }
+.list_area.list_style08 ul li .tg_cont .review_area .rv_img_area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 16px;
+}
+.list_area.list_style08 ul li .tg_cont .review_area .rv_img_area .img_area {
+  width: 72px;
+  cursor: pointer;
+}
+.list_area.list_style08 ul li .tg_cont .review_area .rv_img_area.show_large .img_area {
+  width: 100%;
+}
 .list_area.list_style08 ul li .tg_cont .review_area .rv_date {
   font-size: 14px;
-  color: #555555;
+  color: #717171;
   font-weight: 500;
   display: block;
   margin-top: 16px;
