@@ -26,12 +26,293 @@
       <div class="root_container">
         <div class="sticky_menu">
           <div id="header_area"></div>
+          <div class="tab_area tab_style03">
+            <ul>
+              <li class="on">
+                <a href="./review_wriable.html">작성가능 후기 (2)</a>
+              </li>
+              <li>
+                <a href="./review_written.html">작성한 후기 (5)</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div id="contents">
           <div id="floating_area"></div>
           <div id="nav_area"></div>
+
+          <div class="pb_150">
+            <!-- 데이터 없을 시, -->
+            <!-- <div class="no_data_area pt_40">
+              <i></i><span>작성가능한 후기가 없습니다.</span>
+            </div> -->
+
+            <ul>
+              <li>
+                <div class="order_item_wrap">
+                  <div class="content_area">
+                    <div class="item_area">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/product/product_img01.jpg"
+                          alt="한국 예술인 복지재단 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <span class="cate">예술인 등록서비스</span>
+                        <p class="tit">한국 예술인 복지재단</p>
+                        <div class="price_text">
+                          <span class="price">30,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="desc_text_style01">이용기간 : 10. 15(토)</span>
+                    <button
+                      type="button"
+                      class="btn btn_style03 btn_size_44 w_full mt_16"
+                      onClick="onModalShow('md_review')"
+                    >
+                      후기 쓰기
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="order_item_wrap">
+                  <div class="content_area">
+                    <div class="item_area">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/product/product_img01.jpg"
+                          alt="한국 예술인 복지재단 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <span class="cate">예술인 등록서비스</span>
+                        <p class="tit">한국 예술인 복지재단</p>
+                        <div class="price_text">
+                          <span class="price">30,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="desc_text_style01">이용기간 : 10. 15(토)</span>
+                    <button
+                      type="button"
+                      class="btn btn_style03 btn_size_44 w_full mt_16"
+                      onClick="onModalShow('md_review')"
+                    >
+                      후기 쓰기
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <!-- modal -->
+        <div class="modal_wrap full" id="md_review">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>
+                후기 작성
+                <!-- 후기 수정 -->
+              </p>
+              <button
+                type="button"
+                class="x_btn"
+                onclick="onModalHide('md_review')"
+              >
+                <span>모달창 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">
+              <div class="md_review_area">
+                <div class="order_item_wrap">
+                  <div class="content_area">
+                    <div class="item_area">
+                      <div class="img_area rect01">
+                        <img
+                          src="../assets/images/product/product_img01.jpg"
+                          alt="한국 예술인 복지재단 이미지"
+                        />
+                      </div>
+                      <div class="text_area">
+                        <span class="cate">예술인 등록서비스</span>
+                        <p class="tit">한국 예술인 복지재단</p>
+                        <div class="price_text">
+                          <span class="price">30,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="desc_text_style01">이용기간 : 10. 15(토)</span>
+                  </div>
+                </div>
+
+                <div class="pt_24 pb_60">
+                  <div class="inner">
+                    <div class="input_list_area gap_24">
+                      <fieldset>
+                        <div class="label_input_area">
+                          <legend class="label">별점을 남겨주세요</legend>
+                          <div class="star_input_wrap">
+                            <div class="star_input">
+                              <label htmlFor="star01">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star01"
+                                  value="0.5"
+                                  checked
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star02">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star02"
+                                  value="1.0"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star03">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star03"
+                                  value="1.5"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star04">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star04"
+                                  value="2.0"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star05">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star05"
+                                  value="2.5"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star06">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star06"
+                                  value="3.0"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star07">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star07"
+                                  value="3.5"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star08">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star08"
+                                  value="4.0"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star09">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star09"
+                                  value="4.5"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                              <label htmlFor="star10">
+                                <input
+                                  type="radio"
+                                  name="star"
+                                  id="star02"
+                                  value="5.0"
+                                />
+                                <i aria-hidden="true"></i>
+                              </label>
+                            </div>
+                          </div>
+                          <span class="star_score_text"><b>0</b> / 5</span>
+                        </div>
+                      </fieldset>
+
+                      <div class="label_input_area">
+                        <label for="content" class="label">후기 내용</label>
+                        <textarea
+                          name="content"
+                          id="content"
+                          cols="30"
+                          rows="10"
+                          class="textarea"
+                          placeholder="후기 내용을 입력해 주세요."
+                        ></textarea>
+                      </div>
+
+                      <div class="label_input_area">
+                        <span class="label">이미지 첨부</span>
+                        <div class="img_input_list_area">
+                          <div class="img_input">
+                            <input
+                              type="file"
+                              name="img"
+                              id="img"
+                              accept=".jpg, .jpeg, .png"
+                            />
+                            <label for="img"><span>이미지 첨부</span></label>
+                          </div>
+                          <!-- <div class="img_input">
+                            <img
+                              src="../assets/images/product/product_img05.jpg"
+                              alt="이미지 등록"
+                            />
+                            <button type="button" class="img_x_btn">
+                              <span>등록한 이미지 삭제</span>
+                            </button>
+                          </div> -->
+                        </div>
+                        <span class="input_desc_text02">
+                          * 10MB 이하 JPG, PNG만 등록 가능합니다. (최대3장)
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="btn_wrap mt_40">
+                      <button type="button" class="btn btn_style01 btn_size_52">
+                        등록
+                      </button>
+                      <!-- <button type="button" class="btn btn_style02 btn_size_52">
+                        삭제
+                      </button>
+                      <button type="button" class="btn btn_style01 btn_size_52">
+                        수정
+                      </button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // modal -->
       </div>
     </div>
 
