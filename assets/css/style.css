@@ -1894,7 +1894,6 @@ img {
 .tab_area.tab_style02 {
   position: relative;
   padding: 0 16px;
-  border-bottom: 8px solid #f8f8f8;
   overflow: hidden;
 }
 .tab_area.tab_style02::before {
