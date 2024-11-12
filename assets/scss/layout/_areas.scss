@@ -1014,7 +1014,6 @@
       }
       .tit {
         @include fontStyle(16px, $color_gray_1d, 500);
-        @include line2Text;
       }
       .price_text {
         @include flexLayout(center, flex-start, 4px);
@@ -1034,6 +1033,9 @@
     }
     .text_area {
       margin-top: 16px;
+      .tit {
+        @include line2Text;
+      }
     }
     &:not(.prod_slider) ul {
       @include flexLayout(stretch, flex-start, 40px 12px, wrap);
@@ -1093,6 +1095,10 @@
       }
       .text_area {
         flex: 1;
+        max-width: calc(100% - 116px);
+        .tit {
+          @include line1Text;
+        }
       }
       & + li {
         margin-top: 24px;
@@ -1273,6 +1279,7 @@
       }
       .tit {
         @include fontStyle(16px, $color_gray_1d, 700);
+        @include line1Text;
       }
       .desc {
         @include flexLayout(center, flex-start, 8px);
@@ -1375,6 +1382,7 @@
           margin-top: 16px;
           .tit {
             @include fontStyle(16px, $color_gray_1d, 500);
+            @include line2Text;
           }
           .tags,
           .desc {
@@ -1487,6 +1495,7 @@
   }
   .text_area {
     flex: 1;
+    max-width: calc(100% - 80px);
     .cate {
       @include fontStyle(14px, $color_gray_8e, 700);
       display: block;
@@ -1494,6 +1503,7 @@
     }
     .tit {
       @include fontStyle(16px, $color_gray_1d, 500);
+      @include line1Text;
     }
     .price_text {
       @include flexLayout(center, flex-start, 4px);
@@ -1521,7 +1531,7 @@
       width: 108px;
     }
     .text_area {
-      width: calc(100% - 124px);
+      max-width: calc(100% - 124px);
     }
   }
 }

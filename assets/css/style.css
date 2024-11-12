@@ -2077,13 +2077,6 @@ img {
   font-size: 16px;
   color: #1d1d1d;
   font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box !important;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-height: 1.4rem;
-  max-height: 2.8rem;
 }
 .list_area.list_style01 .text_area .price_text, .list_area.list_style02 .text_area .price_text {
   display: flex;
@@ -2109,6 +2102,15 @@ img {
 }
 .list_area.list_style01 .text_area {
   margin-top: 16px;
+}
+.list_area.list_style01 .text_area .tit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.4rem;
+  max-height: 2.8rem;
 }
 .list_area.list_style01:not(.prod_slider) ul {
   display: flex;
@@ -2189,6 +2191,12 @@ img {
 }
 .list_area.list_style02 ul li .text_area {
   flex: 1;
+  max-width: calc(100% - 116px);
+}
+.list_area.list_style02 ul li .text_area .tit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .list_area.list_style02 ul li + li {
   margin-top: 24px;
@@ -2431,6 +2439,9 @@ img {
   font-size: 16px;
   color: #1d1d1d;
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .list_area.list_style08 ul li .desc {
   display: flex;
@@ -2555,6 +2566,13 @@ img {
   font-size: 16px;
   color: #1d1d1d;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.4rem;
+  max-height: 2.8rem;
 }
 .list_area.list_style09 ul li .text_area .tags,
 .list_area.list_style09 ul li .text_area .desc {
@@ -2690,6 +2708,7 @@ img {
 }
 .item_area .text_area {
   flex: 1;
+  max-width: calc(100% - 80px);
 }
 .item_area .text_area .cate {
   font-size: 14px;
@@ -2702,6 +2721,9 @@ img {
   font-size: 16px;
   color: #1d1d1d;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .item_area .text_area .price_text {
   display: flex;
@@ -2738,7 +2760,7 @@ img {
   width: 108px;
 }
 .item_area.type02 .text_area {
-  width: calc(100% - 124px);
+  max-width: calc(100% - 124px);
 }
 
 .item_area02 .tit_area {
