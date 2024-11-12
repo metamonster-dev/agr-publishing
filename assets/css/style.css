@@ -1629,6 +1629,10 @@ img {
   height: 40px;
   font-size: 14px;
 }
+.btn.btn_size_44 {
+  height: 44px;
+  font-size: 14px;
+}
 .btn.btn_size_48 {
   height: 48px;
   font-size: 16px;
@@ -2936,16 +2940,6 @@ img {
   display: block;
 }
 
-/* Editor */
-.editor_area {
-  font-size: 16px;
-  color: #555555;
-  font-weight: 500;
-}
-.editor_area img {
-  max-width: 100%;
-}
-
 /* Error Msg */
 .error_msg {
   font-size: 13px;
@@ -2963,6 +2957,70 @@ img {
   width: 16px;
   height: 16px;
   background: url("../images/icon_error.svg") no-repeat center/contain;
+}
+
+/* Pagination */
+.page_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.page_area button,
+.page_area a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 16px;
+  color: #717171;
+  font-weight: 500;
+  width: 24px;
+  height: 24px;
+}
+.page_area button.active,
+.page_area a.active {
+  color: #475ed9;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.page_area button.prev_btn, .page_area button.next_btn,
+.page_area a.prev_btn,
+.page_area a.next_btn {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.page_area button.prev_btn span, .page_area button.next_btn span,
+.page_area a.prev_btn span,
+.page_area a.next_btn span {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.page_area button.prev_btn,
+.page_area a.prev_btn {
+  background-image: url("../images/icon_page_prev.svg");
+}
+.page_area button.next_btn,
+.page_area a.next_btn {
+  background-image: url("../images/icon_page_next.svg");
+}
+
+/* Editor */
+.editor_area {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+}
+.editor_area img {
+  max-width: 100%;
 }
 
 /* ETCS */
@@ -3184,7 +3242,7 @@ img {
   flex-direction: row;
   margin-top: 24px;
 }
-.modal_wrap.msg .modal_area .btn_area button {
+.modal_wrap.msg .modal_area .btn_area .btn {
   flex: 1;
 }
 
@@ -3296,6 +3354,28 @@ img {
   color: #1d1d1d;
   font-weight: 500;
   width: calc(100% - 80px);
+}
+
+.md_cancel_area {
+  padding-top: 16px;
+  text-align: center;
+}
+.md_cancel_area p {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+}
+.md_cancel_area .text_area {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+.md_cancel_area .text_area span {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
 }
 
 /*======================================*/
@@ -4100,6 +4180,26 @@ img {
 /*======================================*/
 /*----------- MYPAGE STYLES ------------*/
 /*======================================*/
+.mypage_info_area {
+  padding: 32px 0 40px;
+  text-align: center;
+}
+.mypage_info_area img {
+  margin: 0 auto 16px;
+}
+.mypage_info_area p {
+  font-size: 22px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.mypage_info_area span {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
+  margin-top: 16px;
+}
+
 .mypage_dashboard_area {
   padding: 32px 0 40px;
   background-color: #000000;
@@ -4238,22 +4338,66 @@ img {
   text-decoration: underline;
 }
 
-.mypage_withdraw_info_area {
-  padding: 32px 0 40px;
-  text-align: center;
+.order_item_wrap {
+  padding: 24px 16px;
+  border-top: 8px solid #f8f8f8;
+  border-bottom: 1px solid #eeeeee;
 }
-.mypage_withdraw_info_area img {
-  margin: 0 auto 16px;
+.order_item_wrap .title_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eeeeee;
 }
-.mypage_withdraw_info_area p {
-  font-size: 22px;
-  color: #1d1d1d;
+.order_item_wrap .title_area p {
+  font-size: 14px;
+  color: #717171;
+  font-weight: 500;
+}
+.order_item_wrap .title_area button,
+.order_item_wrap .title_area a {
+  font-size: 14px;
+  color: #717171;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.order_item_wrap .content_area .status {
+  font-size: 14px;
+  color: #475ed9;
   font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
 }
-.mypage_withdraw_info_area span {
-  font-size: 16px;
+.order_item_wrap .content_area .status.type01 {
+  color: #475ed9;
+}
+.order_item_wrap .content_area .status.type02 {
+  color: #dd083e;
+}
+.order_item_wrap .content_area .status.type03 {
+  color: #1d1d1d;
+}
+.order_item_wrap .content_area .desc_text_style01 {
+  font-size: 14px;
   color: #555555;
   font-weight: 500;
+  display: block;
+  width: 100%;
+  padding: 6px 16px;
+  margin-top: 16px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+.order_item_wrap .content_area .desc_text_style02 {
+  font-size: 14px;
+  color: #dd083e;
+  font-weight: 400;
   display: block;
   margin-top: 16px;
 }

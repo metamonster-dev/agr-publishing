@@ -4,6 +4,22 @@
 /*======================================*/
 /*----------- MYPAGE STYLES ------------*/
 /*======================================*/
+.mypage_info_area {
+  padding: 32px 0 40px;
+  text-align: center;
+  img {
+    margin: 0 auto 16px;
+  }
+  p {
+    @include fontStyle(22px, $color_gray_1d, 700);
+  }
+  span {
+    @include fontStyle(16px, $color_gray_5, 500);
+    display: block;
+    margin-top: 16px;
+  }
+}
+
 // 대시보드
 .mypage_dashboard_area {
   padding: 32px 0 40px;
@@ -97,18 +113,55 @@
     }
   }
 }
-.mypage_withdraw_info_area {
-  padding: 32px 0 40px;
-  text-align: center;
-  img {
-    margin: 0 auto 16px;
+
+// 주문내역
+.order_item_wrap {
+  padding: 24px 16px;
+  border-top: 8px solid $color_gray_f8;
+  border-bottom: 1px solid $color_gray_e;
+  .title_area {
+    @include flexLayout(center, space-between, 8px);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $color_gray_e;
+    p {
+      @include fontStyle(14px, $color_gray_71, 500);
+    }
+    button,
+    a {
+      @include fontStyle(14px, $color_gray_71, 500);
+      text-decoration: underline;
+    }
   }
-  p {
-    @include fontStyle(22px, $color_gray_1d, 700);
-  }
-  span {
-    @include fontStyle(16px, $color_gray_5, 500);
-    display: block;
-    margin-top: 16px;
+  .content_area {
+    .status {
+      @include fontStyle(14px, $color_key_01, 700);
+      display: block;
+      margin-bottom: 8px;
+      &.type01 {
+        color: $color_key_01;
+      }
+      &.type02 {
+        color: $color_red_01;
+      }
+      &.type03 {
+        color: $color_gray_1d;
+      }
+    }
+    .desc_text_style01 {
+      @include fontStyle(14px, $color_gray_5, 500);
+      display: block;
+      width: 100%;
+      padding: 6px 16px;
+      margin-top: 16px;
+      border-radius: 4px;
+      background-color: $color_gray_f8;
+      text-align: center;
+    }
+    .desc_text_style02 {
+      @include fontStyle(14px, $color_red_01, 400);
+      display: block;
+      margin-top: 16px;
+    }
   }
 }

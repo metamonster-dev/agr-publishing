@@ -114,7 +114,11 @@
                 </ul>
               </section>
 
-              <button type="button" class="btn btn_style02 btn_size_52 w_full">
+              <button
+                type="button"
+                class="btn btn_style02 btn_size_52 w_full"
+                onClick="onModalShow('md_logout')"
+              >
                 로그아웃
               </button>
               <div class="mypage_dashboard_btn mt_16">
@@ -123,6 +127,23 @@
             </div>
           </div>
         </div>
+
+        <!-- modal -->
+        <div class="modal_wrap msg" id="md_logout">
+          <div class="modal_area">
+            <span> 성공적으로 로그아웃하셨습니다. </span>
+            <div class="btn_area">
+              <button
+                type="button"
+                class="btn btn_style01 btn_size_52"
+                onClick="location.href='/'"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- // modal -->
       </div>
     </div>
 

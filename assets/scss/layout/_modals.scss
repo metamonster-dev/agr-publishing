@@ -156,7 +156,7 @@
       .btn_area {
         @include flexLayout(center, center, 8px);
         margin-top: 24px;
-        button {
+        .btn {
           flex: 1;
         }
       }
@@ -244,6 +244,25 @@
     dd {
       @include fontStyle(16px, $color_gray_1d, 500);
       width: calc(100% - 80px);
+    }
+  }
+}
+
+// 취소신청
+.md_cancel_area {
+  padding-top: 16px;
+  text-align: center;
+  p {
+    @include fontStyle(16px, $color_gray_5, 500);
+  }
+  .text_area {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    span {
+      @include fontStyle(16px, $color_gray_5, 500);
+      display: block;
     }
   }
 }
