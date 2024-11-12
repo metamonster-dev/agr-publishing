@@ -90,7 +90,11 @@
                   <a href="./mypage.html" class="btn btn_style02 btn_size_52">
                     취소
                   </a>
-                  <button type="submit" class="btn btn_style01 btn_size_52">
+                  <button
+                    type="submit"
+                    class="btn btn_style01 btn_size_52"
+                    id="withdraw_btn"
+                  >
                     탈퇴
                   </button>
                 </div>
@@ -103,14 +107,15 @@
         <div class="modal_wrap msg" id="md_withdraw">
           <div class="modal_area">
             <span>
-              회원탈퇴 시 회원님의 <br />모든 데이터가 삭제됩니다. <br /><br />
+              회원탈퇴 시 회원님의 <br />
+              모든 데이터가 삭제됩니다. <br /><br />
               <strong>그래도 회원을 탈퇴하시겠습니까?</strong>
             </span>
             <div class="btn_area">
               <button
                 type="button"
                 class="btn btn_style02 btn_size_52"
-                onClick="onModalHide('md_withdraw')"
+                onClick="onModalHide('md_withdraw', 'withdraw_btn')"
               >
                 취소
               </button>
@@ -134,7 +139,7 @@
               <button
                 type="button"
                 class="btn btn_style01 btn_size_52"
-                onClick="onModalHide('md_cannot_withdraw')"
+                onClick="onModalHide('md_cannot_withdraw', 'withdraw_btn')"
               >
                 확인
               </button>

@@ -922,6 +922,11 @@ img {
   margin-bottom: 24px;
 }
 
+.py_24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .py_40 {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -2616,6 +2621,24 @@ img {
   color: #8e8e8e;
   font-weight: 500;
   margin-top: 4px;
+}
+.item_area02 .btn_area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-top: 16px;
+}
+.item_area02 .btn_area button {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 500;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
 }
 
 .item_area03 {

@@ -31,7 +31,230 @@
         <div id="contents">
           <div id="floating_area"></div>
           <div id="nav_area"></div>
+
+          <div class="pt_32 pb_24 border_bottom_8">
+            <div class="inner">
+              <button
+                type="button"
+                class="btn btn_style01 btn_size_52 w_full"
+                id="delivery_btn"
+                onClick="onModalShow('md_delivery')"
+              >
+                배송지 추가
+              </button>
+            </div>
+          </div>
+
+          <div class="pb_150">
+            <div class="inner">
+              <!-- 데이터 없을 시, -->
+              <!-- <div class="no_data_area pt_40">
+                <i></i><span>배송지 목록이 없습니다.</span>
+              </div> -->
+
+              <ul>
+                <li class="py_24">
+                  <div class="item_area02">
+                    <div class="tit_area">
+                      <p class="tit color_key_01">김아트(회사)</p>
+                      <span class="tag">기본배송지</span>
+                    </div>
+                    <div class="text_area">
+                      <p class="addr">
+                        [12345] 서울 구로구 디지털로26길 43 대륭포스트타워 8차
+                        L동 805호
+                      </p>
+                      <span class="phone">010-1234-1234</span>
+                    </div>
+                    <div class="btn_area">
+                      <button type="button">수정</button>
+                      <button type="button">삭제</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="py_24 border_top">
+                  <div class="item_area02">
+                    <div class="tit_area">
+                      <p class="tit">김아트(회사)</p>
+                    </div>
+                    <div class="text_area">
+                      <p class="addr">
+                        [12345] 서울 구로구 디지털로26길 43 대륭포스트타워 8차
+                        L동 805호
+                      </p>
+                      <span class="phone">010-1234-1234</span>
+                    </div>
+                    <div class="btn_area">
+                      <button type="button">수정</button>
+                      <button type="button">삭제</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="py_24 border_top">
+                  <div class="item_area02">
+                    <div class="tit_area">
+                      <p class="tit">김아트(회사)</p>
+                    </div>
+                    <div class="text_area">
+                      <p class="addr">
+                        [12345] 서울 구로구 디지털로26길 43 대륭포스트타워 8차
+                        L동 805호
+                      </p>
+                      <span class="phone">010-1234-1234</span>
+                    </div>
+                    <div class="btn_area">
+                      <button type="button">수정</button>
+                      <button type="button">삭제</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        <!-- modal -->
+        <div class="modal_wrap full" id="md_delivery">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>
+                배송지 추가
+                <!-- 배송지 수정 -->
+              </p>
+              <button
+                type="button"
+                class="x_btn"
+                onclick="onModalHide('md_delivery', 'delivery_btn')"
+              >
+                <span>모달창 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">
+              <div class="pt_32 pb_60">
+                <div class="inner">
+                  <div class="input_list_area gap_24">
+                    <div class="label_input_area">
+                      <label for="delivery_name" class="label">
+                        배송지 이름
+                      </label>
+                      <input
+                        type="text"
+                        name="delivery_name"
+                        id="delivery_name"
+                        class="input"
+                        placeholder="배송지 이름을 입력해주세요"
+                      />
+                    </div>
+
+                    <div class="label_input_area">
+                      <label for="name" class="label">이름</label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        class="input"
+                        placeholder="이름을 입력해주세요"
+                      />
+                    </div>
+
+                    <div class="label_input_area">
+                      <label for="phone" class="label">연락처1</label>
+                      <input
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        class="input"
+                        placeholder="‘-’없이 입력해 주세요."
+                      />
+                    </div>
+
+                    <div class="label_input_area">
+                      <label for="phone02" class="label">연락처2</label>
+                      <input
+                        type="text"
+                        name="phone02"
+                        id="phone02"
+                        class="input"
+                        placeholder="‘-’없이 입력해 주세요."
+                      />
+                    </div>
+
+                    <div class="label_input_area">
+                      <span class="label">주소</span>
+
+                      <div class="input_btn_area">
+                        <label for="zone_code" class="hidden_text"
+                          >우편번호</label
+                        >
+                        <input
+                          type="text"
+                          name="zone_code"
+                          id="zone_code"
+                          class="input"
+                          placeholder="우편번호"
+                          disabled
+                        />
+                        <button
+                          type="button"
+                          class="btn btn_style02 btn_size_52"
+                        >
+                          주소 검색
+                        </button>
+                      </div>
+
+                      <label for="address" class="hidden_text">주소</label>
+                      <input
+                        type="text"
+                        name="address"
+                        id="address"
+                        class="input"
+                        placeholder="주소"
+                        disabled
+                      />
+
+                      <label for="address_detail" class="hidden_text">
+                        상세 주소
+                      </label>
+                      <input
+                        type="text"
+                        name="address_detail"
+                        id="address_detail"
+                        class="input"
+                        placeholder="상세 주소를 입력해 주세요"
+                      />
+                    </div>
+
+                    <div class="chk_custom03">
+                      <input
+                        type="checkbox"
+                        name="default"
+                        id="default"
+                        value="1"
+                      />
+                      <label for="default">기본 배송지</label>
+                    </div>
+                  </div>
+
+                  <div class="btn_wrap mt_40">
+                    <button type="button" class="btn btn_style02 btn_size_52">
+                      취소
+                    </button>
+                    <button type="button" class="btn btn_style01 btn_size_52">
+                      추가
+                    </button>
+                    <!-- <button type="button" class="btn btn_style02 btn_size_52">
+                      배송지 삭제
+                    </button>
+                    <button type="button" class="btn btn_style01 btn_size_52">
+                      수정
+                    </button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // modal -->
       </div>
     </div>
 

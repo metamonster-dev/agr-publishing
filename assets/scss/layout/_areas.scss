@@ -61,6 +61,10 @@
 .mb_24 {
   margin-bottom: 24px;
 }
+.py_24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 .py_40 {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1403,6 +1407,17 @@
     .phone {
       @include fontStyle(16px, $color_gray_8e, 500);
       margin-top: 4px;
+    }
+  }
+  .btn_area {
+    @include flexLayout(center, flex-start, 6px);
+    margin-top: 16px;
+    button {
+      @include fontStyle(14px, $color_gray_5, 500);
+      height: 32px;
+      padding: 0 8px;
+      border: 1px solid $color_gray_d8;
+      border-radius: 4px;
     }
   }
 }
