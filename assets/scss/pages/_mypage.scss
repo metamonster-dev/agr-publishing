@@ -165,3 +165,16 @@
     }
   }
 }
+
+// 포트폴리오
+.portpolio_detail_tit_area {
+  padding: 20px 0;
+  border-bottom: 1px solid $color_gray_e;
+  h2 {
+    @include fontStyle(18px, $color_gray_1d, 700);
+  }
+  .date {
+    @include fontStyle(14px, $color_gray_71, 500);
+    margin-top: 8px;
+  }
+}

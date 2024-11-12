@@ -830,6 +830,10 @@ img {
 /*======================================*/
 /*----------- COMMON STYLES ------------*/
 /*======================================*/
+.d_block {
+  display: block !important;
+}
+
 .d_none {
   display: none !important;
 }
@@ -940,6 +944,11 @@ img {
 .px_8 {
   padding-left: 8px;
   padding-right: 8px;
+}
+
+.px_16 {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .pt_16 {
@@ -1326,6 +1335,35 @@ img {
   font-weight: 700;
 }
 
+.chk_custom04 input:checked + label::before {
+  border: 6px solid #475ed9;
+}
+.chk_custom04 label {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  padding: 0.5px 0 0.5px 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.chk_custom04 label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #8e8e8e;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
 .star_input_wrap {
   overflow: hidden;
   margin: 0 auto;
@@ -1546,35 +1584,28 @@ img {
   gap: 40px;
 }
 
-.chk_list_area.grid01 {
+.chk_list_area {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 24px;
   flex-wrap: wrap;
   flex-direction: row;
+}
+.chk_list_area.grid01 {
+  gap: 8px;
 }
 .chk_list_area.grid01 > * {
   width: 100%;
 }
 .chk_list_area.grid02 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   gap: 12px;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 .chk_list_area.grid02 > * {
   width: calc(50% - 6px);
 }
 .chk_list_area.grid03 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   gap: 14px;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 .chk_list_area.grid03 > * {
   width: calc((100% - 28px) / 3);
@@ -1723,6 +1754,9 @@ img {
   border-color: #c6c6c6;
   background-color: #c6c6c6;
   color: #ffffff;
+}
+.btn.btn_style01:focus {
+  outline-color: #475ed9;
 }
 .btn.btn_style02 {
   border: 1px solid #8e8e8e;
@@ -1972,6 +2006,9 @@ img {
 }
 .img_area.rect03::before {
   padding-bottom: 60%;
+}
+.img_area.rect04::before {
+  padding-bottom: 63%;
 }
 
 /* Video */
@@ -2665,13 +2702,6 @@ img {
   font-size: 16px;
   color: #1d1d1d;
   font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box !important;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-height: 1.4rem;
-  max-height: 2.8rem;
 }
 .item_area .text_area .price_text {
   display: flex;
@@ -2692,10 +2722,23 @@ img {
   color: #1d1d1d;
   font-weight: 700;
 }
+.item_area .text_area .date {
+  font-size: 14px;
+  color: #717171;
+  font-weight: 500;
+  display: block;
+  margin-top: 8px;
+}
 .item_area.border {
   padding: 16px;
   border: 1px solid #d8d8d8;
   border-radius: 4px;
+}
+.item_area.type02 .img_area {
+  width: 108px;
+}
+.item_area.type02 .text_area {
+  width: calc(100% - 124px);
 }
 
 .item_area02 .tit_area {
@@ -2944,6 +2987,26 @@ img {
   font-size: 16px;
   color: #1d1d1d;
   font-weight: 700;
+}
+
+.desc_text_style {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
+  position: relative;
+  padding-left: 11px;
+  letter-spacing: -0.02rem;
+}
+.desc_text_style::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: #555555;
 }
 
 /* Tool Tip */
@@ -4540,6 +4603,22 @@ img {
   font-weight: 400;
   display: block;
   margin-top: 16px;
+}
+
+.portpolio_detail_tit_area {
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.portpolio_detail_tit_area h2 {
+  font-size: 18px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.portpolio_detail_tit_area .date {
+  font-size: 14px;
+  color: #717171;
+  font-weight: 500;
+  margin-top: 8px;
 }
 
 /*======================================*/

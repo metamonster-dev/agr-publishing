@@ -257,87 +257,89 @@
               </button>
             </div>
             <div class="md_cont">
-              <div class="md_consult_area">
-                <div class="pt_24 pb_60">
-                  <div class="inner">
-                    <div class="input_list_area gap_24">
-                      <div class="label_input_area">
-                        <label for="title" class="label">제목</label>
-                        <input
-                          type="text"
-                          name="title"
-                          id="title"
-                          class="input"
-                          placeholder="제목을 입력해 주세요."
-                        />
-                      </div>
-
-                      <div class="label_input_area">
-                        <label for="content" class="label">내용</label>
-                        <textarea
-                          name="content"
-                          id="content"
-                          cols="30"
-                          rows="10"
-                          class="textarea"
-                          placeholder="내용을 입력해 주세요."
-                        ></textarea>
-                      </div>
-
-                      <div class="label_input_area">
-                        <span class="label">이미지 첨부</span>
-                        <div class="img_input_list_area">
-                          <div class="img_input">
-                            <input
-                              type="file"
-                              name="img"
-                              id="img"
-                              accept=".jpg, .jpeg, .png"
-                            />
-                            <label for="img"><span>이미지 첨부</span></label>
-                          </div>
-                          <div class="img_input">
-                            <img
-                              src="../assets/images/product/product_img05.jpg"
-                              alt="이미지 등록"
-                            />
-                            <button type="button" class="img_x_btn">
-                              <span>등록한 이미지 삭제</span>
-                            </button>
-                          </div>
-                          <div class="img_input">
-                            <img
-                              src="../assets/images/product/product_img05.jpg"
-                              alt="이미지 등록"
-                            />
-                            <button type="button" class="img_x_btn">
-                              <span>등록한 이미지 삭제</span>
-                            </button>
-                          </div>
-                          <div class="img_input">
-                            <img
-                              src="../assets/images/product/product_img05.jpg"
-                              alt="이미지 등록"
-                            />
-                            <button type="button" class="img_x_btn">
-                              <span>등록한 이미지 삭제</span>
-                            </button>
-                          </div>
-                        </div>
-                        <span class="input_desc_text02">
-                          * 10MB 이하 JPG, PNG만 등록 가능합니다. (최대3장)
-                        </span>
-                      </div>
+              <div class="pt_24 pb_60">
+                <div class="inner">
+                  <div class="input_list_area gap_24">
+                    <div class="label_input_area">
+                      <label for="title" class="label">제목</label>
+                      <input
+                        type="text"
+                        name="title"
+                        id="title"
+                        class="input"
+                        placeholder="제목을 입력해 주세요."
+                      />
                     </div>
 
-                    <button
-                      type="button"
-                      class="btn btn_style01 btn_size_52 w_full mt_40"
-                      onClick="onModalHide('md_consult', 'consult_btn')"
-                    >
-                      등록
-                    </button>
+                    <div class="label_input_area">
+                      <label for="content" class="label">내용</label>
+                      <textarea
+                        name="content"
+                        id="content"
+                        cols="30"
+                        rows="10"
+                        class="textarea"
+                        placeholder="내용을 입력해 주세요."
+                      ></textarea>
+                    </div>
+
+                    <div class="label_input_area">
+                      <span class="label">이미지 첨부</span>
+                      <div class="img_input_list_area">
+                        <div class="img_input">
+                          <input
+                            type="file"
+                            name="img"
+                            id="img"
+                            accept=".jpg, .jpeg, .png"
+                          />
+                          <label for="img"><span>이미지 첨부</span></label>
+                        </div>
+                        <div class="img_input">
+                          <img
+                            src="../assets/images/product/product_img05.jpg"
+                            alt="이미지 등록"
+                          />
+                          <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </button>
+                        </div>
+                        <div class="img_input">
+                          <img
+                            src="../assets/images/product/product_img05.jpg"
+                            alt="이미지 등록"
+                          />
+                          <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </button>
+                        </div>
+                        <div class="img_input">
+                          <img
+                            src="../assets/images/product/product_img05.jpg"
+                            alt="이미지 등록"
+                          />
+                          <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </button>
+                        </div>
+                      </div>
+                      <span class="input_desc_text02">
+                        * 10MB 이하 JPG, PNG만 등록 가능합니다. (최대3장)
+                      </span>
+                    </div>
                   </div>
+
+                  <button
+                    type="button"
+                    class="btn btn_style01 btn_size_52 w_full mt_40"
+                    onClick="notyf.open({
+                          type: 'icon',
+                          message: '작성하신 문의글 등록 완료!',
+                          icon: '<img src=\'../assets/images/icon_toast_check.svg\' aria-hidden=\'true\' />',
+                        })"
+                  >
+                    등록
+                  </button>
                 </div>
               </div>
             </div>

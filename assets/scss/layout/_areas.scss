@@ -4,6 +4,9 @@
 /*======================================*/
 /*----------- COMMON STYLES ------------*/
 /*======================================*/
+.d_block {
+  display: block !important;
+}
 .d_none {
   display: none !important;
 }
@@ -76,6 +79,10 @@
 .px_8 {
   padding-left: 8px;
   padding-right: 8px;
+}
+.px_16 {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .pt_16 {
   padding-top: 16px;
@@ -401,6 +408,34 @@
     }
   }
 }
+.chk_custom04 {
+  input:checked + label {
+    &::before {
+      border: 6px solid $color_key_01;
+    }
+  }
+  label {
+    @include fontStyle(16px, $color_gray_5, 500);
+    position: relative;
+    display: inline-block;
+    padding: 0.5px 0 0.5px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $color_gray_8e;
+      border-radius: 50%;
+      background-color: $color_white;
+    }
+  }
+}
 
 .star_input_wrap {
   overflow: hidden;
@@ -566,20 +601,22 @@
   }
 }
 .chk_list_area {
+  @include flexLayout(center, flex-start, 24px, wrap);
+
   &.grid01 {
-    @include flexLayout(center, flex-start, 8px, wrap);
+    gap: 8px;
     & > * {
       width: 100%;
     }
   }
   &.grid02 {
-    @include flexLayout(center, flex-start, 12px, wrap);
+    gap: 12px;
     & > * {
       width: calc(50% - 6px);
     }
   }
   &.grid03 {
-    @include flexLayout(center, flex-start, 14px, wrap);
+    gap: 14px;
     & > * {
       width: calc((100% - 14px * 2) / 3);
     }
@@ -689,6 +726,9 @@
       border-color: $color_gray_c6;
       background-color: $color_gray_c6;
       color: $color_white;
+    }
+    &:focus {
+      outline-color: $color_key_01;
     }
   }
   &.btn_style02 {
@@ -907,6 +947,9 @@
   }
   &.rect03::before {
     padding-bottom: 60%;
+  }
+  &.rect04::before {
+    padding-bottom: 63%;
   }
 }
 
@@ -1451,7 +1494,6 @@
     }
     .tit {
       @include fontStyle(16px, $color_gray_1d, 500);
-      @include line2Text;
     }
     .price_text {
       @include flexLayout(center, flex-start, 4px);
@@ -1463,11 +1505,24 @@
         @include fontStyle(16px, $color_gray_1d, 700);
       }
     }
+    .date {
+      @include fontStyle(14px, $color_gray_71, 500);
+      display: block;
+      margin-top: 8px;
+    }
   }
   &.border {
     padding: 16px;
     border: 1px solid $color_gray_d8;
     border-radius: 4px;
+  }
+  &.type02 {
+    .img_area {
+      width: 108px;
+    }
+    .text_area {
+      width: calc(100% - 124px);
+    }
   }
 }
 .item_area02 {
@@ -1647,6 +1702,24 @@
     .desc {
       @include fontStyle(16px, $color_gray_1d, 700);
     }
+  }
+}
+.desc_text_style {
+  @include fontStyle(14px, $color_gray_5, 500);
+  display: block;
+  position: relative;
+  padding-left: 11px;
+  letter-spacing: -0.02rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: $color_gray_5;
   }
 }
 

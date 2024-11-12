@@ -31,7 +31,208 @@
         <div id="contents">
           <div id="floating_area"></div>
           <div id="nav_area"></div>
+
+          <div class="pt_32 pb_24 border_bottom_8">
+            <div class="inner">
+              <button
+                type="button"
+                class="btn btn_style01 btn_size_52 w_full"
+                id="portpolio_btn"
+                onClick="onModalShow('md_portpolio')"
+              >
+                포폴 등록하기
+              </button>
+              <span class="desc_text_style mt_16">
+                등록하신 포폴은 관리자 승인처리가 완료되어야 게시됩니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="pb_150">
+            <!-- 데이터 없을 시, -->
+            <!-- <div class="no_data_area pt_40">
+              <i></i><span>등록된 포폴이 없습니다.</span>
+            </div> -->
+
+            <ul>
+              <li class="border_bottom">
+                <a href="./portpolio_detail.html" class="d_block px_16 py_24">
+                  <div class="item_area type02">
+                    <div class="img_area rect04">
+                      <img
+                        src="../assets/images/product/product_img02.jpg"
+                        alt="김아트의 포트폴리오 김아트의 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <span class="cate">포트폴리오</span>
+                      <p class="tit line1_text">
+                        김아트의 포트폴리오 김아트의 포트폴리오
+                      </p>
+                      <span class="date">2024.10.08</span>
+                    </div>
+                  </div>
+                  <span class="tag_text tag_style01 mt_16">승인완료</span>
+                  <!-- <span class="tag_text tag_style03 mt_16">승인대기</span> -->
+                </a>
+              </li>
+              <li class="border_bottom">
+                <a href="./portpolio_detail.html" class="d_block px_16 py_24">
+                  <div class="item_area type02">
+                    <div class="img_area rect04">
+                      <img
+                        src="../assets/images/product/product_img02.jpg"
+                        alt="김아트의 포트폴리오 김아트의 이미지"
+                      />
+                    </div>
+                    <div class="text_area">
+                      <span class="cate">포트폴리오</span>
+                      <p class="tit line1_text">
+                        김아트의 포트폴리오 김아트의 포트폴리오
+                      </p>
+                      <span class="date">2024.10.08</span>
+                    </div>
+                  </div>
+                  <!-- <span class="tag_text tag_style01 mt_16">승인완료</span> -->
+                  <span class="tag_text tag_style03 mt_16">승인대기</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <!-- modal -->
+        <div class="modal_wrap full" id="md_portpolio">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>포폴 등록하기</p>
+              <button
+                type="button"
+                class="x_btn"
+                onClick="onModalHide('md_portpolio', 'portpolio_btn')"
+              >
+                <span>모달창 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">
+              <div class="pt_24 pb_60">
+                <div class="inner">
+                  <div class="input_list_area gap_24">
+                    <div class="label_input_area">
+                      <label for="title" class="label">제목</label>
+                      <input
+                        type="text"
+                        name="title"
+                        id="title"
+                        class="input"
+                        placeholder="제목을 입력해 주세요."
+                      />
+                    </div>
+
+                    <div class="label_input_area">
+                      <label for="content" class="label">내용</label>
+                      <textarea
+                        name="content"
+                        id="content"
+                        cols="30"
+                        rows="10"
+                        class="textarea"
+                        placeholder="내용을 입력해 주세요."
+                      ></textarea>
+                    </div>
+
+                    <div class="label_input_area">
+                      <span class="label">이미지 첨부</span>
+                      <div class="img_input_list_area">
+                        <div class="img_input">
+                          <input
+                            type="file"
+                            name="img"
+                            id="img"
+                            accept=".jpg, .jpeg, .png, .webp, .mp3, .wav"
+                          />
+                          <label for="img"><span>이미지 첨부</span></label>
+                        </div>
+                        <div class="img_input">
+                          <img
+                            src="../assets/images/product/product_img05.jpg"
+                            alt="이미지 등록"
+                          />
+                          <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </button>
+                        </div>
+                        <div class="img_input">
+                          <img
+                            src="../assets/images/product/product_img05.jpg"
+                            alt="이미지 등록"
+                          />
+                          <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </button>
+                        </div>
+                        <div class="img_input">
+                          <img
+                            src="../assets/images/product/product_img05.jpg"
+                            alt="이미지 등록"
+                          />
+                          <button type="button" class="img_x_btn">
+                            <span>등록한 이미지 삭제</span>
+                          </button>
+                        </div>
+                      </div>
+                      <span class="input_desc_text02">
+                        * 10MB 이하 png,jpg,webp,mp3,wav만 등록 가능합니다.
+                        (최대 3장)
+                      </span>
+                    </div>
+
+                    <fieldset>
+                      <div class="label_input_area">
+                        <legend class="hidden_text">공개 여부</legend>
+                        <div class="chk_list_area">
+                          <div class="chk_custom04">
+                            <input
+                              type="radio"
+                              name="visible"
+                              id="visible01"
+                              value="1"
+                              checked
+                            />
+                            <label for="visible01">공개</label>
+                          </div>
+                          <div class="chk_custom04">
+                            <input
+                              type="radio"
+                              name="visible"
+                              id="visible02"
+                              value="2"
+                            />
+                            <label for="visible02">비공개</label>
+                          </div>
+                        </div>
+                        <span class="error_msg d_none">ERROR MESSAGE</span>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn btn_style01 btn_size_52 w_full mt_40"
+                    onClick="notyf.open({
+                      type: 'icon',
+                      message: '작성하신 포트폴리오 등록 완료!',
+                      icon: '<img src=\'../assets/images/icon_toast_check.svg\' aria-hidden=\'true\' />',
+                    })"
+                  >
+                    등록
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // modal -->
       </div>
     </div>
 
