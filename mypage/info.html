@@ -281,7 +281,12 @@
                         value="음악, 연극"
                         disabled
                       />
-                      <button type="button" class="btn btn_style02 btn_size_52">
+                      <button
+                        type="button"
+                        class="btn btn_style02 btn_size_52"
+                        id="interest_btn"
+                        onClick="onModalShow('md_interest')"
+                      >
                         수정하기
                       </button>
                     </div>
@@ -300,6 +305,262 @@
             </div>
           </form>
         </div>
+
+        <!-- modal -->
+        <div class="modal_wrap full" id="md_interest">
+          <div class="modal_area">
+            <div class="md_tit">
+              <p>관심사 수정</p>
+              <button
+                type="button"
+                class="x_btn"
+                onClick="onModalHide('md_interest', 'interest_btn')"
+              >
+                <span>모달창 닫기</span>
+              </button>
+            </div>
+            <div class="md_cont">
+              <div class="pt_24 pb_60">
+                <div class="inner">
+                  <div class="input_list_area gap_24">
+                    <fieldset>
+                      <legend class="label mb_8">
+                        <h3>예술분야</h3>
+                      </legend>
+                      <div class="label_input_area">
+                        <div class="chk_list_area grid03">
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field01"
+                              value="1"
+                            />
+                            <label for="field01">
+                              <img
+                                src="../assets/images/icon_field01.png"
+                                alt="문학(책) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>문학</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field02"
+                              value="2"
+                            />
+                            <label for="field02">
+                              <img
+                                src="../assets/images/icon_field02.png"
+                                alt="사진(이미지) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>사진</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field03"
+                              value="3"
+                            />
+                            <label for="field03">
+                              <img
+                                src="../assets/images/icon_field03.png"
+                                alt="건축(집 + 연필 + 자) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>건축</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field04"
+                              value="4"
+                            />
+                            <label for="field04">
+                              <img
+                                src="../assets/images/icon_field04.png"
+                                alt="국악(한국 북) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>국악</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field05"
+                              value="5"
+                            />
+                            <label for="field05">
+                              <img
+                                src="../assets/images/icon_field05.png"
+                                alt="무용(춤) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>무용</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field06"
+                              value="6"
+                            />
+                            <label for="field06">
+                              <img
+                                src="../assets/images/icon_field06.png"
+                                alt="연극(가면) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>연극</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field07"
+                              value="7"
+                            />
+                            <label for="field07">
+                              <img
+                                src="../assets/images/icon_field07.png"
+                                alt="음악(악보 + 음표) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>음악</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field08"
+                              value="8"
+                            />
+                            <label for="field08">
+                              <img
+                                src="../assets/images/icon_field08.png"
+                                alt="영화(영화 필름) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>영화</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field09"
+                              value="9"
+                            />
+                            <label for="field09">
+                              <img
+                                src="../assets/images/icon_field09.png"
+                                alt="만화(캐릭터) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>만화</span>
+                            </label>
+                          </div>
+                          <div class="chk_custom02">
+                            <input
+                              type="checkbox"
+                              name="field"
+                              id="field10"
+                              value="10"
+                            />
+                            <label for="field10">
+                              <img
+                                src="../assets/images/icon_field10.png"
+                                alt="연예(TV) 아이콘"
+                                aria-hidden="true"
+                              />
+                              <span>연예</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <fieldset>
+                      <legend class="label mb_8">
+                        <h3>예술활동 유형</h3>
+                      </legend>
+                      <div class="label_input_area">
+                        <div class="chk_list_area grid02">
+                          <div class="chk_custom">
+                            <input
+                              type="radio"
+                              name="activity"
+                              id="activity01"
+                              value="1"
+                            />
+                            <label for="activity01">창작</label>
+                          </div>
+                          <div class="chk_custom">
+                            <input
+                              type="radio"
+                              name="activity"
+                              id="activity02"
+                              value="2"
+                            />
+                            <label for="activity02">실연</label>
+                          </div>
+                          <div class="chk_custom">
+                            <input
+                              type="radio"
+                              name="activity"
+                              id="activity03"
+                              value="3"
+                            />
+                            <label for="activity03">기술지원</label>
+                          </div>
+                          <div class="chk_custom">
+                            <input
+                              type="radio"
+                              name="activity"
+                              id="activity04"
+                              value="4"
+                            />
+                            <label for="activity04">기획</label>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="btn_wrap mt_40">
+                    <button
+                      type="button"
+                      class="btn btn_style02 btn_size_52 w_full"
+                      onClick="onModalHide('md_interest', 'interest_btn')"
+                    >
+                      취소
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn_style01 btn_size_52 w_full"
+                      onClick="onModalHide('md_interest', 'interest_btn')"
+                    >
+                      선택
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // modal -->
       </div>
     </div>
 
