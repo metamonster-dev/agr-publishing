@@ -29,12 +29,177 @@
     <div id="root_layout">
       <div class="root_container">
         <div class="sticky_menu">
-          <div id="header_area"></div>
+          <!-- SKIP NAV -->
+          <a href="#contents" id="skip_nav">본문 바로가기</a>
+
+          <!-- HEADER -->
+          <header id="header" class="hd_bg02 d_block">
+            <div class="inner">
+              <h1>
+                <a href="/" class="hd_icon logo">
+                  <span>ART GUIDE RUN 메인 페이지로 이동</span>
+                </a>
+              </h1>
+              <div class="hd_flex">
+                <a href="./search/search.html" class="hd_icon icon01">
+                  <span>검색 페이지로 이동</span>
+                </a>
+                <button
+                  type="button"
+                  class="menu_btn hd_icon icon02"
+                  onClick="menuOpenClick()"
+                >
+                  <span>카테고리 메뉴 보기</span>
+                </button>
+              </div>
+            </div>
+          </header>
+          <!-- // HEADER -->
+
+          <!-- MOBILE_MENU -->
+          <div id="m_menu">
+            <div class="m_header">
+              <div class="inner">
+                <div class="m_flex">
+                  <button
+                    type="button"
+                    class="back_btn"
+                    onClick="menuCloseClick()"
+                  >
+                    <span>카테고리 메뉴 닫기</span>
+                  </button>
+                  <p>카테고리</p>
+                </div>
+                <button
+                  type="button"
+                  class="close_btn"
+                  onClick="menuCloseClick()"
+                >
+                  <span>카테고리 메뉴 닫기</span>
+                </button>
+              </div>
+            </div>
+            <nav class="gnb" aria-label="주 네비게이션">
+              <ul>
+                <li class="active">
+                  <button type="button">회사소개</button>
+                  <ul class="depth02">
+                    <li><a href="./company/company.html">회사소개</a></li>
+                    <li><a href="./company/organization.html">조직도</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button type="button">가이드런</button>
+                  <ul class="depth02">
+                    <li>
+                      <a href="./product/list_guide_run.html">1:1 컨설팅</a>
+                    </li>
+                    <li><a href="javascript:;">클래스</a></li>
+                    <li><a href="javascript:;">포트폴리오 멘토링</a></li>
+                    <li><a href="javascript:;">공모사업 지원가이드</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button type="button">딥파인더</button>
+                  <ul class="depth02">
+                    <li>
+                      <a href="./product/list_deep_finder.html">예술인 등록</a>
+                    </li>
+                    <li><a href="javascript:;">작품 저작권 등록</a></li>
+                    <li><a href="javascript:;">협회가입, 작품등록</a></li>
+                    <li><a href="javascript:;">기획운영 대행</a></li>
+                    <li><a href="javascript:;">디지털 퍼블리싱</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button type="button">아트마켓</button>
+                  <ul class="depth02">
+                    <li><a href="./product/list_art_market.html">공연</a></li>
+                    <li><a href="javascript:;">작품</a></li>
+                    <li><a href="javascript:;">판매</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button type="button">아트게더링</button>
+                  <ul class="depth02">
+                    <li>
+                      <a href="./gathering/gathering_list.html">게더링</a>
+                    </li>
+                    <li><a href="./gathering/artist_list.html">아티스트</a></li>
+                    <li><a href="./gathering/work_list.html">작품 소개</a></li>
+                    <li><a href="./gathering/vod_list.html">VOD</a></li>
+                    <li>
+                      <a href="./gathering/sheet_share_list.html">점자 악보</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button type="button">소식</button>
+                  <ul class="depth02">
+                    <li><a href="./news/notice.html">공지사항</a></li>
+                    <li><a href="./news/faq.html">자주 묻는 질문</a></li>
+                    <li><a href="./news/contact.html">문의하기</a></li>
+                    <li><a href="./news/promotion.html">홍보, 광고문의</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- // MOBILE_MENU -->
         </div>
 
         <div id="contents">
-          <div id="floating_area"></div>
-          <div id="nav_area"></div>
+          <!-- FLOADING MENU -->
+          <div id="floating_menu" class="show">
+            <div class="zoom_area">
+              <button type="button" class="zoom_btn" onClick="floatingToggle()">
+                <span class="hidden_text">화면 확대/축소 선택 열기</span>
+              </button>
+              <div class="btns_area">
+                <button type="button" onClick="zoomOut()">
+                  <span class="hidden_text">화면 축소</span>
+                </button>
+                <button type="button" onClick="zoomIn()">
+                  <span class="hidden_text">화면 확대</span>
+                </button>
+              </div>
+            </div>
+            <button type="button" class="top_btn" onClick="goTopClick()">
+              <span class="hidden_text">홈페이지 상단으로 이동</span>
+            </button>
+          </div>
+          <!-- // FLOADING MENU -->
+
+          <!-- BOTTOM NAV -->
+          <nav id="bottom_nav" aria-label="하단 고정 네비게이션">
+            <ul>
+              <li>
+                <a href="./index.html">
+                  <i class="icon01" aria-hidden="true"></i>
+                  <span>홈</span>
+                </a>
+              </li>
+              <li>
+                <a href="./calendar/calendar.html">
+                  <i class="icon02" aria-hidden="true"></i>
+                  <span>캘린더</span>
+                </a>
+              </li>
+              <li>
+                <a href="./interest/interest.html">
+                  <i class="icon03" aria-hidden="true"></i>
+                  <span>관심</span>
+                </a>
+              </li>
+              <li>
+                <a href="./mypage/mypage.html">
+                  <i class="icon04" aria-hidden="true"></i>
+                  <span>마이</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- // BOTTOM NAV -->
 
           <div class="main_visual_wrap">
             <div class="m_slider01">
@@ -694,7 +859,68 @@
           </section>
         </div>
 
-        <div id="footer_area"></div>
+        <!-- FOOTER -->
+        <footer id="footer">
+          <div class="ft_top">
+            <div class="inner">
+              <nav aria-label="하단 보조 네비게이션">
+                <ul>
+                  <li>
+                    <button
+                      type="button"
+                      id="privacy_btn"
+                      onClick="onModalShow('md_privacy')"
+                    >
+                      <b>개인정보처리방침</b>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      id="terms_btn"
+                      onClick="onModalShow('md_terms')"
+                    >
+                      이용약관
+                    </button>
+                  </li>
+                  <li>
+                    <a href="./company/company.html">회사소개</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">고객센터</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="ft_btm">
+            <div class="inner">
+              <ul>
+                <li>(주)아트가이드런</li>
+                <li>대표 : 소수정</li>
+                <li>
+                  소재지 : 경기도 안양시 동안구 경수대로 733번길 23, 103-1202
+                </li>
+                <li>사업자등록번호 : 819-11-00230</li>
+                <li>통신판매업신고번호 : 000-1234-1234</li>
+              </ul>
+
+              <hr />
+
+              <p>
+                고객센터 <br /><a href="tel:0507-1037-5064">0507-1037-5064</a>
+              </p>
+              <ul>
+                <li>고객센터 운영시간 : 오전 10시~오후 5시</li>
+                <li>고객센터 톡 운영시간 : 오전 11시~오후 11시</li>
+                <li>(점심시간 12:00~14:00)</li>
+              </ul>
+              <span>Copyright@Art Guide Runner. All rights reserved</span>
+            </div>
+          </div>
+        </footer>
+        <!-- // FOOTER -->
 
         <!-- modal -->
         <div id="agree_terms_area"></div>
@@ -704,13 +930,137 @@
     </div>
 
     <script>
+      // 메뉴 열기/닫기 click
+      const menuOpenClick = () => {
+        $("#m_menu").addClass("show");
+        $("#m_menu a, #m_menu button").eq(0).focus();
+      };
+      const menuCloseClick = () => {
+        $("#m_menu").removeClass("show");
+        $("#contents a, #contents button, #contents input").eq(0).focus();
+      };
+
+      $(window).on("load", function () {
+        // header init
+        const index = $("body")
+          .attr("class")
+          .split(" ")
+          .filter((className) => className.startsWith("hd_type"))
+          .map((className) => className.slice(-1));
+        $(`#header:not(:nth-of-type(${index}))`).remove();
+        $("#header").css("display", "block");
+
+        // depth01 focus & click
+        $("#m_menu .gnb > ul > li > button").on("click focus", function () {
+          $(this).parent().addClass("active").siblings().removeClass("active");
+        });
+
+        // 메뉴 Tab 이동 제어
+        $("#contents a, #contents button, #contents input")
+          .eq(0)
+          .on("keydown", function (e) {
+            if (
+              $("#m_menu").css("display") === "block" &&
+              e.shiftKey &&
+              e.key === "Tab"
+            ) {
+              e.preventDefault();
+              $("#header .menu_btn").focus();
+            }
+          });
+        $("#header .menu_btn").on("keydown", function (e) {
+          if (
+            !$("#m_menu").hasClass("show") &&
+            !e.shiftKey &&
+            e.key === "Tab"
+          ) {
+            e.preventDefault();
+            if ($(".sticky_menu .tab_area").length > 0)
+              $(".sticky_menu .tab_area button, .sticky_menu .tab_area a")
+                .first()
+                .focus();
+            else
+              $("#contents a, #contents button, #contents input").eq(0).focus();
+          }
+        });
+        $("#m_menu .back_btn").on("keydown", function (e) {
+          if (e.shiftKey && e.key === "Tab") {
+            e.preventDefault();
+            $("#m_menu .gnb > ul > li")
+              .last()
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+            $("#m_menu .gnb > ul > li > button").last().focus();
+          }
+        });
+        $("#m_menu a, #m_menu button")
+          .last()
+          .on("keydown", function (e) {
+            if (!e.shiftKey && e.key === "Tab") {
+              e.preventDefault();
+              $("#m_menu .back_btn").focus();
+            }
+          });
+      });
+    </script>
+
+    <script>
+      // top button click
+      const goTopClick = () => $("html, body").animate({ scrollTop: 0 }, 500);
+      const floatingToggle = () => {
+        $("#floating_menu .zoom_area").toggleClass("active");
+        if ($("#floating_menu .zoom_area").hasClass("active")) {
+          $("#floating_menu .zoom_btn span").text("화면 확대/축소 선택 닫기");
+        } else {
+          $("#floating_menu .zoom_btn span").text("화면 확대/축소 선택 열기");
+        }
+      };
+
+      // zoom button click
+      let zoomLevel = 1;
+      const zoomOut = () => {
+        zoomLevel = Math.max(zoomLevel - 0.1, 0.7);
+        if (zoomLevel <= 0.7) return alert("최소 화면 크기입니다.");
+        document.body.style.zoom = zoomLevel;
+      };
+      const zoomIn = () => {
+        zoomLevel = Math.min(zoomLevel + 0.1, 1.4);
+        if (zoomLevel >= 1.4) return alert("최대 화면 크기입니다.");
+        document.body.style.zoom = zoomLevel;
+      };
+
+      $(document).ready(function () {
+        // 스크롤에 따른 버튼 노출 제어
+        let lastScrollY = $(window).scrollTop();
+        let isScrolling;
+
+        $(window).on("scroll", function () {
+          const currentScrollY = $(window).scrollTop();
+
+          if (currentScrollY > lastScrollY) {
+            $("#floating_menu").removeClass("show");
+          } else {
+            $("#floating_menu").addClass("show");
+          }
+          lastScrollY = currentScrollY;
+
+          clearTimeout(isScrolling);
+          isScrolling = setTimeout(function () {
+            $("#floating_menu").addClass("show");
+          }, 400);
+        });
+      });
+    </script>
+
+    <script>
       // ===== 공통 영역 설정 스크립트 =====
-      $("#header_area").load("./include/header.html");
-      $("#footer_area").load("./include/footer.html");
+      // $("#header_area").load("./include/header.html");
+      // $("#footer_area").load("./include/footer.html");
       $("#agree_terms_area").load("./include/agree/terms.html");
       $("#agree_privacy_area").load("./include/agree/privacy.html");
-      $("#floating_area").load("./include/floating.html");
-      $("#nav_area").load("./include/bottom_nav.html");
+      // $("#floating_area").load("./include/floating.html");
+      // $("#nav_area").load("./include/bottom_nav.html");
 
       $(window).on("load", function () {
         $("#bottom_nav ul li").eq(0).addClass("active");
