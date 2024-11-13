@@ -5,12 +5,22 @@
       <nav aria-label="하단 보조 네비게이션">
         <ul>
           <li>
-            <a href="javascript:;">
+            <button
+              type="button"
+              id="privacy_btn"
+              onClick="onModalShow('md_privacy')"
+            >
               <b>개인정보처리방침</b>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="javascript:;">이용약관</a>
+            <button
+              type="button"
+              id="terms_btn"
+              onClick="onModalShow('md_terms')"
+            >
+              이용약관
+            </button>
           </li>
           <li>
             <a href="../company/company.html">회사소개</a>
