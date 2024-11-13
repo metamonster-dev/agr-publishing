@@ -269,7 +269,7 @@ img {
 .sticky_menu {
   position: sticky;
   top: 0;
-  z-index: 500;
+  z-index: 550;
 }
 
 /*===== SKIP NAV =====*/
@@ -671,7 +671,7 @@ img {
   border-top: 1px solid #d8d8d8;
   background-color: #ffffff;
   transform: translateX(-50%);
-  z-index: 499;
+  z-index: 500;
 }
 #bottom_nav ul {
   display: flex;
@@ -1855,7 +1855,7 @@ img {
   padding: 10px 16px;
   border-top: 1px solid #d8d8d8;
   background-color: #ffffff;
-  z-index: 550;
+  z-index: 500;
   transform: translateX(-50%);
 }
 
@@ -4108,7 +4108,7 @@ img {
   padding: 10px 16px;
   border-top: 1px solid #d8d8d8;
   background-color: #ffffff;
-  z-index: 550;
+  z-index: 500;
   transform: translateX(-50%);
 }
 .prod_detail_fixed_btn .heart_btn {
