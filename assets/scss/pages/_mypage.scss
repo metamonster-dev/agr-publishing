@@ -157,6 +157,9 @@
       border-radius: 4px;
       background-color: $color_gray_f8;
       text-align: center;
+      & + .desc_text_style01 {
+        margin-top: 6px;
+      }
     }
     .desc_text_style02 {
       @include fontStyle(14px, $color_red_01, 400);

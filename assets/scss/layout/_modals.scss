@@ -273,8 +273,19 @@
     border-top: 0;
     border-bottom: 8px solid $color_gray_f8;
   }
-  // .item_area {
-  //   padding: 32px 16px 24px;
-  //   border-bottom: 8px solid $color_gray_f8;
-  // }
+}
+
+// 관심사 선택
+.md_interest_tit_area {
+  padding: 32px 0;
+  background-color: $color_gray_f8;
+  text-align: center;
+  p {
+    @include fontStyle(22px, $color_gray_1d, 700);
+  }
+  span {
+    @include fontStyle(16px, $color_gray_5, 500);
+    display: block;
+    margin-top: 12px;
+  }
 }

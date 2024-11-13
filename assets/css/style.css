@@ -3717,6 +3717,24 @@ img {
   border-bottom: 8px solid #f8f8f8;
 }
 
+.md_interest_tit_area {
+  padding: 32px 0;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+.md_interest_tit_area p {
+  font-size: 22px;
+  color: #1d1d1d;
+  font-weight: 700;
+}
+.md_interest_tit_area span {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 500;
+  display: block;
+  margin-top: 12px;
+}
+
 /*======================================*/
 /*------------- MAIN PAGES -------------*/
 /*======================================*/
@@ -4728,6 +4746,9 @@ img {
   border-radius: 4px;
   background-color: #f8f8f8;
   text-align: center;
+}
+.order_item_wrap .content_area .desc_text_style01 + .desc_text_style01 {
+  margin-top: 6px;
 }
 .order_item_wrap .content_area .desc_text_style02 {
   font-size: 14px;
