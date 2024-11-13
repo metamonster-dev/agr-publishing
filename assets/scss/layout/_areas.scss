@@ -1902,6 +1902,108 @@
   }
 }
 
+/* Calendar */
+.calendar_area {
+  .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 24px;
+  }
+  .fc-toolbar-title {
+    @include fontStyle(22px, $color_gray_1d, 700);
+  }
+  .fc-theme-standard .fc-scrollgrid {
+    border: 0;
+    border-top: 2px solid $color_gray_1d;
+  }
+  .fc-theme-standard th,
+  .fc-theme-standard td {
+    border: 0;
+  }
+  .fc-theme-standard th {
+    a {
+      @include fontStyle(14px, $color_gray_71, 500);
+      padding: 6px 4px;
+    }
+    .fc-day-sun a {
+      color: $color_red_01;
+    }
+    .fc-day-sat a {
+      color: $color_blue;
+    }
+  }
+  .fc-theme-standard td {
+    tr {
+      border-bottom: 1px solid $color_gray_e;
+    }
+    .fc-daygrid-day-top {
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+    }
+    .fc-daygrid-day-number {
+      @include flexLayout(center, center);
+      @include fontStyle(16px, $color_gray_1d, 500);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    .fc-day-sun .fc-daygrid-day-number {
+      color: $color_red_01;
+    }
+    .fc-day-sat .fc-daygrid-day-number {
+      color: $color_blue;
+    }
+    .fc-daygrid-day.fc-day-today {
+      background-color: transparent;
+      .fc-daygrid-day-number {
+        background-color: $color_gray_1d;
+        color: $color_white;
+      }
+    }
+    .fc-daygrid-day-events {
+      margin-bottom: 10px;
+    }
+    .fc-h-event {
+      @include fontStyle(12px, $color_white, 700);
+      padding: 2px;
+      border: 0;
+      border-radius: 4px;
+      background-color: $color_key_01;
+      cursor: pointer;
+
+      .fc-event-title {
+        @include line1Text;
+        display: block;
+        line-height: 1;
+      }
+    }
+  }
+
+  &.main {
+    padding: 8px 0 6px;
+    margin-top: 16px;
+    border: 1px solid $color_gray_e;
+    border-radius: 4px;
+    background-color: $color_gray_f8;
+    .fc-toolbar.fc-header-toolbar {
+      margin-bottom: 0;
+    }
+    .fc-theme-standard .fc-scrollgrid {
+      border: 0;
+    }
+    .fc-scrollgrid-section-sticky > * {
+      background-color: transparent;
+    }
+    .fc-theme-standard td {
+      tr {
+        border: 0;
+      }
+      .fc-h-event {
+        cursor: default;
+      }
+    }
+  }
+}
+
 /* ETCS */
 // Art Guide Run Banner
 .agr_banner_wrap {

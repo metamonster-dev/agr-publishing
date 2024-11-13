@@ -19,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
     <script src="../js/common.js" defer></script>
   </head>
   <body class="hd_type02">
@@ -59,17 +60,15 @@
 
           <div class="pt_24 pb_150 border_top_8">
             <div class="inner">
-              <div class="calendar_wrap">
-                <!-- 캘린더 라이브러리 영역 -->
+              <div class="calendar_area">
+                <div
+                  id="calendar"
+                  tabindex="0"
+                  role="application"
+                  aria-live="polite"
+                  aria-label="월별 캘린더 테이블"
+                ></div>
               </div>
-              <button
-                type="button"
-                id="calendar_btn"
-                class="btn btn_style01 btn_size_40 w_full"
-                onClick="onModalShow('md_offering')"
-              >
-                캘린더
-              </button>
             </div>
           </div>
         </div>
@@ -133,6 +132,110 @@
       });
 
       // ===== 페이지 =====
+      $(window).on("load", function () {
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          height: "auto",
+          headerToolbar: {
+            left: "",
+            center: "title",
+            right: "",
+          },
+          titleFormat: function (date) {
+            return `${date.date.year}.${String(date.date.month + 1).padStart(
+              2,
+              "0"
+            )}`;
+          },
+          locale: "ko",
+          dayCellContent: function (args) {
+            return args.date.getDate().toString();
+          },
+          datesSet: function () {
+            if (!$("table.fc-scrollgrid").find("caption").length)
+              $("table.fc-scrollgrid").prepend(
+                "<caption class='hidden_text'>캘린더 테이블 : 월별 일정 표시</caption>"
+              );
+            if (!$("table.fc-col-header").find("caption").length)
+              $("table.fc-col-header").prepend(
+                "<caption class='hidden_text'>캘린더 테이블 : 월별 일정에서 요일 표시 영역</caption>"
+              );
+            // $("table.fc-scrollgrid-sync-table").prepend(
+            //   "<caption class='hidden_text'>캘린더 테이블 : 월별 일정에서 날짜 표시 영역</caption>"
+            // );
+          },
+
+          // DATA
+          events: [
+            {
+              title: "문화예술 지원사업",
+              start: "2024-11-04",
+              end: "2024-11-07",
+            },
+            {
+              title: "문화예술 지원사업",
+              start: "2024-11-05",
+              allDay: true,
+            },
+            {
+              title: "아트전시 박람회",
+              start: "2024-11-12",
+              end: "2024-11-15",
+            },
+          ],
+          eventClick: function (info) {
+            onModalShow("md_offering");
+          },
+        });
+        calendar.render();
+
+        // 월 변경
+        function updateAriaLabel() {
+          const title = calendar.getCurrentData().viewTitle;
+          calendarEl.setAttribute("aria-label", `현재 달력 : ${title}`);
+        }
+        updateAriaLabel();
+
+        $(calendarEl).on({
+          // 스크롤 이벤트
+          wheel: function (event) {
+            event.preventDefault();
+            if (event.originalEvent.deltaY < 0) calendar.prev();
+            else if (event.originalEvent.deltaY > 0) calendar.next();
+            updateAriaLabel();
+          },
+
+          // 키보드 이벤트
+          keydown: function (event) {
+            if (event.key === "ArrowLeft") {
+              event.preventDefault();
+              calendar.prev();
+              updateAriaLabel();
+            } else if (event.key === "ArrowRight") {
+              event.preventDefault();
+              calendar.next();
+              updateAriaLabel();
+            }
+          },
+
+          // 터치 스와이프 이벤트
+          touchstart: function (event) {
+            startX = event.originalEvent.touches[0].clientX;
+          },
+
+          touchend: function (event) {
+            const endX = event.originalEvent.changedTouches[0].clientX;
+            const diffX = startX - endX;
+
+            if (Math.abs(diffX) > 50) {
+              if (diffX > 0) calendar.next();
+              else calendar.prev();
+              updateAriaLabel();
+            }
+          },
+        });
+      });
     </script>
   </body>
 </html>

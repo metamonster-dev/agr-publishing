@@ -22,6 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
     <script src="./js/common.js" defer></script>
   </head>
   <body class="hd_type01">
@@ -98,7 +99,15 @@
             <div class="inner">
               <div class="main_tit flex_between">
                 <h2>공모사업 일정</h2>
-                <div class="date">9월 23일</div>
+                <div class="date">11월 13일</div>
+              </div>
+              <div class="calendar_area main">
+                <div
+                  id="calendar"
+                  role="application"
+                  aria-live="polite"
+                  aria-label="금주 캘린더 테이블"
+                ></div>
               </div>
             </div>
           </section>
@@ -702,6 +711,7 @@
       });
 
       // ===== 메인 =====
+      // 슬라이더
       const slider01 = new Swiper(".m_slider01", {
         autoplay: {
           delay: 4000,
@@ -766,6 +776,64 @@
             .attr("alt", "관련기관 슬라이드 자동 재생 시작");
           slider02.autoplay.stop();
         }
+      });
+
+      // 캘린더
+      $(window).on("load", function () {
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridWeek",
+          height: "auto",
+          headerToolbar: {
+            left: "",
+            center: "",
+            right: "",
+          },
+          locale: "ko",
+          dayHeaderContent: function (args) {
+            const dayName = args.date.toLocaleDateString("ko-KR", {
+              weekday: "short",
+            });
+
+            return dayName;
+          },
+          dayCellContent: function (args) {
+            return args.date.getDate().toString();
+          },
+          datesSet: function () {
+            if (!$("table.fc-scrollgrid").find("caption").length)
+              $("table.fc-scrollgrid").prepend(
+                "<caption class='hidden_text'>캘린더 테이블 : 금주 일정 표시</caption>"
+              );
+            if (!$("table.fc-col-header").find("caption").length)
+              $("table.fc-col-header").prepend(
+                "<caption class='hidden_text'>캘린더 테이블 : 금주 일정에서 요일 표시 영역</caption>"
+              );
+            // $("table.fc-scrollgrid-sync-table").prepend(
+            //   "<caption class='hidden_text'>캘린더 테이블 : 금주 일정에서 날짜 표시 영역</caption>"
+            // );
+          },
+
+          // DATA
+          events: [
+            {
+              title: "문화예술 지원사업",
+              start: "2024-11-11",
+              end: "2024-11-15",
+            },
+            {
+              title: "문화예술 지원사업",
+              start: "2024-11-12",
+              allDay: true,
+            },
+            {
+              title: "미디어 아트",
+              start: "2024-11-15",
+              allDay: true,
+            },
+          ],
+        });
+        calendar.render();
       });
     </script>
   </body>

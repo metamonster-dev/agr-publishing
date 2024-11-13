@@ -66,10 +66,6 @@
   }
 }
 
-.main_schedule_wrap {
-  padding: 40px 0 0;
-}
-
 .main_banner_wrap a {
   @include flexLayout(flex-start, center, 8px, nowrap, column);
   padding: 29px 32px;
