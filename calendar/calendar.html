@@ -125,14 +125,14 @@
       $("#floating_area").load("../include/floating.html");
       $("#nav_area").load("../include/bottom_nav.html");
 
-      $(window).on("load", function () {
+      document.addEventListener("DOMContentLoaded", function () {
         $("#header h1").text("캘린더");
         $("#floating_menu").addClass("b_80");
         $("#bottom_nav ul li").eq(1).addClass("active");
       });
 
       // ===== 페이지 =====
-      $(window).on("load", function () {
+      document.addEventListener("DOMContentLoaded", function () {
         const calendarEl = document.getElementById("calendar");
         const calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: "dayGridMonth",
