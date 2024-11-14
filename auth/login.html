@@ -204,6 +204,17 @@
           return false;
         }
 
+        if (!regEmail.test(f.email.value)) {
+          $(f.email)
+            .addClass("error")
+            .parents(".label_input_area")
+            .find(".error_msg")
+            .text("이메일 주소를 정확히 입력해주세요.")
+            .removeClass("d_none");
+          f.email.focus();
+          return false;
+        }
+
         if (!regPassword.test(f.password.value)) {
           $(f.password)
             .addClass("error")

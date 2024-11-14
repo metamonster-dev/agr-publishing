@@ -166,12 +166,17 @@
 
 // 약관 동의
 .md_agree_area {
+  @include fontStyle(16px, $color_gray_5, 500);
   padding: 32px 0;
   .inner {
     @include flexLayout(flex-start, center, 24px, nowrap, column);
     & > div {
       @include flexLayout(flex-start, center, 16px, nowrap, column);
     }
+  }
+  b {
+    color: $color_gray_1d;
+    font-weight: 700;
   }
 }
 

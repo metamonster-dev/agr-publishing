@@ -330,6 +330,7 @@
 .chk_custom02 {
   input:checked + label {
     border-color: $color_key_01;
+    background-color: $color_key_03;
     &::before {
       content: "";
       position: absolute;
@@ -572,10 +573,11 @@
 .input_search_area {
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-  input {
+  .input {
     height: 44px;
     padding-right: 48px;
     border-color: $color_gray_e;
+    font-size: 14px;
   }
   button {
     position: absolute;
@@ -699,6 +701,9 @@
     }
     &.bottom {
       background-image: url("../images/icon_arrow_bottom.svg");
+    }
+    &.top {
+      background-image: url("../images/icon_arrow_top.svg");
     }
   }
   &.btn_size_32 {
@@ -1302,6 +1307,9 @@
           }
         }
       }
+      .item_area .text_area .tit {
+        font-weight: 500;
+      }
 
       .tg_tit {
         position: relative;
@@ -1387,7 +1395,7 @@
         .text_area {
           margin-top: 16px;
           .tit {
-            @include fontStyle(16px, $color_gray_1d, 500);
+            @include fontStyle(16px, $color_gray_1d, 700);
             @include line2Text;
           }
           .tags,
@@ -1538,6 +1546,9 @@
     }
     .text_area {
       max-width: calc(100% - 124px);
+      .tit {
+        font-weight: 700;
+      }
     }
   }
 }
@@ -1917,6 +1928,9 @@
   .fc-theme-standard th,
   .fc-theme-standard td {
     border: 0;
+    tr {
+      border-bottom: 1px solid $color_gray_e;
+    }
   }
   .fc-theme-standard th {
     a {
@@ -1931,9 +1945,6 @@
     }
   }
   .fc-theme-standard td {
-    tr {
-      border-bottom: 1px solid $color_gray_e;
-    }
     .fc-daygrid-day-top {
       height: 46px;
       align-items: center;
@@ -1993,10 +2004,13 @@
     .fc-scrollgrid-section-sticky > * {
       background-color: transparent;
     }
+    .fc-theme-standard th,
     .fc-theme-standard td {
       tr {
         border: 0;
       }
+    }
+    .fc-theme-standard td {
       .fc-h-event {
         cursor: default;
       }

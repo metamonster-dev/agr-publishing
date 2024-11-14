@@ -248,6 +248,7 @@
   z-index: $z_mobile_menu;
   transition: all 0.5s;
   .m_header {
+    border-bottom: 1px solid $color_gray_e;
     .inner {
       @include flexLayout(center, space-between, 8px);
       height: $height_header;
@@ -288,11 +289,11 @@
       }
       ul.depth02 {
         position: absolute;
-        top: $height_header;
+        top: calc($height_header + 1px);
         right: 0;
         display: none;
         width: 60%;
-        height: calc(100% - $height_header);
+        height: calc(100% - $height_header - 1px);
         background-color: $color_white;
         li a {
           @include flexLayout(center, space-between);

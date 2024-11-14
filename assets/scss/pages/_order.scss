@@ -70,7 +70,7 @@
   border-bottom: 1px solid $color_gray_e;
   .num {
     @include fontStyle(14px, $color_gray_1d, 500);
-    span {
+    b {
       color: $color_key_01;
       font-weight: 700;
     }

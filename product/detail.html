@@ -135,10 +135,19 @@
               </div>
               <button
                 type="button"
-                class="btn btn_style03 btn_size_40 w_full"
-                onClick="onMoreInfo()"
+                class="btn btn_style03 btn_size_40 w_full d_none"
+                id="more_show_btn"
+                onClick="onMoreInfoShow()"
               >
                 상품 정보 더보기 <i class="arrow bottom" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn_style03 btn_size_40 w_full mt_16 d_none"
+                id="more_hide_btn"
+                onClick="onMoreInfoHide()"
+              >
+                상품 정보 접기 <i class="arrow top" aria-hidden="true"></i>
               </button>
             </div>
           </section>
@@ -294,7 +303,7 @@
       </div>
     </div>
 
-    <script defer>
+    <script>
       // ===== 공통 영역 설정 스크립트 =====
       $("#header_area").load("../include/header.html");
       $("#floating_area").load("../include/floating.html");
@@ -324,25 +333,34 @@
         }
       });
 
-      // 상세 상품 더보기 버튼
-      const onMoreInfo = () => {
+      // 상세 상품 더보기/접기 버튼
+      const onMoreInfoShow = () => {
         $(".editor_area").css("height", "auto");
         $(".editor_area").removeClass("hide");
-        $(".editor_area").next().remove();
+        $("#more_show_btn").addClass("d_none");
+        $("#more_hide_btn").removeClass("d_none");
       };
-
-      $(window).on("load", function () {
-        // 상세 상품 영역 사이즈 설정
+      const onMoreInfoHide = () => {
         const hideH =
           Math.floor(
             document.querySelector(".editor_area").offsetHeight / 4 / 100
           ) * 100;
         if (hideH > 300) {
           $(".editor_area").css("height", hideH);
+          if (!$(".editor_area").hasClass("hide"))
+            $(".editor_area").addClass("hide");
+          $("#more_show_btn").removeClass("d_none");
+          $("#more_hide_btn").addClass("d_none");
         } else {
           $(".editor_area").removeClass("hide");
           $(".editor_area").next().remove();
+          $("#more_show_btn").addClass("d_none");
+          $("#more_hide_btn").removeClass("d_none");
         }
+      };
+
+      $(window).on("load", function () {
+        onMoreInfoHide();
 
         // 탭 버튼
         const tabBtn = $(".prod_detail_tab_area button");
