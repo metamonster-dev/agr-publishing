@@ -2,10 +2,14 @@
 /*----------- DEFAULT STYLES -----------*/
 /*======================================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --scale-factor: 1;
+}
+
 html,
 body {
   font-family: "Pretendard";
-  font-size: 16px;
+  font-size: calc(10px * var(--scale-factor));
   color: #000;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
@@ -411,7 +415,7 @@ img {
   height: 56px;
 }
 #header h1 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -559,7 +563,7 @@ img {
   flex-direction: row;
 }
 #m_menu .m_header .m_flex p {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -595,7 +599,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   width: 40%;
@@ -618,7 +622,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   padding: 0 16px;
@@ -727,7 +731,7 @@ img {
 }
 #bottom_nav ul li button span,
 #bottom_nav ul li a span {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #717171;
   font-weight: 500;
   display: block;
@@ -772,7 +776,7 @@ img {
 }
 #footer .ft_top ul li button,
 #footer .ft_top ul li a {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #ffffff;
   font-weight: 500;
   display: block;
@@ -797,25 +801,25 @@ img {
   flex-direction: column;
 }
 #footer .ft_btm ul li {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #aaaaaa;
   font-weight: 500;
   word-break: keep-all;
 }
 #footer .ft_btm p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #aaaaaa;
   font-weight: 500;
 }
 #footer .ft_btm p a {
-  font-size: 17px;
+  font-size: 1.7rem;
   color: #ffffff;
   font-weight: 700;
   display: inline-block;
   margin-top: 6px;
 }
 #footer .ft_btm span {
-  font-size: 11px;
+  font-size: 1.1rem;
   color: #aaaaaa;
   font-weight: 500;
   display: block;
@@ -876,8 +880,8 @@ img {
   display: -webkit-box !important;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-height: 1.4rem;
-  max-height: 2.8rem;
+  line-height: 2.4rem;
+  max-height: 4.8rem;
 }
 
 .bg_gray_f8 {
@@ -1029,7 +1033,7 @@ img {
 /* Input, Textarea, Select, Label */
 .input,
 .textarea {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   position: relative;
@@ -1071,7 +1075,7 @@ img {
 }
 
 .select {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   height: 52px;
@@ -1085,7 +1089,7 @@ img {
 }
 
 .label {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 500;
   display: block;
@@ -1096,7 +1100,7 @@ img {
 }
 
 .label_tit {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
   display: block;
@@ -1108,7 +1112,7 @@ img {
   z-index: 10;
 }
 .select_custom button {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   position: relative;
@@ -1153,7 +1157,7 @@ img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 .select_custom ul li {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   padding: 12px 16px;
@@ -1220,7 +1224,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   position: relative;
@@ -1300,7 +1304,7 @@ img {
   width: 48px;
 }
 .chk_custom02 label span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #717171;
   font-weight: 500;
   display: block;
@@ -1312,7 +1316,7 @@ img {
   background-image: url("../images/icon_check_on.svg");
 }
 .chk_custom03 label {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   position: relative;
@@ -1347,7 +1351,7 @@ img {
   border: 6px solid #475ed9;
 }
 .chk_custom04 label {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   position: relative;
@@ -1379,7 +1383,7 @@ img {
 }
 
 .star_score_text {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   text-align: center;
@@ -1665,7 +1669,7 @@ img {
   flex: 1;
 }
 .chk_btn_area button {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   padding: 3px 0;
@@ -1673,7 +1677,7 @@ img {
 }
 
 .input_desc_text {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #475ed9;
   font-weight: 500;
   display: block;
@@ -1681,14 +1685,14 @@ img {
 }
 
 .input_desc_text02 {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   display: block;
 }
 
 .input_desc_text03 {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #717171;
   font-weight: 500;
   display: block;
@@ -1806,7 +1810,7 @@ img {
   margin-top: 8px;
 }
 .btn.download_btn span {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #717171;
   font-weight: 500;
   display: inline-block;
@@ -1834,7 +1838,7 @@ img {
   margin-top: 8px;
 }
 .btn.link_btn span {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #717171;
   font-weight: 500;
   display: inline-block;
@@ -1881,7 +1885,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   height: 33px;
@@ -1932,7 +1936,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #717171;
   font-weight: 500;
   height: 52px;
@@ -1975,7 +1979,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #8e8e8e;
   font-weight: 700;
   width: 100%;
@@ -2082,14 +2086,14 @@ img {
   border-radius: 4px;
 }
 .list_area.list_style01 .text_area .cate, .list_area.list_style02 .text_area .cate {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #8e8e8e;
   font-weight: 700;
   display: block;
   margin-bottom: 4px;
 }
 .list_area.list_style01 .text_area .tit, .list_area.list_style02 .text_area .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
 }
@@ -2103,12 +2107,12 @@ img {
   margin-top: 6px;
 }
 .list_area.list_style01 .text_area .price_text .percent, .list_area.list_style02 .text_area .price_text .percent {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #475ed9;
   font-weight: 700;
 }
 .list_area.list_style01 .text_area .price_text .price, .list_area.list_style02 .text_area .price_text .price {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -2124,8 +2128,8 @@ img {
   display: -webkit-box !important;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-height: 1.4rem;
-  max-height: 2.8rem;
+  line-height: 2.4rem;
+  max-height: 4.8rem;
 }
 .list_area.list_style01:not(.prod_slider) ul {
   display: flex;
@@ -2246,12 +2250,12 @@ img {
   text-align: center;
 }
 .list_area.list_style03 ul li .text_area p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .list_area.list_style03 ul li .text_area span {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   display: block;
@@ -2271,7 +2275,7 @@ img {
   flex-direction: row;
 }
 .list_area.list_style04 ul li .review_top_area .review {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #1d1d1d;
   font-weight: 700;
   position: relative;
@@ -2290,7 +2294,7 @@ img {
   flex-direction: row;
 }
 .list_area.list_style04 ul li .review_top_area .writer_date span {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   position: relative;
@@ -2307,7 +2311,7 @@ img {
   background-color: #d8d8d8;
 }
 .list_area.list_style04 ul li .review_text {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   margin-top: 16px;
@@ -2338,7 +2342,7 @@ img {
   margin-top: 16px;
 }
 .list_area.list_style04 ul li .review_btn_area button {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   height: 32px;
@@ -2366,14 +2370,14 @@ img {
   flex-direction: row;
 }
 .list_area.list_style05 dl dt {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #717171;
   font-weight: 500;
   width: 96px;
   padding-right: 16px;
 }
 .list_area.list_style05 dl dd {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   width: calc(100% - 96px);
@@ -2395,12 +2399,12 @@ img {
   flex-direction: row;
 }
 .list_area.list_style06 ul li span {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
 .list_area.list_style06 ul li button {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   text-decoration: underline;
@@ -2419,12 +2423,12 @@ img {
   flex-direction: row;
 }
 .list_area.list_style07 dl dt {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
 .list_area.list_style07 dl dd {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -2451,7 +2455,7 @@ img {
   margin-bottom: 8px;
 }
 .list_area.list_style08 ul li .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
   overflow: hidden;
@@ -2474,7 +2478,7 @@ img {
   gap: 8px;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
@@ -2519,13 +2523,13 @@ img {
   border-top: 1px solid #eeeeee;
 }
 .list_area.list_style08 ul li .tg_cont .review_area .rv_tit {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #475ed9;
   font-weight: 700;
   margin-bottom: 16px;
 }
 .list_area.list_style08 ul li .tg_cont .review_area .rv_desc {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
 }
@@ -2546,7 +2550,7 @@ img {
   width: 100%;
 }
 .list_area.list_style08 ul li .tg_cont .review_area .rv_date {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   display: block;
@@ -2581,7 +2585,7 @@ img {
   margin-top: 16px;
 }
 .list_area.list_style09 ul li .text_area .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
   overflow: hidden;
@@ -2589,8 +2593,8 @@ img {
   display: -webkit-box !important;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-height: 1.4rem;
-  max-height: 2.8rem;
+  line-height: 2.4rem;
+  max-height: 4.8rem;
 }
 .list_area.list_style09 ul li .text_area .tags,
 .list_area.list_style09 ul li .text_area .desc {
@@ -2598,7 +2602,7 @@ img {
 }
 .list_area.list_style09 ul li .text_area .tags > *,
 .list_area.list_style09 ul li .text_area .desc > * {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
@@ -2636,7 +2640,7 @@ img {
   transition: all 0.3s;
 }
 .list_toggle_area ul li .tg_tit .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -2644,7 +2648,7 @@ img {
   color: #475ed9;
 }
 .list_toggle_area ul li .tg_tit .date {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   display: block;
@@ -2654,7 +2658,7 @@ img {
   padding: 0 16px 24px;
 }
 .list_toggle_area ul li .tg_cont p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   padding: 16px;
@@ -2677,12 +2681,12 @@ img {
   flex-direction: row;
 }
 .list_tit_area h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .list_tit_area p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 500;
 }
@@ -2693,7 +2697,7 @@ img {
   gap: 4px;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   height: 32px;
@@ -2729,14 +2733,14 @@ img {
   max-width: calc(100% - 80px);
 }
 .item_area .text_area .cate {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #8e8e8e;
   font-weight: 700;
   display: block;
   margin-bottom: 4px;
 }
 .item_area .text_area .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   overflow: hidden;
@@ -2753,17 +2757,17 @@ img {
   margin-top: 4px;
 }
 .item_area .text_area .price_text .percent {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #475ed9;
   font-weight: 700;
 }
 .item_area .text_area .price_text .price {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .item_area .text_area .date {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   display: block;
@@ -2793,12 +2797,12 @@ img {
   flex-direction: row;
 }
 .item_area02 .tit_area .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .item_area02 .tit_area .tag {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #ffffff;
   font-weight: 700;
   padding: 0 6px;
@@ -2810,12 +2814,12 @@ img {
   margin-top: 8px;
 }
 .item_area02 .text_area .addr {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
 }
 .item_area02 .text_area .phone {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #8e8e8e;
   font-weight: 500;
   margin-top: 4px;
@@ -2830,7 +2834,7 @@ img {
   margin-top: 16px;
 }
 .item_area02 .btn_area button {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   height: 32px;
@@ -2860,7 +2864,7 @@ img {
   margin-bottom: 8px;
 }
 .item_area03 .text_area .tit {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -2882,7 +2886,7 @@ img {
   gap: 8px;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
@@ -2900,7 +2904,7 @@ img {
   margin: 8px 0;
 }
 .toggle_area button.tg_tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
   position: relative;
@@ -2932,12 +2936,12 @@ img {
   border-bottom: 1px solid #eeeeee;
 }
 .toggle_area div.tg_tit .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .toggle_area div.tg_tit button {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   height: 32px;
@@ -2969,12 +2973,12 @@ img {
   border-radius: 4px;
 }
 .tit_desc_area.text_style01 .tit {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
 .tit_desc_area.text_style01 .desc {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 500;
 }
@@ -2984,12 +2988,12 @@ img {
   background-color: #f8f8f8;
 }
 .tit_desc_area.text_style02 .tit {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
 }
 .tit_desc_area.text_style02 .desc {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -2999,12 +3003,12 @@ img {
   background-color: #eff1ff;
 }
 .tit_desc_area.text_style03 .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #475ed9;
   font-weight: 700;
 }
 .tit_desc_area.text_style03 .desc {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -3022,18 +3026,18 @@ img {
   background-color: #f8f8f8;
 }
 .tit_desc_area02.text_style01 .tit {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
 }
 .tit_desc_area02.text_style01 .desc {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 
 .desc_text_style {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -3102,7 +3106,7 @@ img {
   z-index: 10;
 }
 .tooltip_wrap .tooltip_area p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #ffffff;
   font-weight: 700;
   flex: 1;
@@ -3175,7 +3179,7 @@ img {
   background-image: url("../images/icon_nodata_heart.svg");
 }
 .no_data_area span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #8e8e8e;
   font-weight: 500;
   display: block;
@@ -3183,7 +3187,7 @@ img {
 
 /* Error Msg */
 .error_msg {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #dd083e;
   font-weight: 500;
   position: relative;
@@ -3217,7 +3221,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #717171;
   font-weight: 500;
   width: 24px;
@@ -3256,7 +3260,7 @@ img {
 
 /* Editor */
 .editor_area {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
 }
@@ -3269,7 +3273,7 @@ img {
   margin-bottom: 24px;
 }
 .calendar_area .fc-toolbar-title {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -3286,7 +3290,7 @@ img {
   border-bottom: 1px solid #eeeeee;
 }
 .calendar_area .fc-theme-standard th a {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   padding: 6px 4px;
@@ -3309,7 +3313,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   width: 32px;
@@ -3333,7 +3337,7 @@ img {
   margin-bottom: 10px;
 }
 .calendar_area .fc-theme-standard td .fc-h-event {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #ffffff;
   font-weight: 700;
   padding: 2px;
@@ -3380,7 +3384,7 @@ img {
   background: url("../images/banner_bg.jpg") no-repeat center/cover;
 }
 .agr_banner_wrap h2 {
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #ffffff;
   font-weight: 700;
 }
@@ -3399,14 +3403,14 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .agr_banner_wrap .text_area p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #ffffff;
   font-weight: 500;
   display: block;
   text-align: center;
 }
 .agr_banner_wrap .text_area p b {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #ffffff;
   font-weight: 700;
   display: block;
@@ -3508,7 +3512,7 @@ img {
   border-bottom: 1px solid #eeeeee;
 }
 .modal_wrap.full .modal_area .md_tit p {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -3550,7 +3554,7 @@ img {
   text-align: center;
 }
 .modal_wrap.bottom .modal_area .md_tit p {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -3572,13 +3576,13 @@ img {
   text-align: center;
 }
 .modal_wrap.msg .modal_area p {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
   margin-bottom: 16px;
 }
 .modal_wrap.msg .modal_area span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -3597,7 +3601,7 @@ img {
 }
 
 .md_agree_area {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   padding: 32px 0;
@@ -3628,7 +3632,7 @@ img {
   text-align: center;
 }
 .md_is_member_area p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
 }
@@ -3649,7 +3653,7 @@ img {
   width: 20px;
 }
 .md_is_member_area .sns_info span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -3673,7 +3677,7 @@ img {
   text-align: center;
 }
 .md_share_area button span {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -3700,14 +3704,14 @@ img {
   flex-direction: row;
 }
 .md_offering_area dl dt {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #717171;
   font-weight: 500;
   width: 80px;
   padding-right: 8px;
 }
 .md_offering_area dl dd {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   width: calc(100% - 80px);
@@ -3718,7 +3722,7 @@ img {
   text-align: center;
 }
 .md_cancel_area p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
 }
@@ -3729,7 +3733,7 @@ img {
   background-color: #f8f8f8;
 }
 .md_cancel_area .text_area span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -3746,12 +3750,12 @@ img {
   text-align: center;
 }
 .md_interest_tit_area p {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .md_interest_tit_area span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -3762,7 +3766,7 @@ img {
 /*------------- MAIN PAGES -------------*/
 /*======================================*/
 .main_tit h2 {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -3771,12 +3775,12 @@ img {
   font-style: normal;
 }
 .main_tit p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #717171;
   font-weight: 500;
 }
 .main_tit .date {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #717171;
   font-weight: 500;
   padding: 8px 10px 8px 30px;
@@ -3828,7 +3832,7 @@ img {
   z-index: 2;
 }
 .main_visual_wrap .btns p {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
   width: auto;
@@ -3851,7 +3855,7 @@ img {
   padding: 29px 32px;
 }
 .main_banner_wrap a b {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -3868,7 +3872,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #e86d28;
   font-weight: 700;
 }
@@ -3892,7 +3896,7 @@ img {
   margin-top: 24px;
 }
 .login_btns_area a {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   position: relative;
@@ -3923,7 +3927,7 @@ img {
   background-color: #eeeeee;
 }
 .login_sns_area .tit p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 500;
   position: relative;
@@ -3983,14 +3987,14 @@ img {
   background-color: #ffffff;
 }
 .identity_btn.type01 span {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   display: block;
   flex: 1;
 }
 .identity_btn.type01 span b {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
   display: block;
@@ -4001,7 +4005,7 @@ img {
   background-color: #eff1ff;
 }
 .identity_btn.type02 span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4012,12 +4016,12 @@ img {
   text-align: center;
 }
 .join_tit_area h2 {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .join_tit_area p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   margin-top: 12px;
@@ -4031,13 +4035,13 @@ img {
   margin: 0 auto;
 }
 .join_complete_area h2 {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
   margin-top: 16px;
 }
 .join_complete_area p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   margin-top: 16px;
@@ -4058,7 +4062,7 @@ img {
   margin: 0 auto 16px;
 }
 .find_info_area p {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4076,7 +4080,7 @@ img {
   background-color: #f8f8f8;
 }
 .find_info_area .email_info span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -4096,12 +4100,12 @@ img {
   background-color: #eff1ff;
 }
 .timer_area p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #475ed9;
   font-weight: 700;
 }
 .timer_area button {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 700;
   text-decoration: underline;
@@ -4150,7 +4154,7 @@ img {
   overflow: hidden;
 }
 .prod_detail_visual_wrap .page {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
   position: absolute;
@@ -4189,7 +4193,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 700;
 }
@@ -4203,7 +4207,7 @@ img {
   padding: 20px 0 40px;
 }
 .prod_detail_tit_wrap .btm_area h2 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4217,7 +4221,7 @@ img {
   margin-top: 16px;
 }
 .prod_detail_tit_wrap .btm_area .star_review button {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   text-decoration: underline;
@@ -4232,12 +4236,12 @@ img {
   margin-top: 16px;
 }
 .prod_detail_tit_wrap .btm_area .price_text .percent {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #475ed9;
   font-weight: 700;
 }
 .prod_detail_tit_wrap .btm_area .price_text .price {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4275,12 +4279,12 @@ img {
   text-align: center;
 }
 .prod_detail_review_wrap .total_area p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .prod_detail_review_wrap .total_area span {
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #1d1d1d;
   font-weight: 700;
   display: block;
@@ -4294,12 +4298,12 @@ img {
 /*----------- ORDER STYLES -------------*/
 /*======================================*/
 .order_use_text .desc {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
 }
 .order_use_text .note {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #dd083e;
   font-weight: 500;
   margin-top: 16px;
@@ -4323,7 +4327,7 @@ img {
   margin-top: 24px;
 }
 .order_caution_text .tit {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 700;
   position: relative;
@@ -4340,7 +4344,7 @@ img {
   background: url("../images/icon_caution.svg") no-repeat center/contain;
 }
 .order_caution_text .text {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #717171;
   font-weight: 500;
   letter-spacing: -0.01rem;
@@ -4359,7 +4363,7 @@ img {
   margin: 0 auto 16px;
 }
 .order_info_area p {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4376,7 +4380,7 @@ img {
   border-bottom: 1px solid #eeeeee;
 }
 .order_number_area .num {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 500;
 }
@@ -4385,7 +4389,7 @@ img {
   font-weight: 700;
 }
 .order_number_area .date {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
@@ -4415,13 +4419,13 @@ img {
   background-image: url("../images/work_tit_bg.jpg");
 }
 .gathering_tit_area h2 {
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #ffffff;
   font-weight: 700;
   font-family: "Poppins";
 }
 .gathering_tit_area p {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #ffffff;
   font-weight: 700;
 }
@@ -4435,7 +4439,7 @@ img {
   flex-direction: row;
 }
 .gathering_list_tit p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 500;
 }
@@ -4454,7 +4458,7 @@ img {
   margin-bottom: 8px;
 }
 .gathering_detail_tit_area h2 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4474,7 +4478,7 @@ img {
   gap: 8px;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
@@ -4503,13 +4507,13 @@ img {
   border-radius: 50%;
 }
 .artist_tit_area .profile_area h2 {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
   margin-top: 16px;
 }
 .artist_tit_area .text_area {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   margin-top: 24px;
@@ -4523,7 +4527,7 @@ img {
   padding: 40px 0;
 }
 .artist_view_area .desc {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   margin-top: 16px;
@@ -4544,7 +4548,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   height: 33px;
@@ -4564,12 +4568,12 @@ img {
   margin: 0 auto 16px;
 }
 .mypage_info_area p {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .mypage_info_area span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -4589,12 +4593,12 @@ img {
   flex-direction: row;
 }
 .mypage_dashboard_area .tit h2 {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #ffffff;
   font-weight: 700;
 }
 .mypage_dashboard_area .tit a {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #cccccc;
   font-weight: 700;
   text-decoration: underline;
@@ -4622,12 +4626,12 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .mypage_dashboard_area ul li p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #cccccc;
   font-weight: 500;
 }
 .mypage_dashboard_area ul li span {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #ffffff;
   font-weight: 700;
 }
@@ -4636,7 +4640,7 @@ img {
   padding: 40px 0 28px;
 }
 .mypage_dashboard_list_area h3 {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4656,7 +4660,7 @@ img {
   gap: 12px;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   position: relative;
@@ -4678,19 +4682,19 @@ img {
 }
 .mypage_dashboard_btn button,
 .mypage_dashboard_btn a {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #8e8e8e;
   font-weight: 700;
   text-decoration: underline;
 }
 
 .mypage_withdraw_area .desc {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
 }
 .mypage_withdraw_area h2 {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4701,12 +4705,12 @@ img {
   background-color: #f8f8f8;
 }
 .mypage_withdraw_area .text_area p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
 }
 .mypage_withdraw_area .text_area span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #475ed9;
   font-weight: 700;
   display: block;
@@ -4731,19 +4735,19 @@ img {
   border-bottom: 1px solid #eeeeee;
 }
 .order_item_wrap .title_area p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
 }
 .order_item_wrap .title_area button,
 .order_item_wrap .title_area a {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   text-decoration: underline;
 }
 .order_item_wrap .content_area .status {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #475ed9;
   font-weight: 700;
   display: block;
@@ -4759,7 +4763,7 @@ img {
   color: #1d1d1d;
 }
 .order_item_wrap .content_area .desc_text_style01 {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -4774,7 +4778,7 @@ img {
   margin-top: 6px;
 }
 .order_item_wrap .content_area .desc_text_style02 {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #dd083e;
   font-weight: 400;
   display: block;
@@ -4786,12 +4790,12 @@ img {
   border-bottom: 1px solid #eeeeee;
 }
 .portpolio_detail_tit_area h2 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .portpolio_detail_tit_area .date {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   margin-top: 8px;
@@ -4809,12 +4813,12 @@ img {
   flex-direction: row;
 }
 .search_tit_area h2 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .search_tit_area button {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #717171;
   font-weight: 500;
   text-decoration: underline;
@@ -4848,7 +4852,7 @@ img {
 
 .search_list_area ul li button,
 .search_list_area ul li a {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 500;
   overflow: hidden;
@@ -4866,7 +4870,7 @@ img {
 }
 
 .search_text_area h2 {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #1d1d1d;
   font-weight: 500;
 }
@@ -4900,13 +4904,13 @@ img {
   background-image: url("../images/company_tit_bg02.jpg");
 }
 .company_tit_area h2 {
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #ffffff;
   font-weight: 700;
   font-family: "Poppins";
 }
 .company_tit_area p {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #ffffff;
   font-weight: 700;
 }
@@ -4917,17 +4921,17 @@ img {
   letter-spacing: -0.01rem;
 }
 .company_text_area h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .company_text_area p {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .company_text_area span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -4943,7 +4947,7 @@ img {
   margin-top: 16px;
 }
 .company_text_area ul li {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   position: relative;
@@ -4967,13 +4971,13 @@ img {
   text-align: center;
 }
 .company_text_area .text_area p {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 
 .company_desc {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #1d1d1d;
   font-weight: 700;
 }
@@ -4985,7 +4989,7 @@ img {
   gap: 16px;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #ffffff;
   font-weight: 700;
   height: 60px;
@@ -5032,7 +5036,7 @@ img {
   gap: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #ffffff;
   font-weight: 700;
   height: 39px;
@@ -5048,7 +5052,7 @@ img {
   gap: 16px;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   height: 59px;
@@ -5067,12 +5071,12 @@ img {
   text-align: center;
 }
 .organization_wrap dl dd p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #1d1d1d;
   font-weight: 700;
 }
 .organization_wrap dl dd span {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   display: block;
@@ -5116,13 +5120,13 @@ img {
   margin: 0 auto;
 }
 .error_wrap h1 {
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #1d1d1d;
   font-weight: 700;
   margin-top: 16px;
 }
 .error_wrap p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #555555;
   font-weight: 500;
   margin-top: 16px;

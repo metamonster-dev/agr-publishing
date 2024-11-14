@@ -19,18 +19,18 @@
     background-image: url("../images/work_tit_bg.jpg");
   }
   h2 {
-    @include fontStyle(25px, $color_white, 700);
+    @include fontStyle(2.5rem, $color_white, 700);
     font-family: "Poppins";
   }
   p {
-    @include fontStyle(18px, $color_white, 700);
+    @include fontStyle(1.8rem, $color_white, 700);
   }
 }
 
 .gathering_list_tit {
   @include flexLayout(center, space-between, 8px);
   p {
-    @include fontStyle(14px, $color_gray_1d, 500);
+    @include fontStyle(1.4rem, $color_gray_1d, 500);
   }
 }
 
@@ -42,14 +42,14 @@
     margin-bottom: 8px;
   }
   h2 {
-    @include fontStyle(18px, $color_gray_1d, 700);
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
   }
   .desc {
     @include flexLayout(center, flex-start, 8px);
     margin-top: 8px;
     p {
       @include flexLayout(center, center, 8px);
-      @include fontStyle(14px, $color_gray_71, 500);
+      @include fontStyle(1.4rem, $color_gray_71, 500);
       &:not(:last-of-type)::after {
         content: "";
         display: block;
@@ -77,12 +77,12 @@
       border-radius: 50%;
     }
     h2 {
-      @include fontStyle(22px, $color_gray_1d, 700);
+      @include fontStyle(2.2rem, $color_gray_1d, 700);
       margin-top: 16px;
     }
   }
   .text_area {
-    @include fontStyle(16px, $color_gray_1d, 500);
+    @include fontStyle(1.6rem, $color_gray_1d, 500);
     margin-top: 24px;
     padding: 20px 16px;
     border: 1px solid $color_key_05;
@@ -95,7 +95,7 @@
   padding: 40px 0;
 
   .desc {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     margin-top: 16px;
   }
   .tags {
@@ -103,7 +103,7 @@
     margin-top: 16px;
     & > * {
       @include flexLayout(center, center);
-      @include fontStyle(14px, $color_gray_5, 500);
+      @include fontStyle(1.4rem, $color_gray_5, 500);
       height: 33px;
       padding: 0 12px;
       border: 1px solid $color_gray_d8;

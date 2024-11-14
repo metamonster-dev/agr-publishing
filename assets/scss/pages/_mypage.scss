@@ -11,10 +11,10 @@
     margin: 0 auto 16px;
   }
   p {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
   }
   span {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     display: block;
     margin-top: 16px;
   }
@@ -27,10 +27,10 @@
   .tit {
     @include flexLayout(flex-end, space-between, 8px);
     h2 {
-      @include fontStyle(22px, $color_white, 700);
+      @include fontStyle(2.2rem, $color_white, 700);
     }
     a {
-      @include fontStyle(14px, $color_gray_c, 700);
+      @include fontStyle(1.4rem, $color_gray_c, 700);
       text-decoration: underline;
     }
   }
@@ -45,10 +45,10 @@
       border-radius: 4px;
       background-color: rgba(255, 255, 255, 0.1);
       p {
-        @include fontStyle(14px, $color_gray_c, 500);
+        @include fontStyle(1.4rem, $color_gray_c, 500);
       }
       span {
-        @include fontStyle(22px, $color_white, 700);
+        @include fontStyle(2.2rem, $color_white, 700);
       }
     }
   }
@@ -56,14 +56,14 @@
 .mypage_dashboard_list_area {
   padding: 40px 0 28px;
   h3 {
-    @include fontStyle(16px, $color_gray_1d, 700);
+    @include fontStyle(1.6rem, $color_gray_1d, 700);
   }
   ul {
     @include flexLayout(stretch, flex-start, 0, nowrap, column);
     margin-top: 12px;
     li a {
       @include flexLayout(center, flex-start, 12px);
-      @include fontStyle(16px, $color_gray_1d, 500);
+      @include fontStyle(1.6rem, $color_gray_1d, 500);
       position: relative;
       padding: 12px 24px 12px 0;
       &::before {
@@ -84,7 +84,7 @@
   text-align: right;
   button,
   a {
-    @include fontStyle(14px, $color_gray_8e, 700);
+    @include fontStyle(1.4rem, $color_gray_8e, 700);
     text-decoration: underline;
   }
 }
@@ -92,10 +92,10 @@
 // 회원탈퇴
 .mypage_withdraw_area {
   .desc {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
   }
   h2 {
-    @include fontStyle(16px, $color_gray_1d, 700);
+    @include fontStyle(1.6rem, $color_gray_1d, 700);
   }
   .text_area {
     margin-top: 16px;
@@ -103,10 +103,10 @@
     border-radius: 4px;
     background-color: $color_gray_f8;
     p {
-      @include fontStyle(16px, $color_gray_5, 500);
+      @include fontStyle(1.6rem, $color_gray_5, 500);
     }
     span {
-      @include fontStyle(16px, $color_key_01, 700);
+      @include fontStyle(1.6rem, $color_key_01, 700);
       display: block;
       margin-top: 16px;
       text-decoration: underline;
@@ -125,17 +125,17 @@
     margin-bottom: 16px;
     border-bottom: 1px solid $color_gray_e;
     p {
-      @include fontStyle(14px, $color_gray_71, 500);
+      @include fontStyle(1.4rem, $color_gray_71, 500);
     }
     button,
     a {
-      @include fontStyle(14px, $color_gray_71, 500);
+      @include fontStyle(1.4rem, $color_gray_71, 500);
       text-decoration: underline;
     }
   }
   .content_area {
     .status {
-      @include fontStyle(14px, $color_key_01, 700);
+      @include fontStyle(1.4rem, $color_key_01, 700);
       display: block;
       margin-bottom: 8px;
       &.type01 {
@@ -149,7 +149,7 @@
       }
     }
     .desc_text_style01 {
-      @include fontStyle(14px, $color_gray_5, 500);
+      @include fontStyle(1.4rem, $color_gray_5, 500);
       display: block;
       width: 100%;
       padding: 6px 16px;
@@ -162,7 +162,7 @@
       }
     }
     .desc_text_style02 {
-      @include fontStyle(14px, $color_red_01, 400);
+      @include fontStyle(1.4rem, $color_red_01, 400);
       display: block;
       margin-top: 16px;
     }
@@ -174,10 +174,10 @@
   padding: 20px 0;
   border-bottom: 1px solid $color_gray_e;
   h2 {
-    @include fontStyle(18px, $color_gray_1d, 700);
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
   }
   .date {
-    @include fontStyle(14px, $color_gray_71, 500);
+    @include fontStyle(1.4rem, $color_gray_71, 500);
     margin-top: 8px;
   }
 }

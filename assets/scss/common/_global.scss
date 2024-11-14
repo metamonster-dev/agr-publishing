@@ -1,10 +1,15 @@
 /*======================================*/
 /*----------- DEFAULT STYLES -----------*/
 /*======================================*/
+:root {
+  --scale-factor: 1;
+}
+
 html,
 body {
   font-family: "Pretendard";
-  font-size: 16px;
+  // font-size: 10px;
+  font-size: calc(10px * var(--scale-factor));
   color: #000;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;

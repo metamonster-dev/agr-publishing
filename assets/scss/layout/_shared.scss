@@ -150,7 +150,7 @@
     height: $height_header;
   }
   h1 {
-    @include fontStyle(18px, $color_gray_1d, 700);
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
   }
   .hd_flex {
     @include flexLayout(center, center, 12px);
@@ -256,7 +256,7 @@
     .m_flex {
       @include flexLayout(center, center, 12px);
       p {
-        @include fontStyle(18px, $color_gray_1d, 700);
+        @include fontStyle(1.8rem, $color_gray_1d, 700);
       }
     }
     button {
@@ -282,7 +282,7 @@
     ul li {
       button {
         @include flexLayout(center, flex-start);
-        @include fontStyle(16px, $color_gray_1d, 500);
+        @include fontStyle(1.6rem, $color_gray_1d, 500);
         width: 40%;
         padding: 0 16px;
         height: 64px;
@@ -297,7 +297,7 @@
         background-color: $color_white;
         li a {
           @include flexLayout(center, space-between);
-          @include fontStyle(16px, $color_gray_5, 500);
+          @include fontStyle(1.6rem, $color_gray_5, 500);
           padding: 0 16px;
           height: 64px;
           &::after {
@@ -390,7 +390,7 @@
           }
         }
         span {
-          @include fontStyle(13px, $color_gray_71, 500);
+          @include fontStyle(1.3rem, $color_gray_71, 500);
           display: block;
         }
       }
@@ -432,7 +432,7 @@
       li {
         button,
         a {
-          @include fontStyle(14px, $color_white, 500);
+          @include fontStyle(1.4rem, $color_white, 500);
           display: block;
         }
       }
@@ -451,20 +451,20 @@
     ul {
       @include flexLayout(flex-start, flex-start, 4px, nowrap, column);
       li {
-        @include fontStyle(14px, $color_gray_a, 500);
+        @include fontStyle(1.4rem, $color_gray_a, 500);
         word-break: keep-all;
       }
     }
     p {
-      @include fontStyle(14px, $color_gray_a, 500);
+      @include fontStyle(1.4rem, $color_gray_a, 500);
       a {
-        @include fontStyle(17px, $color_white, 700);
+        @include fontStyle(1.7rem, $color_white, 700);
         display: inline-block;
         margin-top: 6px;
       }
     }
     span {
-      @include fontStyle(11px, $color_gray_a, 500);
+      @include fontStyle(1.1rem, $color_gray_a, 500);
       display: block;
       margin-top: 24px;
     }

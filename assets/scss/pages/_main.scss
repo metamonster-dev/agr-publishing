@@ -6,17 +6,17 @@
 /*======================================*/
 .main_tit {
   h2 {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
     i {
       font-size: 21px;
       font-style: normal;
     }
   }
   p {
-    @include fontStyle(16px, $color_gray_71, 500);
+    @include fontStyle(1.6rem, $color_gray_71, 500);
   }
   .date {
-    @include fontStyle(13px, $color_gray_71, 500);
+    @include fontStyle(1.3rem, $color_gray_71, 500);
     padding: 8px 10px 8px 30px;
     border: 1px solid $color_gray_d8;
     border-radius: 20px;
@@ -53,7 +53,7 @@
     z-index: 2;
 
     p {
-      @include fontStyle(13px, rgba(255, 255, 255, 0.5), 700);
+      @include fontStyle(1.3rem, rgba(255, 255, 255, 0.5), 700);
       width: auto;
       margin-right: 8px;
       .swiper-pagination-current {
@@ -71,7 +71,7 @@
   padding: 29px 32px;
 
   b {
-    @include fontStyle(18px, $color_gray_1d, 700);
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
   }
 
   &.bn_type01 {
@@ -83,7 +83,7 @@
       no-repeat right 32px center / 68px;
     span {
       @include flexLayout(center, flex-start);
-      @include fontStyle(14px, $color_orange_01, 700);
+      @include fontStyle(1.4rem, $color_orange_01, 700);
       i {
         display: block;
         width: 16px;

@@ -6,10 +6,10 @@
 /*======================================*/
 .order_use_text {
   .desc {
-    @include fontStyle(16px, $color_gray_1d, 500);
+    @include fontStyle(1.6rem, $color_gray_1d, 500);
   }
   .note {
-    @include fontStyle(14px, $color_red_01, 500);
+    @include fontStyle(1.4rem, $color_red_01, 500);
     margin-top: 16px;
     span {
       font-weight: 700;
@@ -27,7 +27,7 @@
   margin-top: 24px;
 
   .tit {
-    @include fontStyle(14px, $color_gray_1d, 700);
+    @include fontStyle(1.4rem, $color_gray_1d, 700);
     position: relative;
     padding-left: 22px;
     &::before {
@@ -42,7 +42,7 @@
     }
   }
   .text {
-    @include fontStyle(13px, $color_gray_71, 500);
+    @include fontStyle(1.3rem, $color_gray_71, 500);
     letter-spacing: -0.01rem;
   }
 }
@@ -59,7 +59,7 @@
     margin: 0 auto 16px;
   }
   p {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
   }
 }
 
@@ -69,13 +69,13 @@
   background-color: $color_white;
   border-bottom: 1px solid $color_gray_e;
   .num {
-    @include fontStyle(14px, $color_gray_1d, 500);
+    @include fontStyle(1.4rem, $color_gray_1d, 500);
     b {
       color: $color_key_01;
       font-weight: 700;
     }
   }
   .date {
-    @include fontStyle(14px, $color_gray_71, 500);
+    @include fontStyle(1.4rem, $color_gray_71, 500);
   }
 }

@@ -7,10 +7,10 @@
 .search_tit_area {
   @include flexLayout(center, space-between);
   h2 {
-    @include fontStyle(18px, $color_gray_1d, 700);
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
   }
   button {
-    @include fontStyle(14px, $color_gray_71, 500);
+    @include fontStyle(1.4rem, $color_gray_71, 500);
     text-decoration: underline;
   }
 }
@@ -39,7 +39,7 @@
 .search_list_area ul li {
   button,
   a {
-    @include fontStyle(16px, $color_gray_1d, 500);
+    @include fontStyle(1.6rem, $color_gray_1d, 500);
     @include line1Text;
     display: block;
     padding: 0 16px 0 44px;
@@ -53,7 +53,7 @@
 }
 .search_text_area {
   h2 {
-    @include fontStyle(14px, $color_gray_1d, 500);
+    @include fontStyle(1.4rem, $color_gray_1d, 500);
     span {
       color: $color_key_01;
       font-weight: 700;
@@ -79,11 +79,11 @@
     background-image: url("../images/company_tit_bg02.jpg");
   }
   h2 {
-    @include fontStyle(25px, $color_white, 700);
+    @include fontStyle(2.5rem, $color_white, 700);
     font-family: "Poppins";
   }
   p {
-    @include fontStyle(18px, $color_white, 700);
+    @include fontStyle(1.8rem, $color_white, 700);
   }
 }
 
@@ -92,13 +92,13 @@
   border-bottom: 1px solid $color_gray_e;
   letter-spacing: -0.01rem;
   h3 {
-    @include fontStyle(18px, $color_gray_1d, 700);
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
   }
   p {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
   }
   span {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     display: block;
     margin-top: 16px;
   }
@@ -106,7 +106,7 @@
     @include flexLayout(stretch, flex-start, 8px, nowrap, column);
     margin-top: 16px;
     li {
-      @include fontStyle(16px, $color_gray_5, 500);
+      @include fontStyle(1.6rem, $color_gray_5, 500);
       position: relative;
       padding-left: 15px;
 
@@ -129,19 +129,19 @@
     background-color: $color_gray_f8;
     text-align: center;
     p {
-      @include fontStyle(18px, $color_gray_1d, 700);
+      @include fontStyle(1.8rem, $color_gray_1d, 700);
     }
   }
 }
 
 .company_desc {
-  @include fontStyle(18px, $color_gray_1d, 700);
+  @include fontStyle(1.8rem, $color_gray_1d, 700);
 }
 
 .organization_wrap {
   h3 {
     @include flexLayout(center, center, 16px);
-    @include fontStyle(16px, $color_white, 700);
+    @include fontStyle(1.6rem, $color_white, 700);
     height: 60px;
     border-radius: 4px;
     background-color: $color_gray_1d;
@@ -180,7 +180,7 @@
       }
       p {
         @include flexLayout(center, center);
-        @include fontStyle(16px, $color_white, 700);
+        @include fontStyle(1.6rem, $color_white, 700);
         height: 39px;
         padding: 0 4px;
         border-radius: 4px 4px 0 0;
@@ -189,7 +189,7 @@
       }
       span {
         @include flexLayout(center, center, 16px);
-        @include fontStyle(16px, $color_gray_5, 500);
+        @include fontStyle(1.6rem, $color_gray_5, 500);
         height: 59px;
         b {
           color: $color_key_01;
@@ -206,10 +206,10 @@
       border-bottom: 0;
       text-align: center;
       p {
-        @include fontStyle(16px, $color_gray_1d, 700);
+        @include fontStyle(1.6rem, $color_gray_1d, 700);
       }
       span {
-        @include fontStyle(16px, $color_gray_5, 500);
+        @include fontStyle(1.6rem, $color_gray_5, 500);
         display: block;
         margin-top: 8px;
       }
@@ -249,11 +249,11 @@
     margin: 0 auto;
   }
   h1 {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
     margin-top: 16px;
   }
   p {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     margin-top: 16px;
   }
   .btn {

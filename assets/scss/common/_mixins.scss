@@ -48,8 +48,8 @@
   display: -webkit-box !important;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-height: 1.4rem;
-  max-height: 2.8rem;
+  line-height: 2.4rem;
+  max-height: 4.8rem;
 }
 
 @mixin flexLayout(
@@ -67,7 +67,7 @@
   flex-wrap: $wrap;
   flex-direction: $direction;
 }
-@mixin fontStyle($size: 12px, $color: $color_black, $weight: 500) {
+@mixin fontStyle($size: 1.6rem, $color: $color_black, $weight: 500) {
   font-size: $size;
   color: $color;
   font-weight: $weight;

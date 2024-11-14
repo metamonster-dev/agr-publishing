@@ -142,7 +142,7 @@
 /* Input, Textarea, Select, Label */
 .input,
 .textarea {
-  @include fontStyle(16px, $color_gray_1d, 500);
+  @include fontStyle(1.6rem, $color_gray_1d, 500);
   position: relative;
   width: 100%;
   border: 1px solid $color_gray_d8;
@@ -173,7 +173,7 @@
   resize: none;
 }
 .select {
-  @include fontStyle(16px, $color_gray_1d, 500);
+  @include fontStyle(1.6rem, $color_gray_1d, 500);
   height: 52px;
   padding: 0 40px 0 16px;
   border: 1px solid $color_gray_d8;
@@ -183,7 +183,7 @@
   appearance: none;
 }
 .label {
-  @include fontStyle(14px, $color_gray_1d, 500);
+  @include fontStyle(1.4rem, $color_gray_1d, 500);
   display: block;
   &.required::after {
     content: " *";
@@ -191,7 +191,7 @@
   }
 }
 .label_tit {
-  @include fontStyle(18px, $color_gray_1d, 700);
+  @include fontStyle(1.8rem, $color_gray_1d, 700);
   display: block;
   margin-bottom: 4px;
 }
@@ -201,7 +201,7 @@
   z-index: 10;
 
   button {
-    @include fontStyle(16px, $color_gray_1d, 500);
+    @include fontStyle(1.6rem, $color_gray_1d, 500);
     position: relative;
     width: 100%;
     height: 52px;
@@ -244,7 +244,7 @@
     background-color: $color_white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
     li {
-      @include fontStyle(16px, $color_gray_1d, 500);
+      @include fontStyle(1.6rem, $color_gray_1d, 500);
       padding: 12px 16px;
       cursor: pointer;
       &:not(:first-of-type) {
@@ -300,7 +300,7 @@
   }
   label {
     @include flexLayout(center, flex-start);
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     position: relative;
     height: 52px;
     padding: 0 40px 0 16px;
@@ -370,7 +370,7 @@
       width: 48px;
     }
     span {
-      @include fontStyle(16px, $color_gray_71, 500);
+      @include fontStyle(1.6rem, $color_gray_71, 500);
       display: block;
     }
   }
@@ -384,7 +384,7 @@
     }
   }
   label {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     position: relative;
     display: inline-block;
     padding: 0.5px 0 0.5px 32px;
@@ -419,7 +419,7 @@
     }
   }
   label {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     position: relative;
     display: inline-block;
     padding: 0.5px 0 0.5px 32px;
@@ -447,7 +447,7 @@
   padding: 8px 0;
 }
 .star_score_text {
-  @include fontStyle(14px, $color_gray_71, 500);
+  @include fontStyle(1.4rem, $color_gray_71, 500);
   text-align: center;
   b {
     color: $color_key_01;
@@ -648,23 +648,23 @@
     flex: 1;
   }
   button {
-    @include fontStyle(14px, $color_gray_71, 500);
+    @include fontStyle(1.4rem, $color_gray_71, 500);
     padding: 3px 0;
     text-decoration: underline;
   }
 }
 
 .input_desc_text {
-  @include fontStyle(14px, $color_key_01, 500);
+  @include fontStyle(1.4rem, $color_key_01, 500);
   display: block;
   margin-top: 16px;
 }
 .input_desc_text02 {
-  @include fontStyle(14px, $color_gray_71, 500);
+  @include fontStyle(1.4rem, $color_gray_71, 500);
   display: block;
 }
 .input_desc_text03 {
-  @include fontStyle(13px, $color_gray_71, 500);
+  @include fontStyle(1.3rem, $color_gray_71, 500);
   display: block;
 }
 
@@ -776,7 +776,7 @@
       margin-top: 8px;
     }
     span {
-      @include fontStyle(13px, $color_gray_71, 500);
+      @include fontStyle(1.3rem, $color_gray_71, 500);
       display: inline-block;
       text-decoration: underline;
       word-break: break-all;
@@ -804,7 +804,7 @@
       margin-top: 8px;
     }
     span {
-      @include fontStyle(13px, $color_gray_71, 500);
+      @include fontStyle(1.3rem, $color_gray_71, 500);
       display: inline-block;
       text-decoration: underline;
       word-break: break-all;
@@ -843,7 +843,7 @@
       li {
         button {
           @include flexLayout(center, center);
-          @include fontStyle(14px, $color_gray_5, 500);
+          @include fontStyle(1.4rem, $color_gray_5, 500);
           height: 33px;
           padding: 0 10px;
           border: 1px solid $color_gray_d8;
@@ -879,7 +879,7 @@
       li {
         button {
           @include flexLayout(center, center);
-          @include fontStyle(16px, $color_gray_71, 500);
+          @include fontStyle(1.6rem, $color_gray_71, 500);
           height: 52px;
           padding: 0 8px;
           border-bottom: 2px solid transparent;
@@ -910,7 +910,7 @@
         button,
         a {
           @include flexLayout(center, center);
-          @include fontStyle(16px, $color_gray_8e, 700);
+          @include fontStyle(1.6rem, $color_gray_8e, 700);
           width: 100%;
           height: 52px;
           padding: 0 8px;
@@ -1019,21 +1019,21 @@
   &.list_style02 {
     .text_area {
       .cate {
-        @include fontStyle(14px, $color_gray_8e, 700);
+        @include fontStyle(1.4rem, $color_gray_8e, 700);
         display: block;
         margin-bottom: 4px;
       }
       .tit {
-        @include fontStyle(16px, $color_gray_1d, 500);
+        @include fontStyle(1.6rem, $color_gray_1d, 500);
       }
       .price_text {
         @include flexLayout(center, flex-start, 4px);
         margin-top: 6px;
         .percent {
-          @include fontStyle(14px, $color_key_01, 700);
+          @include fontStyle(1.4rem, $color_key_01, 700);
         }
         .price {
-          @include fontStyle(16px, $color_gray_1d, 700);
+          @include fontStyle(1.6rem, $color_gray_1d, 700);
         }
       }
     }
@@ -1140,10 +1140,10 @@
         margin-top: 12px;
         text-align: center;
         p {
-          @include fontStyle(16px, $color_gray_1d, 700);
+          @include fontStyle(1.6rem, $color_gray_1d, 700);
         }
         span {
-          @include fontStyle(14px, $color_gray_71, 500);
+          @include fontStyle(1.4rem, $color_gray_71, 500);
           display: block;
           margin-top: 4px;
         }
@@ -1160,7 +1160,7 @@
       .review_top_area {
         @include flexLayout(center, space-between, 8px);
         .review {
-          @include fontStyle(13px, $color_gray_1d, 700);
+          @include fontStyle(1.3rem, $color_gray_1d, 700);
           position: relative;
           display: block;
           padding: 4px 10px 4px 24px;
@@ -1172,7 +1172,7 @@
         .writer_date {
           @include flexLayout(center, center, 16px);
           span {
-            @include fontStyle(14px, $color_gray_71, 500);
+            @include fontStyle(1.4rem, $color_gray_71, 500);
             position: relative;
             display: block;
             &:not(:first-of-type)::before {
@@ -1189,7 +1189,7 @@
         }
       }
       .review_text {
-        @include fontStyle(16px, $color_gray_1d, 500);
+        @include fontStyle(1.6rem, $color_gray_1d, 500);
         margin-top: 16px;
       }
       .review_img_area {
@@ -1208,7 +1208,7 @@
         @include flexLayout(center, flex-start, 6px);
         margin-top: 16px;
         button {
-          @include fontStyle(14px, $color_gray_5, 500);
+          @include fontStyle(1.4rem, $color_gray_5, 500);
           height: 32px;
           padding: 0 8px;
           border: 1px solid $color_gray_d8;
@@ -1234,12 +1234,12 @@
     dl {
       @include flexLayout(stretch, center, 16px 0, wrap);
       dt {
-        @include fontStyle(16px, $color_gray_71, 500);
+        @include fontStyle(1.6rem, $color_gray_71, 500);
         width: 96px;
         padding-right: 16px;
       }
       dd {
-        @include fontStyle(16px, $color_gray_1d, 500);
+        @include fontStyle(1.6rem, $color_gray_1d, 500);
         width: calc(100% - 96px);
       }
     }
@@ -1249,10 +1249,10 @@
     li {
       @include flexLayout(center, space-between, 8px);
       span {
-        @include fontStyle(14px, $color_gray_71, 500);
+        @include fontStyle(1.4rem, $color_gray_71, 500);
       }
       button {
-        @include fontStyle(14px, $color_gray_71, 500);
+        @include fontStyle(1.4rem, $color_gray_71, 500);
         text-decoration: underline;
       }
     }
@@ -1264,10 +1264,10 @@
     dl {
       @include flexLayout(center, space-between, 8px);
       dt {
-        @include fontStyle(14px, $color_gray_71, 500);
+        @include fontStyle(1.4rem, $color_gray_71, 500);
       }
       dd {
-        @include fontStyle(14px, $color_gray_1d, 700);
+        @include fontStyle(1.4rem, $color_gray_1d, 700);
       }
       & + dl {
         margin-top: 16px;
@@ -1289,7 +1289,7 @@
         margin-bottom: 8px;
       }
       .tit {
-        @include fontStyle(16px, $color_gray_1d, 700);
+        @include fontStyle(1.6rem, $color_gray_1d, 700);
         @include line1Text;
       }
       .desc {
@@ -1297,7 +1297,7 @@
         margin-top: 8px;
         p {
           @include flexLayout(center, center, 8px);
-          @include fontStyle(14px, $color_gray_71, 500);
+          @include fontStyle(1.4rem, $color_gray_71, 500);
           &:not(:last-of-type)::after {
             content: "";
             display: block;
@@ -1342,11 +1342,11 @@
             border-top: 1px solid $color_gray_e;
           }
           .rv_tit {
-            @include fontStyle(14px, $color_key_01, 700);
+            @include fontStyle(1.4rem, $color_key_01, 700);
             margin-bottom: 16px;
           }
           .rv_desc {
-            @include fontStyle(16px, $color_gray_5, 500);
+            @include fontStyle(1.6rem, $color_gray_5, 500);
           }
           .rv_img_area {
             @include flexLayout(flex-start, flex-start, 8px, wrap);
@@ -1361,7 +1361,7 @@
             }
           }
           .rv_date {
-            @include fontStyle(14px, $color_gray_71, 500);
+            @include fontStyle(1.4rem, $color_gray_71, 500);
             display: block;
             margin-top: 16px;
           }
@@ -1395,14 +1395,14 @@
         .text_area {
           margin-top: 16px;
           .tit {
-            @include fontStyle(16px, $color_gray_1d, 700);
+            @include fontStyle(1.6rem, $color_gray_1d, 700);
             @include line2Text;
           }
           .tags,
           .desc {
             margin-top: 4px;
             & > * {
-              @include fontStyle(14px, $color_gray_71, 500);
+              @include fontStyle(1.4rem, $color_gray_71, 500);
             }
           }
         }
@@ -1444,13 +1444,13 @@
       transition: all 0.3s;
     }
     .tit {
-      @include fontStyle(16px, $color_gray_1d, 700);
+      @include fontStyle(1.6rem, $color_gray_1d, 700);
       b {
         color: $color_key_01;
       }
     }
     .date {
-      @include fontStyle(14px, $color_gray_71, 500);
+      @include fontStyle(1.4rem, $color_gray_71, 500);
       display: block;
       margin-top: 8px;
     }
@@ -1458,7 +1458,7 @@
   .tg_cont {
     padding: 0 16px 24px;
     p {
-      @include fontStyle(16px, $color_gray_5, 500);
+      @include fontStyle(1.6rem, $color_gray_5, 500);
       padding: 16px;
       border-radius: 4px;
       background-color: $color_gray_f8;
@@ -1475,15 +1475,15 @@
 .list_tit_area {
   @include flexLayout(center, space-between, 8px);
   h3 {
-    @include fontStyle(18px, $color_gray_1d, 700);
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
   }
   p {
-    @include fontStyle(14px, $color_gray_1d, 500);
+    @include fontStyle(1.4rem, $color_gray_1d, 500);
   }
 
   .select_btn {
     @include flexLayout(center, center, 4px);
-    @include fontStyle(14px, $color_gray_5, 500);
+    @include fontStyle(1.4rem, $color_gray_5, 500);
     height: 32px;
     padding: 0 8px;
     border: 1px solid $color_gray_d8;
@@ -1511,26 +1511,26 @@
     flex: 1;
     max-width: calc(100% - 80px);
     .cate {
-      @include fontStyle(14px, $color_gray_8e, 700);
+      @include fontStyle(1.4rem, $color_gray_8e, 700);
       display: block;
       margin-bottom: 4px;
     }
     .tit {
-      @include fontStyle(16px, $color_gray_1d, 500);
+      @include fontStyle(1.6rem, $color_gray_1d, 500);
       @include line1Text;
     }
     .price_text {
       @include flexLayout(center, flex-start, 4px);
       margin-top: 4px;
       .percent {
-        @include fontStyle(14px, $color_key_01, 700);
+        @include fontStyle(1.4rem, $color_key_01, 700);
       }
       .price {
-        @include fontStyle(16px, $color_gray_1d, 700);
+        @include fontStyle(1.6rem, $color_gray_1d, 700);
       }
     }
     .date {
-      @include fontStyle(14px, $color_gray_71, 500);
+      @include fontStyle(1.4rem, $color_gray_71, 500);
       display: block;
       margin-top: 8px;
     }
@@ -1556,10 +1556,10 @@
   .tit_area {
     @include flexLayout(center, flex-start, 8px);
     .tit {
-      @include fontStyle(16px, $color_gray_1d, 700);
+      @include fontStyle(1.6rem, $color_gray_1d, 700);
     }
     .tag {
-      @include fontStyle(13px, $color_white, 700);
+      @include fontStyle(1.3rem, $color_white, 700);
       padding: 0 6px;
       border-radius: 4px;
       background-color: $color_key_01;
@@ -1569,10 +1569,10 @@
   .text_area {
     margin-top: 8px;
     .addr {
-      @include fontStyle(16px, $color_gray_5, 500);
+      @include fontStyle(1.6rem, $color_gray_5, 500);
     }
     .phone {
-      @include fontStyle(16px, $color_gray_8e, 500);
+      @include fontStyle(1.6rem, $color_gray_8e, 500);
       margin-top: 4px;
     }
   }
@@ -1580,7 +1580,7 @@
     @include flexLayout(center, flex-start, 6px);
     margin-top: 16px;
     button {
-      @include fontStyle(14px, $color_gray_5, 500);
+      @include fontStyle(1.4rem, $color_gray_5, 500);
       height: 32px;
       padding: 0 8px;
       border: 1px solid $color_gray_d8;
@@ -1602,7 +1602,7 @@
       margin-bottom: 8px;
     }
     .tit {
-      @include fontStyle(18px, $color_gray_1d, 700);
+      @include fontStyle(1.8rem, $color_gray_1d, 700);
     }
     .desc {
       @include flexLayout(center, flex-start, 8px);
@@ -1611,7 +1611,7 @@
       border-top: 1px solid $color_gray_e;
       p {
         @include flexLayout(center, center, 8px);
-        @include fontStyle(14px, $color_gray_71, 500);
+        @include fontStyle(1.4rem, $color_gray_71, 500);
         &:not(:last-of-type)::after {
           content: "";
           display: block;
@@ -1629,7 +1629,7 @@
   background-color: $color_white;
   margin: 8px 0;
   button.tg_tit {
-    @include fontStyle(16px, $color_gray_1d, 700);
+    @include fontStyle(1.6rem, $color_gray_1d, 700);
     position: relative;
     width: 100%;
     padding: 17px 16px 18px;
@@ -1654,10 +1654,10 @@
     padding: 0 16px;
     border-bottom: 1px solid $color_gray_e;
     .tit {
-      @include fontStyle(16px, $color_gray_1d, 700);
+      @include fontStyle(1.6rem, $color_gray_1d, 700);
     }
     button {
-      @include fontStyle(14px, $color_gray_5, 500);
+      @include fontStyle(1.4rem, $color_gray_5, 500);
       height: 32px;
       padding: 0 8px;
       border: 1px solid $color_gray_d8;
@@ -1686,10 +1686,10 @@
 
   &.text_style01 {
     .tit {
-      @include fontStyle(14px, $color_gray_71, 500);
+      @include fontStyle(1.4rem, $color_gray_71, 500);
     }
     .desc {
-      @include fontStyle(14px, $color_gray_1d, 500);
+      @include fontStyle(1.4rem, $color_gray_1d, 500);
     }
   }
   &.text_style02 {
@@ -1697,10 +1697,10 @@
     padding: 0 16px;
     background-color: $color_gray_f8;
     .tit {
-      @include fontStyle(14px, $color_gray_5, 500);
+      @include fontStyle(1.4rem, $color_gray_5, 500);
     }
     .desc {
-      @include fontStyle(14px, $color_gray_1d, 700);
+      @include fontStyle(1.4rem, $color_gray_1d, 700);
     }
   }
   &.text_style03 {
@@ -1708,10 +1708,10 @@
     padding: 0 16px;
     background-color: $color_key_03;
     .tit {
-      @include fontStyle(16px, $color_key_01, 700);
+      @include fontStyle(1.6rem, $color_key_01, 700);
     }
     .desc {
-      @include fontStyle(18px, $color_gray_1d, 700);
+      @include fontStyle(1.8rem, $color_gray_1d, 700);
     }
   }
 }
@@ -1724,15 +1724,15 @@
 
   &.text_style01 {
     .tit {
-      @include fontStyle(16px, $color_gray_5, 500);
+      @include fontStyle(1.6rem, $color_gray_5, 500);
     }
     .desc {
-      @include fontStyle(16px, $color_gray_1d, 700);
+      @include fontStyle(1.6rem, $color_gray_1d, 700);
     }
   }
 }
 .desc_text_style {
-  @include fontStyle(14px, $color_gray_5, 500);
+  @include fontStyle(1.4rem, $color_gray_5, 500);
   display: block;
   position: relative;
   padding-left: 11px;
@@ -1788,7 +1788,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
     z-index: 10;
     p {
-      @include fontStyle(14px, $color_white, 700);
+      @include fontStyle(1.4rem, $color_white, 700);
       flex: 1;
     }
   }
@@ -1852,14 +1852,14 @@
     }
   }
   span {
-    @include fontStyle(16px, $color_gray_8e, 500);
+    @include fontStyle(1.6rem, $color_gray_8e, 500);
     display: block;
   }
 }
 
 /* Error Msg */
 .error_msg {
-  @include fontStyle(13px, $color_red_01, 500);
+  @include fontStyle(1.3rem, $color_red_01, 500);
   position: relative;
   display: block;
   padding-left: 22px;
@@ -1880,7 +1880,7 @@
   button,
   a {
     @include flexLayout(center, center);
-    @include fontStyle(16px, $color_gray_71, 500);
+    @include fontStyle(1.6rem, $color_gray_71, 500);
     width: 24px;
     height: 24px;
     &.active {
@@ -1907,7 +1907,7 @@
 
 /* Editor */
 .editor_area {
-  @include fontStyle(16px, $color_gray_5, 500);
+  @include fontStyle(1.6rem, $color_gray_5, 500);
   img {
     max-width: 100%;
   }
@@ -1919,7 +1919,7 @@
     margin-bottom: 24px;
   }
   .fc-toolbar-title {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
   }
   .fc-theme-standard .fc-scrollgrid {
     border: 0;
@@ -1934,7 +1934,7 @@
   }
   .fc-theme-standard th {
     a {
-      @include fontStyle(14px, $color_gray_71, 500);
+      @include fontStyle(1.4rem, $color_gray_71, 500);
       padding: 6px 4px;
     }
     .fc-day-sun a {
@@ -1952,7 +1952,7 @@
     }
     .fc-daygrid-day-number {
       @include flexLayout(center, center);
-      @include fontStyle(16px, $color_gray_1d, 500);
+      @include fontStyle(1.6rem, $color_gray_1d, 500);
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -1974,7 +1974,7 @@
       margin-bottom: 10px;
     }
     .fc-h-event {
-      @include fontStyle(12px, $color_white, 700);
+      @include fontStyle(1.2rem, $color_white, 700);
       padding: 2px;
       border: 0;
       border-radius: 4px;
@@ -2026,7 +2026,7 @@
   background: url("../images/banner_bg.jpg") no-repeat center / cover;
 
   h2 {
-    @include fontStyle(25px, $color_white, 700);
+    @include fontStyle(2.5rem, $color_white, 700);
   }
   .text_area {
     @include flexLayout(center, center, 24px, nowrap, column);
@@ -2036,11 +2036,11 @@
     backdrop-filter: blur(30px);
     background-color: rgba(255, 255, 255, 0.1);
     p {
-      @include fontStyle(16px, $color_white, 500);
+      @include fontStyle(1.6rem, $color_white, 500);
       display: block;
       text-align: center;
       b {
-        @include fontStyle(22px, $color_white, 700);
+        @include fontStyle(2.2rem, $color_white, 700);
         display: block;
         margin-bottom: 8px;
       }

@@ -39,7 +39,7 @@
   position: relative;
   overflow: hidden;
   .page {
-    @include fontStyle(12px, rgba(255, 255, 255, 0.5), 700);
+    @include fontStyle(1.2rem, rgba(255, 255, 255, 0.5), 700);
     position: absolute;
     bottom: 16px;
     left: auto;
@@ -65,7 +65,7 @@
     }
     a {
       @include flexLayout(center);
-      @include fontStyle(14px, $color_gray_71, 700);
+      @include fontStyle(1.4rem, $color_gray_71, 700);
       i {
         display: block;
         width: 16px;
@@ -78,13 +78,13 @@
   .btm_area {
     padding: 20px 0 40px;
     h2 {
-      @include fontStyle(18px, $color_gray_1d, 700);
+      @include fontStyle(1.8rem, $color_gray_1d, 700);
     }
     .star_review {
       @include flexLayout(center, flex-start, 8px);
       margin-top: 16px;
       button {
-        @include fontStyle(14px, $color_gray_71, 500);
+        @include fontStyle(1.4rem, $color_gray_71, 500);
         text-decoration: underline;
       }
     }
@@ -92,10 +92,10 @@
       @include flexLayout(center, flex-start, 4px);
       margin-top: 16px;
       .percent {
-        @include fontStyle(14px, $color_key_01, 700);
+        @include fontStyle(1.4rem, $color_key_01, 700);
       }
       .price {
-        @include fontStyle(18px, $color_gray_1d, 700);
+        @include fontStyle(1.8rem, $color_gray_1d, 700);
       }
     }
   }
@@ -139,10 +139,10 @@
     background-color: $color_gray_f8;
     text-align: center;
     p {
-      @include fontStyle(14px, $color_gray_1d, 700);
+      @include fontStyle(1.4rem, $color_gray_1d, 700);
     }
     span {
-      @include fontStyle(25px, $color_gray_1d, 700);
+      @include fontStyle(2.5rem, $color_gray_1d, 700);
       display: block;
       margin: 8px 0;
     }

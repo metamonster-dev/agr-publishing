@@ -84,7 +84,7 @@
         padding: 0 16px;
         border-bottom: 1px solid $color_gray_e;
         p {
-          @include fontStyle(18px, $color_gray_1d, 700);
+          @include fontStyle(1.8rem, $color_gray_1d, 700);
         }
       }
       .md_cont {
@@ -125,7 +125,7 @@
         padding: 7px 0;
         text-align: center;
         p {
-          @include fontStyle(18px, $color_gray_1d, 700);
+          @include fontStyle(1.8rem, $color_gray_1d, 700);
         }
         .x_btn {
           position: absolute;
@@ -146,11 +146,11 @@
       border-radius: 8px;
       text-align: center;
       p {
-        @include fontStyle(18px, $color_gray_1d, 700);
+        @include fontStyle(1.8rem, $color_gray_1d, 700);
         margin-bottom: 16px;
       }
       span {
-        @include fontStyle(16px, $color_gray_5, 500);
+        @include fontStyle(1.6rem, $color_gray_5, 500);
         display: block;
       }
       .btn_area {
@@ -166,7 +166,7 @@
 
 // 약관 동의
 .md_agree_area {
-  @include fontStyle(16px, $color_gray_5, 500);
+  @include fontStyle(1.6rem, $color_gray_5, 500);
   padding: 32px 0;
   .inner {
     @include flexLayout(flex-start, center, 24px, nowrap, column);
@@ -185,7 +185,7 @@
   padding: 16px 0 0;
   text-align: center;
   p {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
   }
   .sns_info {
     @include flexLayout(center, center, 8px);
@@ -198,7 +198,7 @@
       width: 20px;
     }
     span {
-      @include fontStyle(16px, $color_gray_5, 500);
+      @include fontStyle(1.6rem, $color_gray_5, 500);
       display: block;
       word-break: break-all;
     }
@@ -217,7 +217,7 @@
   button {
     text-align: center;
     span {
-      @include fontStyle(14px, $color_gray_5, 500);
+      @include fontStyle(1.4rem, $color_gray_5, 500);
       display: block;
       margin-top: 8px;
     }
@@ -242,12 +242,12 @@
   dl {
     @include flexLayout(stretch, center, 16px 0, wrap);
     dt {
-      @include fontStyle(16px, $color_gray_71, 500);
+      @include fontStyle(1.6rem, $color_gray_71, 500);
       width: 80px;
       padding-right: 8px;
     }
     dd {
-      @include fontStyle(16px, $color_gray_1d, 500);
+      @include fontStyle(1.6rem, $color_gray_1d, 500);
       width: calc(100% - 80px);
     }
   }
@@ -258,7 +258,7 @@
   padding-top: 16px;
   text-align: center;
   p {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
   }
   .text_area {
     margin-top: 24px;
@@ -266,7 +266,7 @@
     border-radius: 4px;
     background-color: $color_gray_f8;
     span {
-      @include fontStyle(16px, $color_gray_5, 500);
+      @include fontStyle(1.6rem, $color_gray_5, 500);
       display: block;
     }
   }
@@ -286,10 +286,10 @@
   background-color: $color_gray_f8;
   text-align: center;
   p {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
   }
   span {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     display: block;
     margin-top: 12px;
   }

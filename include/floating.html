@@ -32,35 +32,23 @@
 
   // zoom button click
   const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  const metaViewport = document.querySelector('meta[name="viewport"]');
+  const isIPhoneDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   let zoomLevel = 1;
   const zoomOut = () => {
-    if (!isMobileDevice) {
-      zoomLevel = Math.max(zoomLevel - 0.1, 0.7);
-      if (zoomLevel <= 0.7) return alert("최소 화면 크기입니다.");
-      document.body.style.zoom = zoomLevel;
-    } else {
-      zoomLevel = Math.min(zoomLevel + 0.1, 1.4);
-      if (zoomLevel >= 1.4) return alert("최소 화면 크기입니다.");
-      metaViewport.setAttribute(
-        "content",
-        `width=device-width, initial-scale=${zoomLevel}`
-      );
-    }
+    zoomLevel = Math.max(zoomLevel - 0.1, 0.7);
+    if (zoomLevel <= 0.7) return alert("최소 화면 크기입니다.");
+    document.body.style.zoom = zoomLevel;
+
+    if (isIPhoneDevice)
+      document.documentElement.style.setProperty("--scale-factor", zoomLevel);
   };
   const zoomIn = () => {
-    if (!isMobileDevice) {
-      zoomLevel = Math.min(zoomLevel + 0.1, 1.4);
-      if (zoomLevel >= 1.4) return alert("최대 화면 크기입니다.");
-      document.body.style.zoom = zoomLevel;
-    } else {
-      zoomLevel = Math.max(zoomLevel - 0.1, 0.7);
-      if (zoomLevel <= 0.7) return alert("최대 화면 크기입니다.");
-      metaViewport.setAttribute(
-        "content",
-        `width=device-width, initial-scale=${zoomLevel}`
-      );
-    }
+    zoomLevel = Math.min(zoomLevel + 0.1, 1.4);
+    if (zoomLevel >= 1.4) return alert("최대 화면 크기입니다.");
+    document.body.style.zoom = zoomLevel;
+
+    if (isIPhoneDevice)
+      document.documentElement.style.setProperty("--scale-factor", zoomLevel);
   };
 
   $(document).ready(function () {

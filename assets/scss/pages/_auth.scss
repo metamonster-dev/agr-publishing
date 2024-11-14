@@ -8,7 +8,7 @@
   @include flexLayout(center, center, 16px);
   margin-top: 24px;
   a {
-    @include fontStyle(14px, $color_gray_71, 500);
+    @include fontStyle(1.4rem, $color_gray_71, 500);
     position: relative;
     display: block;
   }
@@ -35,7 +35,7 @@
       background-color: $color_gray_e;
     }
     p {
-      @include fontStyle(14px, $color_gray_1d, 500);
+      @include fontStyle(1.4rem, $color_gray_1d, 500);
       position: relative;
       display: inline-block;
       padding: 0 16px;
@@ -84,11 +84,11 @@
     border: 1px solid $color_gray_8e;
     background-color: $color_white;
     span {
-      @include fontStyle(14px, $color_gray_5, 500);
+      @include fontStyle(1.4rem, $color_gray_5, 500);
       display: block;
       flex: 1;
       b {
-        @include fontStyle(16px, $color_gray_1d, 700);
+        @include fontStyle(1.6rem, $color_gray_1d, 700);
         display: block;
         margin-bottom: 8px;
       }
@@ -98,7 +98,7 @@
     border: 1px solid $color_key_05;
     background-color: $color_key_03;
     span {
-      @include fontStyle(16px, $color_gray_1d, 700);
+      @include fontStyle(1.6rem, $color_gray_1d, 700);
     }
   }
 }
@@ -108,10 +108,10 @@
   background-color: $color_gray_f8;
   text-align: center;
   h2 {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
   }
   p {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     margin-top: 12px;
   }
 }
@@ -123,11 +123,11 @@
     margin: 0 auto;
   }
   h2 {
-    @include fontStyle(22px, $color_gray_1d, 700);
+    @include fontStyle(2.2rem, $color_gray_1d, 700);
     margin-top: 16px;
   }
   p {
-    @include fontStyle(16px, $color_gray_5, 500);
+    @include fontStyle(1.6rem, $color_gray_5, 500);
     margin-top: 16px;
   }
   button {
@@ -146,7 +146,7 @@
     margin: 0 auto 16px;
   }
   p {
-    @include fontStyle(18px, $color_gray_1d, 700);
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
   }
   .email_info {
     @include flexLayout(center, center);
@@ -156,7 +156,7 @@
     border-radius: 4px;
     background-color: $color_gray_f8;
     span {
-      @include fontStyle(16px, $color_gray_5, 500);
+      @include fontStyle(1.6rem, $color_gray_5, 500);
       display: block;
       word-break: break-all;
     }
@@ -169,10 +169,10 @@
   border-radius: 4px;
   background-color: $color_key_03;
   p {
-    @include fontStyle(14px, $color_key_01, 700);
+    @include fontStyle(1.4rem, $color_key_01, 700);
   }
   button {
-    @include fontStyle(14px, $color_gray_71, 700);
+    @include fontStyle(1.4rem, $color_gray_71, 700);
     text-decoration: underline;
   }
 }
