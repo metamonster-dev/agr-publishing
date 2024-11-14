@@ -18,7 +18,7 @@
   </button>
 </div>
 
-<script defer>
+<script>
   // top button click
   const goTopClick = () => $("html, body").animate({ scrollTop: 0 }, 500);
   const floatingToggle = () => {
@@ -31,16 +31,36 @@
   };
 
   // zoom button click
+  const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const metaViewport = document.querySelector('meta[name="viewport"]');
   let zoomLevel = 1;
   const zoomOut = () => {
-    zoomLevel = Math.max(zoomLevel - 0.1, 0.7);
-    if (zoomLevel <= 0.7) return alert("최소 화면 크기입니다.");
-    document.body.style.zoom = zoomLevel;
+    if (!isMobileDevice) {
+      zoomLevel = Math.max(zoomLevel - 0.1, 0.7);
+      if (zoomLevel <= 0.7) return alert("최소 화면 크기입니다.");
+      document.body.style.zoom = zoomLevel;
+    } else {
+      zoomLevel = Math.min(zoomLevel + 0.1, 1.4);
+      if (zoomLevel >= 1.4) return alert("최소 화면 크기입니다.");
+      metaViewport.setAttribute(
+        "content",
+        `width=device-width, initial-scale=${zoomLevel}`
+      );
+    }
   };
   const zoomIn = () => {
-    zoomLevel = Math.min(zoomLevel + 0.1, 1.4);
-    if (zoomLevel >= 1.4) return alert("최대 화면 크기입니다.");
-    document.body.style.zoom = zoomLevel;
+    if (!isMobileDevice) {
+      zoomLevel = Math.min(zoomLevel + 0.1, 1.4);
+      if (zoomLevel >= 1.4) return alert("최대 화면 크기입니다.");
+      document.body.style.zoom = zoomLevel;
+    } else {
+      zoomLevel = Math.max(zoomLevel - 0.1, 0.7);
+      if (zoomLevel <= 0.7) return alert("최대 화면 크기입니다.");
+      metaViewport.setAttribute(
+        "content",
+        `width=device-width, initial-scale=${zoomLevel}`
+      );
+    }
   };
 
   $(document).ready(function () {
