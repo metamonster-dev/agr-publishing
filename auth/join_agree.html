@@ -154,16 +154,16 @@
       </div>
     </div>
 
-    <script defer>
+    <script>
       // ===== 공통 영역 설정 스크립트 =====
-      $("#header_area").load("../include/header.html");
-      $("#floating_area").load("../include/floating.html");
-      $("#agree_terms_area").load("../include/agree/terms.html");
-      $("#agree_privacy_area").load("../include/agree/privacy.html");
-      $("#agree_marketing_area").load("../include/agree/marketing.html");
-
-      $(window).on("load", function () {
-        $("#header h1").text("약관동의");
+      $(document).ready(function () {
+        $("#header_area").load("../include/header.html", function () {
+          $("#header h1").text("약관동의");
+        });
+        $("#floating_area").load("../include/floating.html");
+        $("#agree_terms_area").load("../include/agree/terms.html");
+        $("#agree_privacy_area").load("../include/agree/privacy.html");
+        $("#agree_marketing_area").load("../include/agree/marketing.html");
       });
 
       // ===== 페이지 =====

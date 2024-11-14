@@ -274,13 +274,13 @@
       </div>
     </div>
 
-    <script defer>
+    <script>
       // ===== 공통 영역 설정 스크립트 =====
-      $("#header_area").load("../include/header.html");
-      $("#floating_area").load("../include/floating.html");
-
-      $(window).on("load", function () {
-        $("#header h1").text("회원가입");
+      $(document).ready(function () {
+        $("#header_area").load("../include/header.html", function () {
+          $("#header h1").text("회원가입");
+        });
+        $("#floating_area").load("../include/floating.html");
       });
 
       // ===== 페이지 =====

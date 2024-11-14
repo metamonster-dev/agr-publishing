@@ -3,6 +3,16 @@ const regEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regPassword =
   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,16}$/;
 
+// ===== HEADER 메뉴 열기/닫기 click
+const menuOpenClick = () => {
+  $("#m_menu").addClass("show");
+  $("#m_menu a, #m_menu button").eq(0).focus();
+};
+const menuCloseClick = () => {
+  $("#m_menu").removeClass("show");
+  $("#contents a, #contents button, #contents input").eq(0).focus();
+};
+
 // toast
 const notyf = new Notyf({
   position: {
@@ -45,7 +55,69 @@ const onScrollMove = (id) => {
   $(`#${id}`).focus();
 };
 
+$(window).one("load", function () {
+  // header init
+  const index = $("body")
+    .attr("class")
+    .split(" ")
+    .filter((className) => className.startsWith("hd_type"))
+    .map((className) => className.slice(-1));
+  setTimeout(() => {
+    $(`#header:not(:nth-of-type(${index}))`).remove();
+    $("#header").css("display", "block");
+  }, 100);
+});
+
 $(window).on("load", function () {
+  // ===== HEADER
+  // depth01 focus & click
+  $("#m_menu .gnb > ul > li > button").on("click focus", function () {
+    $(this).parent().addClass("active").siblings().removeClass("active");
+  });
+
+  // 메뉴 Tab 이동 제어
+  $("#contents a, #contents button, #contents input")
+    .eq(0)
+    .on("keydown", function (e) {
+      if (
+        $("#m_menu").css("display") === "block" &&
+        e.shiftKey &&
+        e.key === "Tab"
+      ) {
+        e.preventDefault();
+        $("#header .menu_btn").focus();
+      }
+    });
+  $("#header .menu_btn").on("keydown", function (e) {
+    if (!$("#m_menu").hasClass("show") && !e.shiftKey && e.key === "Tab") {
+      e.preventDefault();
+      if ($(".sticky_menu .tab_area").length > 0)
+        $(".sticky_menu .tab_area button, .sticky_menu .tab_area a")
+          .first()
+          .focus();
+      else $("#contents a, #contents button, #contents input").eq(0).focus();
+    }
+  });
+  $("#m_menu .back_btn").on("keydown", function (e) {
+    if (e.shiftKey && e.key === "Tab") {
+      e.preventDefault();
+      $("#m_menu .gnb > ul > li")
+        .last()
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+      $("#m_menu .gnb > ul > li > button").last().focus();
+    }
+  });
+  $("#m_menu a, #m_menu button")
+    .last()
+    .on("keydown", function (e) {
+      if (!e.shiftKey && e.key === "Tab") {
+        e.preventDefault();
+        $("#m_menu .back_btn").focus();
+      }
+    });
+
   // 상품 slider
   const productSlider = new Swiper(".prod_slider", {
     slidesPerView: 1.25,

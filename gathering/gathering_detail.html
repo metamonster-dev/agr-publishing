@@ -197,16 +197,17 @@
       </div>
     </div>
 
-    <script defer>
+    <script>
       // ===== 공통 영역 설정 스크립트 =====
-      $("#header_area").load("../include/header.html");
-      $("#floating_area").load("../include/floating.html");
-      $("#nav_area").load("../include/bottom_nav.html");
-      $("#agree_use_area").load("../include/agree/use.html");
-
-      $(window).on("load", function () {
-        $("#header h1").text("게더링 모집 요청");
-        $("#floating_menu").addClass("b_80");
+      $(document).ready(function () {
+        $("#header_area").load("../include/header.html", function () {
+          $("#header h1").text("게더링 모집 요청");
+        });
+        $("#floating_area").load("../include/floating.html", function () {
+          $("#floating_menu").addClass("b_80");
+        });
+        $("#nav_area").load("../include/bottom_nav.html");
+        $("#agree_use_area").load("../include/agree/use.html");
       });
 
       // ===== 페이지 =====
