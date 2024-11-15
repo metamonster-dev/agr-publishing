@@ -3578,25 +3578,6 @@ img {
   text-align: center;
   border-radius: 4px;
 }
-.modal_wrap.middle .modal_area .img_area {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  overflow: hidden;
-}
-.modal_wrap.middle .modal_area .btn_area {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  padding: 16px;
-}
-.modal_wrap.middle .modal_area .btn_area button {
-  font-size: 1.6rem;
-  color: #475ed9;
-  font-weight: 700;
-}
 .modal_wrap.msg {
   align-items: center;
   justify-content: center;
@@ -3632,6 +3613,29 @@ img {
 }
 .modal_wrap.msg .modal_area .btn_area .btn {
   flex: 1;
+}
+
+.md_popup_area a {
+  display: block;
+}
+.md_popup_area .img_area {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
+}
+.md_popup_area .btn_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 16px;
+}
+.md_popup_area .btn_area button {
+  font-size: 1.6rem;
+  color: #475ed9;
+  font-weight: 700;
 }
 
 .md_agree_area {

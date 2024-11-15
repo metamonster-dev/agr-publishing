@@ -144,18 +144,6 @@
       max-width: 328px;
       text-align: center;
       border-radius: 4px;
-      .img_area {
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        overflow: hidden;
-      }
-      .btn_area {
-        @include flexLayout(center, space-between, 8px);
-        padding: 16px;
-        button {
-          @include fontStyle(1.6rem, $color_key_01, 700);
-        }
-      }
     }
   }
   &.msg {
@@ -183,6 +171,25 @@
           flex: 1;
         }
       }
+    }
+  }
+}
+
+// 팝업
+.md_popup_area {
+  a {
+    display: block;
+  }
+  .img_area {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;
+  }
+  .btn_area {
+    @include flexLayout(center, space-between, 8px);
+    padding: 16px;
+    button {
+      @include fontStyle(1.6rem, $color_key_01, 700);
     }
   }
 }
