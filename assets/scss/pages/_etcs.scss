@@ -20,6 +20,7 @@
     position: relative;
     button {
       &:not(.x_btn) {
+        @include fontStyle(14px, $color_gray_1d, 500);
         height: 36px;
         padding: 0 34px 0 14px;
         border: 1px solid $color_gray_e;

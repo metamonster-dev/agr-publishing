@@ -81,7 +81,6 @@
   }
 }
 .mypage_dashboard_btn {
-  text-align: right;
   button,
   a {
     @include fontStyle(1.4rem, $color_gray_8e, 700);

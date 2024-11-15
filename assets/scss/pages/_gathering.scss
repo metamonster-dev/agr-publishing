@@ -94,6 +94,9 @@
 .artist_view_area {
   padding: 40px 0;
 
+  h3 {
+    @include fontStyle(1.8rem, $color_gray_1d, 700);
+  }
   .desc {
     @include fontStyle(1.6rem, $color_gray_5, 500);
     margin-top: 16px;

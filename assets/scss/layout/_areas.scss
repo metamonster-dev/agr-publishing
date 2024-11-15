@@ -156,6 +156,8 @@
   }
   &:disabled {
     background-color: $color_gray_f8;
+    -webkit-text-fill-color: inherit;
+    opacity: 1;
   }
   &:not(.error):focus {
     border-color: $color_key_01;
@@ -1381,7 +1383,7 @@
   }
   &.list_style09 {
     ul {
-      @include flexLayout(stretch, flex-start, 0, wrap);
+      @include flexLayout(stretch, flex-start, 40px 12px, wrap);
       li {
         .img_area.video::after {
           content: "";
@@ -1412,17 +1414,11 @@
       }
     }
 
-    &.grid01 ul {
-      gap: 24px;
-      li {
-        width: 100%;
-      }
+    &.grid01 ul li {
+      width: 100%;
     }
-    &.grid02 ul {
-      gap: 40px 12px;
-      li {
-        width: calc(50% - 6px);
-      }
+    &.grid02 ul li {
+      width: calc(50% - 6px);
     }
   }
 }

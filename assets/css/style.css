@@ -1055,6 +1055,8 @@ img {
 .input:disabled,
 .textarea:disabled {
   background-color: #f8f8f8;
+  -webkit-text-fill-color: inherit;
+  opacity: 1;
 }
 .input:not(.error):focus,
 .textarea:not(.error):focus {
@@ -2570,7 +2572,7 @@ img {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
-  gap: 0;
+  gap: 40px 12px;
   flex-wrap: wrap;
   flex-direction: row;
 }
@@ -2610,14 +2612,8 @@ img {
   color: #717171;
   font-weight: 500;
 }
-.list_area.list_style09.grid01 ul {
-  gap: 24px;
-}
 .list_area.list_style09.grid01 ul li {
   width: 100%;
-}
-.list_area.list_style09.grid02 ul {
-  gap: 40px 12px;
 }
 .list_area.list_style09.grid02 ul li {
   width: calc(50% - 6px);
@@ -4564,6 +4560,11 @@ img {
 .artist_view_area {
   padding: 40px 0;
 }
+.artist_view_area h3 {
+  font-size: 1.8rem;
+  color: #1d1d1d;
+  font-weight: 700;
+}
 .artist_view_area .desc {
   font-size: 1.6rem;
   color: #555555;
@@ -4715,9 +4716,6 @@ img {
   background: url("../images/icon_arrow_right.svg") no-repeat center/contain;
 }
 
-.mypage_dashboard_btn {
-  text-align: right;
-}
 .mypage_dashboard_btn button,
 .mypage_dashboard_btn a {
   font-size: 1.4rem;
@@ -4874,6 +4872,9 @@ img {
   position: relative;
 }
 .search_tags_area ul li button:not(.x_btn) {
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 500;
   height: 36px;
   padding: 0 34px 0 14px;
   border: 1px solid #eeeeee;
