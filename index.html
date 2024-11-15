@@ -924,6 +924,7 @@
         <!-- // FOOTER -->
 
         <!-- modal -->
+        <div id="popup_area"></div>
         <div id="agree_terms_area"></div>
         <div id="agree_privacy_area"></div>
         <!-- // modal -->
@@ -999,6 +1000,7 @@
       $(document).ready(function () {
         // $("#header_area").load("./include/header.html");
         // $("#footer_area").load("./include/footer.html");
+        $("#popup_area").load("./include/popup.html");
         $("#agree_terms_area").load("./include/agree/terms.html");
         $("#agree_privacy_area").load("./include/agree/privacy.html");
         // $("#floating_area").load("./include/floating.html", function () {
@@ -1012,6 +1014,7 @@
       $(window).on("load", function () {
         $("#bottom_nav ul li").eq(0).addClass("active");
         $("#floating_menu").addClass("b_80");
+        onModalShow("popup");
       });
 
       // ===== 메인 =====
