@@ -37,11 +37,9 @@
     <script>
       // ===== 공통 영역 설정 스크립트 =====
       $(document).ready(function () {
-        $("#popup_area").load("./include/popup.html");
-      });
-
-      $(window).on("load", function () {
-        onModalShow("popup");
+        $("#popup_area").load("./include/popup.html", function () {
+          onModalShow("popup");
+        });
       });
     </script>
   </body>
