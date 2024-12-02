@@ -27,6 +27,7 @@
 | /include |           | popup.html      | 공통 Popup 영역         |
 
 ※ 돋보기 기능 때문에 font-size 들 rem 으로 잡혀있어요.
+※ React 에서 작업할 때는 css 변환 작업 없이, style.scss 파일로만 연결시켜 사용하세요!
 
 <br/>
 <hr/>
