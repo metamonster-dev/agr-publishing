@@ -1,6 +1,6 @@
 # **아트가이드런 사용자 퍼블리싱**
 
-## **프로젝트 환경**
+### **프로젝트 환경**
 
 | 퍼블 페이지  | https://metamonster-dev.github.io/agr-publishing/ |
 | ------------ | ------------------------------------------------- |
@@ -10,7 +10,7 @@
 | 디자인       | width 360 모바일 형태                             |
 | 퍼블리싱     | max-width 480 모바일 화면 고정 형태               |
 
-## **폴더/파일**
+### **폴더/파일**
 
 | 폴더     | 서브 폴더 | 파일명          | 설명                    |
 | -------- | --------- | --------------- | ----------------------- |
@@ -29,25 +29,23 @@
 ※ 돋보기 기능 때문에 font-size 들 rem 으로 잡혀있어요.
 ※ React 에서 작업할 때는 css 변환 작업 없이, style.scss 파일로만 연결시켜 사용하세요!
 
-<br/>
 <hr/>
-<br/>
 
-## **퍼블리싱 고려사항**
+### **퍼블리싱 고려사항**
 
 - 웹접근성
 - 스크린리더 최적화
 - 돋보기 기능 (플로팅 버튼)
 - 색상 대비모드 (디자인)
 
-### **[ 웹접근성 확인 프로그램 및 사이트 ]**
+#### **[ 웹접근성 확인 프로그램 및 사이트 ]**
 
 - [Chrome_OpenWAX](https://chromewebstore.google.com/detail/openwax/bfahpbmaknaeohgdklfbobogpdngngoe?hl=ko)
 - [Chrome_Screen Reader](https://chromewebstore.google.com/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=ko)
 - [W3C MarkUp 검사기](https://validator.w3.org/)
 - [W3C CSS 검사기](https://jigsaw.w3.org/css-validator/)
 
-### **[ 키보드 동작 스크립트 ]**
+#### **[ 키보드 동작 스크립트 ]**
 
 - 콘텐츠 읽히는 순서대로 정상 이동
 - 본문 바로가기 버튼 정상 이동
