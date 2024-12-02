@@ -47,10 +47,11 @@
 - [W3C MarkUp 검사기](https://validator.w3.org/)
 - [W3C CSS 검사기](https://jigsaw.w3.org/css-validator/)
 
-### **[ Tab 이동 ]**
+### **[ 키보드 동작 스크립트 ]**
 
 - 콘텐츠 읽히는 순서대로 정상 이동
 - 본문 바로가기 버튼 정상 이동
-- header => 상단 탭 => 플로팅 버튼 => 바텀 고정 메뉴 => 콘텐츠 영역 순서로 정상 이동
+- skip button => header => 상단 탭 => 플로팅 버튼 => 바텀 고정 메뉴 => 콘텐츠 영역 순서로 정상 이동
 - 모달/팝업/툴팁창 열릴 때 focus 가 창 내부에서 정상 이동
 - 모달/팝업/툴팁창 닫힐 때 focus 가 창 열 때 접근했던 버튼으로 정상 이동
+- select 커스텀으로 키보드 Enter, ArrowDown, ArrowUp, Tab, Escape 로 정상 접근 및 동작
