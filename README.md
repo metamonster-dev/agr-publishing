@@ -2,13 +2,13 @@
 
 ### **프로젝트 환경**
 
-| 퍼블 페이지  | https://metamonster-dev.github.io/agr-publishing/ |
-| ------------ | ------------------------------------------------- |
-| 문서 및 버전 | HTML5, SCSS                                       |
-| 인코딩       | UTF-8                                             |
-| 웹유형       | 반응형 웹                                         |
-| 디자인       | width 360 모바일 형태                             |
-| 퍼블리싱     | max-width 480 모바일 화면 고정 형태               |
+| 퍼블 페이지  | https://metamonster-dev.github.io/agr-publishing/link.html |
+| ------------ | ---------------------------------------------------------- |
+| 문서 및 버전 | HTML5, SCSS                                                |
+| 인코딩       | UTF-8                                                      |
+| 웹유형       | 반응형 웹                                                  |
+| 디자인       | width 360 모바일 형태                                      |
+| 퍼블리싱     | max-width 480 모바일 화면 고정 형태                        |
 
 ### **폴더/파일**
 
@@ -26,8 +26,34 @@
 | /include |           | floating.html   | 공통 Floating 버튼 영역 |
 | /include |           | popup.html      | 공통 Popup 영역         |
 
-※ 돋보기 기능 때문에 font-size 들 rem 으로 잡혀있어요.
+※ 돋보기 기능 때문에 font-size 들 rem 으로 잡혀있어요. <br/>
 ※ React 에서 작업할 때는 css 변환 작업 없이, style.scss 파일로만 연결시켜 사용하세요!
+
+### **라이브러리**
+
+JQuery, Swiper, Notyf, FullCalendar
+
+```html
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Swiper -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- Notyf -->
+<link
+  href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
+
+<!-- Full Calendar -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+```
 
 <hr/>
 
@@ -53,3 +79,7 @@
 - 모달/팝업/툴팁창 열릴 때 focus 가 창 내부에서 정상 이동
 - 모달/팝업/툴팁창 닫힐 때 focus 가 창 열 때 접근했던 버튼으로 정상 이동
 - select 커스텀으로 키보드 Enter, ArrowDown, ArrowUp, Tab, Escape 로 정상 접근 및 동작
+
+```
+
+```
